@@ -1,0 +1,19 @@
+---
+interface Props {
+  title: string;
+  summary?: string;
+  open?: boolean;
+}
+
+const { title, summary, open = false } = Astro.props;
+---
+
+<details class="collapsible" open={open}>
+  <summary>
+    <span class="collapsible__title">{title}</span>
+    {summary && <span class="collapsible__summary">{summary}</span>}
+  </summary>
+  <div class="collapsible__body">
+    <slot />
+  </div>
+</details>

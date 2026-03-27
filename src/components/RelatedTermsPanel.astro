@@ -1,0 +1,22 @@
+---
+import type { TermEntry } from '../lib/content';
+import { getTermHref } from '../lib/content';
+import { withBase } from '../lib/site';
+
+interface Props {
+  terms: TermEntry[];
+}
+
+const { terms } = Astro.props;
+---
+
+{terms.length > 0 && (
+  <div class="related-terms__grid">
+    {terms.map((term) => (
+      <a class="related-terms__card" href={withBase(getTermHref(term))}>
+        <span class="related-terms__title">{term.data.title}</span>
+        <span class="related-terms__description">{term.data.short_definition}</span>
+      </a>
+    ))}
+  </div>
+)}

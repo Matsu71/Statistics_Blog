@@ -1,0 +1,14 @@
+---
+interface Props {
+  summary: string;
+}
+
+const { summary } = Astro.props;
+---
+
+<details class="disclosure-block">
+  <summary>{summary}</summary>
+  <div class="disclosure-block__content">
+    <slot />
+  </div>
+</details>

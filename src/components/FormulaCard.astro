@@ -1,0 +1,29 @@
+---
+interface Formula {
+  name: string;
+  latex: string;
+  description: string;
+  conditions?: string[];
+}
+
+interface Props {
+  formula: Formula;
+}
+
+const { formula } = Astro.props;
+---
+
+<article class="detail-card formula-card">
+  <h3>{formula.name}</h3>
+  <div class="formula-block" role="img" aria-label={`${formula.name} の式`}>
+    {formula.latex}
+  </div>
+  <p>{formula.description}</p>
+  {formula.conditions && formula.conditions.length > 0 && (
+    <ul class="formula-card__conditions simple-list">
+      {formula.conditions.map((condition) => (
+        <li>{condition}</li>
+      ))}
+    </ul>
+  )}
+</article>

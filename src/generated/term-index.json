@@ -1,0 +1,168 @@
+{
+  "generatedAt": "2026-03-27T21:36:33.523Z",
+  "stats": {
+    "publishedCount": 4,
+    "draftCount": 0,
+    "unstartedCount": 67
+  },
+  "nextTerm": {
+    "slug": "population",
+    "title": "母集団",
+    "category": "sampling_distribution",
+    "level": "foundation",
+    "priority": 1,
+    "prerequisites": [],
+    "relatedTerms": [
+      "sample",
+      "population-mean",
+      "population-variance"
+    ]
+  },
+  "publishedTerms": [
+    {
+      "slug": "mean",
+      "title": "平均",
+      "shortDefinition": "データ全体の中心を手早くつかむための、もっとも基本的な代表値です。",
+      "category": "descriptive_statistics",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "算術平均"
+      ],
+      "tags": [
+        "代表値",
+        "中心"
+      ],
+      "sortOrder": 10,
+      "updatedAt": "2026-03-27",
+      "href": "/terms/mean/",
+      "searchText": "平均 データ全体の中心を手早くつかむための、もっとも基本的な代表値です。 descriptive_statistics statistics_grade_2 算術平均 代表値 中心",
+      "relatedPublishedSlugs": [
+        "variance",
+        "standard-deviation"
+      ]
+    },
+    {
+      "slug": "variance",
+      "title": "分散",
+      "shortDefinition": "データが平均のまわりにどのくらい散らばっているかを、二乗を使って測る代表的な指標です。",
+      "category": "descriptive_statistics",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "ばらつき",
+        "散布度",
+        "記述統計"
+      ],
+      "sortOrder": 20,
+      "updatedAt": "2026-03-28",
+      "href": "/terms/variance/",
+      "searchText": "分散 データが平均のまわりにどのくらい散らばっているかを、二乗を使って測る代表的な指標です。 descriptive_statistics statistics_grade_2 ばらつき 散布度 記述統計",
+      "relatedPublishedSlugs": [
+        "mean",
+        "standard-deviation",
+        "normal-distribution"
+      ]
+    },
+    {
+      "slug": "standard-deviation",
+      "title": "標準偏差",
+      "shortDefinition": "分散を元の単位に戻して解釈しやすくした、散らばりの代表的な指標です。",
+      "category": "descriptive_statistics",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "ばらつき",
+        "散布度"
+      ],
+      "sortOrder": 30,
+      "updatedAt": "2026-03-27",
+      "href": "/terms/standard-deviation/",
+      "searchText": "標準偏差 分散を元の単位に戻して解釈しやすくした、散らばりの代表的な指標です。 descriptive_statistics statistics_grade_2 ばらつき 散布度",
+      "relatedPublishedSlugs": [
+        "mean",
+        "variance"
+      ]
+    },
+    {
+      "slug": "normal-distribution",
+      "title": "正規分布",
+      "shortDefinition": "左右対称のつり鐘型をした、もっとも代表的な連続型の確率分布です。",
+      "category": "probability_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率分布",
+        "連続型",
+        "標準化"
+      ],
+      "sortOrder": 330,
+      "updatedAt": "2026-03-28",
+      "href": "/terms/normal-distribution/",
+      "searchText": "正規分布 左右対称のつり鐘型をした、もっとも代表的な連続型の確率分布です。 probability_distribution statistics_grade_2 確率分布 連続型 標準化",
+      "relatedPublishedSlugs": [
+        "mean",
+        "variance",
+        "standard-deviation"
+      ]
+    }
+  ],
+  "featuredTermSlugs": [
+    "mean",
+    "variance",
+    "standard-deviation"
+  ],
+  "queueSummaryByCategory": {
+    "descriptive_statistics": {
+      "published": 3,
+      "draft": 0,
+      "unstarted": 6
+    },
+    "probability": {
+      "published": 0,
+      "draft": 0,
+      "unstarted": 8
+    },
+    "probability_distribution": {
+      "published": 1,
+      "draft": 0,
+      "unstarted": 12
+    },
+    "sampling_distribution": {
+      "published": 0,
+      "draft": 0,
+      "unstarted": 13
+    },
+    "estimation": {
+      "published": 0,
+      "draft": 0,
+      "unstarted": 6
+    },
+    "hypothesis_testing": {
+      "published": 0,
+      "draft": 0,
+      "unstarted": 11
+    },
+    "correlation_regression": {
+      "published": 0,
+      "draft": 0,
+      "unstarted": 9
+    },
+    "data_handling": {
+      "published": 0,
+      "draft": 0,
+      "unstarted": 2
+    }
+  }
+}

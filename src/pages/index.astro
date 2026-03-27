@@ -1,13 +1,23 @@
 ---
 import ContentCard from '../components/ContentCard.astro';
 import PageHero from '../components/PageHero.astro';
+import termIndex from '../generated/term-index.json';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getPublishedTerms, getPublishedTopics, getTermHref } from '../lib/content';
+import {
+  getContentLevelLabel,
+  getExamScopeLabels,
+  getPublishedTopics,
+  getTermCategoryLabel
+} from '../lib/content';
 import { withBase } from '../lib/site';
 
-const terms = await getPublishedTerms();
+const terms = termIndex.publishedTerms;
 const topics = await getPublishedTopics();
-const featuredTerms = terms.slice(0, 3);
+const featuredTerms = termIndex.featuredTermSlugs
+  .map((slug) => terms.find((term) => term.slug === slug))
+  .filter(Boolean);
+const nextTerm = termIndex.nextTerm;
+const queuedRemaining = termIndex.stats.draftCount + termIndex.stats.unstartedCount;
 ---
 
 <BaseLayout
@@ -17,7 +27,7 @@ const featuredTerms = terms.slice(0, 3);
   <PageHero
     eyebrow="Prototype"
     title="1用語1ページで、統計の理解を少しずつ積み上げる"
-    description="文系の初学者でも入口で迷いにくく、それでいて試験と理解の両方に届くことを目指した学習サイトの土台です。"
+    description="文系の初学者でも入口で迷いにくく、それでいて試験と理解の両方に届くことを目指した学習サイトです。"
   >
     <div class="hero-actions">
       <a class="button-link" href={withBase('/terms/')}>用語一覧を見る</a>
@@ -27,7 +37,7 @@ const featuredTerms = terms.slice(0, 3);
     <div class="stats-grid" aria-label="サイトの状況">
       <div class="stat-card">
         <p class="stat-label">公開中の用語</p>
-        <p class="stat-value">{terms.length}</p>
+        <p class="stat-value">{termIndex.stats.publishedCount}</p>
       </div>
       <div class="stat-card">
         <p class="stat-label">公開中の分野解説</p>
@@ -37,7 +47,17 @@ const featuredTerms = terms.slice(0, 3);
         <p class="stat-label">想定更新単位</p>
         <p class="stat-value">1語/回</p>
       </div>
+      <div class="stat-card">
+        <p class="stat-label">キュー残り</p>
+        <p class="stat-value">{queuedRemaining}</p>
+      </div>
     </div>
+
+    {nextTerm && (
+      <p class="section-text" style="margin-top: 1rem;">
+        次に追加予定の用語は「{nextTerm.title}」です。queue から 1 語ずつ足していく前提で、案内も自動更新されます。
+      </p>
+    )}
   </PageHero>
 
   <section class="page-section">
@@ -78,8 +98,10 @@ const featuredTerms = terms.slice(0, 3);
     <div class="site-shell">
       <div class="section-head">
         <div>
-          <h2 class="section-title">ダミー用語ページ</h2>
-          <p class="section-text">ビルド確認用として最小限のサンプルを入れています。</p>
+          <h2 class="section-title">最初に読むデモページ</h2>
+          <p class="section-text">
+            UI とテンプレート確認用に、初学者が読み進めやすい形のサンプルを配置しています。
+          </p>
         </div>
         <a class="ghost-link" href={withBase('/terms/')}>すべての用語を見る</a>
       </div>
@@ -87,12 +109,14 @@ const featuredTerms = terms.slice(0, 3);
       <div class="card-grid">
         {featuredTerms.map((term) => (
           <ContentCard
-            href={withBase(getTermHref(term))}
-            title={term.data.title}
-            description={term.data.description}
-            meta={`${term.data.category} / ${term.data.examLevel}`}
-            badges={term.data.tags.slice(0, 3)}
-            searchText={[term.data.title, ...term.data.aliases, ...term.data.tags].join(' ')}
+            href={withBase(term.href)}
+            title={term.title}
+            description={term.shortDefinition}
+            meta={`${getTermCategoryLabel(term.category)} / ${getExamScopeLabels(
+              term.examScope
+            ).join('・')}`}
+            badges={[getContentLevelLabel(term.level), ...term.tags.slice(0, 2)]}
+            searchText={term.searchText}
           />
         ))}
       </div>

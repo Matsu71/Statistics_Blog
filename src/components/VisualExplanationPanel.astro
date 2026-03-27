@@ -1,0 +1,105 @@
+---
+interface Props {
+  items: string[];
+  variant?: 'generic' | 'spread' | 'distribution' | 'balance';
+}
+
+const { items, variant = 'generic' } = Astro.props;
+const titleId = `visual-${variant}-panel`;
+---
+
+<div class="visual-panel">
+  <figure class="visual-panel__figure">
+    <svg
+      viewBox="0 0 320 180"
+      role="img"
+      aria-labelledby={titleId}
+      class="visual-panel__svg"
+    >
+      <title id={titleId}>視覚的な説明を補助する図</title>
+
+      {variant === 'spread' && (
+        <>
+          <rect x="12" y="18" width="296" height="144" rx="20" fill="#f8fbfd" />
+          <line x1="42" y1="72" x2="278" y2="72" stroke="#8eb6cf" stroke-width="4" />
+          <line x1="42" y1="122" x2="278" y2="122" stroke="#8eb6cf" stroke-width="4" />
+          <circle cx="118" cy="72" r="8" fill="#1f5f8b" />
+          <circle cx="144" cy="72" r="8" fill="#1f5f8b" />
+          <circle cx="160" cy="72" r="8" fill="#1f5f8b" />
+          <circle cx="176" cy="72" r="8" fill="#1f5f8b" />
+          <circle cx="202" cy="72" r="8" fill="#1f5f8b" />
+          <circle cx="64" cy="122" r="8" fill="#9d7b38" />
+          <circle cx="112" cy="122" r="8" fill="#9d7b38" />
+          <circle cx="160" cy="122" r="8" fill="#9d7b38" />
+          <circle cx="208" cy="122" r="8" fill="#9d7b38" />
+          <circle cx="256" cy="122" r="8" fill="#9d7b38" />
+          <line x1="160" y1="44" x2="160" y2="146" stroke="#1f2d3a" stroke-dasharray="6 6" />
+          <text x="32" y="56" class="visual-panel__label">集まりが狭い</text>
+          <text x="32" y="106" class="visual-panel__label">広がりが大きい</text>
+        </>
+      )}
+
+      {variant === 'distribution' && (
+        <>
+          <rect x="12" y="18" width="296" height="144" rx="20" fill="#f8fbfd" />
+          <line x1="38" y1="136" x2="282" y2="136" stroke="#1f2d3a" stroke-width="4" />
+          <path
+            d="M42 136 C86 130, 98 74, 160 42 C222 74, 234 130, 278 136"
+            fill="none"
+            stroke="#1f5f8b"
+            stroke-width="6"
+            stroke-linecap="round"
+          />
+          <path
+            d="M98 136 C114 116, 128 82, 160 42 C192 82, 206 116, 222 136 Z"
+            fill="rgba(31, 95, 139, 0.16)"
+          />
+          <line x1="160" y1="36" x2="160" y2="142" stroke="#9d7b38" stroke-dasharray="6 6" />
+          <text x="148" y="28" class="visual-panel__label">平均</text>
+          <text x="42" y="158" class="visual-panel__label">値</text>
+          <text x="250" y="158" class="visual-panel__label">左右対称</text>
+        </>
+      )}
+
+      {variant === 'balance' && (
+        <>
+          <rect x="12" y="18" width="296" height="144" rx="20" fill="#f8fbfd" />
+          <line x1="160" y1="44" x2="160" y2="138" stroke="#1f2d3a" stroke-width="6" />
+          <line x1="88" y1="76" x2="232" y2="76" stroke="#1f5f8b" stroke-width="6" />
+          <path d="M104 76 L72 126 H136 Z" fill="rgba(31, 95, 139, 0.16)" stroke="#1f5f8b" />
+          <path d="M216 76 L184 126 H248 Z" fill="rgba(31, 95, 139, 0.16)" stroke="#1f5f8b" />
+          <circle cx="104" cy="110" r="9" fill="#9d7b38" />
+          <circle cx="92" cy="98" r="7" fill="#9d7b38" />
+          <circle cx="216" cy="110" r="9" fill="#9d7b38" />
+          <circle cx="228" cy="98" r="7" fill="#9d7b38" />
+          <text x="118" y="54" class="visual-panel__label">つり合いの中心</text>
+        </>
+      )}
+
+      {variant === 'generic' && (
+        <>
+          <rect x="12" y="18" width="296" height="144" rx="20" fill="#f8fbfd" />
+          <circle cx="98" cy="94" r="14" fill="#1f5f8b" opacity="0.85" />
+          <circle cx="160" cy="68" r="14" fill="#9d7b38" opacity="0.8" />
+          <circle cx="222" cy="108" r="14" fill="#1f5f8b" opacity="0.6" />
+          <path
+            d="M98 94 C118 82, 138 78, 160 68 C184 58, 204 74, 222 108"
+            fill="none"
+            stroke="#1f2d3a"
+            stroke-width="4"
+            stroke-dasharray="8 8"
+          />
+          <text x="54" y="148" class="visual-panel__label">イメージを図で補う</text>
+        </>
+      )}
+    </svg>
+  </figure>
+
+  <div class="visual-panel__content">
+    <ul>
+      {items.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  </div>
+</div>

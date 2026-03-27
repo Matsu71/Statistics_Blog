@@ -1,0 +1,66 @@
+---
+interface Props {
+  variant?: string;
+  items?: string[];
+}
+
+const { variant = 'generic', items = [] } = Astro.props;
+
+const normalizedVariant = variant.toLowerCase();
+const isVariance = normalizedVariant === 'variance';
+const isNormalDistribution = normalizedVariant === 'normal-distribution';
+---
+
+<div class="term-visual">
+  <div class="term-visual__canvas" aria-hidden="true">
+    {isVariance ? (
+      <svg class="term-visual__svg" viewBox="0 0 440 220" role="presentation">
+        <line x1="40" y1="60" x2="400" y2="60" class="term-visual__axis" />
+        <line x1="40" y1="160" x2="400" y2="160" class="term-visual__axis" />
+        <line x1="220" y1="28" x2="220" y2="192" class="term-visual__guide" />
+        <circle cx="200" cy="60" r="10" class="term-visual__dot term-visual__dot--tight" />
+        <circle cx="220" cy="60" r="10" class="term-visual__dot term-visual__dot--tight" />
+        <circle cx="240" cy="60" r="10" class="term-visual__dot term-visual__dot--tight" />
+        <circle cx="140" cy="160" r="10" class="term-visual__dot term-visual__dot--wide" />
+        <circle cx="220" cy="160" r="10" class="term-visual__dot term-visual__dot--wide" />
+        <circle cx="300" cy="160" r="10" class="term-visual__dot term-visual__dot--wide" />
+        <text x="52" y="42" class="term-visual__label">分散が小さい</text>
+        <text x="52" y="142" class="term-visual__label">分散が大きい</text>
+        <text x="228" y="210" class="term-visual__sub-label">平均</text>
+      </svg>
+    ) : isNormalDistribution ? (
+      <svg class="term-visual__svg" viewBox="0 0 440 220" role="presentation">
+        <line x1="30" y1="180" x2="410" y2="180" class="term-visual__axis" />
+        <path
+          d="M50 180 C 100 180, 130 120, 170 80 C 190 60, 210 45, 220 45 C 230 45, 250 60, 270 80 C 310 120, 340 180, 390 180"
+          class="term-visual__curve"
+        />
+        <line x1="220" y1="45" x2="220" y2="180" class="term-visual__guide" />
+        <line x1="140" y1="96" x2="140" y2="180" class="term-visual__guide term-visual__guide--soft" />
+        <line x1="300" y1="96" x2="300" y2="180" class="term-visual__guide term-visual__guide--soft" />
+        <text x="212" y="204" class="term-visual__sub-label">μ</text>
+        <text x="126" y="204" class="term-visual__sub-label">μ-σ</text>
+        <text x="286" y="204" class="term-visual__sub-label">μ+σ</text>
+        <text x="48" y="38" class="term-visual__label">左右対称の山形</text>
+      </svg>
+    ) : (
+      <svg class="term-visual__svg" viewBox="0 0 440 220" role="presentation">
+        <rect x="28" y="26" width="384" height="168" rx="20" class="term-visual__frame" />
+        <circle cx="132" cy="110" r="18" class="term-visual__dot term-visual__dot--tight" />
+        <circle cx="220" cy="110" r="18" class="term-visual__dot term-visual__dot--wide" />
+        <circle cx="308" cy="110" r="18" class="term-visual__dot term-visual__dot--tight" />
+        <line x1="150" y1="110" x2="202" y2="110" class="term-visual__axis" />
+        <line x1="238" y1="110" x2="290" y2="110" class="term-visual__axis" />
+        <text x="52" y="56" class="term-visual__label">図解をここに追加できます</text>
+      </svg>
+    )}
+  </div>
+
+  {items.length > 0 && (
+    <ul class="term-list term-visual__notes">
+      {items.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  )}
+</div>

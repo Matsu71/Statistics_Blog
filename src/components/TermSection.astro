@@ -1,0 +1,20 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  intro?: string;
+  tone?: 'default' | 'accent' | 'subtle';
+}
+
+const { id, title, intro, tone = 'default' } = Astro.props;
+---
+
+<section id={id} class:list={['term-section', `term-section--${tone}`]} aria-labelledby={`${id}-title`}>
+  <div class="term-section__header">
+    <h2 id={`${id}-title`}>{title}</h2>
+    {intro && <p class="term-section__intro">{intro}</p>}
+  </div>
+  <div class="term-section__body">
+    <slot />
+  </div>
+</section>

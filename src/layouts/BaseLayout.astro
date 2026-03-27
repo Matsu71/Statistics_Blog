@@ -7,13 +7,23 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  ogType?: 'website' | 'article';
+  ogImage?: string;
+  updatedAt?: Date;
 }
 
-const { title, description = siteMeta.description } = Astro.props;
+const {
+  title,
+  description = siteMeta.description,
+  ogType = 'website',
+  ogImage = withBase('/og-default.svg'),
+  updatedAt
+} = Astro.props;
 const pageTitle = title ? `${title} | ${siteMeta.name}` : siteMeta.name;
 const canonicalUrl = Astro.site
   ? new URL(Astro.url.pathname, Astro.site).toString()
   : Astro.url.toString();
+const ogImageUrl = Astro.site ? new URL(ogImage, Astro.site).toString() : new URL(ogImage, Astro.url).toString();
 ---
 
 <!doctype html>
@@ -25,16 +35,23 @@ const canonicalUrl = Astro.site
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" href={withBase('/favicon.svg')} type="image/svg+xml" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content={siteMeta.name} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+    {updatedAt && <meta property="article:modified_time" content={updatedAt.toISOString()} />}
   </head>
   <body>
+    <a class="skip-link" href="#main-content">本文へ移動</a>
     <SiteHeader />
-    <main>
+    <main id="main-content">
       <slot />
     </main>
     <SiteFooter />

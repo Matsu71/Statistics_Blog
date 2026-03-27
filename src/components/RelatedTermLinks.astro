@@ -1,0 +1,22 @@
+---
+interface RelatedItem {
+  href: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  items: RelatedItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="related-grid">
+  {items.map((item) => (
+    <a class="related-card" href={item.href}>
+      <h3 class="related-card__title">{item.title}</h3>
+      <p class="related-card__description">{item.description}</p>
+    </a>
+  ))}
+</div>

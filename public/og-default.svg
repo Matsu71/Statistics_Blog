@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">統計ことばノート</title>
+  <desc id="desc">統計検定2級向けの1用語1ページ学習サイト</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#fcfaf5" />
+      <stop offset="100%" stop-color="#eef5f9" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" rx="36" fill="url(#bg)" />
+  <circle cx="176" cy="122" r="160" fill="#d9ebf6" opacity="0.82" />
+  <circle cx="1084" cy="74" r="150" fill="#efe3c4" opacity="0.82" />
+  <path d="M120 430 C250 408, 320 270, 440 250 C570 226, 620 388, 780 378 C910 368, 982 222, 1080 198" fill="none" stroke="#1f5f8b" stroke-width="18" stroke-linecap="round"/>
+  <path d="M496 472 C540 406, 566 302, 600 230 C636 302, 660 406, 704 472 Z" fill="#1f5f8b" opacity="0.14" />
+  <text x="120" y="178" fill="#1f5f8b" font-family="'Iowan Old Style','Times New Roman',serif" font-size="42" font-weight="700">Statistics Grade 2</text>
+  <text x="120" y="290" fill="#1f2d3a" font-family="'Iowan Old Style','Times New Roman',serif" font-size="88" font-weight="700">統計ことばノート</text>
+  <text x="120" y="362" fill="#5f6c79" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="34">1用語1ページで、統計の理解を少しずつ積み上げる</text>
+  <text x="120" y="434" fill="#5f6c79" font-family="'Hiragino Sans','Yu Gothic',sans-serif" font-size="30">平均・分散・正規分布・推定・検定</text>
+</svg>

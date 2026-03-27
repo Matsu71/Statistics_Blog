@@ -9,13 +9,19 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
+    "pick:next-term": "node scripts/pick-next-term.mjs",
+    "scaffold:term": "node scripts/scaffold-term.mjs",
+    "validate:term-queue": "node scripts/validate-term-queue.mjs",
+    "validate:content": "node scripts/validate-content.mjs",
+    "generate:index": "node scripts/generate-term-index.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",
-    "astro": "^5.0.0"
+    "astro": "^5.0.0",
+    "yaml": "^2.8.2"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",

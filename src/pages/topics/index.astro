@@ -3,7 +3,13 @@ import ContentCard from '../../components/ContentCard.astro';
 import EmptyState from '../../components/EmptyState.astro';
 import PageHero from '../../components/PageHero.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getPublishedTopics, getTopicHref } from '../../lib/content';
+import {
+  getContentLevelLabel,
+  getExamScopeLabels,
+  getPublishedTopics,
+  getTopicHref,
+  getTopicTypeLabel
+} from '../../lib/content';
 import { withBase } from '../../lib/site';
 
 const topics = await getPublishedTopics();
@@ -27,10 +33,17 @@ const topics = await getPublishedTopics();
             <ContentCard
               href={withBase(getTopicHref(topic))}
               title={topic.data.title}
-              description={topic.data.description}
-              meta={topic.data.status}
-              badges={topic.data.relatedTerms}
-              searchText={[topic.data.title, ...topic.data.relatedTerms].join(' ')}
+              description={topic.data.summary}
+              meta={`${getTopicTypeLabel(topic.data.topic_type)} / ${getExamScopeLabels(
+                topic.data.exam_scope
+              ).join('・')}`}
+              badges={[getContentLevelLabel(topic.data.level), ...topic.data.related_terms]}
+              searchText={[
+                topic.data.title,
+                topic.data.summary,
+                ...topic.data.learning_goals,
+                ...topic.data.related_terms
+              ].join(' ')}
             />
           ))}
         </div>

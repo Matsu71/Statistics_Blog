@@ -1,0 +1,28 @@
+---
+interface Item {
+  id: string;
+  text: string;
+}
+
+interface Props {
+  items: Item[];
+  title?: string;
+}
+
+const { items, title } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <nav class="section-nav" aria-label={title ?? 'ページ内目次'}>
+      {title && <h2>{title}</h2>}
+      <ol class="section-nav__list">
+        {items.map((item) => (
+          <li>
+            <a href={`#${item.id}`}>{item.text}</a>
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )
+}

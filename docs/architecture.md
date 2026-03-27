@@ -20,6 +20,7 @@
 .
 ├── .github/workflows/     # GitHub Pages デプロイ
 ├── docs/                  # 設計・運用ドキュメント
+├── data/                  # 用語生成キュー
 ├── public/                # 静的アセット
 ├── scripts/               # 将来の自動生成スクリプト置き場
 ├── src/
@@ -39,20 +40,46 @@
 
 ### `terms`
 
-1用語1ページの主コレクション。各 Markdown は次のような役割を持つ。
+1用語1ページの主コレクション。各 Markdown は、AI が量産しやすいように構造化 frontmatter を持つ。
 
-- `title`: 表示名
-- `description`: 一覧ページや SEO 用の要約
-- `category`: 記述統計、確率、推定などの分類
-- `aliases`: 別名
-- `tags`: 一覧・検索補助用のタグ
-- `relatedTerms`: 関連用語の ID
-- `sortOrder`: 一覧順制御
-- `draft`: 非公開制御
+- `slug`: canonical ID。ファイル名と queue の両方で一致させる
+- `exam_scope`: 対象試験範囲
+- `level`: 基礎 / 標準 / 発展
+- `status`: `draft` または `published`
+- `category`: 用語領域
+- `short_definition`: 一覧・SEO 向けの短い定義
+- `definition`: 本文用の定義
+- `intuition`: 直感的説明
+- `visual_explanation`: 視覚的説明
+- `where_it_appears`: どのような場面で現れるか
+- `practical_examples`: 現実の例・実務の例
+- `exam_points`: 試験で重要なポイント
+- `formulas`: 数式と記号
+- `rigorous_explanation`: 厳密な説明
+- `proof`: 証明の要約
+- `common_mistakes`: 間違えやすい点
+- `related_terms`: 関連用語の slug
+- `references`: 参考文献
+- `sort_order`: 一覧順制御
 
 ### `topics`
 
-将来の分野解説コレクション。初期状態では空でも構わないが、ルートとスキーマを先に用意しておく。
+将来の分野解説コレクション。`summary`, `learning_goals`, `sections`, `related_terms` を中心に、複数の用語ページを束ねる。
+
+### `data/term-queue.json`
+
+用語の追加順を管理するキュー。少なくとも次を持つ。
+
+- `slug`
+- `title`
+- `category`
+- `priority`
+- `status`: `unstarted`, `draft`, `published`
+- `level`
+- `exam_scope`
+- `prerequisites`
+- `related_terms`
+- `content_path`
 
 ## 画面構成
 
@@ -76,8 +103,10 @@
 1時間ごとに 1 用語ずつ追加する運用を想定する。実装方針は以下の通り。
 
 - 原稿生成ロジックは `scripts/` に分離する
+- 生成対象の選定は `data/term-queue.json` から行う
 - 生成結果は `src/content/terms/` に Markdown として保存する
 - 一覧ページはコレクションを読むだけにし、ページ追加時のコード変更を不要にする
+- `scripts/validate-term-queue.mjs` で slug と公開状態の最低限の整合性を確認する
 
 ### 2. 分野解説の追加
 
@@ -88,6 +117,7 @@
 将来は次のチェックをスクリプト化しやすい。
 
 - frontmatter の必須項目チェック
+- queue と content の slug 同期チェック
 - 用語重複チェック
 - 関連用語リンク切れチェック
 - 文章テンプレート準拠チェック

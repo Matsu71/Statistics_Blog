@@ -1,37 +1,83 @@
 ---
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getPublishedTopics } from '../../lib/content';
+import {
+  getContentLevelLabel,
+  getExamScopeLabels,
+  getPublishedTopics,
+  getTopicTypeLabel
+} from '../../lib/content';
 import { formatDate } from '../../lib/site';
 
 export async function getStaticPaths() {
   const topics = await getPublishedTopics();
 
   return topics.map((topic) => ({
-    params: { slug: topic.id },
+    params: { slug: topic.data.slug },
     props: { topic }
   }));
 }
 
 const { topic } = Astro.props;
+const hasMarkdownBody = (topic.body?.trim().length ?? 0) > 0;
 const { Content } = await render(topic);
 ---
 
-<BaseLayout title={topic.data.title} description={topic.data.description}>
+<BaseLayout title={topic.data.title} description={topic.data.summary}>
   <section class="page-hero">
     <div class="site-shell">
       <article class="article-card">
         <p class="eyebrow">分野解説</p>
         <h1 class="article-title">{topic.data.title}</h1>
-        <p class="article-summary">{topic.data.description}</p>
+        <p class="article-summary">{topic.data.summary}</p>
         <div class="article-meta">
-          <span class="meta-chip">{topic.data.status}</span>
-          {topic.data.updatedAt && (
-            <span class="meta-chip">更新: {formatDate(topic.data.updatedAt)}</span>
-          )}
+          <span class="meta-chip">{getTopicTypeLabel(topic.data.topic_type)}</span>
+          <span class="meta-chip">{getContentLevelLabel(topic.data.level)}</span>
+          <span class="meta-chip">{getExamScopeLabels(topic.data.exam_scope).join('・')}</span>
+          <span class="meta-chip">更新: {formatDate(topic.data.updated_at)}</span>
         </div>
         <div class="prose">
-          <Content />
+          <h2>学習目標</h2>
+          <ul>
+            {topic.data.learning_goals.map((goal) => (
+              <li>{goal}</li>
+            ))}
+          </ul>
+
+          {topic.data.sections.length > 0 && (
+            <>
+              <h2>構成案</h2>
+              {topic.data.sections.map((section) => (
+                <div class="detail-card">
+                  <h3>{section.title}</h3>
+                  <p>{section.objective}</p>
+                  {section.related_terms.length > 0 && (
+                    <p class="muted-text">
+                      関連用語: {section.related_terms.join(' / ')}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </>
+          )}
+
+          {topic.data.related_terms.length > 0 && (
+            <>
+              <h2>関連用語</h2>
+              <ul>
+                {topic.data.related_terms.map((termSlug) => (
+                  <li>{termSlug}</li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {hasMarkdownBody && (
+            <>
+              <h2>補足ノート</h2>
+              <Content />
+            </>
+          )}
         </div>
       </article>
     </div>

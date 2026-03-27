@@ -1,81 +1,305 @@
 ---
 import { render } from 'astro:content';
+import CollapsibleSection from '../../components/CollapsibleSection.astro';
+import FormulaCard from '../../components/FormulaCard.astro';
+import RelatedTermsPanel from '../../components/RelatedTermsPanel.astro';
+import SectionNav from '../../components/SectionNav.astro';
+import TermHero from '../../components/TermHero.astro';
+import TermSection from '../../components/TermSection.astro';
+import VisualExplanationPanel from '../../components/VisualExplanationPanel.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getPublishedTerms, getTermHref } from '../../lib/content';
+import {
+  getContentLevelLabel,
+  getExamScopeLabels,
+  getPublishedTerms,
+  getTermCategoryLabel,
+  getTermHref
+} from '../../lib/content';
 import { formatDate, withBase } from '../../lib/site';
 
 export async function getStaticPaths() {
   const terms = await getPublishedTerms();
 
   return terms.map((term) => ({
-    params: { slug: term.id },
+    params: { slug: term.data.slug },
     props: { term }
   }));
 }
 
 const { term } = Astro.props;
 const allTerms = await getPublishedTerms();
-const relatedTerms = allTerms.filter((entry) => term.data.relatedTerms.includes(entry.id));
-const { Content, headings } = await render(term);
+const relatedTerms = allTerms.filter((entry) => term.data.related_terms.includes(entry.data.slug));
+const hasMarkdownBody = (term.body?.trim().length ?? 0) > 0;
+const { Content } = await render(term);
+
+const takeaways = [
+  term.data.short_definition,
+  term.data.where_it_appears[0] ?? 'TODO: この用語が出てくる場面を追加します。',
+  term.data.exam_points[0] ?? 'TODO: 試験での重要ポイントを追加します。'
+];
+
+const sectionLinks = [
+  { id: 'takeaways', text: 'この記事でわかること' },
+  { id: 'intuition', text: 'まずはイメージで理解する' },
+  ...(term.data.visual_explanation.length > 0
+    ? [{ id: 'visual-explanation', text: '視覚的な説明' }]
+    : []),
+  { id: 'definition', text: '定義' },
+  { id: 'real-world', text: '現実でどう現れるか' },
+  { id: 'exam-points', text: '試験で重要なポイント' },
+  ...(term.data.formulas.length > 0 ? [{ id: 'formulas', text: '数式とその意味' }] : []),
+  ...(term.data.common_mistakes.length > 0
+    ? [{ id: 'common-mistakes', text: 'よくある勘違い' }]
+    : []),
+  ...(term.data.rigorous_explanation.length > 0 || term.data.proof
+    ? [{ id: 'rigor', text: '厳密な説明・証明' }]
+    : []),
+  { id: 'related-terms', text: '関連用語' },
+  ...(hasMarkdownBody ? [{ id: 'notes', text: '補足ノート' }] : []),
+  ...(term.data.references.length > 0 ? [{ id: 'references', text: '参考文献' }] : [])
+];
+
+const visualVariant =
+  term.data.slug === 'variance'
+    ? 'spread'
+    : term.data.slug === 'normal-distribution'
+      ? 'distribution'
+      : term.data.slug === 'mean'
+        ? 'balance'
+        : 'generic';
 ---
 
-<BaseLayout title={term.data.title} description={term.data.description}>
+<BaseLayout
+  title={term.data.title}
+  description={term.data.short_definition}
+  ogType="article"
+  updatedAt={term.data.updated_at}
+>
   <section class="page-hero">
     <div class="site-shell article-layout">
-      <article class="article-card">
-        <p class="eyebrow">用語ページ</p>
-        <h1 class="article-title">{term.data.title}</h1>
-        <p class="article-summary">{term.data.description}</p>
+      <article class="article-card article-card--term">
+        <TermHero
+          title={term.data.title}
+          summary={term.data.short_definition}
+          metaChips={[
+            getTermCategoryLabel(term.data.category),
+            getContentLevelLabel(term.data.level),
+            getExamScopeLabels(term.data.exam_scope).join('・'),
+            `更新: ${formatDate(term.data.updated_at)}`
+          ]}
+          aliases={term.data.aliases}
+          tags={term.data.tags}
+          takeaways={takeaways}
+        >
+          <a class="ghost-link" href={withBase('/terms/')}>用語一覧へ戻る</a>
+          <a class="ghost-link" href={withBase('/topics/')}>分野解説一覧</a>
+        </TermHero>
 
-        <div class="article-meta">
-          <span class="meta-chip">{term.data.category}</span>
-          <span class="meta-chip">{term.data.examLevel}</span>
-          {term.data.updatedAt && (
-            <span class="meta-chip">更新: {formatDate(term.data.updatedAt)}</span>
-          )}
+        <div class="term-mobile-nav">
+          <SectionNav items={sectionLinks} title="このページの目次" />
         </div>
 
-        {term.data.aliases.length > 0 && (
-          <div class="link-row" style="margin-top: 1rem;">
-            {term.data.aliases.map((alias) => (
-              <span class="pill">{alias}</span>
+        <div class="term-prose">
+          <TermSection
+            id="intuition"
+            title="まずはイメージで理解する"
+            intro="式の前に、この用語が何を見ているのかを言葉でつかみます。"
+          >
+            {term.data.intuition.map((item) => (
+              <p>{item}</p>
             ))}
-          </div>
-        )}
+          </TermSection>
 
-        <div class="prose">
-          <Content />
+          {term.data.visual_explanation.length > 0 && (
+            <TermSection
+              id="visual-explanation"
+              title="視覚的な説明"
+              intro="画像がなくても読めるように、簡易図と短い説明をセットにしています。"
+            >
+              <VisualExplanationPanel items={term.data.visual_explanation} variant={visualVariant} />
+            </TermSection>
+          )}
+
+          <TermSection
+            id="definition"
+            title="定義"
+            intro="直感のあとで、言葉としての定義をここで固定します。"
+          >
+            <p>{term.data.definition}</p>
+          </TermSection>
+
+          <TermSection
+            id="real-world"
+            title="現実でどう現れるか"
+            intro="試験の文脈と日常・実務の文脈を行き来しながら、この用語の居場所を確認します。"
+          >
+            <div class="split-panel">
+              <div class="detail-card">
+                <h3>よく出てくる場面</h3>
+                <ul class="simple-list">
+                  {term.data.where_it_appears.map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+
+              {term.data.practical_examples.length > 0 && (
+                <div class="stack-list">
+                  {term.data.practical_examples.map((example) => (
+                    <article class="detail-card">
+                      <h3>{example.title}</h3>
+                      <p>{example.description}</p>
+                    </article>
+                  ))}
+                </div>
+              )}
+            </div>
+          </TermSection>
+
+          <TermSection
+            id="exam-points"
+            title="試験で重要なポイント"
+            intro="時間がないときは、この節だけでも先に確認すると着眼点を押さえやすくなります。"
+            tone="accent"
+          >
+            <ul class="check-list">
+              {term.data.exam_points.map((point) => (
+                <li>{point}</li>
+              ))}
+            </ul>
+          </TermSection>
+
+          {term.data.formulas.length > 0 && (
+            <TermSection
+              id="formulas"
+              title="数式とその意味"
+              intro="式は単独で覚えるのではなく、記号の意味と一緒に確認します。"
+            >
+              <div class="formula-grid">
+                {term.data.formulas.map((formula) => (
+                  <FormulaCard formula={formula} />
+                ))}
+              </div>
+            </TermSection>
+          )}
+
+          {term.data.common_mistakes.length > 0 && (
+            <TermSection
+              id="common-mistakes"
+              title="よくある勘違い"
+              intro="似た概念との違いをここで整理しておくと、試験でも混線しにくくなります。"
+              tone="subtle"
+            >
+              <ul class="warning-list">
+                {term.data.common_mistakes.map((mistake) => (
+                  <li>{mistake}</li>
+                ))}
+              </ul>
+            </TermSection>
+          )}
+
+          {(term.data.rigorous_explanation.length > 0 || term.data.proof) && (
+            <TermSection
+              id="rigor"
+              title="厳密な説明・証明"
+              intro="主導線を邪魔しないように、詳しい説明は折りたたみで分けています。"
+            >
+              {term.data.rigorous_explanation.length > 0 && (
+                <CollapsibleSection
+                  title="厳密な説明を読む"
+                  summary="定義の背景や前提を、もう一歩ていねいに確認します。"
+                >
+                  {term.data.rigorous_explanation.map((item) => (
+                    <p>{item}</p>
+                  ))}
+                </CollapsibleSection>
+              )}
+
+              {term.data.proof && (
+                <CollapsibleSection
+                  title="証明の流れを見る"
+                  summary={term.data.proof.summary}
+                >
+                  {term.data.proof.outline_steps.length > 0 && (
+                    <ol class="simple-list">
+                      {term.data.proof.outline_steps.map((step) => (
+                        <li>{step}</li>
+                      ))}
+                    </ol>
+                  )}
+                </CollapsibleSection>
+              )}
+            </TermSection>
+          )}
+
+          <TermSection
+            id="related-terms"
+            title="関連用語"
+            intro="1語だけで閉じず、近い概念へ横移動すると理解がつながりやすくなります。"
+          >
+            {relatedTerms.length > 0 ? (
+              <RelatedTermsPanel terms={relatedTerms} />
+            ) : (
+              <p>TODO: 関連用語の公開ページが増えたら、ここに導線を追加します。</p>
+            )}
+          </TermSection>
+
+          {hasMarkdownBody && (
+            <TermSection
+              id="notes"
+              title="補足ノート"
+              intro="本文で伝えきれない背景や、周辺概念とのつながりを短く補います。"
+            >
+              <div class="prose">
+                <Content />
+              </div>
+            </TermSection>
+          )}
+
+          {term.data.references.length > 0 && (
+            <TermSection
+              id="references"
+              title="参考文献"
+              intro="追加確認に使える資料だけを載せています。未確認の文献は入れていません。"
+            >
+              <ul class="simple-list">
+                {term.data.references.map((reference) => (
+                  <li>
+                    {reference.url ? <a href={reference.url}>{reference.title}</a> : reference.title}
+                    {reference.author && ` / ${reference.author}`}
+                    {reference.year && ` / ${reference.year}`}
+                    {reference.note && ` / ${reference.note}`}
+                  </li>
+                ))}
+              </ul>
+            </TermSection>
+          )}
         </div>
       </article>
 
-      <aside class="toc-card">
-        {headings.length > 0 && (
-          <>
-            <h2>目次</h2>
-            <ol>
-              {headings
-                .filter((heading) => heading.depth <= 2)
-                .map((heading) => (
-                  <li>
-                    <a href={`#${heading.slug}`}>{heading.text}</a>
-                  </li>
-                ))}
-            </ol>
-          </>
-        )}
+      <aside class="toc-card term-aside" aria-labelledby="term-sidebar-title">
+        <h2 id="term-sidebar-title">ページ内の導線</h2>
+        <SectionNav items={sectionLinks} />
 
-        {relatedTerms.length > 0 && (
-          <>
-            <h2 style="margin-top: 1.4rem;">関連用語</h2>
-            <ul>
+        <div class="toc-card__section">
+          <h2>関連用語</h2>
+          {relatedTerms.length > 0 ? (
+            <ul class="simple-list">
               {relatedTerms.map((relatedTerm) => (
                 <li>
                   <a href={withBase(getTermHref(relatedTerm))}>{relatedTerm.data.title}</a>
                 </li>
               ))}
             </ul>
-          </>
-        )}
+          ) : (
+            <p class="muted-text">公開済みの関連ページが増えたら、ここから移動できます。</p>
+          )}
+        </div>
+
+        <div class="toc-card__section toc-card__actions">
+          <a class="button-link" href={withBase('/terms/')}>用語一覧から探す</a>
+          <a class="ghost-link" href={withBase('/topics/')}>分野解説を見る</a>
+        </div>
       </aside>
     </div>
   </section>
