@@ -25,6 +25,39 @@ const categoryValues = [
 ];
 const examScopeValues = ['statistics_grade_2'];
 const referenceTypeValues = ['official', 'textbook', 'web'];
+const knownTermFrontmatterKeys = new Set([
+  'title',
+  'slug',
+  'exam_scope',
+  'level',
+  'status',
+  'category',
+  'short_definition',
+  'definition',
+  'intuition',
+  'visual_explanation',
+  'where_it_appears',
+  'practical_examples',
+  'exam_points',
+  'formulas',
+  'rigorous_explanation',
+  'proof',
+  'common_mistakes',
+  'references',
+  'aliases',
+  'tags',
+  'related_terms',
+  'sort_order',
+  'updated_at'
+]);
+const legacyTermFrontmatterKeys = {
+  description: 'short_definition',
+  examLevel: 'exam_scope',
+  relatedTerms: 'related_terms',
+  sortOrder: 'sort_order',
+  updatedAt: 'updated_at',
+  draft: 'status'
+};
 const requiredQueueKeys = [
   'slug',
   'title',
@@ -177,7 +210,7 @@ function extractTextChunks(value, chunks = []) {
 
 function detectTodoMarkers(record) {
   const haystack = extractTextChunks(record.data, [record.body]).join('\n');
-  return /\bTODO:|\b保留:/.test(haystack);
+  return /\bTODO:|\b保留:|このページは雛形です|前提用語とのつながりを確認する/.test(haystack);
 }
 
 function detectEditorialWarnings(record) {
@@ -543,6 +576,26 @@ function validateReference(reference, fieldPath, errors) {
 
 function validateMarkdownRecord(record, queueItemBySlug, issues, warnings) {
   const { data } = record;
+  const termFrontmatterKeys = Object.keys(data);
+
+  for (const key of termFrontmatterKeys) {
+    if (knownTermFrontmatterKeys.has(key)) {
+      continue;
+    }
+
+    if (key in legacyTermFrontmatterKeys) {
+      addIssue(
+        issues,
+        `${record.relativePath}: legacy frontmatter field "${key}" is not allowed. Use "${legacyTermFrontmatterKeys[key]}" instead.`
+      );
+      continue;
+    }
+
+    addIssue(
+      issues,
+      `${record.relativePath}: unknown frontmatter field "${key}". Remove it or add support in src/content.config.ts.`
+    );
+  }
 
   if (!isNonEmptyString(data.slug)) {
     addIssue(issues, `${record.relativePath}: missing required field "slug".`);
@@ -653,8 +706,13 @@ function validateMarkdownRecord(record, queueItemBySlug, issues, warnings) {
     allowUndefined: true
   });
   checkStringArray(data.tags, `${record.relativePath}: tags`, issues, { allowUndefined: true });
+
+  if (!('related_terms' in data)) {
+    addIssue(issues, `${record.relativePath}: related_terms is required.`);
+  }
+
   checkStringArray(data.related_terms, `${record.relativePath}: related_terms`, issues, {
-    allowUndefined: true
+    minLength: 1
   });
   checkDuplicateStrings(data.related_terms, `${record.relativePath}: related_terms`, issues);
 
@@ -693,6 +751,12 @@ function validateMarkdownRecord(record, queueItemBySlug, issues, warnings) {
       issues,
       `${record.relativePath}: invalid updated_at "${formatValue(data.updated_at)}". Expected YYYY-MM-DD.`
     );
+  } else if (normalizedUpdatedAt > getLocalIsoDate()) {
+    addIssue(
+      warnings,
+      `${record.relativePath}: updated_at "${normalizedUpdatedAt}" is in the future.`,
+      'warning'
+    );
   }
 
   if (data.practical_examples !== undefined && !Array.isArray(data.practical_examples)) {
@@ -714,6 +778,10 @@ function validateMarkdownRecord(record, queueItemBySlug, issues, warnings) {
         addIssue(issues, `${fieldPath}.description is required.`);
       }
     });
+  }
+
+  if (data.status === 'published' && (!Array.isArray(data.practical_examples) || data.practical_examples.length === 0)) {
+    addIssue(issues, `${record.relativePath}: published content must include at least one practical_examples entry.`);
   }
 
   if (data.formulas !== undefined && !Array.isArray(data.formulas)) {
@@ -815,6 +883,7 @@ export async function validateWorkspace({ includeEditorialWarnings = true } = {}
   errors.push(...markdownLoad.issues);
 
   const contentBySlug = new Map();
+  const recordsByTitle = new Map();
 
   for (const record of markdownLoad.records) {
     if (!isNonEmptyString(record.data.slug)) {
@@ -830,6 +899,14 @@ export async function validateWorkspace({ includeEditorialWarnings = true } = {}
     }
 
     contentBySlug.set(record.data.slug, record);
+
+    if (isNonEmptyString(record.data.title)) {
+      if (!recordsByTitle.has(record.data.title)) {
+        recordsByTitle.set(record.data.title, []);
+      }
+
+      recordsByTitle.get(record.data.title).push(record.relativePath);
+    }
   }
 
   for (const item of queue?.items ?? []) {
@@ -856,6 +933,16 @@ export async function validateWorkspace({ includeEditorialWarnings = true } = {}
 
   for (const record of markdownLoad.records) {
     validateMarkdownRecord(record, queueValidation.itemBySlug, errors, warnings);
+  }
+
+  for (const [title, relativePaths] of recordsByTitle.entries()) {
+    if (relativePaths.length > 1) {
+      addIssue(
+        warnings,
+        `Duplicate content title "${title}" in ${relativePaths.join(', ')}.`,
+        'warning'
+      );
+    }
   }
 
   if (!includeEditorialWarnings) {

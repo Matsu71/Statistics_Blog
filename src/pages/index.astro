@@ -13,9 +13,10 @@ import { withBase } from '../lib/site';
 
 const terms = termIndex.publishedTerms;
 const topics = await getPublishedTopics();
+type FeaturedTerm = (typeof terms)[number];
 const featuredTerms = termIndex.featuredTermSlugs
   .map((slug) => terms.find((term) => term.slug === slug))
-  .filter(Boolean);
+  .filter((term): term is FeaturedTerm => Boolean(term));
 const nextTerm = termIndex.nextTerm;
 const queuedRemaining = termIndex.stats.draftCount + termIndex.stats.unstartedCount;
 ---

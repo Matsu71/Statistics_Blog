@@ -6,7 +6,6 @@ import {
   fileExists,
   parseCliArgs,
   printIssues,
-  readQueue,
   updateQueueForScaffold,
   validateWorkspace,
   writeJsonAtomic,

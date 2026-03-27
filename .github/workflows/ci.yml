@@ -1,8 +1,9 @@
-name: Deploy GitHub Pages
+name: CI
 
 on:
+  pull_request:
   push:
-    branches:
+    branches-ignore:
       - main
   workflow_dispatch:
 
@@ -10,7 +11,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: deploy-pages-${{ github.ref }}
+  group: ci-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -38,7 +39,8 @@ jobs:
 
   site-quality:
     name: 02-site-quality
-    needs: content-validation
+    needs:
+      - content-validation
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -61,7 +63,8 @@ jobs:
 
   build-site:
     name: 03-build-site
-    needs: site-quality
+    needs:
+      - site-quality
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -76,32 +79,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
       - name: Build static site
         run: npm run build
 
       - name: Validate built internal links
         run: npm run validate:links
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
-
-  deploy:
-    name: 04-deploy-pages
-    needs: build-site
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4

@@ -8,6 +8,7 @@
 - `terms` と `topics` を分けた、将来拡張しやすいコレクション設計
 - `data/term-queue.json` で、公開候補と優先度を機械的に管理
 - `docs/editorial-style-guide.md` で、AI 生成時の表記ルールを固定
+- content validation、repo lint、typecheck、build、内部リンク検証を GitHub Actions で自動実行
 - GitHub Pages 向けの静的ビルド
 - サイトマップ生成に対応
 - 依存を最小限にしたシンプルな土台
@@ -29,18 +30,33 @@ npm run dev
 ## ビルド
 
 ```bash
-npm run build
-npm run preview
+npm run generate:index
+npm run lint
+npm run typecheck
 npm run validate:term-queue
+npm run validate:content
+npm run build
+npm run validate:links
+npm run preview
 ```
 
 出力先は `dist/`。
 
+一括実行する場合は次を使う。
+
+```bash
+npm run ci
+```
+
+`src/content/terms/` や `data/term-queue.json` を触った回は、先に `npm run generate:index` を実行してから品質チェックに進みます。CI では generated index の未更新を検知して停止します。
+
 ## GitHub Pages 公開
 
-1. GitHub にリポジトリを push する
-2. GitHub の `Settings > Pages` で `GitHub Actions` を選ぶ
-3. `main` ブランチへ push すると `.github/workflows/deploy.yml` が自動デプロイする
+1. GitHub の `Settings > Pages` で `GitHub Actions` を選ぶ
+2. Pull Request では `.github/workflows/ci.yml` が品質ゲートとして動く
+3. `main` ブランチへ push すると `.github/workflows/deploy.yml` が品質ゲートを再実行し、その後 GitHub Pages へ公開する
+
+詳細手順と停止箇所は [docs/deployment.md](docs/deployment.md) を参照。
 
 ### URL 設定
 
@@ -51,11 +67,12 @@ npm run validate:term-queue
 
 ### 用語ページを追加する
 
-1. `data/term-queue.json` の対象語を確認し、次に追加する slug を決める
-2. `docs/editorial-style-guide.md` に従って `src/content/terms/` に Markdown を追加する
-3. frontmatter に schema 必須項目を入れる
-4. `status` を `draft` か `published` に設定する
-5. `npm run validate:term-queue` と `npm run build` で確認する
+1. `npm run pick:next-term` で候補を確認する
+2. `npm run scaffold:term -- --slug=<slug>` で安全な下書きを作る
+3. `docs/editorial-style-guide.md` に従って `src/content/terms/` の内容を埋める
+4. `npm run generate:index` を実行する
+5. `npm run ci` を実行する
+6. 失敗した段階のログを見て修正する。見る場所の一覧は [docs/deployment.md](docs/deployment.md) にまとめている
 
 例:
 
@@ -102,13 +119,12 @@ src/content/terms/   用語ページ原稿
 src/content/topics/  分野解説原稿
 data/term-queue.json 用語の優先キュー
 src/lib/             サイト設定・取得処理
-scripts/             将来の自動生成スクリプト
+scripts/             生成・検証・lint 用の CLI
 docs/                設計メモ
 public/              静的アセット
 ```
 
 ## 今後の想定
 
-- `scripts/` に用語自動生成スクリプトを置く
 - `data/term-queue.json` から未着手のものを 1 件ずつ追加する
-- 表記ゆれチェック、リンク切れチェックを自動化する
+- 自動昇格前に `status: draft` と `published` の運用境界を詰める

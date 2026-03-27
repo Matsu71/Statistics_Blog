@@ -16,6 +16,8 @@ async function main() {
     if (report.warnings.length > 0) {
       printWarnings('warnings:', report.warnings);
     }
+    console.error("Look at: data/term-queue.json, src/content/terms/*.md, and src/generated/term-index.json.");
+    console.error("Next step: fix the queue/content/generated-index mismatches above and rerun 'npm run validate:content'.");
     process.exit(1);
   }
 
@@ -26,6 +28,8 @@ async function main() {
     if (report.warnings.length > 0) {
       printWarnings('warnings:', report.warnings);
     }
+    console.error("Look at: src/generated/term-index.json and rerun 'npm run generate:index' locally if needed.");
+    console.error("Next step: regenerate the index, commit the updated file if it changed, and rerun 'npm run validate:content'.");
     process.exit(1);
   }
 
