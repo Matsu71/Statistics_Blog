@@ -1,0 +1,90 @@
+---
+import ContentCard from '../../components/ContentCard.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import PageHero from '../../components/PageHero.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishedTerms, getTermHref } from '../../lib/content';
+import { withBase } from '../../lib/site';
+
+const terms = await getPublishedTerms();
+---
+
+<BaseLayout
+  title="用語一覧"
+  description="統計検定2級向けの学習用語を、1用語1ページで整理した一覧ページです。"
+>
+  <PageHero
+    eyebrow="Terms"
+    title="統計用語を、小さな単位で確実に理解する"
+    description="用語ページは将来の自動生成を前提に、コンテンツをコードから分離して追加しやすい形にしています。"
+  />
+
+  <section class="page-section">
+    <div class="site-shell">
+      <div class="filter-panel">
+        <div>
+          <label for="term-search">用語を探す</label>
+          <input
+            id="term-search"
+            type="search"
+            placeholder="例: 平均 / 分散 / 記述統計"
+            autocomplete="off"
+          />
+        </div>
+        <p class="muted-text" id="term-search-status">{terms.length}件を表示中</p>
+      </div>
+
+      {terms.length > 0 ? (
+        <div class="card-grid" id="term-list">
+          {terms.map((term) => (
+            <ContentCard
+              href={withBase(getTermHref(term))}
+              title={term.data.title}
+              description={term.data.description}
+              meta={`${term.data.category} / ${term.data.examLevel}`}
+              badges={term.data.tags}
+              searchText={[
+                term.data.title,
+                term.data.category,
+                term.data.examLevel,
+                ...term.data.aliases,
+                ...term.data.tags
+              ].join(' ')}
+            />
+          ))}
+        </div>
+      ) : (
+        <EmptyState
+          title="まだ用語ページがありません"
+          description="今後は `src/content/terms/` に Markdown を追加していく想定です。"
+        />
+      )}
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  const input = document.querySelector('#term-search');
+  const cards = Array.from(document.querySelectorAll('[data-search]'));
+  const status = document.querySelector('#term-search-status');
+
+  if (input instanceof HTMLInputElement && status) {
+    const update = () => {
+      const query = input.value.trim().toLowerCase();
+      let visible = 0;
+
+      cards.forEach((card) => {
+        const element = card;
+        const matches = query === '' || element.dataset.search?.includes(query);
+        element.toggleAttribute('hidden', !matches);
+        if (matches) {
+          visible += 1;
+        }
+      });
+
+      status.textContent = `${visible}件を表示中`;
+    };
+
+    input.addEventListener('input', update);
+  }
+</script>

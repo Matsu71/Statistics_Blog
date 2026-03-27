@@ -1,0 +1,82 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishedTerms, getTermHref } from '../../lib/content';
+import { formatDate, withBase } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const terms = await getPublishedTerms();
+
+  return terms.map((term) => ({
+    params: { slug: term.id },
+    props: { term }
+  }));
+}
+
+const { term } = Astro.props;
+const allTerms = await getPublishedTerms();
+const relatedTerms = allTerms.filter((entry) => term.data.relatedTerms.includes(entry.id));
+const { Content, headings } = await render(term);
+---
+
+<BaseLayout title={term.data.title} description={term.data.description}>
+  <section class="page-hero">
+    <div class="site-shell article-layout">
+      <article class="article-card">
+        <p class="eyebrow">用語ページ</p>
+        <h1 class="article-title">{term.data.title}</h1>
+        <p class="article-summary">{term.data.description}</p>
+
+        <div class="article-meta">
+          <span class="meta-chip">{term.data.category}</span>
+          <span class="meta-chip">{term.data.examLevel}</span>
+          {term.data.updatedAt && (
+            <span class="meta-chip">更新: {formatDate(term.data.updatedAt)}</span>
+          )}
+        </div>
+
+        {term.data.aliases.length > 0 && (
+          <div class="link-row" style="margin-top: 1rem;">
+            {term.data.aliases.map((alias) => (
+              <span class="pill">{alias}</span>
+            ))}
+          </div>
+        )}
+
+        <div class="prose">
+          <Content />
+        </div>
+      </article>
+
+      <aside class="toc-card">
+        {headings.length > 0 && (
+          <>
+            <h2>目次</h2>
+            <ol>
+              {headings
+                .filter((heading) => heading.depth <= 2)
+                .map((heading) => (
+                  <li>
+                    <a href={`#${heading.slug}`}>{heading.text}</a>
+                  </li>
+                ))}
+            </ol>
+          </>
+        )}
+
+        {relatedTerms.length > 0 && (
+          <>
+            <h2 style="margin-top: 1.4rem;">関連用語</h2>
+            <ul>
+              {relatedTerms.map((relatedTerm) => (
+                <li>
+                  <a href={withBase(getTermHref(relatedTerm))}>{relatedTerm.data.title}</a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

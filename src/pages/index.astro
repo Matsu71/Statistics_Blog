@@ -1,0 +1,101 @@
+---
+import ContentCard from '../components/ContentCard.astro';
+import PageHero from '../components/PageHero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPublishedTerms, getPublishedTopics, getTermHref } from '../lib/content';
+import { withBase } from '../lib/site';
+
+const terms = await getPublishedTerms();
+const topics = await getPublishedTopics();
+const featuredTerms = terms.slice(0, 3);
+---
+
+<BaseLayout
+  title="ホーム"
+  description="統計検定2級向けの学習用語集サイト。まずは1用語1ページで理解を積み上げる構成です。"
+>
+  <PageHero
+    eyebrow="Prototype"
+    title="1用語1ページで、統計の理解を少しずつ積み上げる"
+    description="文系の初学者でも入口で迷いにくく、それでいて試験と理解の両方に届くことを目指した学習サイトの土台です。"
+  >
+    <div class="hero-actions">
+      <a class="button-link" href={withBase('/terms/')}>用語一覧を見る</a>
+      <a class="ghost-link" href={withBase('/topics/')}>分野解説の準備状況を見る</a>
+    </div>
+
+    <div class="stats-grid" aria-label="サイトの状況">
+      <div class="stat-card">
+        <p class="stat-label">公開中の用語</p>
+        <p class="stat-value">{terms.length}</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">公開中の分野解説</p>
+        <p class="stat-value">{topics.length}</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">想定更新単位</p>
+        <p class="stat-value">1語/回</p>
+      </div>
+    </div>
+  </PageHero>
+
+  <section class="page-section">
+    <div class="site-shell">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">このサイトの使い方</h2>
+          <p class="section-text">
+            まずは用語ページを主軸にし、将来は複数の用語を束ねた分野解説へ発展できるように分けています。
+          </p>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <div class="content-card">
+          <h2 class="content-card__title">1. 用語から入る</h2>
+          <p class="muted-text">
+            「平均」「分散」のような単位で知識を切り出し、必要な理解を小さく積み上げます。
+          </p>
+        </div>
+        <div class="content-card">
+          <h2 class="content-card__title">2. 理解を深める</h2>
+          <p class="muted-text">
+            各ページ内でイメージ、定義、試験での重要点、数式という順に理解を深めます。
+          </p>
+        </div>
+        <div class="content-card">
+          <h2 class="content-card__title">3. 分野でまとめる</h2>
+          <p class="muted-text">
+            将来は確率、推定、検定のような重要分野を、用語ページを再利用して解説します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="site-shell">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">ダミー用語ページ</h2>
+          <p class="section-text">ビルド確認用として最小限のサンプルを入れています。</p>
+        </div>
+        <a class="ghost-link" href={withBase('/terms/')}>すべての用語を見る</a>
+      </div>
+
+      <div class="card-grid">
+        {featuredTerms.map((term) => (
+          <ContentCard
+            href={withBase(getTermHref(term))}
+            title={term.data.title}
+            description={term.data.description}
+            meta={`${term.data.category} / ${term.data.examLevel}`}
+            badges={term.data.tags.slice(0, 3)}
+            searchText={[term.data.title, ...term.data.aliases, ...term.data.tags].join(' ')}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

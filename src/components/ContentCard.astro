@@ -1,0 +1,34 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+  meta?: string;
+  badges?: string[];
+  searchText?: string;
+}
+
+const {
+  href,
+  title,
+  description,
+  meta,
+  badges = [],
+  searchText = ''
+} = Astro.props;
+---
+
+<a class="content-card" href={href} data-search={searchText.toLowerCase()}>
+  <div>
+    <h2 class="content-card__title">{title}</h2>
+    {meta && <p class="content-card__meta">{meta}</p>}
+  </div>
+  <p class="muted-text">{description}</p>
+  {badges.length > 0 && (
+    <ul class="pill-list" aria-label="タグ">
+      {badges.map((badge) => (
+        <li class="pill">{badge}</li>
+      ))}
+    </ul>
+  )}
+</a>

@@ -1,0 +1,15 @@
+---
+import { siteMeta, withBase } from '../lib/site';
+---
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <p>{siteMeta.name} / GitHub Pages で公開する静的な学習サイト</p>
+    <p>
+      次の拡張先:
+      <a href={withBase('/terms/')}>用語ページ追加</a>
+      ・
+      <a href={withBase('/topics/')}>分野解説ページ追加</a>
+    </p>
+  </div>
+</footer>

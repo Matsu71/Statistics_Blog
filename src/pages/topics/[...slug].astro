@@ -1,0 +1,39 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getPublishedTopics } from '../../lib/content';
+import { formatDate } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const topics = await getPublishedTopics();
+
+  return topics.map((topic) => ({
+    params: { slug: topic.id },
+    props: { topic }
+  }));
+}
+
+const { topic } = Astro.props;
+const { Content } = await render(topic);
+---
+
+<BaseLayout title={topic.data.title} description={topic.data.description}>
+  <section class="page-hero">
+    <div class="site-shell">
+      <article class="article-card">
+        <p class="eyebrow">分野解説</p>
+        <h1 class="article-title">{topic.data.title}</h1>
+        <p class="article-summary">{topic.data.description}</p>
+        <div class="article-meta">
+          <span class="meta-chip">{topic.data.status}</span>
+          {topic.data.updatedAt && (
+            <span class="meta-chip">更新: {formatDate(topic.data.updatedAt)}</span>
+          )}
+        </div>
+        <div class="prose">
+          <Content />
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
