@@ -26,17 +26,24 @@ const {
   data-search={searchText.toLowerCase()}
   data-category={category}
 >
+  <div class="content-card__top">
+    {meta ? <p class="content-card__meta">{meta}</p> : <span />}
+    <span class="content-card__icon" aria-hidden="true">↗</span>
+  </div>
   <div class="content-card__header">
     <h2 class="content-card__title">{title}</h2>
-    {meta && <p class="content-card__meta">{meta}</p>}
   </div>
   <p class="content-card__description">{description}</p>
-  {badges.length > 0 && (
-    <ul class="pill-list" aria-label="タグ">
-      {badges.map((badge) => (
-        <li class="pill">{badge}</li>
-      ))}
-    </ul>
-  )}
-  <span class="content-card__arrow" aria-hidden="true">詳しく見る →</span>
+  <div class="content-card__footer">
+    {badges.length > 0 ? (
+      <ul class="pill-list" aria-label="タグ">
+        {badges.map((badge) => (
+          <li class="pill">{badge}</li>
+        ))}
+      </ul>
+    ) : (
+      <span />
+    )}
+    <span class="content-card__arrow" aria-hidden="true">詳しく読む</span>
+  </div>
 </a>

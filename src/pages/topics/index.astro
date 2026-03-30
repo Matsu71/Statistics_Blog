@@ -20,12 +20,33 @@ const topics = await getPublishedTopics();
   description="関連するテーマをまとめる一覧です。"
 >
   <PageHero
+    eyebrow="Topics"
     title="分野解説"
-    description="関連するテーマをまとめるページです。"
-  />
+    description="近い用語をまとめて読み、全体像をつかめます。"
+  >
+    <div class="hero-actions">
+      <a class="button-link" href={withBase('/')}>ホームへ</a>
+      <a class="ghost-link" href={withBase('/terms/')}>用語一覧へ</a>
+    </div>
+    <div class="hero-panel hero-panel--compact" slot="aside">
+      <p class="hero-panel__eyebrow">Bridge</p>
+      <h2 class="hero-panel__title">分野解説の役割</h2>
+      <ul class="hero-panel__list">
+        <li>近い用語をまとめて見渡せます。</li>
+        <li>全体像をつかんでから個別ページへ戻れます。</li>
+      </ul>
+    </div>
+  </PageHero>
 
   <section class="page-section">
     <div class="site-shell">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">一覧</h2>
+          <p class="section-text">関連するテーマをまとめています。</p>
+        </div>
+      </div>
+
       {topics.length > 0 ? (
         <div class="topic-grid">
           {topics.map((topic) => (
@@ -47,7 +68,7 @@ const topics = await getPublishedTopics();
           ))}
         </div>
       ) : (
-        <EmptyState title="準備中" description="公開後にここへ追加します。" />
+        <EmptyState title="準備中" description="ここへ追加します。" />
       )}
     </div>
   </section>

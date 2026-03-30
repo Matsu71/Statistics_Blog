@@ -4,7 +4,7 @@ import EmptyState from '../../components/EmptyState.astro';
 import PageHero from '../../components/PageHero.astro';
 import TermListCard from '../../components/TermListCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getContentLevelLabel, getTermCategoryLabel } from '../../lib/content';
+import { getContentLevelLabel, getExamScopeLabels, getTermCategoryLabel } from '../../lib/content';
 import { withBase } from '../../lib/site';
 
 const terms = termIndex.publishedTerms;
@@ -23,12 +23,34 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
   description="統計検定2級向けの学習用語を、1用語1ページで整理した一覧ページです。"
 >
   <PageHero
+    eyebrow="Glossary"
     title="用語一覧"
-    description="調べたい用語を探せます。"
-  />
+    description="調べたい用語を、検索と絞り込みで見つけて読めます。"
+  >
+    <div class="hero-actions">
+      <a class="button-link" href={withBase('/')}>ホームへ</a>
+      <a class="ghost-link" href={withBase('/topics/')}>分野解説へ</a>
+    </div>
+    <div class="hero-panel hero-panel--compact" slot="aside">
+      <p class="hero-panel__eyebrow">How To Use</p>
+      <h2 class="hero-panel__title">探し方のコツ</h2>
+      <ul class="hero-panel__list">
+        <li>用語名で検索できます。</li>
+        <li>カテゴリで近い概念をまとめて見られます。</li>
+        <li>難易度で学習順を整えられます。</li>
+      </ul>
+    </div>
+  </PageHero>
 
   <section class="page-section">
     <div class="site-shell">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">一覧</h2>
+          <p class="section-text">キーワードとカテゴリで絞り込めます。</p>
+        </div>
+      </div>
+
       <div class="filter-panel filter-panel--stacked">
         <div class="filter-panel__search">
           <label for="term-search">検索</label>
@@ -90,6 +112,7 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
                 categoryKey={term.category}
                 levelLabel={getContentLevelLabel(term.level)}
                 levelKey={term.level}
+                examLabel={getExamScopeLabels(term.examScope).join('・')}
               />
             ))}
           </div>

@@ -9,11 +9,12 @@ const currentPath = Astro.url.pathname.endsWith('/')
 <header class="site-header">
   <div class="site-header__inner">
     <a class="brand" href={withBase('/')}>
+      <span class="brand__eyebrow">Statistics Glossary</span>
       <span class="brand__name">{siteMeta.name}</span>
       <span class="brand__tagline">統計検定2級の学習用語集</span>
     </a>
 
-    <nav aria-label="グローバルナビゲーション">
+    <nav class="site-nav" aria-label="グローバルナビゲーション">
       <ul class="nav-list">
         {navigation.map((item) => {
           const href = withBase(item.href);

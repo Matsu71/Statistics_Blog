@@ -19,19 +19,62 @@ const spotlightTerms = featuredTerms.length > 0 ? featuredTerms : terms.slice(0,
   description="統計検定2級向けの学習用語集です。"
 >
   <PageHero
+    eyebrow="Glossary"
     title="統計用語集"
-    description="統計検定2級向けの用語ページです。"
+    description="統計検定2級向けの用語を、1ページずつ読み進められます。"
   >
     <div class="hero-actions">
       <a class="button-link" href={withBase('/terms/')}>用語一覧を見る</a>
       <a class="ghost-link" href={withBase('/topics/')}>分野解説を見る</a>
+    </div>
+    <div class="hero-panel" slot="aside">
+      <p class="hero-panel__eyebrow">Start Here</p>
+      <h2 class="hero-panel__title">最初に読むなら</h2>
+      <ul class="hero-panel__list">
+        {spotlightTerms.map((term) => (
+          <li>
+            <a href={withBase(term.href)}>
+              <strong>{term.title}</strong>
+              <span>{term.shortDefinition}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
   </PageHero>
 
   <section class="page-section">
     <div class="site-shell">
       <div class="section-head">
-        <h2 class="section-title">注目</h2>
+        <div>
+          <h2 class="section-title">入口</h2>
+          <p class="section-text">探し方に合わせて入口を分けています。</p>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <ContentCard
+          href={withBase('/terms/')}
+          title="用語一覧"
+          description="用語を起点に、定義と試験ポイントを確認できます。"
+        />
+        <ContentCard
+          href={withBase('/topics/')}
+          title="分野解説"
+          description="近い概念をまとめて読み、用語同士のつながりをつかめます。"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section">
+    <div class="site-shell">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">注目</h2>
+          <p class="section-text">はじめてでも入りやすい用語です。</p>
+        </div>
+        <a class="ghost-link" href={withBase('/terms/')}>一覧へ</a>
       </div>
 
       <div class="card-grid">
