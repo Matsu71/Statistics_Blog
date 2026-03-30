@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-03-27",
+  "updated_at": "2026-03-30",
   "target_exam": "statistics_grade_2",
   "target_exam_label": "統計検定2級",
   "status_vocab": {
@@ -165,11 +165,12 @@
       "title": "母集団",
       "category": "sampling_distribution",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": ["statistics_grade_2"],
       "prerequisites": [],
-      "related_terms": ["sample", "population-mean", "population-variance"]
+      "related_terms": ["sample", "population-mean", "population-variance"],
+      "content_path": "src/content/terms/population.md"
     },
     {
       "slug": "sample",
