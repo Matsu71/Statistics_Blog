@@ -2,7 +2,7 @@ import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileExists, readMarkdownRecord, rootDir } from './lib/term-pipeline.mjs';
 
-const docsDir = path.join(rootDir, 'docs');
+const repoDocsDir = path.join(rootDir, 'project-docs');
 const agentsPath = path.join(rootDir, 'AGENTS.md');
 const skillsDir = path.join(rootDir, '.agents', 'skills');
 const termsDir = path.join(rootDir, 'src', 'content', 'terms');
@@ -248,7 +248,7 @@ async function main() {
   const docsFiles = [
     path.join(rootDir, 'README.md'),
     agentsPath,
-    ...(await walkMarkdownFiles(docsDir)),
+    ...(await walkMarkdownFiles(repoDocsDir)),
     ...(await walkMarkdownFiles(skillsDir))
   ];
   const contentFiles = [

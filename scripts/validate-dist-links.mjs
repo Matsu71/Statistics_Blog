@@ -1,12 +1,12 @@
 import { access, readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
+import { defaultBuildDir, resolveNormalizedBasePath } from '../site-build.config.mjs';
 
 const rootDir = process.cwd();
-const distDir = path.join(rootDir, 'dist');
+const buildDir = path.join(rootDir, defaultBuildDir);
 const generatedTermIndexPath = path.join(rootDir, 'src', 'generated', 'term-index.json');
 const ignoredSchemes = /^(https?:|mailto:|tel:|javascript:|data:)/i;
-const repository = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? '';
-const publicBasePath = (process.env.PUBLIC_BASE_PATH ?? '').replace(/^\/+|\/+$/g, '');
+const publicBasePath = resolveNormalizedBasePath();
 
 async function fileExists(targetPath) {
   try {
@@ -37,8 +37,8 @@ async function walkHtmlFiles(directory) {
   return results;
 }
 
-function toDistRelativePath(targetPath) {
-  return path.relative(distDir, targetPath).split(path.sep).join('/');
+function toBuildRelativePath(targetPath) {
+  return path.relative(buildDir, targetPath).split(path.sep).join('/');
 }
 
 function extractTargetsByAttribute(content, attributeName) {
@@ -93,7 +93,7 @@ async function targetExists(relativeTarget) {
   const candidates = getCandidatePaths(relativeTarget);
 
   for (const candidate of candidates) {
-    if (await fileExists(path.join(distDir, candidate))) {
+    if (await fileExists(path.join(buildDir, candidate))) {
       return true;
     }
   }
@@ -111,11 +111,6 @@ async function absoluteTargetExists(cleanTarget) {
   if (publicBasePath !== '' && normalized.startsWith(`${publicBasePath}/`)) {
     return targetExists(normalized.slice(publicBasePath.length + 1));
   }
-
-  if (repository !== '' && normalized.startsWith(`${repository}/`)) {
-    return targetExists(normalized.slice(repository.length + 1));
-  }
-
   return false;
 }
 
@@ -128,10 +123,6 @@ async function relativeTargetExists(cleanTarget, sourceRelativePath) {
 function getEffectiveBasePath() {
   if (publicBasePath !== '') {
     return `/${publicBasePath}`;
-  }
-
-  if (repository !== '') {
-    return `/${repository}`;
   }
 
   return '';
@@ -148,10 +139,10 @@ async function validateTermsIndexCoverage(errors) {
     return;
   }
 
-  const termsIndexPath = path.join(distDir, 'terms', 'index.html');
+  const termsIndexPath = path.join(buildDir, 'terms', 'index.html');
 
   if (!(await fileExists(termsIndexPath))) {
-    errors.push('dist/terms/index.html is missing. Run npm run build before validating built links.');
+    errors.push(`${defaultBuildDir}/terms/index.html is missing. Run npm run build before validating built links.`);
     return;
   }
 
@@ -163,24 +154,24 @@ async function validateTermsIndexCoverage(errors) {
 
     if (!termsIndexHtml.includes(`href="${expectedHref}"`) && !termsIndexHtml.includes(`href='${expectedHref}'`)) {
       errors.push(
-        `dist/terms/index.html: published term "${term.slug}" is missing from the built terms index (${expectedHref}).`
+        `${defaultBuildDir}/terms/index.html: published term "${term.slug}" is missing from the built terms index (${expectedHref}).`
       );
     }
   }
 }
 
 async function main() {
-  if (!(await fileExists(distDir))) {
-    console.error('validate:links failed: dist/ does not exist. Run npm run build first.');
+  if (!(await fileExists(buildDir))) {
+    console.error(`validate:links failed: ${defaultBuildDir}/ does not exist. Run npm run build first.`);
     process.exit(1);
   }
 
-  const htmlFiles = await walkHtmlFiles(distDir);
+  const htmlFiles = await walkHtmlFiles(buildDir);
   const errors = [];
 
   for (const filePath of htmlFiles) {
     const content = await readFile(filePath, 'utf8');
-    const sourceRelativePath = toDistRelativePath(filePath);
+    const sourceRelativePath = toBuildRelativePath(filePath);
 
     for (const target of extractAssetTargets(content)) {
       if (target === '' || target.startsWith('#') || ignoredSchemes.test(target)) {
@@ -198,7 +189,7 @@ async function main() {
         : await relativeTargetExists(cleanTarget, sourceRelativePath);
 
       if (!exists) {
-        errors.push(`dist/${sourceRelativePath}: broken internal asset or link target "${target}"`);
+        errors.push(`${defaultBuildDir}/${sourceRelativePath}: broken internal asset or link target "${target}"`);
       }
     }
   }
@@ -210,7 +201,7 @@ async function main() {
     for (const error of errors) {
       console.error(`- ${error}`);
     }
-    console.error('Look at: dist/**/*.html, src/pages/**, src/content/**, and src/generated/term-index.json.');
+    console.error(`Look at: ${defaultBuildDir}/**/*.html, src/pages/**, src/content/**, and src/generated/term-index.json.`);
     console.error('Next step: inspect the reported built page and fix the missing route or link source before deploying.');
     process.exit(1);
   }

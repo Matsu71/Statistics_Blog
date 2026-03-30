@@ -5,7 +5,7 @@ Codex Automation や手動運用から呼べるように、用語追加パイプ
 ## 主なコマンド
 
 - `npm run lint`
-  - `README.md`、`docs/`、`src/content/` のリンク切れを中心にした repo-specific lint を実行します。
+  - `README.md`、`project-docs/`、`src/content/` のリンク切れを中心にした repo-specific lint を実行します。
 - `npm run typecheck`
   - `astro check` を実行し、Astro / TypeScript の型エラーを検査します。
 - `npm run pick:next-term`
@@ -16,12 +16,14 @@ Codex Automation や手動運用から呼べるように、用語追加パイプ
   - queue の語彙・path・status と実ファイルの最低限の整合を検査します。
 - `npm run validate:content`
   - queue と content の cross-check、必須 frontmatter、関連語、編集ガイド由来 warning を検査します。
+- `npm run validate`
+  - `validate:term-queue` と `validate:content -- --strict` を続けて実行します。
 - `npm run validate:links`
-  - build 後の `dist/**/*.html` を走査し、内部リンク切れと用語一覧未反映を検査します。
+  - build 後の `docs/**/*.html` を走査し、内部リンク切れと用語一覧未反映を検査します。
 - `npm run generate:index`
   - `src/generated/term-index.json` を再生成し、ホームと用語一覧の導線データを更新します。
-- `npm run ci`
-  - `quality:content -> quality:site -> quality:build` を順に実行します。
+- `npm run verify`
+  - `validate -> lint -> typecheck -> build -> validate:links` を順に実行します。
 
 ## 実装方針
 
@@ -29,4 +31,4 @@ Codex Automation や手動運用から呼べるように、用語追加パイプ
 - content の正本は `src/content/terms/*.md`
 - 生成物の正本は `src/generated/term-index.json` ではなく、常に queue と content
 - 共通ロジックは `scripts/lib/term-pipeline.mjs` に寄せ、コマンドごとの判定差を避けます
-- `npm run ci` は index を自動再生成しません。内容を変えた回は先に `npm run generate:index` を実行し、未反映なら `validate:content` で止めます
+- `npm run verify` は index を自動再生成しません。内容を変えた回は先に `npm run generate:index` を実行し、未反映なら `validate:content` で止めます

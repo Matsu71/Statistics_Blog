@@ -10,7 +10,7 @@
     "dev": "astro dev",
     "start": "astro dev",
     "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
-    "preview": "astro preview",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
     "check": "ASTRO_TELEMETRY_DISABLED=1 astro check",
     "typecheck": "ASTRO_TELEMETRY_DISABLED=1 astro check",
     "lint": "node scripts/lint-repo.mjs",
@@ -18,12 +18,13 @@
     "scaffold:term": "node scripts/scaffold-term.mjs",
     "validate:term-queue": "node scripts/validate-term-queue.mjs",
     "validate:content": "node scripts/validate-content.mjs",
+    "validate": "npm run validate:term-queue && npm run validate:content -- --strict",
     "validate:links": "node scripts/validate-dist-links.mjs",
     "generate:index": "node scripts/generate-term-index.mjs",
-    "quality:content": "npm run validate:term-queue && npm run validate:content -- --strict",
+    "quality:content": "npm run validate",
     "quality:site": "npm run lint && npm run typecheck",
     "quality:build": "npm run build && npm run validate:links",
-    "ci": "npm run quality:content && npm run quality:site && npm run quality:build"
+    "verify": "npm run quality:content && npm run quality:site && npm run quality:build"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",
