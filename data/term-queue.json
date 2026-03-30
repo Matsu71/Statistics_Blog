@@ -177,11 +177,12 @@
       "title": "標本",
       "category": "sampling_distribution",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": ["statistics_grade_2"],
       "prerequisites": ["population"],
-      "related_terms": ["population", "sample-mean"]
+      "related_terms": ["population", "sample-mean"],
+      "content_path": "src/content/terms/sample.md"
     },
     {
       "slug": "random-sampling",

@@ -1,22 +1,23 @@
 {
-  "generatedAt": "2026-03-30T13:47:25.710Z",
+  "generatedAt": "2026-03-30T14:21:35.132Z",
   "stats": {
-    "publishedCount": 5,
+    "publishedCount": 6,
     "draftCount": 0,
-    "unstartedCount": 66
+    "unstartedCount": 65
   },
   "nextTerm": {
-    "slug": "sample",
-    "title": "標本",
+    "slug": "sample-mean",
+    "title": "標本平均",
     "category": "sampling_distribution",
     "level": "foundation",
     "priority": 1,
     "prerequisites": [
-      "population"
+      "mean",
+      "sample"
     ],
     "relatedTerms": [
-      "population",
-      "sample-mean"
+      "population-mean",
+      "standard-error"
     ]
   },
   "publishedTerms": [
@@ -112,7 +113,32 @@
       "updatedAt": "2026-03-30",
       "href": "/terms/population/",
       "searchText": "母集団 統計で知りたい対象全体を指し、標本がどこから取り出されたかを決める出発点です。 sampling_distribution statistics_grade_2 標本調査 母数 推測統計",
-      "relatedPublishedSlugs": []
+      "relatedPublishedSlugs": [
+        "sample"
+      ]
+    },
+    {
+      "slug": "sample",
+      "title": "標本",
+      "shortDefinition": "母集団から取り出して、実際に観測や集計の対象にした一部のデータです。",
+      "category": "sampling_distribution",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "標本調査",
+        "推測統計",
+        "統計量"
+      ],
+      "sortOrder": 130,
+      "updatedAt": "2026-03-30",
+      "href": "/terms/sample/",
+      "searchText": "標本 母集団から取り出して、実際に観測や集計の対象にした一部のデータです。 sampling_distribution statistics_grade_2 標本調査 推測統計 統計量",
+      "relatedPublishedSlugs": [
+        "population"
+      ]
     },
     {
       "slug": "normal-distribution",
@@ -162,9 +188,9 @@
       "unstarted": 12
     },
     "sampling_distribution": {
-      "published": 1,
+      "published": 2,
       "draft": 0,
-      "unstarted": 12
+      "unstarted": 11
     },
     "estimation": {
       "published": 0,
