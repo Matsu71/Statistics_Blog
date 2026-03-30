@@ -7,10 +7,6 @@ interface Props {
   categoryKey: string;
   levelLabel: string;
   levelKey: string;
-  examLabel: string;
-  aliases?: string[];
-  tags?: string[];
-  relatedCount?: number;
   searchText?: string;
 }
 
@@ -22,10 +18,6 @@ const {
   categoryKey,
   levelLabel,
   levelKey,
-  examLabel,
-  aliases = [],
-  tags = [],
-  relatedCount = 0,
   searchText = ''
 } = Astro.props;
 ---
@@ -37,28 +29,7 @@ const {
   data-category={categoryKey}
   data-level={levelKey}
 >
-  <div class="term-list-card__head">
-    <div>
-      <p class="term-list-card__meta">{categoryLabel} / {levelLabel}</p>
-      <h2 class="term-list-card__title">{title}</h2>
-    </div>
-    <span class="pill">{examLabel}</span>
-  </div>
-
+  <p class="term-list-card__meta">{categoryLabel} / {levelLabel}</p>
+  <h2 class="term-list-card__title">{title}</h2>
   <p class="term-list-card__description">{description}</p>
-
-  {aliases.length > 0 && (
-    <p class="term-list-card__aliases">別名: {aliases.join(' / ')}</p>
-  )}
-
-  <div class="term-list-card__footer">
-    {tags.length > 0 && (
-      <ul class="pill-list" aria-label="タグ">
-        {tags.slice(0, 3).map((tag) => (
-          <li class="pill">{tag}</li>
-        ))}
-      </ul>
-    )}
-    <span class="term-list-card__count">関連 {relatedCount} 件</span>
-  </div>
 </a>

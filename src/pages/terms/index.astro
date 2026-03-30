@@ -4,15 +4,10 @@ import EmptyState from '../../components/EmptyState.astro';
 import PageHero from '../../components/PageHero.astro';
 import TermListCard from '../../components/TermListCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import {
-  getContentLevelLabel,
-  getExamScopeLabels,
-  getTermCategoryLabel
-} from '../../lib/content';
+import { getContentLevelLabel, getTermCategoryLabel } from '../../lib/content';
 import { withBase } from '../../lib/site';
 
 const terms = termIndex.publishedTerms;
-const nextTerm = termIndex.nextTerm;
 const categories = Array.from(new Set(terms.map((term) => term.category))).map((category) => ({
   value: category,
   label: getTermCategoryLabel(category)
@@ -28,32 +23,22 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
   description="統計検定2級向けの学習用語を、1用語1ページで整理した一覧ページです。"
 >
   <PageHero
-    eyebrow="Glossary"
-    title="学びたい用語から、すぐ入れる一覧ページ"
-    description="検索しながら、カテゴリやレベルを手がかりに読み進められます。まずは短い定義を読み、必要なら詳細ページで式や厳密な説明まで確認できます。"
-  >
-    <div class="hero-actions">
-      <a class="button-link" href={withBase('/')}>トップへ戻る</a>
-      <a class="ghost-link" href={withBase('/topics/')}>分野解説一覧を見る</a>
-    </div>
-  </PageHero>
+    title="用語一覧"
+    description="調べたい用語を探せます。"
+  />
 
   <section class="page-section">
     <div class="site-shell">
       <div class="filter-panel filter-panel--stacked">
         <div class="filter-panel__search">
-          <label for="term-search">用語を探す</label>
+          <label for="term-search">検索</label>
           <input
             class="search-input"
             id="term-search"
             type="search"
-            placeholder="例: 分散 / 正規分布 / 仮説検定"
+            placeholder="分散 / 正規分布"
             autocomplete="off"
-            aria-describedby="term-search-help"
           />
-          <p class="muted-text" id="term-search-help">
-            タイトル、定義、別名、タグから絞り込めます。
-          </p>
         </div>
 
         <div class="filter-panel__controls">
@@ -69,7 +54,7 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
         </div>
 
         <div class="filter-panel__categories">
-          <p class="filter-panel__label">カテゴリで絞る</p>
+          <p class="filter-panel__label">カテゴリ</p>
           <div class="filter-chip-group" role="group" aria-label="カテゴリフィルター">
             <button class="filter-chip is-active" type="button" data-category="all" aria-pressed="true">
               すべて
@@ -90,14 +75,6 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
         <p class="muted-text" id="term-search-status" aria-live="polite">
           {terms.length}件を表示中
         </p>
-        <p class="muted-text">
-          公開済み {termIndex.stats.publishedCount}件 / 下書き {termIndex.stats.draftCount}件 / 未着手 {termIndex.stats.unstartedCount}件
-        </p>
-        {nextTerm && (
-          <p class="muted-text">
-            次に追加予定: {nextTerm.title}（{getTermCategoryLabel(nextTerm.category)}）
-          </p>
-        )}
       </div>
 
       {terms.length > 0 ? (
@@ -113,25 +90,16 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
                 categoryKey={term.category}
                 levelLabel={getContentLevelLabel(term.level)}
                 levelKey={term.level}
-                examLabel={getExamScopeLabels(term.examScope).join('・')}
-                aliases={term.aliases}
-                tags={term.tags}
-                relatedCount={term.relatedPublishedSlugs.length}
               />
             ))}
           </div>
           <div class="empty-card empty-inline" id="term-empty-result" hidden>
-            <h2 class="content-card__title">該当する用語が見つかりません</h2>
-            <p class="muted-text">
-              検索語を短くするか、カテゴリや難易度の絞り込みを外してもう一度試してください。
-            </p>
+            <h2 class="content-card__title">見つかりません</h2>
+            <p class="muted-text">条件を変えて試してください。</p>
           </div>
         </>
       ) : (
-        <EmptyState
-          title="まだ用語ページがありません"
-          description="今後は `src/content/terms/` に Markdown を追加していく想定です。"
-        />
+        <EmptyState title="まだありません" description="用語ページは準備中です。" />
       )}
     </div>
   </section>

@@ -17,12 +17,11 @@ const topics = await getPublishedTopics();
 
 <BaseLayout
   title="分野解説"
-  description="将来的に確率、推定、検定などの重要分野をまとめるための一覧ページです。"
+  description="関連するテーマをまとめる一覧です。"
 >
   <PageHero
-    eyebrow="Topics"
-    title="重要分野の解説ページを、あとから積み上げる"
-    description="今は空の受け皿ですが、用語ページが増えたあとに分野ごとのまとめ記事を追加できるように分けています。"
+    title="分野解説"
+    description="関連するテーマをまとめるページです。"
   />
 
   <section class="page-section">
@@ -48,10 +47,7 @@ const topics = await getPublishedTopics();
           ))}
         </div>
       ) : (
-        <EmptyState
-          title="分野解説ページはまだ未着手です"
-          description="まずは `src/content/terms/` に用語ページを蓄積し、その後で `src/content/topics/` に統合的な解説を追加する想定です。"
-        />
+        <EmptyState title="準備中" description="公開後にここへ追加します。" />
       )}
     </div>
   </section>
