@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-03-30T14:21:35.132Z",
+  "generatedAt": "2026-03-31T18:44:46.356Z",
   "stats": {
-    "publishedCount": 6,
+    "publishedCount": 7,
     "draftCount": 0,
-    "unstartedCount": 65
+    "unstartedCount": 64
   },
   "nextTerm": {
-    "slug": "sample-mean",
-    "title": "標本平均",
+    "slug": "population-mean",
+    "title": "母平均",
     "category": "sampling_distribution",
     "level": "foundation",
     "priority": 1,
     "prerequisites": [
-      "mean",
-      "sample"
+      "population",
+      "mean"
     ],
     "relatedTerms": [
-      "population-mean",
-      "standard-error"
+      "sample-mean",
+      "population-variance"
     ]
   },
   "publishedTerms": [
@@ -137,8 +137,30 @@
       "href": "/terms/sample/",
       "searchText": "標本 母集団から取り出して、実際に観測や集計の対象にした一部のデータです。 sampling_distribution statistics_grade_2 標本調査 推測統計 統計量",
       "relatedPublishedSlugs": [
-        "population"
+        "population",
+        "sample-mean"
       ]
+    },
+    {
+      "slug": "sample-mean",
+      "title": "標本平均",
+      "shortDefinition": "標本に含まれる観測値を合計して個数で割った、標本を代表する平均です。",
+      "category": "sampling_distribution",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "標本",
+        "平均",
+        "統計量"
+      ],
+      "sortOrder": 150,
+      "updatedAt": "2026-03-31",
+      "href": "/terms/sample-mean/",
+      "searchText": "標本平均 標本に含まれる観測値を合計して個数で割った、標本を代表する平均です。 sampling_distribution statistics_grade_2 標本 平均 統計量",
+      "relatedPublishedSlugs": []
     },
     {
       "slug": "normal-distribution",
@@ -188,9 +210,9 @@
       "unstarted": 12
     },
     "sampling_distribution": {
-      "published": 2,
+      "published": 3,
       "draft": 0,
-      "unstarted": 11
+      "unstarted": 10
     },
     "estimation": {
       "published": 0,

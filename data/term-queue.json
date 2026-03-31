@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-03-30",
+  "updated_at": "2026-03-31",
   "target_exam": "statistics_grade_2",
   "target_exam_label": "統計検定2級",
   "status_vocab": {
@@ -43,9 +43,14 @@
       "priority": 1,
       "status": "published",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
       "prerequisites": [],
-      "related_terms": ["variance", "standard-deviation"],
+      "related_terms": [
+        "variance",
+        "standard-deviation"
+      ],
       "content_path": "src/content/terms/mean.md"
     },
     {
@@ -55,9 +60,17 @@
       "priority": 1,
       "status": "published",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["mean"],
-      "related_terms": ["mean", "standard-deviation", "normal-distribution"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "mean"
+      ],
+      "related_terms": [
+        "mean",
+        "standard-deviation",
+        "normal-distribution"
+      ],
       "content_path": "src/content/terms/variance.md"
     },
     {
@@ -67,9 +80,17 @@
       "priority": 1,
       "status": "published",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["mean", "variance"],
-      "related_terms": ["mean", "variance"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "mean",
+        "variance"
+      ],
+      "related_terms": [
+        "mean",
+        "variance"
+      ],
       "content_path": "src/content/terms/standard-deviation.md"
     },
     {
@@ -79,9 +100,14 @@
       "priority": 2,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
       "prerequisites": [],
-      "related_terms": ["mean", "mode"]
+      "related_terms": [
+        "mean",
+        "mode"
+      ]
     },
     {
       "slug": "mode",
@@ -90,9 +116,14 @@
       "priority": 3,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
       "prerequisites": [],
-      "related_terms": ["mean", "median"]
+      "related_terms": [
+        "mean",
+        "median"
+      ]
     },
     {
       "slug": "quartile",
@@ -101,9 +132,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["median"],
-      "related_terms": ["interquartile-range", "box-plot"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "median"
+      ],
+      "related_terms": [
+        "interquartile-range",
+        "box-plot"
+      ]
     },
     {
       "slug": "interquartile-range",
@@ -112,9 +150,16 @@
       "priority": 3,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["quartile"],
-      "related_terms": ["quartile", "box-plot"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "quartile"
+      ],
+      "related_terms": [
+        "quartile",
+        "box-plot"
+      ]
     },
     {
       "slug": "range",
@@ -123,9 +168,14 @@
       "priority": 3,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
       "prerequisites": [],
-      "related_terms": ["variance", "standard-deviation"]
+      "related_terms": [
+        "variance",
+        "standard-deviation"
+      ]
     },
     {
       "slug": "coefficient-of-variation",
@@ -134,9 +184,16 @@
       "priority": 3,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["mean", "standard-deviation"],
-      "related_terms": ["standard-deviation"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "mean",
+        "standard-deviation"
+      ],
+      "related_terms": [
+        "standard-deviation"
+      ]
     },
     {
       "slug": "histogram",
@@ -145,9 +202,13 @@
       "priority": 3,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
       "prerequisites": [],
-      "related_terms": ["box-plot"]
+      "related_terms": [
+        "box-plot"
+      ]
     },
     {
       "slug": "box-plot",
@@ -156,9 +217,17 @@
       "priority": 3,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["quartile", "interquartile-range"],
-      "related_terms": ["quartile", "interquartile-range"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "quartile",
+        "interquartile-range"
+      ],
+      "related_terms": [
+        "quartile",
+        "interquartile-range"
+      ]
     },
     {
       "slug": "population",
@@ -167,9 +236,15 @@
       "priority": 1,
       "status": "published",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
       "prerequisites": [],
-      "related_terms": ["sample", "population-mean", "population-variance"],
+      "related_terms": [
+        "sample",
+        "population-mean",
+        "population-variance"
+      ],
       "content_path": "src/content/terms/population.md"
     },
     {
@@ -179,9 +254,16 @@
       "priority": 1,
       "status": "published",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["population"],
-      "related_terms": ["population", "sample-mean"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "population"
+      ],
+      "related_terms": [
+        "population",
+        "sample-mean"
+      ],
       "content_path": "src/content/terms/sample.md"
     },
     {
@@ -191,20 +273,36 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["population", "sample"],
-      "related_terms": ["sample"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "population",
+        "sample"
+      ],
+      "related_terms": [
+        "sample"
+      ]
     },
     {
       "slug": "sample-mean",
       "title": "標本平均",
       "category": "sampling_distribution",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["mean", "sample"],
-      "related_terms": ["population-mean", "standard-error"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "mean",
+        "sample"
+      ],
+      "related_terms": [
+        "population-mean",
+        "standard-error"
+      ],
+      "content_path": "src/content/terms/sample-mean.md"
     },
     {
       "slug": "population-mean",
@@ -213,9 +311,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["population", "mean"],
-      "related_terms": ["sample-mean", "population-variance"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "population",
+        "mean"
+      ],
+      "related_terms": [
+        "sample-mean",
+        "population-variance"
+      ]
     },
     {
       "slug": "population-variance",
@@ -224,9 +330,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["population", "variance"],
-      "related_terms": ["sample-variance", "unbiased-variance"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "population",
+        "variance"
+      ],
+      "related_terms": [
+        "sample-variance",
+        "unbiased-variance"
+      ]
     },
     {
       "slug": "sample-variance",
@@ -235,9 +349,17 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["sample", "variance"],
-      "related_terms": ["unbiased-variance", "standard-deviation"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "sample",
+        "variance"
+      ],
+      "related_terms": [
+        "unbiased-variance",
+        "standard-deviation"
+      ]
     },
     {
       "slug": "unbiased-variance",
@@ -246,9 +368,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["sample-variance", "population-variance"],
-      "related_terms": ["sample-variance", "unbiased-estimator"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "sample-variance",
+        "population-variance"
+      ],
+      "related_terms": [
+        "sample-variance",
+        "unbiased-estimator"
+      ]
     },
     {
       "slug": "standard-error",
@@ -257,9 +387,17 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["sample-mean", "standard-deviation"],
-      "related_terms": ["sample-mean", "central-limit-theorem"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "sample-mean",
+        "standard-deviation"
+      ],
+      "related_terms": [
+        "sample-mean",
+        "central-limit-theorem"
+      ]
     },
     {
       "slug": "sample-space",
@@ -268,9 +406,14 @@
       "priority": 2,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
       "prerequisites": [],
-      "related_terms": ["event", "probability"]
+      "related_terms": [
+        "event",
+        "probability"
+      ]
     },
     {
       "slug": "event",
@@ -279,9 +422,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["sample-space"],
-      "related_terms": ["probability", "conditional-probability"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "sample-space"
+      ],
+      "related_terms": [
+        "probability",
+        "conditional-probability"
+      ]
     },
     {
       "slug": "probability",
@@ -290,9 +440,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["sample-space", "event"],
-      "related_terms": ["conditional-probability", "independence"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "sample-space",
+        "event"
+      ],
+      "related_terms": [
+        "conditional-probability",
+        "independence"
+      ]
     },
     {
       "slug": "conditional-probability",
@@ -301,9 +459,17 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability", "event"],
-      "related_terms": ["independence", "bayes-theorem"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability",
+        "event"
+      ],
+      "related_terms": [
+        "independence",
+        "bayes-theorem"
+      ]
     },
     {
       "slug": "independence",
@@ -312,9 +478,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability", "conditional-probability"],
-      "related_terms": ["conditional-probability"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability",
+        "conditional-probability"
+      ],
+      "related_terms": [
+        "conditional-probability"
+      ]
     },
     {
       "slug": "bayes-theorem",
@@ -323,9 +496,16 @@
       "priority": 3,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["conditional-probability"],
-      "related_terms": ["conditional-probability", "probability"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "conditional-probability"
+      ],
+      "related_terms": [
+        "conditional-probability",
+        "probability"
+      ]
     },
     {
       "slug": "probability-variable",
@@ -334,9 +514,18 @@
       "priority": 1,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability", "event", "sample-space"],
-      "related_terms": ["probability-distribution", "expected-value"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability",
+        "event",
+        "sample-space"
+      ],
+      "related_terms": [
+        "probability-distribution",
+        "expected-value"
+      ]
     },
     {
       "slug": "expected-value",
@@ -345,9 +534,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability-variable", "mean"],
-      "related_terms": ["variance", "probability-distribution"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability-variable",
+        "mean"
+      ],
+      "related_terms": [
+        "variance",
+        "probability-distribution"
+      ]
     },
     {
       "slug": "covariance",
@@ -356,9 +553,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["expected-value", "variance"],
-      "related_terms": ["correlation-coefficient"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "expected-value",
+        "variance"
+      ],
+      "related_terms": [
+        "correlation-coefficient"
+      ]
     },
     {
       "slug": "probability-distribution",
@@ -367,8 +571,12 @@
       "priority": 1,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability-variable"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability-variable"
+      ],
       "related_terms": [
         "probability-mass-function",
         "probability-density-function",
@@ -382,9 +590,16 @@
       "priority": 3,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability-distribution"],
-      "related_terms": ["probability-density-function", "bernoulli-distribution"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability-distribution"
+      ],
+      "related_terms": [
+        "probability-density-function",
+        "bernoulli-distribution"
+      ]
     },
     {
       "slug": "probability-density-function",
@@ -393,9 +608,16 @@
       "priority": 3,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability-distribution"],
-      "related_terms": ["cumulative-distribution-function", "normal-distribution"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability-distribution"
+      ],
+      "related_terms": [
+        "cumulative-distribution-function",
+        "normal-distribution"
+      ]
     },
     {
       "slug": "cumulative-distribution-function",
@@ -404,9 +626,16 @@
       "priority": 3,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability-distribution"],
-      "related_terms": ["probability-mass-function", "probability-density-function"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability-distribution"
+      ],
+      "related_terms": [
+        "probability-mass-function",
+        "probability-density-function"
+      ]
     },
     {
       "slug": "bernoulli-distribution",
@@ -415,9 +644,15 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability-distribution"],
-      "related_terms": ["binomial-distribution"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability-distribution"
+      ],
+      "related_terms": [
+        "binomial-distribution"
+      ]
     },
     {
       "slug": "binomial-distribution",
@@ -426,9 +661,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability-distribution", "bernoulli-distribution"],
-      "related_terms": ["normal-distribution", "expected-value"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability-distribution",
+        "bernoulli-distribution"
+      ],
+      "related_terms": [
+        "normal-distribution",
+        "expected-value"
+      ]
     },
     {
       "slug": "poisson-distribution",
@@ -437,9 +680,15 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability-distribution"],
-      "related_terms": ["binomial-distribution"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability-distribution"
+      ],
+      "related_terms": [
+        "binomial-distribution"
+      ]
     },
     {
       "slug": "geometric-distribution",
@@ -448,9 +697,15 @@
       "priority": 3,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability-distribution"],
-      "related_terms": ["binomial-distribution"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability-distribution"
+      ],
+      "related_terms": [
+        "binomial-distribution"
+      ]
     },
     {
       "slug": "normal-distribution",
@@ -459,9 +714,21 @@
       "priority": 1,
       "status": "published",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["probability-distribution", "mean", "variance"],
-      "related_terms": ["mean", "variance", "standard-deviation", "standard-normal-distribution", "standardization"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "probability-distribution",
+        "mean",
+        "variance"
+      ],
+      "related_terms": [
+        "mean",
+        "variance",
+        "standard-deviation",
+        "standard-normal-distribution",
+        "standardization"
+      ],
       "content_path": "src/content/terms/normal-distribution.md"
     },
     {
@@ -471,9 +738,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["normal-distribution", "standardization"],
-      "related_terms": ["z-score"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "normal-distribution",
+        "standardization"
+      ],
+      "related_terms": [
+        "z-score"
+      ]
     },
     {
       "slug": "t-distribution",
@@ -482,9 +756,17 @@
       "priority": 2,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["standard-normal-distribution", "standard-error"],
-      "related_terms": ["hypothesis-testing", "confidence-interval"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "standard-normal-distribution",
+        "standard-error"
+      ],
+      "related_terms": [
+        "hypothesis-testing",
+        "confidence-interval"
+      ]
     },
     {
       "slug": "chi-square-distribution",
@@ -493,9 +775,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["normal-distribution", "variance"],
-      "related_terms": ["f-distribution"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "normal-distribution",
+        "variance"
+      ],
+      "related_terms": [
+        "f-distribution"
+      ]
     },
     {
       "slug": "f-distribution",
@@ -504,9 +793,15 @@
       "priority": 3,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["chi-square-distribution"],
-      "related_terms": ["regression-line"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "chi-square-distribution"
+      ],
+      "related_terms": [
+        "regression-line"
+      ]
     },
     {
       "slug": "central-limit-theorem",
@@ -515,9 +810,17 @@
       "priority": 2,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["sample-mean", "normal-distribution"],
-      "related_terms": ["standard-error", "law-of-large-numbers"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "sample-mean",
+        "normal-distribution"
+      ],
+      "related_terms": [
+        "standard-error",
+        "law-of-large-numbers"
+      ]
     },
     {
       "slug": "law-of-large-numbers",
@@ -526,9 +829,16 @@
       "priority": 3,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["sample-mean", "population-mean"],
-      "related_terms": ["central-limit-theorem"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "sample-mean",
+        "population-mean"
+      ],
+      "related_terms": [
+        "central-limit-theorem"
+      ]
     },
     {
       "slug": "standardization",
@@ -537,9 +847,18 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["mean", "standard-deviation", "normal-distribution"],
-      "related_terms": ["z-score", "standard-normal-distribution"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "mean",
+        "standard-deviation",
+        "normal-distribution"
+      ],
+      "related_terms": [
+        "z-score",
+        "standard-normal-distribution"
+      ]
     },
     {
       "slug": "z-score",
@@ -548,9 +867,15 @@
       "priority": 3,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["standardization"],
-      "related_terms": ["standard-normal-distribution"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "standardization"
+      ],
+      "related_terms": [
+        "standard-normal-distribution"
+      ]
     },
     {
       "slug": "estimation",
@@ -559,9 +884,18 @@
       "priority": 1,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["sample", "population"],
-      "related_terms": ["estimator", "point-estimation", "interval-estimation"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "sample",
+        "population"
+      ],
+      "related_terms": [
+        "estimator",
+        "point-estimation",
+        "interval-estimation"
+      ]
     },
     {
       "slug": "estimator",
@@ -570,9 +904,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["estimation"],
-      "related_terms": ["point-estimation", "unbiased-estimator"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "estimation"
+      ],
+      "related_terms": [
+        "point-estimation",
+        "unbiased-estimator"
+      ]
     },
     {
       "slug": "point-estimation",
@@ -581,9 +922,17 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["estimation", "estimator"],
-      "related_terms": ["interval-estimation", "unbiased-estimator"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "estimation",
+        "estimator"
+      ],
+      "related_terms": [
+        "interval-estimation",
+        "unbiased-estimator"
+      ]
     },
     {
       "slug": "interval-estimation",
@@ -592,9 +941,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["estimation", "standard-error"],
-      "related_terms": ["confidence-interval", "population-mean"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "estimation",
+        "standard-error"
+      ],
+      "related_terms": [
+        "confidence-interval",
+        "population-mean"
+      ]
     },
     {
       "slug": "confidence-interval",
@@ -603,9 +960,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["interval-estimation", "standard-error"],
-      "related_terms": ["interval-estimation", "t-distribution"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "interval-estimation",
+        "standard-error"
+      ],
+      "related_terms": [
+        "interval-estimation",
+        "t-distribution"
+      ]
     },
     {
       "slug": "unbiased-estimator",
@@ -614,9 +979,17 @@
       "priority": 3,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["estimator", "population-mean", "unbiased-variance"],
-      "related_terms": ["unbiased-variance"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "estimator",
+        "population-mean",
+        "unbiased-variance"
+      ],
+      "related_terms": [
+        "unbiased-variance"
+      ]
     },
     {
       "slug": "hypothesis-testing",
@@ -625,9 +998,18 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["estimation", "probability"],
-      "related_terms": ["null-hypothesis", "alternative-hypothesis", "p-value"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "estimation",
+        "probability"
+      ],
+      "related_terms": [
+        "null-hypothesis",
+        "alternative-hypothesis",
+        "p-value"
+      ]
     },
     {
       "slug": "null-hypothesis",
@@ -636,9 +1018,16 @@
       "priority": 1,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["hypothesis-testing"],
-      "related_terms": ["alternative-hypothesis", "p-value"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "hypothesis-testing"
+      ],
+      "related_terms": [
+        "alternative-hypothesis",
+        "p-value"
+      ]
     },
     {
       "slug": "alternative-hypothesis",
@@ -647,9 +1036,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["hypothesis-testing"],
-      "related_terms": ["null-hypothesis", "one-sided-test", "two-sided-test"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "hypothesis-testing"
+      ],
+      "related_terms": [
+        "null-hypothesis",
+        "one-sided-test",
+        "two-sided-test"
+      ]
     },
     {
       "slug": "test-statistic",
@@ -658,9 +1055,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["hypothesis-testing"],
-      "related_terms": ["p-value", "rejection-region"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "hypothesis-testing"
+      ],
+      "related_terms": [
+        "p-value",
+        "rejection-region"
+      ]
     },
     {
       "slug": "p-value",
@@ -669,9 +1073,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["hypothesis-testing", "test-statistic"],
-      "related_terms": ["significance-level", "null-hypothesis"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "hypothesis-testing",
+        "test-statistic"
+      ],
+      "related_terms": [
+        "significance-level",
+        "null-hypothesis"
+      ]
     },
     {
       "slug": "significance-level",
@@ -680,9 +1092,16 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["hypothesis-testing"],
-      "related_terms": ["p-value", "rejection-region"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "hypothesis-testing"
+      ],
+      "related_terms": [
+        "p-value",
+        "rejection-region"
+      ]
     },
     {
       "slug": "rejection-region",
@@ -691,9 +1110,17 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["test-statistic", "significance-level"],
-      "related_terms": ["null-hypothesis", "p-value"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "test-statistic",
+        "significance-level"
+      ],
+      "related_terms": [
+        "null-hypothesis",
+        "p-value"
+      ]
     },
     {
       "slug": "type-i-error",
@@ -702,9 +1129,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["hypothesis-testing", "significance-level"],
-      "related_terms": ["type-ii-error"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "hypothesis-testing",
+        "significance-level"
+      ],
+      "related_terms": [
+        "type-ii-error"
+      ]
     },
     {
       "slug": "type-ii-error",
@@ -713,9 +1147,15 @@
       "priority": 3,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["type-i-error"],
-      "related_terms": ["type-i-error"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "type-i-error"
+      ],
+      "related_terms": [
+        "type-i-error"
+      ]
     },
     {
       "slug": "one-sided-test",
@@ -724,9 +1164,15 @@
       "priority": 3,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["alternative-hypothesis"],
-      "related_terms": ["two-sided-test"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "alternative-hypothesis"
+      ],
+      "related_terms": [
+        "two-sided-test"
+      ]
     },
     {
       "slug": "two-sided-test",
@@ -735,9 +1181,15 @@
       "priority": 2,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["alternative-hypothesis"],
-      "related_terms": ["one-sided-test"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "alternative-hypothesis"
+      ],
+      "related_terms": [
+        "one-sided-test"
+      ]
     },
     {
       "slug": "scatter-plot",
@@ -746,9 +1198,14 @@
       "priority": 2,
       "status": "unstarted",
       "level": "foundation",
-      "exam_scope": ["statistics_grade_2"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
       "prerequisites": [],
-      "related_terms": ["correlation-coefficient", "regression-line"]
+      "related_terms": [
+        "correlation-coefficient",
+        "regression-line"
+      ]
     },
     {
       "slug": "correlation-coefficient",
@@ -757,9 +1214,17 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["covariance", "scatter-plot"],
-      "related_terms": ["regression-line", "no-correlation"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "covariance",
+        "scatter-plot"
+      ],
+      "related_terms": [
+        "regression-line",
+        "no-correlation"
+      ]
     },
     {
       "slug": "regression-line",
@@ -768,8 +1233,13 @@
       "priority": 1,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["scatter-plot", "correlation-coefficient"],
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "scatter-plot",
+        "correlation-coefficient"
+      ],
       "related_terms": [
         "simple-linear-regression",
         "least-squares-method",
@@ -783,9 +1253,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["regression-line"],
-      "related_terms": ["least-squares-method", "residual"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "regression-line"
+      ],
+      "related_terms": [
+        "least-squares-method",
+        "residual"
+      ]
     },
     {
       "slug": "least-squares-method",
@@ -794,9 +1271,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["regression-line"],
-      "related_terms": ["simple-linear-regression", "residual"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "regression-line"
+      ],
+      "related_terms": [
+        "simple-linear-regression",
+        "residual"
+      ]
     },
     {
       "slug": "coefficient-of-determination",
@@ -805,9 +1289,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["regression-line", "correlation-coefficient"],
-      "related_terms": ["residual"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "regression-line",
+        "correlation-coefficient"
+      ],
+      "related_terms": [
+        "residual"
+      ]
     },
     {
       "slug": "residual",
@@ -816,9 +1307,16 @@
       "priority": 2,
       "status": "unstarted",
       "level": "advanced",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["regression-line"],
-      "related_terms": ["least-squares-method", "coefficient-of-determination"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "regression-line"
+      ],
+      "related_terms": [
+        "least-squares-method",
+        "coefficient-of-determination"
+      ]
     },
     {
       "slug": "no-correlation",
@@ -827,9 +1325,15 @@
       "priority": 3,
       "status": "unstarted",
       "level": "standard",
-      "exam_scope": ["statistics_grade_2"],
-      "prerequisites": ["correlation-coefficient"],
-      "related_terms": ["correlation-coefficient"]
+      "exam_scope": [
+        "statistics_grade_2"
+      ],
+      "prerequisites": [
+        "correlation-coefficient"
+      ],
+      "related_terms": [
+        "correlation-coefficient"
+      ]
     }
   ]
 }
