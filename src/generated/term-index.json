@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-03-31T18:44:46.356Z",
+  "generatedAt": "2026-04-02T08:13:03.895Z",
   "stats": {
-    "publishedCount": 7,
+    "publishedCount": 8,
     "draftCount": 0,
-    "unstartedCount": 64
+    "unstartedCount": 63
   },
   "nextTerm": {
     "slug": "population-mean",
@@ -41,6 +41,30 @@
       "updatedAt": "2026-03-27",
       "href": "/terms/mean/",
       "searchText": "平均 データ全体の中心を手早くつかむための、もっとも基本的な代表値です。 descriptive_statistics statistics_grade_2 算術平均 代表値 中心",
+      "relatedPublishedSlugs": [
+        "variance",
+        "standard-deviation"
+      ]
+    },
+    {
+      "slug": "range",
+      "title": "範囲",
+      "shortDefinition": "データの最大値と最小値の差で、端から端までの広がりを手早く表す指標です。",
+      "category": "descriptive_statistics",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "ばらつき",
+        "散布度",
+        "記述統計"
+      ],
+      "sortOrder": 15,
+      "updatedAt": "2026-04-02",
+      "href": "/terms/range/",
+      "searchText": "範囲 データの最大値と最小値の差で、端から端までの広がりを手早く表す指標です。 descriptive_statistics statistics_grade_2 ばらつき 散布度 記述統計",
       "relatedPublishedSlugs": [
         "variance",
         "standard-deviation"
@@ -190,14 +214,14 @@
   ],
   "featuredTermSlugs": [
     "mean",
-    "variance",
-    "standard-deviation"
+    "range",
+    "variance"
   ],
   "queueSummaryByCategory": {
     "descriptive_statistics": {
-      "published": 3,
+      "published": 4,
       "draft": 0,
-      "unstarted": 6
+      "unstarted": 5
     },
     "probability": {
       "published": 0,

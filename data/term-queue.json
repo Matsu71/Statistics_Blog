@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-03-31",
+  "updated_at": "2026-04-02",
   "target_exam": "statistics_grade_2",
   "target_exam_label": "統計検定2級",
   "status_vocab": {
@@ -166,7 +166,7 @@
       "title": "範囲",
       "category": "descriptive_statistics",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -175,7 +175,8 @@
       "related_terms": [
         "variance",
         "standard-deviation"
-      ]
+      ],
+      "content_path": "src/content/terms/range.md"
     },
     {
       "slug": "coefficient-of-variation",
