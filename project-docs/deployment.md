@@ -20,6 +20,12 @@ GitHub 側では次を手動で設定します。
 
 この変更は repo のファイル編集だけでは確実に反映できないため、必ず人手で確認してください。
 
+### `.nojekyll` が必要な理由
+
+branch deploy で `main/docs` を公開するとき、GitHub Pages が Jekyll 処理を通すと、`_astro` のような先頭が `_` のディレクトリが配信対象から外れることがあります。
+
+この repo では Astro build の CSS / JS が `docs/_astro/` に出るため、`docs/.nojekyll` を置いて Jekyll をバイパスします。build のたびに消えないよう、source 側では `public/.nojekyll` も管理します。
+
 ## Build And Publish Flow
 
 標準手順は次です。
@@ -43,6 +49,7 @@ git push origin main
 ```
 
 push 後は GitHub Pages が `main/docs` をそのまま配信します。
+その際、`docs/.nojekyll` が入っていることも確認します。
 
 ## Output Location
 
