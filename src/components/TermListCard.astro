@@ -8,6 +8,7 @@ interface Props {
   levelLabel: string;
   levelKey: string;
   examLabel: string;
+  tags?: string[];
   searchText?: string;
 }
 
@@ -20,6 +21,7 @@ const {
   levelLabel,
   levelKey,
   examLabel,
+  tags = [],
   searchText = ''
 } = Astro.props;
 ---
@@ -31,15 +33,28 @@ const {
   data-category={categoryKey}
   data-level={levelKey}
 >
-  <div class="term-list-card__head">
-    <div>
-      <p class="term-list-card__meta">{categoryLabel} / {levelLabel}</p>
-      <h2 class="term-list-card__title">{title}</h2>
-    </div>
-    <span class="pill">{examLabel}</span>
+  <div class="term-list-card__topline">
+    <span class="term-list-card__chip">{categoryLabel}</span>
+    <span class="term-list-card__chip term-list-card__chip--soft">{levelLabel}</span>
   </div>
-  <p class="term-list-card__description">{description}</p>
+  <div class="term-list-card__head">
+    <div class="term-list-card__text">
+      <h2 class="term-list-card__title">{title}</h2>
+      <p class="term-list-card__description">{description}</p>
+    </div>
+    <span class="term-list-card__exam">{examLabel}</span>
+  </div>
+
+  {tags.length > 0 && (
+    <ul class="pill-list term-list-card__tags" aria-label="タグ">
+      {tags.map((tag) => (
+        <li class="pill">{tag}</li>
+      ))}
+    </ul>
+  )}
+
   <div class="term-list-card__footer">
     <span class="term-list-card__cta">ページを開く</span>
+    <span class="term-list-card__arrow" aria-hidden="true">→</span>
   </div>
 </a>

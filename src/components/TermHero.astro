@@ -2,51 +2,72 @@
 interface Props {
   title: string;
   summary: string;
-  metaChips: string[];
+  facts: {
+    label: string;
+    value: string;
+  }[];
   aliases?: string[];
   tags?: string[];
   takeaways: string[];
 }
 
-const { title, summary, metaChips, aliases = [], tags = [], takeaways } = Astro.props;
+const { title, summary, facts, aliases = [], tags = [], takeaways } = Astro.props;
 ---
 
 <header class="term-hero">
-  <p class="eyebrow">用語ページ</p>
-  <h1 class="article-title">{title}</h1>
-  <p class="article-summary">{summary}</p>
-  <div class="term-hero__actions">
-    <slot />
+  <div class="term-hero__main">
+    <p class="eyebrow">用語ページ</p>
+    <h1 class="article-title">{title}</h1>
+    <p class="article-summary">{summary}</p>
+    <div class="term-hero__actions">
+      <slot />
+    </div>
+
+    {aliases.length > 0 && (
+      <div class="term-hero__group">
+        <p class="term-hero__panel-label">別名</p>
+        <div class="link-row term-hero__tags" aria-label="別名">
+          {aliases.map((alias) => (
+            <span class="pill">{alias}</span>
+          ))}
+        </div>
+      </div>
+    )}
+
+    {tags.length > 0 && (
+      <div class="term-hero__group">
+        <p class="term-hero__panel-label">タグ</p>
+        <div class="link-row term-hero__tags" aria-label="タグ">
+          {tags.map((tag) => (
+            <span class="pill">{tag}</span>
+          ))}
+        </div>
+      </div>
+    )}
   </div>
 
-  <div class="article-meta">
-    {metaChips.map((chip) => (
-      <span class="meta-chip">{chip}</span>
-    ))}
+  <div class="term-hero__side">
+    {facts.length > 0 && (
+      <section class="term-hero__panel term-hero__facts" aria-labelledby="term-facts-title">
+        <p class="term-hero__panel-label" id="term-facts-title">クイック情報</p>
+        <dl class="term-hero__facts-grid">
+          {facts.map((fact) => (
+            <div class="term-hero__fact">
+              <dt class="term-hero__fact-label">{fact.label}</dt>
+              <dd class="term-hero__fact-value">{fact.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )}
+
+    <section id="takeaways" class="term-hero__panel term-hero__takeaways" aria-labelledby="term-takeaways-title">
+      <p class="term-hero__panel-label" id="term-takeaways-title">この記事でわかること</p>
+      <ul class="check-list">
+        {takeaways.map((item) => (
+          <li>{item}</li>
+        ))}
+      </ul>
+    </section>
   </div>
-
-  {aliases.length > 0 && (
-    <div class="link-row term-hero__tags" aria-label="別名">
-      {aliases.map((alias) => (
-        <span class="pill">{alias}</span>
-      ))}
-    </div>
-  )}
-
-  {tags.length > 0 && (
-    <div class="link-row term-hero__tags" aria-label="タグ">
-      {tags.map((tag) => (
-        <span class="pill">{tag}</span>
-      ))}
-    </div>
-  )}
-
-  <section id="takeaways" class="term-hero__takeaways" aria-labelledby="term-takeaways-title">
-    <h2 id="term-takeaways-title">この記事でわかること</h2>
-    <ul class="check-list">
-      {takeaways.map((item) => (
-        <li>{item}</li>
-      ))}
-    </ul>
-  </section>
 </header>

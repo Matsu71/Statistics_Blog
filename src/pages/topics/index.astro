@@ -22,19 +22,23 @@ const topics = await getPublishedTopics();
   <PageHero
     eyebrow="Topics"
     title="分野解説"
-    description="近い用語をまとめて読み、全体像をつかめます。"
+    description="近い用語をまとめて読み、個別ページを行き来しながら全体像をつかめます。"
   >
     <div class="hero-actions">
       <a class="button-link" href={withBase('/')}>ホームへ</a>
       <a class="ghost-link" href={withBase('/terms/')}>用語一覧へ</a>
     </div>
-    <div class="hero-panel hero-panel--compact" slot="aside">
-      <p class="hero-panel__eyebrow">Bridge</p>
-      <h2 class="hero-panel__title">分野解説の役割</h2>
-      <ul class="hero-panel__list">
-        <li>近い用語をまとめて見渡せます。</li>
-        <li>全体像をつかんでから個別ページへ戻れます。</li>
-      </ul>
+    <div class="hero-tile-grid" slot="aside">
+      <article class="hero-mini-card">
+        <span class="hero-mini-card__label">公開中</span>
+        <strong class="hero-mini-card__value">{topics.length}</strong>
+        <span class="hero-mini-card__meta">関連テーマを少しずつ追加しています</span>
+      </article>
+      <article class="hero-mini-card">
+        <span class="hero-mini-card__label">役割</span>
+        <strong class="hero-mini-card__value">橋渡し</strong>
+        <span class="hero-mini-card__meta">個別の用語どうしをつなげて理解します</span>
+      </article>
     </div>
   </PageHero>
 

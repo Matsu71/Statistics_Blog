@@ -16,6 +16,10 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
   value: level,
   label: getContentLevelLabel(level)
 }));
+const featured = termIndex.featuredTermSlugs
+  .map((slug) => terms.find((term) => term.slug === slug))
+  .filter((term): term is (typeof terms)[number] => Boolean(term))
+  .slice(0, 2);
 ---
 
 <BaseLayout
@@ -25,20 +29,30 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
   <PageHero
     eyebrow="Glossary"
     title="用語一覧"
-    description="調べたい用語を、検索と絞り込みで見つけて読めます。"
+    description="検索、カテゴリ、難易度を使って、今の学習段階に合う用語を見つけられます。"
   >
     <div class="hero-actions">
       <a class="button-link" href={withBase('/')}>ホームへ</a>
       <a class="ghost-link" href={withBase('/topics/')}>分野解説へ</a>
     </div>
-    <div class="hero-panel hero-panel--compact" slot="aside">
-      <p class="hero-panel__eyebrow">How To Use</p>
-      <h2 class="hero-panel__title">探し方のコツ</h2>
-      <ul class="hero-panel__list">
-        <li>用語名で検索できます。</li>
-        <li>カテゴリで近い概念をまとめて見られます。</li>
-        <li>難易度で学習順を整えられます。</li>
-      </ul>
+    <div class="hero-tile-grid" slot="aside">
+      <article class="hero-mini-card">
+        <span class="hero-mini-card__label">公開用語</span>
+        <strong class="hero-mini-card__value">{terms.length}</strong>
+        <span class="hero-mini-card__meta">今すぐ読めるページ</span>
+      </article>
+      <article class="hero-mini-card">
+        <span class="hero-mini-card__label">カテゴリ</span>
+        <strong class="hero-mini-card__value">{categories.length}</strong>
+        <span class="hero-mini-card__meta">近い概念をまとめて探せます</span>
+      </article>
+      {featured[0] && (
+        <article class="hero-mini-card hero-mini-card--accent">
+          <span class="hero-mini-card__label">最初の候補</span>
+          <strong class="hero-mini-card__value">{featured[0].title}</strong>
+          <span class="hero-mini-card__meta">{featured[0].shortDefinition}</span>
+        </article>
+      )}
     </div>
   </PageHero>
 
@@ -73,6 +87,12 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
               ))}
             </select>
           </div>
+        </div>
+
+        <div class="filter-panel__summary">
+          <p class="filter-panel__label">いま見られる範囲</p>
+          <p class="filter-panel__summary-value">{terms.length}語</p>
+          <p class="muted-text">まずは基礎か、気になるカテゴリから選ぶのがおすすめです。</p>
         </div>
 
         <div class="filter-panel__categories">
@@ -113,6 +133,7 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
                 levelLabel={getContentLevelLabel(term.level)}
                 levelKey={term.level}
                 examLabel={getExamScopeLabels(term.examScope).join('・')}
+                tags={term.tags.slice(0, 3)}
               />
             ))}
           </div>

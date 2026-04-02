@@ -81,11 +81,23 @@ const visualVariant =
         <TermHero
           title={term.data.title}
           summary={term.data.short_definition}
-          metaChips={[
-            getTermCategoryLabel(term.data.category),
-            getContentLevelLabel(term.data.level),
-            getExamScopeLabels(term.data.exam_scope).join('・'),
-            `更新: ${formatDate(term.data.updated_at)}`
+          facts={[
+            {
+              label: 'カテゴリ',
+              value: getTermCategoryLabel(term.data.category)
+            },
+            {
+              label: '難易度',
+              value: getContentLevelLabel(term.data.level)
+            },
+            {
+              label: '対象',
+              value: getExamScopeLabels(term.data.exam_scope).join('・')
+            },
+            {
+              label: '更新',
+              value: formatDate(term.data.updated_at)
+            }
           ]}
           aliases={term.data.aliases}
           tags={term.data.tags}
@@ -136,11 +148,11 @@ const visualVariant =
             <div class="split-panel">
               <div class="detail-card">
                 <h3>よく出てくる場面</h3>
-                <ul class="simple-list">
+                <div class="bullet-tiles">
                   {term.data.where_it_appears.map((item) => (
-                    <li>{item}</li>
+                    <p class="bullet-tile">{item}</p>
                   ))}
-                </ul>
+                </div>
               </div>
 
               {term.data.practical_examples.length > 0 && (
@@ -162,11 +174,13 @@ const visualVariant =
             intro="時間がないときは、この節だけでも先に確認すると着眼点を押さえやすくなります。"
             tone="accent"
           >
-            <ul class="check-list">
+            <div class="point-grid">
               {term.data.exam_points.map((point) => (
-                <li>{point}</li>
+                <article class="point-card point-card--accent">
+                  <p>{point}</p>
+                </article>
               ))}
-            </ul>
+            </div>
           </TermSection>
 
           {term.data.formulas.length > 0 && (
@@ -190,11 +204,13 @@ const visualVariant =
               intro="似た概念との違いをここで整理しておくと、試験でも混線しにくくなります。"
               tone="subtle"
             >
-              <ul class="warning-list">
+              <div class="point-grid">
                 {term.data.common_mistakes.map((mistake) => (
-                  <li>{mistake}</li>
+                  <article class="point-card point-card--warning">
+                    <p>{mistake}</p>
+                  </article>
                 ))}
-              </ul>
+              </div>
             </TermSection>
           )}
 
@@ -284,13 +300,14 @@ const visualVariant =
         <div class="toc-card__section">
           <h2>関連用語</h2>
           {relatedTerms.length > 0 ? (
-            <ul class="simple-list">
+            <div class="mini-related-grid">
               {relatedTerms.map((relatedTerm) => (
-                <li>
-                  <a href={withBase(getTermHref(relatedTerm))}>{relatedTerm.data.title}</a>
-                </li>
+                <a class="mini-related-card" href={withBase(getTermHref(relatedTerm))}>
+                  <span class="mini-related-card__title">{relatedTerm.data.title}</span>
+                  <span class="mini-related-card__description">{relatedTerm.data.short_definition}</span>
+                </a>
               ))}
-            </ul>
+            </div>
           ) : (
             <p class="muted-text">公開済みの関連ページが増えたら、ここから移動できます。</p>
           )}
