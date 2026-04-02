@@ -272,7 +272,7 @@
       "title": "無作為抽出",
       "category": "sampling_distribution",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -283,7 +283,8 @@
       ],
       "related_terms": [
         "sample"
-      ]
+      ],
+      "content_path": "src/content/terms/random-sampling.md"
     },
     {
       "slug": "sample-mean",

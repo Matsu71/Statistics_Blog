@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-04-02T08:13:03.895Z",
+  "generatedAt": "2026-04-02T22:43:51.012Z",
   "stats": {
-    "publishedCount": 8,
+    "publishedCount": 9,
     "draftCount": 0,
-    "unstartedCount": 63
+    "unstartedCount": 62
   },
   "nextTerm": {
     "slug": "population-mean",
@@ -166,6 +166,31 @@
       ]
     },
     {
+      "slug": "random-sampling",
+      "title": "無作為抽出",
+      "shortDefinition": "母集団から標本を選ぶときに、特定の対象へ偏らないよう偶然性を使って選ぶ方法です。",
+      "category": "sampling_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "ランダムサンプリング"
+      ],
+      "tags": [
+        "標本調査",
+        "抽出法",
+        "推測統計"
+      ],
+      "sortOrder": 140,
+      "updatedAt": "2026-04-02",
+      "href": "/terms/random-sampling/",
+      "searchText": "無作為抽出 母集団から標本を選ぶときに、特定の対象へ偏らないよう偶然性を使って選ぶ方法です。 sampling_distribution statistics_grade_2 ランダムサンプリング 標本調査 抽出法 推測統計",
+      "relatedPublishedSlugs": [
+        "sample"
+      ]
+    },
+    {
       "slug": "sample-mean",
       "title": "標本平均",
       "shortDefinition": "標本に含まれる観測値を合計して個数で割った、標本を代表する平均です。",
@@ -234,9 +259,9 @@
       "unstarted": 12
     },
     "sampling_distribution": {
-      "published": 3,
+      "published": 4,
       "draft": 0,
-      "unstarted": 10
+      "unstarted": 9
     },
     "estimation": {
       "published": 0,
