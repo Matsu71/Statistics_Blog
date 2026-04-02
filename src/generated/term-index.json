@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-02T22:43:51.012Z",
+  "generatedAt": "2026-04-02T22:54:58.514Z",
   "stats": {
     "publishedCount": 9,
     "draftCount": 0,
@@ -179,13 +179,13 @@
       ],
       "tags": [
         "標本調査",
-        "抽出法",
-        "推測統計"
+        "抽出",
+        "偏り"
       ],
       "sortOrder": 140,
       "updatedAt": "2026-04-02",
       "href": "/terms/random-sampling/",
-      "searchText": "無作為抽出 母集団から標本を選ぶときに、特定の対象へ偏らないよう偶然性を使って選ぶ方法です。 sampling_distribution statistics_grade_2 ランダムサンプリング 標本調査 抽出法 推測統計",
+      "searchText": "無作為抽出 母集団から標本を選ぶときに、特定の対象へ偏らないよう偶然性を使って選ぶ方法です。 sampling_distribution statistics_grade_2 ランダムサンプリング 標本調査 抽出 偏り",
       "relatedPublishedSlugs": [
         "sample"
       ]
