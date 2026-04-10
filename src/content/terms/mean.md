@@ -31,15 +31,15 @@ formulas:
     latex: '\bar{x} = \frac{1}{n}\sum_{i=1}^{n} x_i'
     description: 観測値の合計をデータ数で割ると標本平均になります。
     conditions:
-      - x_i は i 番目の観測値です。
-      - n はデータ数です。
+      - '$x_i$ は i 番目の観測値です。'
+      - '$n$ はデータ数です。'
 rigorous_explanation:
   - 平均からの偏差をすべて足すと 0 になるため、平均はデータ全体のつり合いの点として理解できます。
 proof:
   summary: 平均の定義を偏差の和に代入すると、偏差の総和が 0 になることを確認できます。
   outline_steps:
-    - \sum_{i=1}^{n}(x_i-\bar{x}) を書き下します。
-    - \bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i を代入します。
+    - '$\sum_{i=1}^{n}(x_i-\bar{x})$ を書き下します。'
+    - '$\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i$ を代入します。'
     - 合計を整理すると 0 になります。
 common_mistakes:
   - 平均だけでデータ全体の特徴を説明できたと思い込むこと

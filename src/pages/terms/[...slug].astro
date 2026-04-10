@@ -2,6 +2,7 @@
 import { render } from 'astro:content';
 import CollapsibleSection from '../../components/CollapsibleSection.astro';
 import FormulaCard from '../../components/FormulaCard.astro';
+import MathText from '../../components/MathText.astro';
 import RelatedTermsPanel from '../../components/RelatedTermsPanel.astro';
 import SectionNav from '../../components/SectionNav.astro';
 import TermHero from '../../components/TermHero.astro';
@@ -118,7 +119,9 @@ const visualVariant =
             intro="式の前に、この用語が何を見ているのかを言葉でつかみます。"
           >
             {term.data.intuition.map((item) => (
-              <p>{item}</p>
+              <p>
+                <MathText text={item} />
+              </p>
             ))}
           </TermSection>
 
@@ -137,7 +140,9 @@ const visualVariant =
             title="定義"
             intro="直感のあとで、言葉としての定義をここで固定します。"
           >
-            <p>{term.data.definition}</p>
+            <p>
+              <MathText text={term.data.definition} />
+            </p>
           </TermSection>
 
           <TermSection
@@ -150,7 +155,9 @@ const visualVariant =
                 <h3>よく出てくる場面</h3>
                 <div class="bullet-tiles">
                   {term.data.where_it_appears.map((item) => (
-                    <p class="bullet-tile">{item}</p>
+                    <p class="bullet-tile">
+                      <MathText text={item} />
+                    </p>
                   ))}
                 </div>
               </div>
@@ -158,9 +165,11 @@ const visualVariant =
               {term.data.practical_examples.length > 0 && (
                 <div class="stack-list">
                   {term.data.practical_examples.map((example) => (
-                    <article class="detail-card">
+                    <article class="detail-card detail-card--example">
                       <h3>{example.title}</h3>
-                      <p>{example.description}</p>
+                      <p>
+                        <MathText text={example.description} />
+                      </p>
                     </article>
                   ))}
                 </div>
@@ -177,7 +186,9 @@ const visualVariant =
             <div class="point-grid">
               {term.data.exam_points.map((point) => (
                 <article class="point-card point-card--accent">
-                  <p>{point}</p>
+                  <p>
+                    <MathText text={point} />
+                  </p>
                 </article>
               ))}
             </div>
@@ -207,7 +218,9 @@ const visualVariant =
               <div class="point-grid">
                 {term.data.common_mistakes.map((mistake) => (
                   <article class="point-card point-card--warning">
-                    <p>{mistake}</p>
+                    <p>
+                      <MathText text={mistake} />
+                    </p>
                   </article>
                 ))}
               </div>
@@ -224,9 +237,12 @@ const visualVariant =
                 <CollapsibleSection
                   title="厳密な説明を読む"
                   summary="定義の背景や前提を、もう一歩ていねいに確認します。"
+                  tone="rigor"
                 >
                   {term.data.rigorous_explanation.map((item) => (
-                    <p>{item}</p>
+                    <p>
+                      <MathText text={item} />
+                    </p>
                   ))}
                 </CollapsibleSection>
               )}
@@ -235,11 +251,14 @@ const visualVariant =
                 <CollapsibleSection
                   title="証明の流れを見る"
                   summary={term.data.proof.summary}
+                  tone="proof"
                 >
                   {term.data.proof.outline_steps.length > 0 && (
-                    <ol class="simple-list">
+                    <ol class="simple-list proof-steps">
                       {term.data.proof.outline_steps.map((step) => (
-                        <li>{step}</li>
+                        <li>
+                          <MathText text={step} />
+                        </li>
                       ))}
                     </ol>
                   )}

@@ -1,4 +1,6 @@
 ---
+import MathText from './MathText.astro';
+
 interface Props {
   title: string;
   summary: string;
@@ -18,7 +20,9 @@ const { title, summary, facts, aliases = [], tags = [], takeaways } = Astro.prop
   <div class="term-hero__main">
     <p class="eyebrow">用語ページ</p>
     <h1 class="article-title">{title}</h1>
-    <p class="article-summary">{summary}</p>
+    <p class="article-summary">
+      <MathText text={summary} />
+    </p>
     <div class="term-hero__actions">
       <slot />
     </div>
@@ -65,7 +69,9 @@ const { title, summary, facts, aliases = [], tags = [], takeaways } = Astro.prop
       <p class="term-hero__panel-label" id="term-takeaways-title">この記事でわかること</p>
       <ul class="check-list">
         {takeaways.map((item) => (
-          <li>{item}</li>
+          <li>
+            <MathText text={item} />
+          </li>
         ))}
       </ul>
     </section>

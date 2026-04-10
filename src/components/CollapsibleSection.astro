@@ -1,17 +1,24 @@
 ---
+import MathText from './MathText.astro';
+
 interface Props {
   title: string;
   summary?: string;
   open?: boolean;
+  tone?: 'default' | 'rigor' | 'proof';
 }
 
-const { title, summary, open = false } = Astro.props;
+const { title, summary, open = false, tone = 'default' } = Astro.props;
 ---
 
-<details class="collapsible" open={open}>
+<details class:list={['collapsible', `collapsible--${tone}`]} open={open}>
   <summary>
     <span class="collapsible__title">{title}</span>
-    {summary && <span class="collapsible__summary">{summary}</span>}
+    {summary && (
+      <span class="collapsible__summary">
+        <MathText text={summary} />
+      </span>
+    )}
   </summary>
   <div class="collapsible__body">
     <slot />

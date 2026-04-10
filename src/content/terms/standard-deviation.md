@@ -31,7 +31,7 @@ formulas:
     latex: '\sigma = \sqrt{\sigma^2}'
     description: 母分散の平方根をとると母標準偏差になります。
     conditions:
-      - \sigma^2 は母分散です。
+      - '$\sigma^2$ は母分散です。'
   - name: 標本標準偏差の考え方
     latex: 's = \sqrt{s^2}'
     description: 不偏分散や標本分散の平方根として標本標準偏差を考えます。

@@ -122,6 +122,14 @@ frontmatter は `src/content.config.ts` の `terms` schema に従います。
 
 Markdown 本文は補足ノートです。本文の見出しは補助的に使ってよいですが、必須情報を本文だけに置きません。
 
+### Math Writing Rules
+
+- 数式は KaTeX でレンダリングされる前提で書きます。
+- `formulas[].latex` には、`√`、`Σ`、`1 / n` ではなく、`\sqrt{}`、`\sum`、`\frac{}{}` などの正規 LaTeX を入れます。
+- `description`、`conditions`、`rigorous_explanation`、`proof.outline_steps` などの文章中で記号や短い式を書く場合は、`$x_i$` や `$\bar{x}$` のように inline math で明示します。
+- display 数式は、式の直前に短い説明、式の直後に記号の見方や解釈が続くようにします。
+- 長い式は本文に埋め込まず、数式カードまたは display math として独立させます。
+
 具体例は少なくとも 1 つ必要です。具体例は次のどちらかです。
 
 - `practical_examples` に入った具体例

@@ -1,5 +1,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
+import rehypeKatex from 'rehype-katex';
+import remarkMath from 'remark-math';
 import {
   defaultBuildDir,
   resolveBasePath,
@@ -14,6 +16,8 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [sitemap()],
   markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [[rehypeKatex, { output: 'htmlAndMathml', throwOnError: false }]],
     shikiConfig: {
       theme: 'github-light'
     }

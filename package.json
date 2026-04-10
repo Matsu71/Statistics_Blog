@@ -29,6 +29,9 @@
   "dependencies": {
     "@astrojs/sitemap": "^3.7.1",
     "astro": "^5.0.0",
+    "katex": "^0.16.45",
+    "rehype-katex": "^7.0.1",
+    "remark-math": "^6.0.0",
     "yaml": "^2.8.2"
   },
   "devDependencies": {

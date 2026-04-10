@@ -1,4 +1,7 @@
 ---
+import MathText from './MathText.astro';
+import { renderDisplayMath } from '../lib/math';
+
 interface Formula {
   name: string;
   latex: string;
@@ -11,19 +14,28 @@ interface Props {
 }
 
 const { formula } = Astro.props;
+const renderedFormula = renderDisplayMath(formula.latex);
 ---
 
 <article class="detail-card formula-card">
-  <h3>{formula.name}</h3>
-  <div class="formula-block" role="img" aria-label={`${formula.name} の式`}>
-    {formula.latex}
+  <div class="formula-card__header">
+    <p class="formula-card__eyebrow">定義の式</p>
+    <h3>{formula.name}</h3>
   </div>
-  <p>{formula.description}</p>
+  <p class="formula-card__lead">
+    <MathText text={formula.description} />
+  </p>
+  <div class="formula-block" aria-label={`${formula.name} の式`} set:html={renderedFormula}></div>
   {formula.conditions && formula.conditions.length > 0 && (
-    <ul class="formula-card__conditions simple-list">
-      {formula.conditions.map((condition) => (
-        <li>{condition}</li>
-      ))}
-    </ul>
+    <div class="formula-card__conditions">
+      <p class="formula-card__conditions-title">記号の見方</p>
+      <ul class="simple-list">
+        {formula.conditions.map((condition) => (
+          <li>
+            <MathText text={condition} />
+          </li>
+        ))}
+      </ul>
+    </div>
   )}
 </article>

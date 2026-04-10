@@ -1,4 +1,6 @@
 ---
+import MathText from './MathText.astro';
+
 interface Props {
   items: string[];
   variant?: 'generic' | 'spread' | 'distribution' | 'balance';
@@ -98,7 +100,9 @@ const titleId = `visual-${variant}-panel`;
   <div class="visual-panel__content">
     <ul>
       {items.map((item) => (
-        <li>{item}</li>
+        <li>
+          <MathText text={item} />
+        </li>
       ))}
     </ul>
   </div>
