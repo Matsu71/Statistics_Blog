@@ -45,6 +45,16 @@
 
 ホームや一覧はシンプルに保ち、内容の厚みは詳細ページへ寄せます。
 
+## 数式表示
+
+- 数式は画像化せず、KaTeX によるテキストベースの静的レンダリングを標準にする
+- Markdown 本文の数式は `astro.config.mjs` の `remark-math` / `rehype-katex` で処理する
+- frontmatter の `formulas[].latex` は `src/lib/math.ts` と `FormulaCard` で HTML+MathML にレンダリングする
+- frontmatter の説明文中の短い記号や式は `MathText` で inline math として表示する
+- display 数式は `global.css` の `.formula-block` / `.katex-display` のカード風スタイルを維持する
+- 長い式は数式ブロック内だけ横スクロールさせ、ページ全体を横に広げない
+- 数式 UI を変更した回は、`normal-distribution`、`random-sampling`、`variance`、`sample-mean`、`range` を代表ページとして確認する
+
 ## GitHub Pages 対応
 
 - Astro は `output: 'static'` でビルドする

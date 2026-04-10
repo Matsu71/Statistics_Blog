@@ -63,6 +63,13 @@ npm run scaffold:term -- --slug=<slug>
 
 に従って内容を埋めます。
 
+数式を含む場合は、次も確認します。
+
+- `formulas[].latex` は KaTeX でそのまま通る LaTeX にする
+- 記号や短い式は `$x_i$` のように inline math で書く
+- 数式カードは「説明 -> 式 -> 記号の見方」の流れを崩さない
+- 証明や厳密説明では、式の前後に何をしているかの短い説明を置く
+
 ### Step 4. 一覧データを再生成する
 
 ```bash
@@ -115,6 +122,10 @@ git push origin main
 
 `npm run validate:links`
 - `docs/**/*.html` の壊れたリンクや一覧未反映を直します
+
+数式表示を変更した場合
+- `normal-distribution`、`random-sampling`、`variance`、`sample-mean`、`range` を代表ページとして確認します
+- 長い display 数式、inline math、例題、厳密説明、証明折りたたみ、モバイル幅での横はみ出しを見ます
 
 ## Done の定義
 
