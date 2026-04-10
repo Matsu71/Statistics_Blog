@@ -1,27 +1,8 @@
 ---
 import ContentCard from '../components/ContentCard.astro';
 import PageHero from '../components/PageHero.astro';
-import termIndex from '../generated/term-index.json';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getContentLevelLabel, getExamScopeLabels, getTermCategoryLabel } from '../lib/content';
 import { withBase } from '../lib/site';
-
-const terms = termIndex.publishedTerms;
-type FeaturedTerm = (typeof terms)[number];
-const featuredTerms = termIndex.featuredTermSlugs
-  .map((slug) => terms.find((term) => term.slug === slug))
-  .filter((term): term is FeaturedTerm => Boolean(term));
-const spotlightTerms = featuredTerms.length > 0 ? featuredTerms : terms.slice(0, 3);
-const publishedCategoryCount = new Set(terms.map((term) => term.category)).size;
-const categoryOverview = Object.entries(termIndex.queueSummaryByCategory)
-  .map(([category, summary]) => ({
-    category,
-    label: getTermCategoryLabel(category),
-    published: summary.published,
-    total: summary.published + summary.draft + summary.unstarted
-  }))
-  .filter((item) => item.published > 0)
-  .sort((a, b) => b.published - a.published || a.label.localeCompare(b.label, 'ja'));
 ---
 
 <BaseLayout
@@ -30,64 +11,20 @@ const categoryOverview = Object.entries(termIndex.queueSummaryByCategory)
 >
   <PageHero
     eyebrow="Glossary"
-    title="統計検定2級の学習を、タイルで整理して進める"
-    description="用語・分野・重要ポイントを、読みやすいカード単位でたどれる学習用語集です。"
+    title="統計ことばノート"
+    description="統計検定2級の用語を、1語ずつ整理する学習ノートです。"
   >
     <div class="hero-actions">
       <a class="button-link" href={withBase('/terms/')}>用語一覧を見る</a>
       <a class="ghost-link" href={withBase('/topics/')}>分野解説を見る</a>
     </div>
-    <div class="hero-tile-grid" slot="aside">
-      <article class="hero-mini-card">
-        <span class="hero-mini-card__label">公開用語</span>
-        <strong class="hero-mini-card__value">{termIndex.stats.publishedCount}</strong>
-        <span class="hero-mini-card__meta">1語ずつ落ち着いて読めます</span>
-      </article>
-      <article class="hero-mini-card">
-        <span class="hero-mini-card__label">カテゴリ</span>
-        <strong class="hero-mini-card__value">{publishedCategoryCount}</strong>
-        <span class="hero-mini-card__meta">主要分野を横断して学べます</span>
-      </article>
-      {termIndex.nextTerm && (
-        <article class="hero-mini-card hero-mini-card--accent">
-          <span class="hero-mini-card__label">次の候補</span>
-          <strong class="hero-mini-card__value">{termIndex.nextTerm.title}</strong>
-          <span class="hero-mini-card__meta">
-            {getTermCategoryLabel(termIndex.nextTerm.category)} / {getContentLevelLabel(termIndex.nextTerm.level)}
-          </span>
-        </article>
-      )}
-    </div>
   </PageHero>
-
-  <section class="page-section">
-    <div class="site-shell">
-      <div class="stats-grid">
-        <article class="stat-card">
-          <p class="stat-label">公開済み</p>
-          <p class="stat-value">{termIndex.stats.publishedCount}</p>
-          <p class="stat-note">学習中にすぐ読めるページ数</p>
-        </article>
-        <article class="stat-card">
-          <p class="stat-label">これから増える用語</p>
-          <p class="stat-value">{termIndex.stats.unstartedCount}</p>
-          <p class="stat-note">queue 管理で順次追加しています</p>
-        </article>
-        <article class="stat-card">
-          <p class="stat-label">おすすめの入り口</p>
-          <p class="stat-value">{spotlightTerms[0]?.title ?? '平均'}</p>
-          <p class="stat-note">基礎から読み始めやすい用語です</p>
-        </article>
-      </div>
-    </div>
-  </section>
 
   <section class="page-section page-section--compact">
     <div class="site-shell">
       <div class="section-head">
         <div>
-          <h2 class="section-title">学習の入口</h2>
-          <p class="section-text">調べる、眺める、つながりで覚える。その3つの入口を分けています。</p>
+          <h2 class="section-title">入口</h2>
         </div>
       </div>
 
@@ -95,75 +32,13 @@ const categoryOverview = Object.entries(termIndex.queueSummaryByCategory)
         <ContentCard
           href={withBase('/terms/')}
           title="用語一覧"
-          description="用語を起点に、定義と試験ポイントを確認できます。"
+          description="定義と試験ポイントを用語ごとに確認できます。"
         />
         <ContentCard
           href={withBase('/topics/')}
           title="分野解説"
-          description="近い概念をまとめて読み、用語同士のつながりをつかめます。"
+          description="関連する用語をまとまりで確認できます。"
         />
-        {spotlightTerms[0] && (
-          <ContentCard
-            href={withBase(spotlightTerms[0].href)}
-            title={`最初の1語: ${spotlightTerms[0].title}`}
-            description={spotlightTerms[0].shortDefinition}
-            meta={`${getTermCategoryLabel(spotlightTerms[0].category)} / ${getContentLevelLabel(
-              spotlightTerms[0].level
-            )}`}
-            badges={spotlightTerms[0].tags.slice(0, 2)}
-            searchText={spotlightTerms[0].searchText}
-          />
-        )}
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="site-shell">
-      <div class="section-head">
-        <div>
-          <h2 class="section-title">カテゴリから始める</h2>
-          <p class="section-text">今ある公開ページを、分野ごとのまとまりで見渡せます。</p>
-        </div>
-      </div>
-
-      <div class="category-grid">
-        {categoryOverview.map((item) => (
-          <article class="category-tile">
-            <div class="category-tile__head">
-              <p class="category-tile__label">{item.label}</p>
-              <span class="category-tile__count">{item.published}</span>
-            </div>
-            <p class="category-tile__meta">{item.total}語のうち {item.published}語を公開中</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="page-section">
-    <div class="site-shell">
-      <div class="section-head">
-        <div>
-          <h2 class="section-title">注目の用語</h2>
-          <p class="section-text">短い説明を見比べながら、気になるところから読み始められます。</p>
-        </div>
-        <a class="ghost-link" href={withBase('/terms/')}>一覧へ</a>
-      </div>
-
-      <div class="card-grid">
-        {spotlightTerms.map((term) => (
-          <ContentCard
-            href={withBase(term.href)}
-            title={term.title}
-            description={term.shortDefinition}
-            meta={`${getTermCategoryLabel(term.category)} / ${getExamScopeLabels(
-              term.examScope
-            ).join('・')}`}
-            badges={[getContentLevelLabel(term.level), ...term.tags.slice(0, 2)]}
-            searchText={term.searchText}
-          />
-        ))}
       </div>
     </div>
   </section>
