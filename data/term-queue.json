@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-04-02",
+  "updated_at": "2026-04-12",
   "target_exam": "statistics_grade_2",
   "target_exam_label": "統計検定2級",
   "status_vocab": {
@@ -49,7 +49,8 @@
       "prerequisites": [],
       "related_terms": [
         "variance",
-        "standard-deviation"
+        "standard-deviation",
+        "sample-mean"
       ],
       "content_path": "src/content/terms/mean.md"
     },
@@ -89,7 +90,8 @@
       ],
       "related_terms": [
         "mean",
-        "variance"
+        "variance",
+        "normal-distribution"
       ],
       "content_path": "src/content/terms/standard-deviation.md"
     },
@@ -243,8 +245,9 @@
       "prerequisites": [],
       "related_terms": [
         "sample",
-        "population-mean",
-        "population-variance"
+        "sample-mean",
+        "mean",
+        "variance"
       ],
       "content_path": "src/content/terms/population.md"
     },
@@ -282,6 +285,7 @@
         "sample"
       ],
       "related_terms": [
+        "population",
         "sample"
       ],
       "content_path": "src/content/terms/random-sampling.md"
@@ -301,8 +305,10 @@
         "sample"
       ],
       "related_terms": [
-        "population-mean",
-        "standard-error"
+        "sample",
+        "population",
+        "mean",
+        "variance"
       ],
       "content_path": "src/content/terms/sample-mean.md"
     },
@@ -728,8 +734,7 @@
         "mean",
         "variance",
         "standard-deviation",
-        "standard-normal-distribution",
-        "standardization"
+        "sample-mean"
       ],
       "content_path": "src/content/terms/normal-distribution.md"
     },

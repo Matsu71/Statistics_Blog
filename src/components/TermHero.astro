@@ -66,7 +66,8 @@ const { title, summary, facts, aliases = [], tags = [], takeaways } = Astro.prop
     )}
 
     <section id="takeaways" class="term-hero__panel term-hero__takeaways" aria-labelledby="term-takeaways-title">
-      <p class="term-hero__panel-label" id="term-takeaways-title">この記事でわかること</p>
+      <p class="term-hero__panel-label" id="term-takeaways-title">30秒で要点</p>
+      <p class="term-hero__panel-copy">この記事でわかることを短く確認します。</p>
       <ul class="check-list">
         {takeaways.map((item) => (
           <li>

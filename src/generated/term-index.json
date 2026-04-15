@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-10T22:24:54.436Z",
+  "generatedAt": "2026-04-15T00:30:45.194Z",
   "stats": {
     "publishedCount": 9,
     "draftCount": 0,
@@ -38,12 +38,13 @@
         "中心"
       ],
       "sortOrder": 10,
-      "updatedAt": "2026-03-27",
+      "updatedAt": "2026-04-15",
       "href": "/terms/mean/",
       "searchText": "平均 データ全体の中心を手早くつかむための、もっとも基本的な代表値です。 descriptive_statistics statistics_grade_2 算術平均 代表値 中心",
       "relatedPublishedSlugs": [
         "variance",
-        "standard-deviation"
+        "standard-deviation",
+        "sample-mean"
       ]
     },
     {
@@ -62,7 +63,7 @@
         "記述統計"
       ],
       "sortOrder": 15,
-      "updatedAt": "2026-04-02",
+      "updatedAt": "2026-04-12",
       "href": "/terms/range/",
       "searchText": "範囲 データの最大値と最小値の差で、端から端までの広がりを手早く表す指標です。 descriptive_statistics statistics_grade_2 ばらつき 散布度 記述統計",
       "relatedPublishedSlugs": [
@@ -86,7 +87,7 @@
         "記述統計"
       ],
       "sortOrder": 20,
-      "updatedAt": "2026-03-28",
+      "updatedAt": "2026-04-12",
       "href": "/terms/variance/",
       "searchText": "分散 データが平均のまわりにどのくらい散らばっているかを、二乗を使って測る代表的な指標です。 descriptive_statistics statistics_grade_2 ばらつき 散布度 記述統計",
       "relatedPublishedSlugs": [
@@ -110,12 +111,13 @@
         "散布度"
       ],
       "sortOrder": 30,
-      "updatedAt": "2026-03-27",
+      "updatedAt": "2026-04-12",
       "href": "/terms/standard-deviation/",
       "searchText": "標準偏差 分散を元の単位に戻して解釈しやすくした、散らばりの代表的な指標です。 descriptive_statistics statistics_grade_2 ばらつき 散布度",
       "relatedPublishedSlugs": [
         "mean",
-        "variance"
+        "variance",
+        "normal-distribution"
       ]
     },
     {
@@ -134,11 +136,14 @@
         "推測統計"
       ],
       "sortOrder": 120,
-      "updatedAt": "2026-03-30",
+      "updatedAt": "2026-04-12",
       "href": "/terms/population/",
       "searchText": "母集団 統計で知りたい対象全体を指し、標本がどこから取り出されたかを決める出発点です。 sampling_distribution statistics_grade_2 標本調査 母数 推測統計",
       "relatedPublishedSlugs": [
-        "sample"
+        "sample",
+        "sample-mean",
+        "mean",
+        "variance"
       ]
     },
     {
@@ -157,7 +162,7 @@
         "統計量"
       ],
       "sortOrder": 130,
-      "updatedAt": "2026-03-30",
+      "updatedAt": "2026-04-12",
       "href": "/terms/sample/",
       "searchText": "標本 母集団から取り出して、実際に観測や集計の対象にした一部のデータです。 sampling_distribution statistics_grade_2 標本調査 推測統計 統計量",
       "relatedPublishedSlugs": [
@@ -183,10 +188,11 @@
         "偏り"
       ],
       "sortOrder": 140,
-      "updatedAt": "2026-04-02",
+      "updatedAt": "2026-04-12",
       "href": "/terms/random-sampling/",
       "searchText": "無作為抽出 母集団から標本を選ぶときに、特定の対象へ偏らないよう偶然性を使って選ぶ方法です。 sampling_distribution statistics_grade_2 ランダムサンプリング 標本調査 抽出 偏り",
       "relatedPublishedSlugs": [
+        "population",
         "sample"
       ]
     },
@@ -206,10 +212,15 @@
         "統計量"
       ],
       "sortOrder": 150,
-      "updatedAt": "2026-03-31",
+      "updatedAt": "2026-04-12",
       "href": "/terms/sample-mean/",
       "searchText": "標本平均 標本に含まれる観測値を合計して個数で割った、標本を代表する平均です。 sampling_distribution statistics_grade_2 標本 平均 統計量",
-      "relatedPublishedSlugs": []
+      "relatedPublishedSlugs": [
+        "sample",
+        "population",
+        "mean",
+        "variance"
+      ]
     },
     {
       "slug": "normal-distribution",
@@ -227,13 +238,14 @@
         "標準化"
       ],
       "sortOrder": 330,
-      "updatedAt": "2026-03-28",
+      "updatedAt": "2026-04-12",
       "href": "/terms/normal-distribution/",
       "searchText": "正規分布 左右対称のつり鐘型をした、もっとも代表的な連続型の確率分布です。 probability_distribution statistics_grade_2 確率分布 連続型 標準化",
       "relatedPublishedSlugs": [
         "mean",
         "variance",
-        "standard-deviation"
+        "standard-deviation",
+        "sample-mean"
       ]
     }
   ],

@@ -18,6 +18,23 @@ import { withBase } from '../lib/site';
       <a class="button-link" href={withBase('/terms/')}>用語一覧を見る</a>
       <a class="ghost-link" href={withBase('/topics/')}>分野解説を見る</a>
     </div>
+    <div class="hero-tile-grid" slot="aside">
+      <article class="hero-mini-card">
+        <span class="hero-mini-card__label">読む順</span>
+        <strong class="hero-mini-card__value">一覧 → 詳細</strong>
+        <span class="hero-mini-card__meta">気になる語から開けます。</span>
+      </article>
+      <article class="hero-mini-card">
+        <span class="hero-mini-card__label">見方</span>
+        <strong class="hero-mini-card__value">直感 → 定義</strong>
+        <span class="hero-mini-card__meta">イメージから順に理解します。</span>
+      </article>
+      <article class="hero-mini-card hero-mini-card--accent">
+        <span class="hero-mini-card__label">入口</span>
+        <strong class="hero-mini-card__value">用語一覧</strong>
+        <span class="hero-mini-card__meta">まずはここから始められます。</span>
+      </article>
+    </div>
   </PageHero>
 
   <section class="page-section page-section--compact">
@@ -39,6 +56,35 @@ import { withBase } from '../lib/site';
           title="分野解説"
           description="関連する用語をまとまりで確認できます。"
         />
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section page-section--compact">
+    <div class="site-shell">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">学び方</h2>
+          <p class="section-text">短い順路で、読みやすく進められるようにしています。</p>
+        </div>
+      </div>
+
+      <div class="category-grid">
+        <article class="category-tile">
+          <span class="category-tile__label">用語一覧</span>
+          <span class="category-tile__count">01</span>
+          <p class="category-tile__meta">気になる語をすぐ開く。</p>
+        </article>
+        <article class="category-tile">
+          <span class="category-tile__label">詳細ページ</span>
+          <span class="category-tile__count">02</span>
+          <p class="category-tile__meta">直感・定義・例を順に読む。</p>
+        </article>
+        <article class="category-tile">
+          <span class="category-tile__label">関連用語</span>
+          <span class="category-tile__count">03</span>
+          <p class="category-tile__meta">近い概念へ横につなぐ。</p>
+        </article>
       </div>
     </div>
   </section>

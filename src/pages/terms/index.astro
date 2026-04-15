@@ -37,18 +37,18 @@ const featured = termIndex.featuredTermSlugs
     </div>
     <div class="hero-tile-grid" slot="aside">
       <article class="hero-mini-card">
-        <span class="hero-mini-card__label">公開用語</span>
-        <strong class="hero-mini-card__value">{terms.length}</strong>
-        <span class="hero-mini-card__meta">今すぐ読めるページ</span>
+        <span class="hero-mini-card__label">探す</span>
+        <strong class="hero-mini-card__value">検索</strong>
+        <span class="hero-mini-card__meta">気になる語を入力して開けます。</span>
       </article>
       <article class="hero-mini-card">
-        <span class="hero-mini-card__label">カテゴリ</span>
-        <strong class="hero-mini-card__value">{categories.length}</strong>
-        <span class="hero-mini-card__meta">近い概念をまとめて探せます</span>
+        <span class="hero-mini-card__label">比べる</span>
+        <strong class="hero-mini-card__value">カテゴリ</strong>
+        <span class="hero-mini-card__meta">近い概念をまとめて見られます。</span>
       </article>
       {featured[0] && (
         <article class="hero-mini-card hero-mini-card--accent">
-          <span class="hero-mini-card__label">最初の候補</span>
+          <span class="hero-mini-card__label">入口</span>
           <strong class="hero-mini-card__value">{featured[0].title}</strong>
           <span class="hero-mini-card__meta">{featured[0].shortDefinition}</span>
         </article>
@@ -90,9 +90,9 @@ const featured = termIndex.featuredTermSlugs
         </div>
 
         <div class="filter-panel__summary">
-          <p class="filter-panel__label">いま見られる範囲</p>
-          <p class="filter-panel__summary-value">{terms.length}語</p>
-          <p class="muted-text">まずは基礎か、気になるカテゴリから選ぶのがおすすめです。</p>
+          <p class="filter-panel__label">読み方</p>
+          <p class="filter-panel__summary-value">基礎から</p>
+          <p class="muted-text">気になる語からでも、基礎カテゴリからでも進められます。</p>
         </div>
 
         <div class="filter-panel__categories">
