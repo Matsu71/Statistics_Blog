@@ -63,11 +63,21 @@ const sectionLinks = [
 const visualVariant =
   term.data.slug === 'variance'
     ? 'spread'
+    : term.data.slug === 'standard-deviation'
+      ? 'spread'
     : term.data.slug === 'normal-distribution'
       ? 'distribution'
       : term.data.slug === 'mean'
         ? 'balance'
-        : 'generic';
+        : term.data.slug === 'range'
+          ? 'range-span'
+          : term.data.slug === 'population' || term.data.slug === 'sample'
+            ? 'population-sample'
+            : term.data.slug === 'random-sampling'
+              ? 'sampling-flow'
+              : term.data.slug === 'sample-mean'
+                ? 'sample-mean'
+                : 'generic';
 ---
 
 <BaseLayout

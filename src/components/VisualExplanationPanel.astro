@@ -3,7 +3,15 @@ import MathText from './MathText.astro';
 
 interface Props {
   items: string[];
-  variant?: 'generic' | 'spread' | 'distribution' | 'balance';
+  variant?:
+    | 'generic'
+    | 'spread'
+    | 'distribution'
+    | 'balance'
+    | 'range-span'
+    | 'population-sample'
+    | 'sampling-flow'
+    | 'sample-mean';
 }
 
 const { items, variant = 'generic' } = Astro.props;
@@ -60,6 +68,80 @@ const titleId = `visual-${variant}-panel`;
           <text x="148" y="28" class="visual-panel__label">平均</text>
           <text x="42" y="158" class="visual-panel__label">値</text>
           <text x="250" y="158" class="visual-panel__label">左右対称</text>
+        </>
+      )}
+
+      {variant === 'range-span' && (
+        <>
+          <rect x="12" y="18" width="296" height="144" rx="20" fill="#f8fbfd" />
+          <line x1="48" y1="104" x2="272" y2="104" stroke="#8eb6cf" stroke-width="5" stroke-linecap="round" />
+          <circle cx="72" cy="104" r="9" fill="#9d7b38" />
+          <circle cx="132" cy="104" r="7" fill="#1f5f8b" opacity="0.55" />
+          <circle cx="174" cy="104" r="7" fill="#1f5f8b" opacity="0.55" />
+          <circle cx="248" cy="104" r="9" fill="#9d7b38" />
+          <path d="M72 68 H248" stroke="#1f5f8b" stroke-width="4" stroke-linecap="round" />
+          <path d="M72 68 L82 60 M72 68 L82 76 M248 68 L238 60 M248 68 L238 76" stroke="#1f5f8b" stroke-width="4" stroke-linecap="round" />
+          <text x="48" y="48" class="visual-panel__label">最大値と最小値の幅</text>
+          <text x="52" y="130" class="visual-panel__label">最小</text>
+          <text x="232" y="130" class="visual-panel__label">最大</text>
+          <text x="132" y="88" class="visual-panel__label">範囲</text>
+        </>
+      )}
+
+      {variant === 'population-sample' && (
+        <>
+          <rect x="12" y="18" width="296" height="144" rx="20" fill="#f8fbfd" />
+          <rect x="48" y="42" width="224" height="96" rx="18" fill="rgba(31, 95, 139, 0.08)" stroke="#8eb6cf" stroke-width="3" />
+          <text x="54" y="34" class="visual-panel__label">母集団</text>
+          <circle cx="84" cy="70" r="7" fill="#1f5f8b" opacity="0.45" />
+          <circle cx="118" cy="70" r="7" fill="#1f5f8b" opacity="0.45" />
+          <circle cx="152" cy="70" r="7" fill="#1f5f8b" opacity="0.45" />
+          <circle cx="186" cy="70" r="7" fill="#1f5f8b" opacity="0.45" />
+          <circle cx="220" cy="70" r="7" fill="#1f5f8b" opacity="0.45" />
+          <circle cx="84" cy="104" r="7" fill="#1f5f8b" opacity="0.45" />
+          <circle cx="118" cy="104" r="9" fill="#9d7b38" />
+          <circle cx="152" cy="104" r="7" fill="#1f5f8b" opacity="0.45" />
+          <circle cx="186" cy="104" r="9" fill="#9d7b38" />
+          <circle cx="220" cy="104" r="7" fill="#1f5f8b" opacity="0.45" />
+          <path d="M112 124 H194" stroke="#9d7b38" stroke-width="4" stroke-linecap="round" />
+          <text x="124" y="151" class="visual-panel__label">取り出した一部 = 標本</text>
+        </>
+      )}
+
+      {variant === 'sampling-flow' && (
+        <>
+          <rect x="12" y="18" width="296" height="144" rx="20" fill="#f8fbfd" />
+          <rect x="36" y="52" width="82" height="76" rx="16" fill="rgba(31, 95, 139, 0.08)" stroke="#8eb6cf" />
+          <text x="50" y="45" class="visual-panel__label">名簿全体</text>
+          <text x="62" y="75" class="visual-panel__label">1 2 3</text>
+          <text x="62" y="98" class="visual-panel__label">4 5 6</text>
+          <text x="62" y="121" class="visual-panel__label">7 8 9</text>
+          <path d="M128 90 H182" stroke="#1f2d3a" stroke-width="3" stroke-linecap="round" />
+          <path d="M174 82 L184 90 L174 98" fill="none" stroke="#1f2d3a" stroke-width="3" stroke-linecap="round" />
+          <circle cx="156" cy="64" r="18" fill="rgba(157, 123, 56, 0.16)" stroke="#9d7b38" />
+          <text x="145" y="70" class="visual-panel__label">乱数</text>
+          <rect x="196" y="58" width="82" height="64" rx="16" fill="rgba(31, 95, 139, 0.12)" stroke="#1f5f8b" />
+          <text x="211" y="50" class="visual-panel__label">標本</text>
+          <circle cx="222" cy="82" r="8" fill="#9d7b38" />
+          <circle cx="252" cy="82" r="8" fill="#9d7b38" />
+          <circle cx="237" cy="104" r="8" fill="#9d7b38" />
+          <text x="90" y="150" class="visual-panel__label">人の判断ではなく手順で選ぶ</text>
+        </>
+      )}
+
+      {variant === 'sample-mean' && (
+        <>
+          <rect x="12" y="18" width="296" height="144" rx="20" fill="#f8fbfd" />
+          <line x1="48" y1="76" x2="272" y2="76" stroke="#8eb6cf" stroke-width="4" stroke-linecap="round" />
+          <circle cx="74" cy="76" r="8" fill="#1f5f8b" />
+          <circle cx="116" cy="76" r="8" fill="#1f5f8b" />
+          <circle cx="154" cy="76" r="8" fill="#1f5f8b" />
+          <circle cx="210" cy="76" r="8" fill="#1f5f8b" />
+          <circle cx="246" cy="76" r="8" fill="#1f5f8b" />
+          <line x1="160" y1="46" x2="160" y2="116" stroke="#9d7b38" stroke-width="4" stroke-dasharray="6 6" />
+          <text x="130" y="38" class="visual-panel__label">標本平均</text>
+          <path d="M80 118 C114 134, 202 134, 240 118" fill="none" stroke="#1f5f8b" stroke-width="3" stroke-linecap="round" />
+          <text x="70" y="150" class="visual-panel__label">標本の値を 1 点へ要約</text>
         </>
       )}
 
