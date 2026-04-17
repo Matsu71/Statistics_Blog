@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-04-12",
+  "updated_at": "2026-04-17",
   "target_exam": "statistics_grade_2",
   "target_exam_label": "統計検定2級",
   "status_vocab": {
@@ -418,7 +418,7 @@
       "title": "標本空間",
       "category": "probability",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -427,14 +427,15 @@
       "related_terms": [
         "event",
         "probability"
-      ]
+      ],
+      "content_path": "src/content/terms/sample-space.md"
     },
     {
       "slug": "event",
       "title": "事象",
       "category": "probability",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -445,14 +446,15 @@
       "related_terms": [
         "probability",
         "conditional-probability"
-      ]
+      ],
+      "content_path": "src/content/terms/event.md"
     },
     {
       "slug": "probability",
       "title": "確率",
       "category": "probability",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -464,14 +466,15 @@
       "related_terms": [
         "conditional-probability",
         "independence"
-      ]
+      ],
+      "content_path": "src/content/terms/probability.md"
     },
     {
       "slug": "conditional-probability",
       "title": "条件付き確率",
       "category": "probability",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -483,14 +486,15 @@
       "related_terms": [
         "independence",
         "bayes-theorem"
-      ]
+      ],
+      "content_path": "src/content/terms/conditional-probability.md"
     },
     {
       "slug": "independence",
       "title": "独立",
       "category": "probability",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -501,14 +505,15 @@
       ],
       "related_terms": [
         "conditional-probability"
-      ]
+      ],
+      "content_path": "src/content/terms/independence.md"
     },
     {
       "slug": "bayes-theorem",
       "title": "ベイズの定理",
       "category": "probability",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -519,14 +524,15 @@
       "related_terms": [
         "conditional-probability",
         "probability"
-      ]
+      ],
+      "content_path": "src/content/terms/bayes-theorem.md"
     },
     {
       "slug": "probability-variable",
       "title": "確率変数",
       "category": "probability",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -539,14 +545,15 @@
       "related_terms": [
         "probability-distribution",
         "expected-value"
-      ]
+      ],
+      "content_path": "src/content/terms/probability-variable.md"
     },
     {
       "slug": "expected-value",
       "title": "期待値",
       "category": "probability",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -558,7 +565,8 @@
       "related_terms": [
         "variance",
         "probability-distribution"
-      ]
+      ],
+      "content_path": "src/content/terms/expected-value.md"
     },
     {
       "slug": "covariance",
@@ -583,7 +591,7 @@
       "title": "確率分布",
       "category": "probability_distribution",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -595,14 +603,15 @@
         "probability-mass-function",
         "probability-density-function",
         "cumulative-distribution-function"
-      ]
+      ],
+      "content_path": "src/content/terms/probability-distribution.md"
     },
     {
       "slug": "probability-mass-function",
       "title": "確率質量関数",
       "category": "probability_distribution",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -613,14 +622,15 @@
       "related_terms": [
         "probability-density-function",
         "bernoulli-distribution"
-      ]
+      ],
+      "content_path": "src/content/terms/probability-mass-function.md"
     },
     {
       "slug": "probability-density-function",
       "title": "確率密度関数",
       "category": "probability_distribution",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -631,14 +641,15 @@
       "related_terms": [
         "cumulative-distribution-function",
         "normal-distribution"
-      ]
+      ],
+      "content_path": "src/content/terms/probability-density-function.md"
     },
     {
       "slug": "cumulative-distribution-function",
       "title": "累積分布関数",
       "category": "probability_distribution",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -649,14 +660,15 @@
       "related_terms": [
         "probability-mass-function",
         "probability-density-function"
-      ]
+      ],
+      "content_path": "src/content/terms/cumulative-distribution-function.md"
     },
     {
       "slug": "bernoulli-distribution",
       "title": "ベルヌーイ分布",
       "category": "probability_distribution",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -666,14 +678,15 @@
       ],
       "related_terms": [
         "binomial-distribution"
-      ]
+      ],
+      "content_path": "src/content/terms/bernoulli-distribution.md"
     },
     {
       "slug": "binomial-distribution",
       "title": "二項分布",
       "category": "probability_distribution",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -685,14 +698,15 @@
       "related_terms": [
         "normal-distribution",
         "expected-value"
-      ]
+      ],
+      "content_path": "src/content/terms/binomial-distribution.md"
     },
     {
       "slug": "poisson-distribution",
       "title": "ポアソン分布",
       "category": "probability_distribution",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -702,14 +716,15 @@
       ],
       "related_terms": [
         "binomial-distribution"
-      ]
+      ],
+      "content_path": "src/content/terms/poisson-distribution.md"
     },
     {
       "slug": "geometric-distribution",
       "title": "幾何分布",
       "category": "probability_distribution",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -719,7 +734,8 @@
       ],
       "related_terms": [
         "binomial-distribution"
-      ]
+      ],
+      "content_path": "src/content/terms/geometric-distribution.md"
     },
     {
       "slug": "normal-distribution",

@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-04-17T09:22:59.388Z",
+  "generatedAt": "2026-04-17T13:40:28.540Z",
   "stats": {
-    "publishedCount": 18,
+    "publishedCount": 34,
     "draftCount": 0,
-    "unstartedCount": 53
+    "unstartedCount": 37
   },
   "nextTerm": {
     "slug": "population-mean",
@@ -378,6 +378,276 @@
       ]
     },
     {
+      "slug": "sample-space",
+      "title": "標本空間",
+      "shortDefinition": "試行で起こりうる結果をすべて集めた、確率を考える土台です。",
+      "category": "probability",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率",
+        "集合",
+        "基礎"
+      ],
+      "sortOrder": 210,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/sample-space/",
+      "searchText": "標本空間 試行で起こりうる結果をすべて集めた、確率を考える土台です。 probability statistics_grade_2 確率 集合 基礎",
+      "relatedPublishedSlugs": [
+        "event",
+        "probability"
+      ]
+    },
+    {
+      "slug": "event",
+      "title": "事象",
+      "shortDefinition": "標本空間の中で、確率を考えたい結果のまとまりです。",
+      "category": "probability",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率",
+        "集合",
+        "事象"
+      ],
+      "sortOrder": 220,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/event/",
+      "searchText": "事象 標本空間の中で、確率を考えたい結果のまとまりです。 probability statistics_grade_2 確率 集合 事象",
+      "relatedPublishedSlugs": [
+        "probability",
+        "conditional-probability"
+      ]
+    },
+    {
+      "slug": "probability",
+      "title": "確率",
+      "shortDefinition": "事象が起こる見込みを 0 から 1 の数で表したものです。",
+      "category": "probability",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率",
+        "基礎",
+        "事象"
+      ],
+      "sortOrder": 230,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/probability/",
+      "searchText": "確率 事象が起こる見込みを 0 から 1 の数で表したものです。 probability statistics_grade_2 確率 基礎 事象",
+      "relatedPublishedSlugs": [
+        "conditional-probability",
+        "independence"
+      ]
+    },
+    {
+      "slug": "conditional-probability",
+      "title": "条件付き確率",
+      "shortDefinition": "ある事象が起きたという条件のもとで、別の事象が起こる確率です。",
+      "category": "probability",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率",
+        "条件付き確率",
+        "事象"
+      ],
+      "sortOrder": 240,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/conditional-probability/",
+      "searchText": "条件付き確率 ある事象が起きたという条件のもとで、別の事象が起こる確率です。 probability statistics_grade_2 確率 条件付き確率 事象",
+      "relatedPublishedSlugs": [
+        "independence",
+        "bayes-theorem"
+      ]
+    },
+    {
+      "slug": "independence",
+      "title": "独立",
+      "shortDefinition": "一方の事象が起きても、もう一方の起こりやすさが変わらない関係です。",
+      "category": "probability",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率",
+        "独立",
+        "条件付き確率"
+      ],
+      "sortOrder": 250,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/independence/",
+      "searchText": "独立 一方の事象が起きても、もう一方の起こりやすさが変わらない関係です。 probability statistics_grade_2 確率 独立 条件付き確率",
+      "relatedPublishedSlugs": [
+        "conditional-probability"
+      ]
+    },
+    {
+      "slug": "bayes-theorem",
+      "title": "ベイズの定理",
+      "shortDefinition": "条件付き確率の向きを入れ替えて考えるための公式です。",
+      "category": "probability",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率",
+        "条件付き確率",
+        "ベイズ"
+      ],
+      "sortOrder": 260,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/bayes-theorem/",
+      "searchText": "ベイズの定理 条件付き確率の向きを入れ替えて考えるための公式です。 probability statistics_grade_2 確率 条件付き確率 ベイズ",
+      "relatedPublishedSlugs": [
+        "conditional-probability",
+        "probability"
+      ]
+    },
+    {
+      "slug": "probability-variable",
+      "title": "確率変数",
+      "shortDefinition": "偶然の結果に応じて値が決まる変数です。",
+      "category": "probability",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "確率変量"
+      ],
+      "tags": [
+        "確率",
+        "確率変数",
+        "分布"
+      ],
+      "sortOrder": 270,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/probability-variable/",
+      "searchText": "確率変数 偶然の結果に応じて値が決まる変数です。 probability statistics_grade_2 確率変量 確率 確率変数 分布",
+      "relatedPublishedSlugs": [
+        "probability-distribution",
+        "expected-value"
+      ]
+    },
+    {
+      "slug": "expected-value",
+      "title": "期待値",
+      "shortDefinition": "確率に応じて重み付けした、確率変数の平均的な中心です。",
+      "category": "probability",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率",
+        "期待値",
+        "平均"
+      ],
+      "sortOrder": 280,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/expected-value/",
+      "searchText": "期待値 確率に応じて重み付けした、確率変数の平均的な中心です。 probability statistics_grade_2 確率 期待値 平均",
+      "relatedPublishedSlugs": [
+        "variance",
+        "probability-distribution"
+      ]
+    },
+    {
+      "slug": "probability-distribution",
+      "title": "確率分布",
+      "shortDefinition": "確率変数の値と、その起こりやすさの対応をまとめたものです。",
+      "category": "probability_distribution",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率分布",
+        "確率変数",
+        "分布"
+      ],
+      "sortOrder": 300,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/probability-distribution/",
+      "searchText": "確率分布 確率変数の値と、その起こりやすさの対応をまとめたものです。 probability_distribution statistics_grade_2 確率分布 確率変数 分布",
+      "relatedPublishedSlugs": [
+        "probability-mass-function",
+        "probability-density-function",
+        "cumulative-distribution-function"
+      ]
+    },
+    {
+      "slug": "probability-mass-function",
+      "title": "確率質量関数",
+      "shortDefinition": "離散型確率変数が各値を取る確率を表す関数です。",
+      "category": "probability_distribution",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "PMF"
+      ],
+      "tags": [
+        "確率分布",
+        "離散型",
+        "確率質量関数"
+      ],
+      "sortOrder": 310,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/probability-mass-function/",
+      "searchText": "確率質量関数 離散型確率変数が各値を取る確率を表す関数です。 probability_distribution statistics_grade_2 PMF 確率分布 離散型 確率質量関数",
+      "relatedPublishedSlugs": [
+        "probability-density-function",
+        "bernoulli-distribution"
+      ]
+    },
+    {
+      "slug": "probability-density-function",
+      "title": "確率密度関数",
+      "shortDefinition": "連続型確率変数の確率を、曲線下の面積として表す関数です。",
+      "category": "probability_distribution",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "PDF"
+      ],
+      "tags": [
+        "確率分布",
+        "連続型",
+        "確率密度関数"
+      ],
+      "sortOrder": 320,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/probability-density-function/",
+      "searchText": "確率密度関数 連続型確率変数の確率を、曲線下の面積として表す関数です。 probability_distribution statistics_grade_2 PDF 確率分布 連続型 確率密度関数",
+      "relatedPublishedSlugs": [
+        "cumulative-distribution-function",
+        "normal-distribution"
+      ]
+    },
+    {
       "slug": "normal-distribution",
       "title": "正規分布",
       "shortDefinition": "左右対称のつり鐘型をした、もっとも代表的な連続型の確率分布です。",
@@ -401,6 +671,125 @@
         "variance",
         "standard-deviation",
         "sample-mean"
+      ]
+    },
+    {
+      "slug": "cumulative-distribution-function",
+      "title": "累積分布関数",
+      "shortDefinition": "確率変数がある値以下になる確率を積み上げて表す関数です。",
+      "category": "probability_distribution",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "CDF"
+      ],
+      "tags": [
+        "確率分布",
+        "累積分布関数",
+        "分布"
+      ],
+      "sortOrder": 330,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/cumulative-distribution-function/",
+      "searchText": "累積分布関数 確率変数がある値以下になる確率を積み上げて表す関数です。 probability_distribution statistics_grade_2 CDF 確率分布 累積分布関数 分布",
+      "relatedPublishedSlugs": [
+        "probability-mass-function",
+        "probability-density-function"
+      ]
+    },
+    {
+      "slug": "bernoulli-distribution",
+      "title": "ベルヌーイ分布",
+      "shortDefinition": "成功か失敗かの 1 回の試行を表す、最も基本的な離散分布です。",
+      "category": "probability_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率分布",
+        "離散型",
+        "ベルヌーイ分布"
+      ],
+      "sortOrder": 340,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/bernoulli-distribution/",
+      "searchText": "ベルヌーイ分布 成功か失敗かの 1 回の試行を表す、最も基本的な離散分布です。 probability_distribution statistics_grade_2 確率分布 離散型 ベルヌーイ分布",
+      "relatedPublishedSlugs": [
+        "binomial-distribution"
+      ]
+    },
+    {
+      "slug": "binomial-distribution",
+      "title": "二項分布",
+      "shortDefinition": "独立な成功/失敗の試行を繰り返したときの、成功回数の分布です。",
+      "category": "probability_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率分布",
+        "離散型",
+        "二項分布"
+      ],
+      "sortOrder": 350,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/binomial-distribution/",
+      "searchText": "二項分布 独立な成功/失敗の試行を繰り返したときの、成功回数の分布です。 probability_distribution statistics_grade_2 確率分布 離散型 二項分布",
+      "relatedPublishedSlugs": [
+        "normal-distribution",
+        "expected-value"
+      ]
+    },
+    {
+      "slug": "poisson-distribution",
+      "title": "ポアソン分布",
+      "shortDefinition": "一定の時間や範囲で起こる回数を表す離散分布です。",
+      "category": "probability_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率分布",
+        "離散型",
+        "ポアソン分布"
+      ],
+      "sortOrder": 360,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/poisson-distribution/",
+      "searchText": "ポアソン分布 一定の時間や範囲で起こる回数を表す離散分布です。 probability_distribution statistics_grade_2 確率分布 離散型 ポアソン分布",
+      "relatedPublishedSlugs": [
+        "binomial-distribution"
+      ]
+    },
+    {
+      "slug": "geometric-distribution",
+      "title": "幾何分布",
+      "shortDefinition": "初めて成功するまでに必要な試行回数を表す離散分布です。",
+      "category": "probability_distribution",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "確率分布",
+        "離散型",
+        "幾何分布"
+      ],
+      "sortOrder": 370,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/geometric-distribution/",
+      "searchText": "幾何分布 初めて成功するまでに必要な試行回数を表す離散分布です。 probability_distribution statistics_grade_2 確率分布 離散型 幾何分布",
+      "relatedPublishedSlugs": [
+        "binomial-distribution"
       ]
     },
     {
@@ -493,14 +882,14 @@
       "unstarted": 1
     },
     "probability": {
-      "published": 0,
+      "published": 8,
       "draft": 0,
-      "unstarted": 8
+      "unstarted": 0
     },
     "probability_distribution": {
-      "published": 2,
+      "published": 10,
       "draft": 0,
-      "unstarted": 11
+      "unstarted": 3
     },
     "sampling_distribution": {
       "published": 6,
