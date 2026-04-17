@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-17T09:09:04.244Z",
+  "generatedAt": "2026-04-17T09:22:59.388Z",
   "stats": {
     "publishedCount": 18,
     "draftCount": 0,
@@ -38,7 +38,7 @@
         "中心"
       ],
       "sortOrder": 10,
-      "updatedAt": "2026-04-15",
+      "updatedAt": "2026-04-17",
       "href": "/terms/mean/",
       "searchText": "平均 データ全体の中心を手早くつかむための、もっとも基本的な代表値です。 descriptive_statistics statistics_grade_2 算術平均 代表値 中心",
       "relatedPublishedSlugs": [
