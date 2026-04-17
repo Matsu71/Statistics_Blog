@@ -100,7 +100,7 @@
       "title": "中央値",
       "category": "descriptive_statistics",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -109,14 +109,15 @@
       "related_terms": [
         "mean",
         "mode"
-      ]
+      ],
+      "content_path": "src/content/terms/median.md"
     },
     {
       "slug": "mode",
       "title": "最頻値",
       "category": "descriptive_statistics",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -125,14 +126,15 @@
       "related_terms": [
         "mean",
         "median"
-      ]
+      ],
+      "content_path": "src/content/terms/mode.md"
     },
     {
       "slug": "quartile",
       "title": "四分位数",
       "category": "descriptive_statistics",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -143,14 +145,15 @@
       "related_terms": [
         "interquartile-range",
         "box-plot"
-      ]
+      ],
+      "content_path": "src/content/terms/quartile.md"
     },
     {
       "slug": "interquartile-range",
       "title": "四分位範囲",
       "category": "descriptive_statistics",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -161,7 +164,8 @@
       "related_terms": [
         "quartile",
         "box-plot"
-      ]
+      ],
+      "content_path": "src/content/terms/interquartile-range.md"
     },
     {
       "slug": "range",
@@ -203,7 +207,7 @@
       "title": "ヒストグラム",
       "category": "data_handling",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -211,14 +215,15 @@
       "prerequisites": [],
       "related_terms": [
         "box-plot"
-      ]
+      ],
+      "content_path": "src/content/terms/histogram.md"
     },
     {
       "slug": "box-plot",
       "title": "箱ひげ図",
       "category": "data_handling",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -230,7 +235,8 @@
       "related_terms": [
         "quartile",
         "interquartile-range"
-      ]
+      ],
+      "content_path": "src/content/terms/box-plot.md"
     },
     {
       "slug": "population",
@@ -743,7 +749,7 @@
       "title": "標準正規分布",
       "category": "probability_distribution",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -754,7 +760,8 @@
       ],
       "related_terms": [
         "z-score"
-      ]
+      ],
+      "content_path": "src/content/terms/standard-normal-distribution.md"
     },
     {
       "slug": "t-distribution",
@@ -852,7 +859,7 @@
       "title": "標準化",
       "category": "sampling_distribution",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -865,14 +872,15 @@
       "related_terms": [
         "z-score",
         "standard-normal-distribution"
-      ]
+      ],
+      "content_path": "src/content/terms/standardization.md"
     },
     {
       "slug": "z-score",
       "title": "z値",
       "category": "sampling_distribution",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -882,7 +890,8 @@
       ],
       "related_terms": [
         "standard-normal-distribution"
-      ]
+      ],
+      "content_path": "src/content/terms/z-score.md"
     },
     {
       "slug": "estimation",

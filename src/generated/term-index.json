@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-04-15T00:54:09.834Z",
+  "generatedAt": "2026-04-17T09:09:04.244Z",
   "stats": {
-    "publishedCount": 9,
+    "publishedCount": 18,
     "draftCount": 0,
-    "unstartedCount": 62
+    "unstartedCount": 53
   },
   "nextTerm": {
     "slug": "population-mean",
@@ -118,6 +118,161 @@
         "mean",
         "variance",
         "normal-distribution"
+      ]
+    },
+    {
+      "slug": "median",
+      "title": "中央値",
+      "shortDefinition": "データを小さい順に並べたとき、真ん中にくる値を表す代表値です。",
+      "category": "descriptive_statistics",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "メディアン"
+      ],
+      "tags": [
+        "代表値",
+        "中心",
+        "記述統計"
+      ],
+      "sortOrder": 40,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/median/",
+      "searchText": "中央値 データを小さい順に並べたとき、真ん中にくる値を表す代表値です。 descriptive_statistics statistics_grade_2 メディアン 代表値 中心 記述統計",
+      "relatedPublishedSlugs": [
+        "mean",
+        "mode"
+      ]
+    },
+    {
+      "slug": "mode",
+      "title": "最頻値",
+      "shortDefinition": "データの中で最も多く現れる値を表す代表値です。",
+      "category": "descriptive_statistics",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "モード"
+      ],
+      "tags": [
+        "代表値",
+        "度数",
+        "記述統計"
+      ],
+      "sortOrder": 50,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/mode/",
+      "searchText": "最頻値 データの中で最も多く現れる値を表す代表値です。 descriptive_statistics statistics_grade_2 モード 代表値 度数 記述統計",
+      "relatedPublishedSlugs": [
+        "mean",
+        "median"
+      ]
+    },
+    {
+      "slug": "quartile",
+      "title": "四分位数",
+      "shortDefinition": "データを小さい順に並べ、4 つの部分に分ける位置を表す値です。",
+      "category": "descriptive_statistics",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "第1四分位数",
+        "第2四分位数",
+        "第3四分位数"
+      ],
+      "tags": [
+        "代表値",
+        "散布度",
+        "箱ひげ図"
+      ],
+      "sortOrder": 60,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/quartile/",
+      "searchText": "四分位数 データを小さい順に並べ、4 つの部分に分ける位置を表す値です。 descriptive_statistics statistics_grade_2 第1四分位数 第2四分位数 第3四分位数 代表値 散布度 箱ひげ図",
+      "relatedPublishedSlugs": [
+        "interquartile-range",
+        "box-plot"
+      ]
+    },
+    {
+      "slug": "interquartile-range",
+      "title": "四分位範囲",
+      "shortDefinition": "第 3 四分位数と第 1 四分位数の差で、中央 50% の広がりを表す指標です。",
+      "category": "descriptive_statistics",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "IQR"
+      ],
+      "tags": [
+        "散布度",
+        "四分位数",
+        "箱ひげ図"
+      ],
+      "sortOrder": 70,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/interquartile-range/",
+      "searchText": "四分位範囲 第 3 四分位数と第 1 四分位数の差で、中央 50% の広がりを表す指標です。 descriptive_statistics statistics_grade_2 IQR 散布度 四分位数 箱ひげ図",
+      "relatedPublishedSlugs": [
+        "quartile",
+        "box-plot"
+      ]
+    },
+    {
+      "slug": "histogram",
+      "title": "ヒストグラム",
+      "shortDefinition": "データを階級に分け、各階級の度数を柱の高さで表すグラフです。",
+      "category": "data_handling",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [],
+      "tags": [
+        "グラフ",
+        "度数",
+        "データの可視化"
+      ],
+      "sortOrder": 100,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/histogram/",
+      "searchText": "ヒストグラム データを階級に分け、各階級の度数を柱の高さで表すグラフです。 data_handling statistics_grade_2 グラフ 度数 データの可視化",
+      "relatedPublishedSlugs": [
+        "box-plot"
+      ]
+    },
+    {
+      "slug": "box-plot",
+      "title": "箱ひげ図",
+      "shortDefinition": "四分位数を使って、データの中心と広がりを短く表す図です。",
+      "category": "data_handling",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "箱髭図"
+      ],
+      "tags": [
+        "グラフ",
+        "四分位数",
+        "データの可視化"
+      ],
+      "sortOrder": 110,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/box-plot/",
+      "searchText": "箱ひげ図 四分位数を使って、データの中心と広がりを短く表す図です。 data_handling statistics_grade_2 箱髭図 グラフ 四分位数 データの可視化",
+      "relatedPublishedSlugs": [
+        "quartile",
+        "interquartile-range"
       ]
     },
     {
@@ -247,6 +402,83 @@
         "standard-deviation",
         "sample-mean"
       ]
+    },
+    {
+      "slug": "standard-normal-distribution",
+      "title": "標準正規分布",
+      "shortDefinition": "平均 0、分散 1 の基準となる正規分布です。",
+      "category": "probability_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "standard normal distribution"
+      ],
+      "tags": [
+        "正規分布",
+        "標準化",
+        "確率分布"
+      ],
+      "sortOrder": 390,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/standard-normal-distribution/",
+      "searchText": "標準正規分布 平均 0、分散 1 の基準となる正規分布です。 probability_distribution statistics_grade_2 standard normal distribution 正規分布 標準化 確率分布",
+      "relatedPublishedSlugs": [
+        "z-score"
+      ]
+    },
+    {
+      "slug": "standardization",
+      "title": "標準化",
+      "shortDefinition": "値を「平均との差が標準偏差何個分か」という同じものさしに直す操作です。",
+      "category": "sampling_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "standardization"
+      ],
+      "tags": [
+        "標準化",
+        "z値",
+        "正規分布"
+      ],
+      "sortOrder": 450,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/standardization/",
+      "searchText": "標準化 値を「平均との差が標準偏差何個分か」という同じものさしに直す操作です。 sampling_distribution statistics_grade_2 standardization 標準化 z値 正規分布",
+      "relatedPublishedSlugs": [
+        "z-score",
+        "standard-normal-distribution"
+      ]
+    },
+    {
+      "slug": "z-score",
+      "title": "z値",
+      "shortDefinition": "ある値が平均から標準偏差何個分離れているかを表す値です。",
+      "category": "sampling_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "zスコア",
+        "標準得点"
+      ],
+      "tags": [
+        "標準化",
+        "正規分布",
+        "標準正規分布"
+      ],
+      "sortOrder": 460,
+      "updatedAt": "2026-04-17",
+      "href": "/terms/z-score/",
+      "searchText": "z値 ある値が平均から標準偏差何個分離れているかを表す値です。 sampling_distribution statistics_grade_2 zスコア 標準得点 標準化 正規分布 標準正規分布",
+      "relatedPublishedSlugs": [
+        "standard-normal-distribution"
+      ]
     }
   ],
   "featuredTermSlugs": [
@@ -256,9 +488,9 @@
   ],
   "queueSummaryByCategory": {
     "descriptive_statistics": {
-      "published": 4,
+      "published": 8,
       "draft": 0,
-      "unstarted": 5
+      "unstarted": 1
     },
     "probability": {
       "published": 0,
@@ -266,14 +498,14 @@
       "unstarted": 8
     },
     "probability_distribution": {
-      "published": 1,
+      "published": 2,
       "draft": 0,
-      "unstarted": 12
+      "unstarted": 11
     },
     "sampling_distribution": {
-      "published": 4,
+      "published": 6,
       "draft": 0,
-      "unstarted": 9
+      "unstarted": 7
     },
     "estimation": {
       "published": 0,
@@ -291,9 +523,9 @@
       "unstarted": 9
     },
     "data_handling": {
-      "published": 0,
+      "published": 2,
       "draft": 0,
-      "unstarted": 2
+      "unstarted": 0
     }
   }
 }
