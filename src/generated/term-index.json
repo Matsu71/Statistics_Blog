@@ -1,25 +1,11 @@
 {
-  "generatedAt": "2026-04-17T13:40:28.540Z",
+  "generatedAt": "2026-04-22T06:13:02.474Z",
   "stats": {
-    "publishedCount": 34,
+    "publishedCount": 71,
     "draftCount": 0,
-    "unstartedCount": 37
+    "unstartedCount": 0
   },
-  "nextTerm": {
-    "slug": "population-mean",
-    "title": "母平均",
-    "category": "sampling_distribution",
-    "level": "foundation",
-    "priority": 1,
-    "prerequisites": [
-      "population",
-      "mean"
-    ],
-    "relatedTerms": [
-      "sample-mean",
-      "population-variance"
-    ]
-  },
+  "nextTerm": null,
   "publishedTerms": [
     {
       "slug": "mean",
@@ -118,6 +104,31 @@
         "mean",
         "variance",
         "normal-distribution"
+      ]
+    },
+    {
+      "slug": "coefficient-of-variation",
+      "title": "変動係数",
+      "shortDefinition": "平均に対して標準偏差がどのくらい大きいかを表し、尺度の違うデータでも相対的なばらつきを比べる指標です。",
+      "category": "descriptive_statistics",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "CV"
+      ],
+      "tags": [
+        "散布度",
+        "相対比較",
+        "ばらつき"
+      ],
+      "sortOrder": 35,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/coefficient-of-variation/",
+      "searchText": "変動係数 平均に対して標準偏差がどのくらい大きいかを表し、尺度の違うデータでも相対的なばらつきを比べる指標です。 descriptive_statistics statistics_grade_2 CV 散布度 相対比較 ばらつき",
+      "relatedPublishedSlugs": [
+        "standard-deviation"
       ]
     },
     {
@@ -375,6 +386,190 @@
         "population",
         "mean",
         "variance"
+      ]
+    },
+    {
+      "slug": "standard-error",
+      "title": "標準誤差",
+      "shortDefinition": "標本平均などの統計量が、標本を取り直すたびにどのくらいぶれるかを表す標準偏差です。",
+      "category": "sampling_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "SE",
+        "standard error"
+      ],
+      "tags": [
+        "標本分布",
+        "推定",
+        "ばらつき"
+      ],
+      "sortOrder": 160,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/standard-error/",
+      "searchText": "標準誤差 標本平均などの統計量が、標本を取り直すたびにどのくらいぶれるかを表す標準偏差です。 sampling_distribution statistics_grade_2 SE standard error 標本分布 推定 ばらつき",
+      "relatedPublishedSlugs": [
+        "sample-mean",
+        "central-limit-theorem"
+      ]
+    },
+    {
+      "slug": "population-mean",
+      "title": "母平均",
+      "shortDefinition": "母集団全体の値を平均した、母集団の中心を表す固定された値です。",
+      "category": "sampling_distribution",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "母平均値"
+      ],
+      "tags": [
+        "母数",
+        "平均",
+        "推測統計"
+      ],
+      "sortOrder": 160,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/population-mean/",
+      "searchText": "母平均 母集団全体の値を平均した、母集団の中心を表す固定された値です。 sampling_distribution statistics_grade_2 母平均値 母数 平均 推測統計",
+      "relatedPublishedSlugs": [
+        "sample-mean",
+        "population-variance"
+      ]
+    },
+    {
+      "slug": "unbiased-variance",
+      "title": "不偏分散",
+      "shortDefinition": "標本から母分散 $\\sigma^2$ を見積もるとき、繰り返し標本抽出した平均値が母分散に一致するよう補正した分散です。",
+      "category": "sampling_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "unbiased variance"
+      ],
+      "tags": [
+        "分散",
+        "推定",
+        "不偏性"
+      ],
+      "sortOrder": 170,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/unbiased-variance/",
+      "searchText": "不偏分散 標本から母分散 $\\sigma^2$ を見積もるとき、繰り返し標本抽出した平均値が母分散に一致するよう補正した分散です。 sampling_distribution statistics_grade_2 unbiased variance 分散 推定 不偏性",
+      "relatedPublishedSlugs": [
+        "sample-variance",
+        "unbiased-estimator"
+      ]
+    },
+    {
+      "slug": "population-variance",
+      "title": "母分散",
+      "shortDefinition": "母集団全体が母平均のまわりにどのくらい散らばっているかを表す、母集団のばらつきの指標です。",
+      "category": "sampling_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "母集団分散"
+      ],
+      "tags": [
+        "母数",
+        "ばらつき",
+        "推測統計"
+      ],
+      "sortOrder": 170,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/population-variance/",
+      "searchText": "母分散 母集団全体が母平均のまわりにどのくらい散らばっているかを表す、母集団のばらつきの指標です。 sampling_distribution statistics_grade_2 母集団分散 母数 ばらつき 推測統計",
+      "relatedPublishedSlugs": [
+        "sample-variance",
+        "unbiased-variance"
+      ]
+    },
+    {
+      "slug": "central-limit-theorem",
+      "title": "中心極限定理",
+      "shortDefinition": "独立で同じ分布に従う標本を十分多く平均すると、元の分布が正規分布でなくても標本平均はおおよそ正規分布に従うという定理です。",
+      "category": "sampling_distribution",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "CLT",
+        "central limit theorem"
+      ],
+      "tags": [
+        "標本分布",
+        "正規近似",
+        "推測統計"
+      ],
+      "sortOrder": 180,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/central-limit-theorem/",
+      "searchText": "中心極限定理 独立で同じ分布に従う標本を十分多く平均すると、元の分布が正規分布でなくても標本平均はおおよそ正規分布に従うという定理です。 sampling_distribution statistics_grade_2 CLT central limit theorem 標本分布 正規近似 推測統計",
+      "relatedPublishedSlugs": [
+        "standard-error",
+        "law-of-large-numbers"
+      ]
+    },
+    {
+      "slug": "sample-variance",
+      "title": "標本分散",
+      "shortDefinition": "標本の値が標本平均のまわりにどのくらい散らばっているかを、$n$ で割って表した指標です。",
+      "category": "sampling_distribution",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "標本の分散"
+      ],
+      "tags": [
+        "標本",
+        "ばらつき",
+        "統計量"
+      ],
+      "sortOrder": 180,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/sample-variance/",
+      "searchText": "標本分散 標本の値が標本平均のまわりにどのくらい散らばっているかを、$n$ で割って表した指標です。 sampling_distribution statistics_grade_2 標本の分散 標本 ばらつき 統計量",
+      "relatedPublishedSlugs": [
+        "unbiased-variance",
+        "standard-deviation"
+      ]
+    },
+    {
+      "slug": "law-of-large-numbers",
+      "title": "大数の法則",
+      "shortDefinition": "独立に同じ分布から標本を増やしていくと、標本平均が母平均に近づいていくという法則です。",
+      "category": "sampling_distribution",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "LLN",
+        "law of large numbers"
+      ],
+      "tags": [
+        "標本平均",
+        "収束",
+        "推測統計"
+      ],
+      "sortOrder": 190,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/law-of-large-numbers/",
+      "searchText": "大数の法則 独立に同じ分布から標本を増やしていくと、標本平均が母平均に近づいていくという法則です。 sampling_distribution statistics_grade_2 LLN law of large numbers 標本平均 収束 推測統計",
+      "relatedPublishedSlugs": [
+        "central-limit-theorem"
       ]
     },
     {
@@ -818,6 +1013,83 @@
       ]
     },
     {
+      "slug": "t-distribution",
+      "title": "t分布",
+      "shortDefinition": "母標準偏差が未知の正規母集団で、標本平均を標本標準偏差で標準化したときに現れる分布です。",
+      "category": "probability_distribution",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "t distribution"
+      ],
+      "tags": [
+        "t分布",
+        "仮説検定",
+        "信頼区間"
+      ],
+      "sortOrder": 400,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/t-distribution/",
+      "searchText": "t分布 母標準偏差が未知の正規母集団で、標本平均を標本標準偏差で標準化したときに現れる分布です。 probability_distribution statistics_grade_2 t distribution t分布 仮説検定 信頼区間",
+      "relatedPublishedSlugs": [
+        "hypothesis-testing",
+        "confidence-interval"
+      ]
+    },
+    {
+      "slug": "chi-square-distribution",
+      "title": "カイ二乗分布",
+      "shortDefinition": "独立な標準正規変数の二乗和でできる、0 以上の値だけをとる確率分布です。",
+      "category": "probability_distribution",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "chi-square distribution",
+        "χ^2 distribution"
+      ],
+      "tags": [
+        "確率分布",
+        "自由度",
+        "検定統計量"
+      ],
+      "sortOrder": 400,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/chi-square-distribution/",
+      "searchText": "カイ二乗分布 独立な標準正規変数の二乗和でできる、0 以上の値だけをとる確率分布です。 probability_distribution statistics_grade_2 chi-square distribution χ^2 distribution 確率分布 自由度 検定統計量",
+      "relatedPublishedSlugs": [
+        "f-distribution"
+      ]
+    },
+    {
+      "slug": "f-distribution",
+      "title": "F分布",
+      "shortDefinition": "独立な 2 つのカイ二乗分布を自由度で割って比にした、0 以上の値をとる確率分布です。",
+      "category": "probability_distribution",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "F distribution"
+      ],
+      "tags": [
+        "確率分布",
+        "分散比",
+        "回帰"
+      ],
+      "sortOrder": 410,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/f-distribution/",
+      "searchText": "F分布 独立な 2 つのカイ二乗分布を自由度で割って比にした、0 以上の値をとる確率分布です。 probability_distribution statistics_grade_2 F distribution 確率分布 分散比 回帰",
+      "relatedPublishedSlugs": [
+        "regression-line"
+      ]
+    },
+    {
       "slug": "standardization",
       "title": "標準化",
       "shortDefinition": "値を「平均との差が標準偏差何個分か」という同じものさしに直す操作です。",
@@ -868,6 +1140,686 @@
       "relatedPublishedSlugs": [
         "standard-normal-distribution"
       ]
+    },
+    {
+      "slug": "scatter-plot",
+      "title": "散布図",
+      "shortDefinition": "2つの変量の対応する値を平面上の点として描き、関係の形を目で確かめる図です。",
+      "category": "correlation_regression",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "scatter plot"
+      ],
+      "tags": [
+        "グラフ",
+        "2変量データ",
+        "可視化"
+      ],
+      "sortOrder": 470,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/scatter-plot/",
+      "searchText": "散布図 2つの変量の対応する値を平面上の点として描き、関係の形を目で確かめる図です。 correlation_regression statistics_grade_2 scatter plot グラフ 2変量データ 可視化",
+      "relatedPublishedSlugs": [
+        "correlation-coefficient",
+        "regression-line"
+      ]
+    },
+    {
+      "slug": "covariance",
+      "title": "共分散",
+      "shortDefinition": "2つの変量が一緒に大きくなりやすいか、逆向きに動きやすいかを、平均からのずれの積で表す量です。",
+      "category": "correlation_regression",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "covariance"
+      ],
+      "tags": [
+        "相関",
+        "2変量データ",
+        "ばらつき"
+      ],
+      "sortOrder": 480,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/covariance/",
+      "searchText": "共分散 2つの変量が一緒に大きくなりやすいか、逆向きに動きやすいかを、平均からのずれの積で表す量です。 correlation_regression statistics_grade_2 covariance 相関 2変量データ ばらつき",
+      "relatedPublishedSlugs": [
+        "correlation-coefficient"
+      ]
+    },
+    {
+      "slug": "correlation-coefficient",
+      "title": "相関係数",
+      "shortDefinition": "2つの変量の直線的な関係の向きと強さを、-1 から 1 の範囲で表す指標です。",
+      "category": "correlation_regression",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "correlation coefficient",
+        "ピアソンの相関係数"
+      ],
+      "tags": [
+        "相関",
+        "2変量データ",
+        "記述統計"
+      ],
+      "sortOrder": 490,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/correlation-coefficient/",
+      "searchText": "相関係数 2つの変量の直線的な関係の向きと強さを、-1 から 1 の範囲で表す指標です。 correlation_regression statistics_grade_2 correlation coefficient ピアソンの相関係数 相関 2変量データ 記述統計",
+      "relatedPublishedSlugs": [
+        "regression-line",
+        "no-correlation"
+      ]
+    },
+    {
+      "slug": "no-correlation",
+      "title": "無相関",
+      "shortDefinition": "相関係数が 0 で、2つの変量に直線的な関係が見られない状態です。",
+      "category": "correlation_regression",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "no correlation"
+      ],
+      "tags": [
+        "相関",
+        "直線関係",
+        "散布図"
+      ],
+      "sortOrder": 495,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/no-correlation/",
+      "searchText": "無相関 相関係数が 0 で、2つの変量に直線的な関係が見られない状態です。 correlation_regression statistics_grade_2 no correlation 相関 直線関係 散布図",
+      "relatedPublishedSlugs": [
+        "correlation-coefficient"
+      ]
+    },
+    {
+      "slug": "hypothesis-testing",
+      "title": "仮説検定",
+      "shortDefinition": "標本データが帰無仮説とどの程度食い違うかを調べ、あらかじめ決めた基準で帰無仮説を棄却するか判断する手続きです。",
+      "category": "hypothesis_testing",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "検定"
+      ],
+      "tags": [
+        "仮説検定",
+        "判定",
+        "p値"
+      ],
+      "sortOrder": 500,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/hypothesis-testing/",
+      "searchText": "仮説検定 標本データが帰無仮説とどの程度食い違うかを調べ、あらかじめ決めた基準で帰無仮説を棄却するか判断する手続きです。 hypothesis_testing statistics_grade_2 検定 仮説検定 判定 p値",
+      "relatedPublishedSlugs": [
+        "null-hypothesis",
+        "alternative-hypothesis",
+        "p-value"
+      ]
+    },
+    {
+      "slug": "regression-line",
+      "title": "回帰直線",
+      "shortDefinition": "説明変数 $x$ から目的変数 $y$ を予測するときに、平均的な関係を直線で表したものです。",
+      "category": "correlation_regression",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "regression line",
+        "回帰線"
+      ],
+      "tags": [
+        "回帰",
+        "予測",
+        "2変量データ"
+      ],
+      "sortOrder": 500,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/regression-line/",
+      "searchText": "回帰直線 説明変数 $x$ から目的変数 $y$ を予測するときに、平均的な関係を直線で表したものです。 correlation_regression statistics_grade_2 regression line 回帰線 回帰 予測 2変量データ",
+      "relatedPublishedSlugs": [
+        "simple-linear-regression",
+        "least-squares-method",
+        "coefficient-of-determination"
+      ]
+    },
+    {
+      "slug": "estimation",
+      "title": "推定",
+      "shortDefinition": "標本から母数の値を見積もる、推測統計の基本的な考え方と手続きです。",
+      "category": "estimation",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "estimation"
+      ],
+      "tags": [
+        "推定",
+        "母数",
+        "推測統計"
+      ],
+      "sortOrder": 500,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/estimation/",
+      "searchText": "推定 標本から母数の値を見積もる、推測統計の基本的な考え方と手続きです。 estimation statistics_grade_2 estimation 推定 母数 推測統計",
+      "relatedPublishedSlugs": [
+        "estimator",
+        "point-estimation",
+        "interval-estimation"
+      ]
+    },
+    {
+      "slug": "null-hypothesis",
+      "title": "帰無仮説",
+      "shortDefinition": "仮説検定で最初の基準として置く仮説で、差がない・効果がない・基準どおりであることを表すことが多いです。",
+      "category": "hypothesis_testing",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "null hypothesis"
+      ],
+      "tags": [
+        "仮説検定",
+        "基準",
+        "帰無"
+      ],
+      "sortOrder": 501,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/null-hypothesis/",
+      "searchText": "帰無仮説 仮説検定で最初の基準として置く仮説で、差がない・効果がない・基準どおりであることを表すことが多いです。 hypothesis_testing statistics_grade_2 null hypothesis 仮説検定 基準 帰無",
+      "relatedPublishedSlugs": [
+        "alternative-hypothesis",
+        "p-value"
+      ]
+    },
+    {
+      "slug": "alternative-hypothesis",
+      "title": "対立仮説",
+      "shortDefinition": "仮説検定で、帰無仮説ではない方向の差や効果を表す仮説です。",
+      "category": "hypothesis_testing",
+      "level": "foundation",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "alternative hypothesis"
+      ],
+      "tags": [
+        "仮説検定",
+        "方向",
+        "効果"
+      ],
+      "sortOrder": 502,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/alternative-hypothesis/",
+      "searchText": "対立仮説 仮説検定で、帰無仮説ではない方向の差や効果を表す仮説です。 hypothesis_testing statistics_grade_2 alternative hypothesis 仮説検定 方向 効果",
+      "relatedPublishedSlugs": [
+        "null-hypothesis",
+        "one-sided-test",
+        "two-sided-test"
+      ]
+    },
+    {
+      "slug": "one-sided-test",
+      "title": "片側検定",
+      "shortDefinition": "対立仮説で差の向きを一方向にだけ指定し、その側の尾だけで判定する仮説検定です。",
+      "category": "hypothesis_testing",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "one-tailed test"
+      ],
+      "tags": [
+        "仮説検定",
+        "方向",
+        "片側"
+      ],
+      "sortOrder": 503,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/one-sided-test/",
+      "searchText": "片側検定 対立仮説で差の向きを一方向にだけ指定し、その側の尾だけで判定する仮説検定です。 hypothesis_testing statistics_grade_2 one-tailed test 仮説検定 方向 片側",
+      "relatedPublishedSlugs": [
+        "two-sided-test"
+      ]
+    },
+    {
+      "slug": "two-sided-test",
+      "title": "両側検定",
+      "shortDefinition": "対立仮説で基準との差を上下どちらの方向でも認め、分布の両端で判定する仮説検定です。",
+      "category": "hypothesis_testing",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "two-tailed test"
+      ],
+      "tags": [
+        "仮説検定",
+        "方向",
+        "両側"
+      ],
+      "sortOrder": 504,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/two-sided-test/",
+      "searchText": "両側検定 対立仮説で基準との差を上下どちらの方向でも認め、分布の両端で判定する仮説検定です。 hypothesis_testing statistics_grade_2 two-tailed test 仮説検定 方向 両側",
+      "relatedPublishedSlugs": [
+        "one-sided-test"
+      ]
+    },
+    {
+      "slug": "test-statistic",
+      "title": "検定統計量",
+      "shortDefinition": "標本データを 1 つの数にまとめ、帰無仮説からどれだけ離れているかを測るための統計量です。",
+      "category": "hypothesis_testing",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "test statistic"
+      ],
+      "tags": [
+        "仮説検定",
+        "統計量",
+        "標準化"
+      ],
+      "sortOrder": 505,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/test-statistic/",
+      "searchText": "検定統計量 標本データを 1 つの数にまとめ、帰無仮説からどれだけ離れているかを測るための統計量です。 hypothesis_testing statistics_grade_2 test statistic 仮説検定 統計量 標準化",
+      "relatedPublishedSlugs": [
+        "p-value",
+        "rejection-region"
+      ]
+    },
+    {
+      "slug": "estimator",
+      "title": "推定量",
+      "shortDefinition": "標本から未知の母数を見積もるために計算する統計量です。",
+      "category": "estimation",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "estimator"
+      ],
+      "tags": [
+        "推定量",
+        "統計量",
+        "母数"
+      ],
+      "sortOrder": 505,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/estimator/",
+      "searchText": "推定量 標本から未知の母数を見積もるために計算する統計量です。 estimation statistics_grade_2 estimator 推定量 統計量 母数",
+      "relatedPublishedSlugs": [
+        "point-estimation",
+        "unbiased-estimator"
+      ]
+    },
+    {
+      "slug": "p-value",
+      "title": "p値",
+      "shortDefinition": "帰無仮説が正しいとしたときに、観測結果と同じかそれ以上に極端な結果が出る確率です。",
+      "category": "hypothesis_testing",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "p value"
+      ],
+      "tags": [
+        "仮説検定",
+        "判定",
+        "tail probability"
+      ],
+      "sortOrder": 506,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/p-value/",
+      "searchText": "p値 帰無仮説が正しいとしたときに、観測結果と同じかそれ以上に極端な結果が出る確率です。 hypothesis_testing statistics_grade_2 p value 仮説検定 判定 tail probability",
+      "relatedPublishedSlugs": [
+        "significance-level",
+        "null-hypothesis"
+      ]
+    },
+    {
+      "slug": "significance-level",
+      "title": "有意水準",
+      "shortDefinition": "帰無仮説が正しいのに棄却してしまう危険を、検定の前にどこまで許すかを表す基準値です。",
+      "category": "hypothesis_testing",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "significance level"
+      ],
+      "tags": [
+        "仮説検定",
+        "基準",
+        "alpha"
+      ],
+      "sortOrder": 507,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/significance-level/",
+      "searchText": "有意水準 帰無仮説が正しいのに棄却してしまう危険を、検定の前にどこまで許すかを表す基準値です。 hypothesis_testing statistics_grade_2 significance level 仮説検定 基準 alpha",
+      "relatedPublishedSlugs": [
+        "p-value",
+        "rejection-region"
+      ]
+    },
+    {
+      "slug": "rejection-region",
+      "title": "棄却域",
+      "shortDefinition": "帰無仮説のもとで十分に起こりにくいとみなした検定統計量の範囲で、そこに入ったら帰無仮説を棄却します。",
+      "category": "hypothesis_testing",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "棄却領域",
+        "rejection region"
+      ],
+      "tags": [
+        "仮説検定",
+        "判定",
+        "臨界値"
+      ],
+      "sortOrder": 508,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/rejection-region/",
+      "searchText": "棄却域 帰無仮説のもとで十分に起こりにくいとみなした検定統計量の範囲で、そこに入ったら帰無仮説を棄却します。 hypothesis_testing statistics_grade_2 棄却領域 rejection region 仮説検定 判定 臨界値",
+      "relatedPublishedSlugs": [
+        "null-hypothesis",
+        "p-value"
+      ]
+    },
+    {
+      "slug": "point-estimation",
+      "title": "点推定",
+      "shortDefinition": "未知の母数を、標本から得た 1 つの数で見積もる推定の方法です。",
+      "category": "estimation",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "point estimation"
+      ],
+      "tags": [
+        "点推定",
+        "推定",
+        "推定値"
+      ],
+      "sortOrder": 508,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/point-estimation/",
+      "searchText": "点推定 未知の母数を、標本から得た 1 つの数で見積もる推定の方法です。 estimation statistics_grade_2 point estimation 点推定 推定 推定値",
+      "relatedPublishedSlugs": [
+        "interval-estimation",
+        "unbiased-estimator"
+      ]
+    },
+    {
+      "slug": "type-i-error",
+      "title": "第一種の過誤",
+      "shortDefinition": "帰無仮説が本当は正しいのに、それを棄却してしまう誤りです。",
+      "category": "hypothesis_testing",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "第一種過誤",
+        "type I error"
+      ],
+      "tags": [
+        "仮説検定",
+        "過誤",
+        "偽陽性"
+      ],
+      "sortOrder": 509,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/type-i-error/",
+      "searchText": "第一種の過誤 帰無仮説が本当は正しいのに、それを棄却してしまう誤りです。 hypothesis_testing statistics_grade_2 第一種過誤 type I error 仮説検定 過誤 偽陽性",
+      "relatedPublishedSlugs": [
+        "type-ii-error"
+      ]
+    },
+    {
+      "slug": "type-ii-error",
+      "title": "第二種の過誤",
+      "shortDefinition": "実際には差や効果があるのに、帰無仮説を棄却できず見逃してしまう誤りです。",
+      "category": "hypothesis_testing",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "第二種過誤",
+        "type II error"
+      ],
+      "tags": [
+        "仮説検定",
+        "過誤",
+        "偽陰性"
+      ],
+      "sortOrder": 510,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/type-ii-error/",
+      "searchText": "第二種の過誤 実際には差や効果があるのに、帰無仮説を棄却できず見逃してしまう誤りです。 hypothesis_testing statistics_grade_2 第二種過誤 type II error 仮説検定 過誤 偽陰性",
+      "relatedPublishedSlugs": [
+        "type-i-error"
+      ]
+    },
+    {
+      "slug": "simple-linear-regression",
+      "title": "単回帰分析",
+      "shortDefinition": "1つの説明変数で目的変数の平均的な変化を直線で表し、予測や関係の要約に使う回帰分析です。",
+      "category": "correlation_regression",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "simple linear regression"
+      ],
+      "tags": [
+        "回帰",
+        "予測",
+        "説明変数"
+      ],
+      "sortOrder": 510,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/simple-linear-regression/",
+      "searchText": "単回帰分析 1つの説明変数で目的変数の平均的な変化を直線で表し、予測や関係の要約に使う回帰分析です。 correlation_regression statistics_grade_2 simple linear regression 回帰 予測 説明変数",
+      "relatedPublishedSlugs": [
+        "least-squares-method",
+        "residual"
+      ]
+    },
+    {
+      "slug": "unbiased-estimator",
+      "title": "不偏推定量",
+      "shortDefinition": "推定量の期待値が、推定したい母数そのものに一致する性質、またはその性質をもつ推定量です。",
+      "category": "estimation",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "unbiased estimator"
+      ],
+      "tags": [
+        "推定",
+        "不偏性",
+        "母数"
+      ],
+      "sortOrder": 510,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/unbiased-estimator/",
+      "searchText": "不偏推定量 推定量の期待値が、推定したい母数そのものに一致する性質、またはその性質をもつ推定量です。 estimation statistics_grade_2 unbiased estimator 推定 不偏性 母数",
+      "relatedPublishedSlugs": [
+        "unbiased-variance"
+      ]
+    },
+    {
+      "slug": "interval-estimation",
+      "title": "区間推定",
+      "shortDefinition": "未知の母数を、標本から作った一定の幅をもつ区間で見積もる推定の方法です。",
+      "category": "estimation",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "interval estimation"
+      ],
+      "tags": [
+        "区間推定",
+        "推定",
+        "母平均"
+      ],
+      "sortOrder": 520,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/interval-estimation/",
+      "searchText": "区間推定 未知の母数を、標本から作った一定の幅をもつ区間で見積もる推定の方法です。 estimation statistics_grade_2 interval estimation 区間推定 推定 母平均",
+      "relatedPublishedSlugs": [
+        "confidence-interval",
+        "population-mean"
+      ]
+    },
+    {
+      "slug": "least-squares-method",
+      "title": "最小二乗法",
+      "shortDefinition": "回帰直線を引くときに、観測値と予測値のずれの二乗和が最小になるよう係数を決める方法です。",
+      "category": "correlation_regression",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "least squares",
+        "最小二乗"
+      ],
+      "tags": [
+        "回帰",
+        "最適化",
+        "残差"
+      ],
+      "sortOrder": 520,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/least-squares-method/",
+      "searchText": "最小二乗法 回帰直線を引くときに、観測値と予測値のずれの二乗和が最小になるよう係数を決める方法です。 correlation_regression statistics_grade_2 least squares 最小二乗 回帰 最適化 残差",
+      "relatedPublishedSlugs": [
+        "simple-linear-regression",
+        "residual"
+      ]
+    },
+    {
+      "slug": "confidence-interval",
+      "title": "信頼区間",
+      "shortDefinition": "一定の信頼水準で母数を含むよう設計された、区間推定の具体的な結果です。",
+      "category": "estimation",
+      "level": "standard",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "confidence interval",
+        "CI"
+      ],
+      "tags": [
+        "信頼区間",
+        "区間推定",
+        "t分布"
+      ],
+      "sortOrder": 525,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/confidence-interval/",
+      "searchText": "信頼区間 一定の信頼水準で母数を含むよう設計された、区間推定の具体的な結果です。 estimation statistics_grade_2 confidence interval CI 信頼区間 区間推定 t分布",
+      "relatedPublishedSlugs": [
+        "interval-estimation",
+        "t-distribution"
+      ]
+    },
+    {
+      "slug": "residual",
+      "title": "残差",
+      "shortDefinition": "各観測値 $y_i$ と回帰直線による予測値 $\\hat{y}_i$ の差で、直線で説明しきれなかった部分です。",
+      "category": "correlation_regression",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "residual"
+      ],
+      "tags": [
+        "回帰",
+        "残差",
+        "あてはまり"
+      ],
+      "sortOrder": 530,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/residual/",
+      "searchText": "残差 各観測値 $y_i$ と回帰直線による予測値 $\\hat{y}_i$ の差で、直線で説明しきれなかった部分です。 correlation_regression statistics_grade_2 residual 回帰 残差 あてはまり",
+      "relatedPublishedSlugs": [
+        "least-squares-method",
+        "coefficient-of-determination"
+      ]
+    },
+    {
+      "slug": "coefficient-of-determination",
+      "title": "決定係数",
+      "shortDefinition": "切片を含む単回帰で、回帰直線が目的変数の変動をどの程度とらえられているかを 0 から 1 の範囲で表す指標です。",
+      "category": "correlation_regression",
+      "level": "advanced",
+      "examScope": [
+        "statistics_grade_2"
+      ],
+      "aliases": [
+        "R^2",
+        "coefficient of determination"
+      ],
+      "tags": [
+        "回帰",
+        "あてはまり",
+        "R2"
+      ],
+      "sortOrder": 540,
+      "updatedAt": "2026-04-22",
+      "href": "/terms/coefficient-of-determination/",
+      "searchText": "決定係数 切片を含む単回帰で、回帰直線が目的変数の変動をどの程度とらえられているかを 0 から 1 の範囲で表す指標です。 correlation_regression statistics_grade_2 R^2 coefficient of determination 回帰 あてはまり R2",
+      "relatedPublishedSlugs": [
+        "residual"
+      ]
     }
   ],
   "featuredTermSlugs": [
@@ -877,9 +1829,9 @@
   ],
   "queueSummaryByCategory": {
     "descriptive_statistics": {
-      "published": 8,
+      "published": 9,
       "draft": 0,
-      "unstarted": 1
+      "unstarted": 0
     },
     "probability": {
       "published": 8,
@@ -887,29 +1839,29 @@
       "unstarted": 0
     },
     "probability_distribution": {
-      "published": 10,
+      "published": 13,
       "draft": 0,
-      "unstarted": 3
+      "unstarted": 0
     },
     "sampling_distribution": {
-      "published": 6,
+      "published": 13,
       "draft": 0,
-      "unstarted": 7
+      "unstarted": 0
     },
     "estimation": {
-      "published": 0,
+      "published": 6,
       "draft": 0,
-      "unstarted": 6
+      "unstarted": 0
     },
     "hypothesis_testing": {
-      "published": 0,
+      "published": 11,
       "draft": 0,
-      "unstarted": 11
+      "unstarted": 0
     },
     "correlation_regression": {
-      "published": 0,
+      "published": 9,
       "draft": 0,
-      "unstarted": 9
+      "unstarted": 0
     },
     "data_handling": {
       "published": 2,

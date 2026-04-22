@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-04-17",
+  "updated_at": "2026-04-22",
   "target_exam": "statistics_grade_2",
   "target_exam_label": "統計検定2級",
   "status_vocab": {
@@ -189,7 +189,7 @@
       "title": "変動係数",
       "category": "descriptive_statistics",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -200,7 +200,8 @@
       ],
       "related_terms": [
         "standard-deviation"
-      ]
+      ],
+      "content_path": "src/content/terms/coefficient-of-variation.md"
     },
     {
       "slug": "histogram",
@@ -323,7 +324,7 @@
       "title": "母平均",
       "category": "sampling_distribution",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -335,14 +336,15 @@
       "related_terms": [
         "sample-mean",
         "population-variance"
-      ]
+      ],
+      "content_path": "src/content/terms/population-mean.md"
     },
     {
       "slug": "population-variance",
       "title": "母分散",
       "category": "sampling_distribution",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -354,14 +356,15 @@
       "related_terms": [
         "sample-variance",
         "unbiased-variance"
-      ]
+      ],
+      "content_path": "src/content/terms/population-variance.md"
     },
     {
       "slug": "sample-variance",
       "title": "標本分散",
       "category": "sampling_distribution",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -373,14 +376,15 @@
       "related_terms": [
         "unbiased-variance",
         "standard-deviation"
-      ]
+      ],
+      "content_path": "src/content/terms/sample-variance.md"
     },
     {
       "slug": "unbiased-variance",
       "title": "不偏分散",
       "category": "sampling_distribution",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -392,14 +396,15 @@
       "related_terms": [
         "sample-variance",
         "unbiased-estimator"
-      ]
+      ],
+      "content_path": "src/content/terms/unbiased-variance.md"
     },
     {
       "slug": "standard-error",
       "title": "標準誤差",
       "category": "sampling_distribution",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -411,7 +416,8 @@
       "related_terms": [
         "sample-mean",
         "central-limit-theorem"
-      ]
+      ],
+      "content_path": "src/content/terms/standard-error.md"
     },
     {
       "slug": "sample-space",
@@ -573,7 +579,7 @@
       "title": "共分散",
       "category": "correlation_regression",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -584,7 +590,8 @@
       ],
       "related_terms": [
         "correlation-coefficient"
-      ]
+      ],
+      "content_path": "src/content/terms/covariance.md"
     },
     {
       "slug": "probability-distribution",
@@ -784,7 +791,7 @@
       "title": "t分布",
       "category": "probability_distribution",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -796,14 +803,15 @@
       "related_terms": [
         "hypothesis-testing",
         "confidence-interval"
-      ]
+      ],
+      "content_path": "src/content/terms/t-distribution.md"
     },
     {
       "slug": "chi-square-distribution",
       "title": "カイ二乗分布",
       "category": "probability_distribution",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -814,14 +822,15 @@
       ],
       "related_terms": [
         "f-distribution"
-      ]
+      ],
+      "content_path": "src/content/terms/chi-square-distribution.md"
     },
     {
       "slug": "f-distribution",
       "title": "F分布",
       "category": "probability_distribution",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -831,14 +840,15 @@
       ],
       "related_terms": [
         "regression-line"
-      ]
+      ],
+      "content_path": "src/content/terms/f-distribution.md"
     },
     {
       "slug": "central-limit-theorem",
       "title": "中心極限定理",
       "category": "sampling_distribution",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -850,14 +860,15 @@
       "related_terms": [
         "standard-error",
         "law-of-large-numbers"
-      ]
+      ],
+      "content_path": "src/content/terms/central-limit-theorem.md"
     },
     {
       "slug": "law-of-large-numbers",
       "title": "大数の法則",
       "category": "sampling_distribution",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -868,7 +879,8 @@
       ],
       "related_terms": [
         "central-limit-theorem"
-      ]
+      ],
+      "content_path": "src/content/terms/law-of-large-numbers.md"
     },
     {
       "slug": "standardization",
@@ -914,7 +926,7 @@
       "title": "推定",
       "category": "estimation",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -927,14 +939,15 @@
         "estimator",
         "point-estimation",
         "interval-estimation"
-      ]
+      ],
+      "content_path": "src/content/terms/estimation.md"
     },
     {
       "slug": "estimator",
       "title": "推定量",
       "category": "estimation",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -945,14 +958,15 @@
       "related_terms": [
         "point-estimation",
         "unbiased-estimator"
-      ]
+      ],
+      "content_path": "src/content/terms/estimator.md"
     },
     {
       "slug": "point-estimation",
       "title": "点推定",
       "category": "estimation",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -964,14 +978,15 @@
       "related_terms": [
         "interval-estimation",
         "unbiased-estimator"
-      ]
+      ],
+      "content_path": "src/content/terms/point-estimation.md"
     },
     {
       "slug": "interval-estimation",
       "title": "区間推定",
       "category": "estimation",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -983,14 +998,15 @@
       "related_terms": [
         "confidence-interval",
         "population-mean"
-      ]
+      ],
+      "content_path": "src/content/terms/interval-estimation.md"
     },
     {
       "slug": "confidence-interval",
       "title": "信頼区間",
       "category": "estimation",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1002,14 +1018,15 @@
       "related_terms": [
         "interval-estimation",
         "t-distribution"
-      ]
+      ],
+      "content_path": "src/content/terms/confidence-interval.md"
     },
     {
       "slug": "unbiased-estimator",
       "title": "不偏推定量",
       "category": "estimation",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -1021,14 +1038,15 @@
       ],
       "related_terms": [
         "unbiased-variance"
-      ]
+      ],
+      "content_path": "src/content/terms/unbiased-estimator.md"
     },
     {
       "slug": "hypothesis-testing",
       "title": "仮説検定",
       "category": "hypothesis_testing",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1041,14 +1059,15 @@
         "null-hypothesis",
         "alternative-hypothesis",
         "p-value"
-      ]
+      ],
+      "content_path": "src/content/terms/hypothesis-testing.md"
     },
     {
       "slug": "null-hypothesis",
       "title": "帰無仮説",
       "category": "hypothesis_testing",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -1059,14 +1078,15 @@
       "related_terms": [
         "alternative-hypothesis",
         "p-value"
-      ]
+      ],
+      "content_path": "src/content/terms/null-hypothesis.md"
     },
     {
       "slug": "alternative-hypothesis",
       "title": "対立仮説",
       "category": "hypothesis_testing",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -1078,14 +1098,15 @@
         "null-hypothesis",
         "one-sided-test",
         "two-sided-test"
-      ]
+      ],
+      "content_path": "src/content/terms/alternative-hypothesis.md"
     },
     {
       "slug": "test-statistic",
       "title": "検定統計量",
       "category": "hypothesis_testing",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1096,14 +1117,15 @@
       "related_terms": [
         "p-value",
         "rejection-region"
-      ]
+      ],
+      "content_path": "src/content/terms/test-statistic.md"
     },
     {
       "slug": "p-value",
       "title": "p値",
       "category": "hypothesis_testing",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1115,14 +1137,15 @@
       "related_terms": [
         "significance-level",
         "null-hypothesis"
-      ]
+      ],
+      "content_path": "src/content/terms/p-value.md"
     },
     {
       "slug": "significance-level",
       "title": "有意水準",
       "category": "hypothesis_testing",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1133,14 +1156,15 @@
       "related_terms": [
         "p-value",
         "rejection-region"
-      ]
+      ],
+      "content_path": "src/content/terms/significance-level.md"
     },
     {
       "slug": "rejection-region",
       "title": "棄却域",
       "category": "hypothesis_testing",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1152,14 +1176,15 @@
       "related_terms": [
         "null-hypothesis",
         "p-value"
-      ]
+      ],
+      "content_path": "src/content/terms/rejection-region.md"
     },
     {
       "slug": "type-i-error",
       "title": "第一種の過誤",
       "category": "hypothesis_testing",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -1170,14 +1195,15 @@
       ],
       "related_terms": [
         "type-ii-error"
-      ]
+      ],
+      "content_path": "src/content/terms/type-i-error.md"
     },
     {
       "slug": "type-ii-error",
       "title": "第二種の過誤",
       "category": "hypothesis_testing",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -1187,14 +1213,15 @@
       ],
       "related_terms": [
         "type-i-error"
-      ]
+      ],
+      "content_path": "src/content/terms/type-ii-error.md"
     },
     {
       "slug": "one-sided-test",
       "title": "片側検定",
       "category": "hypothesis_testing",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1204,14 +1231,15 @@
       ],
       "related_terms": [
         "two-sided-test"
-      ]
+      ],
+      "content_path": "src/content/terms/one-sided-test.md"
     },
     {
       "slug": "two-sided-test",
       "title": "両側検定",
       "category": "hypothesis_testing",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1221,14 +1249,15 @@
       ],
       "related_terms": [
         "one-sided-test"
-      ]
+      ],
+      "content_path": "src/content/terms/two-sided-test.md"
     },
     {
       "slug": "scatter-plot",
       "title": "散布図",
       "category": "correlation_regression",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "foundation",
       "exam_scope": [
         "statistics_grade_2"
@@ -1237,14 +1266,15 @@
       "related_terms": [
         "correlation-coefficient",
         "regression-line"
-      ]
+      ],
+      "content_path": "src/content/terms/scatter-plot.md"
     },
     {
       "slug": "correlation-coefficient",
       "title": "相関係数",
       "category": "correlation_regression",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1256,14 +1286,15 @@
       "related_terms": [
         "regression-line",
         "no-correlation"
-      ]
+      ],
+      "content_path": "src/content/terms/correlation-coefficient.md"
     },
     {
       "slug": "regression-line",
       "title": "回帰直線",
       "category": "correlation_regression",
       "priority": 1,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1276,14 +1307,15 @@
         "simple-linear-regression",
         "least-squares-method",
         "coefficient-of-determination"
-      ]
+      ],
+      "content_path": "src/content/terms/regression-line.md"
     },
     {
       "slug": "simple-linear-regression",
       "title": "単回帰分析",
       "category": "correlation_regression",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -1294,14 +1326,15 @@
       "related_terms": [
         "least-squares-method",
         "residual"
-      ]
+      ],
+      "content_path": "src/content/terms/simple-linear-regression.md"
     },
     {
       "slug": "least-squares-method",
       "title": "最小二乗法",
       "category": "correlation_regression",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -1312,14 +1345,15 @@
       "related_terms": [
         "simple-linear-regression",
         "residual"
-      ]
+      ],
+      "content_path": "src/content/terms/least-squares-method.md"
     },
     {
       "slug": "coefficient-of-determination",
       "title": "決定係数",
       "category": "correlation_regression",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -1330,14 +1364,15 @@
       ],
       "related_terms": [
         "residual"
-      ]
+      ],
+      "content_path": "src/content/terms/coefficient-of-determination.md"
     },
     {
       "slug": "residual",
       "title": "残差",
       "category": "correlation_regression",
       "priority": 2,
-      "status": "unstarted",
+      "status": "published",
       "level": "advanced",
       "exam_scope": [
         "statistics_grade_2"
@@ -1348,14 +1383,15 @@
       "related_terms": [
         "least-squares-method",
         "coefficient-of-determination"
-      ]
+      ],
+      "content_path": "src/content/terms/residual.md"
     },
     {
       "slug": "no-correlation",
       "title": "無相関",
       "category": "correlation_regression",
       "priority": 3,
-      "status": "unstarted",
+      "status": "published",
       "level": "standard",
       "exam_scope": [
         "statistics_grade_2"
@@ -1365,7 +1401,8 @@
       ],
       "related_terms": [
         "correlation-coefficient"
-      ]
+      ],
+      "content_path": "src/content/terms/no-correlation.md"
     }
   ]
 }
