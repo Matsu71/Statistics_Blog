@@ -4,7 +4,7 @@ import EmptyState from '../../components/EmptyState.astro';
 import PageHero from '../../components/PageHero.astro';
 import TermListCard from '../../components/TermListCard.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getContentLevelLabel, getExamScopeLabels, getTermCategoryLabel } from '../../lib/content';
+import { getContentLevelLabel, getTermCategoryLabel } from '../../lib/content';
 import { withBase } from '../../lib/site';
 
 const terms = termIndex.publishedTerms;
@@ -16,43 +16,20 @@ const levelOptions = Array.from(new Set(terms.map((term) => term.level))).map((l
   value: level,
   label: getContentLevelLabel(level)
 }));
-const featured = termIndex.featuredTermSlugs
-  .map((slug) => terms.find((term) => term.slug === slug))
-  .filter((term): term is (typeof terms)[number] => Boolean(term))
-  .slice(0, 2);
 ---
 
 <BaseLayout
   title="用語一覧"
-  description="統計検定2級向けの学習用語を、1用語1ページで整理した一覧ページです。"
+  description="統計の用語、考え方、数式、試験ポイントを探して学べる一覧ページです。"
 >
   <PageHero
     eyebrow="Glossary"
     title="用語一覧"
-    description="検索、カテゴリ、難易度を使って、今の学習段階に合う用語を見つけられます。"
+    description="検索、カテゴリ、難易度で絞り込みながら、今読みたい統計用語を探せます。"
   >
     <div class="hero-actions">
       <a class="button-link" href={withBase('/')}>ホームへ</a>
       <a class="ghost-link" href={withBase('/topics/')}>分野解説へ</a>
-    </div>
-    <div class="hero-tile-grid" slot="aside">
-      <article class="hero-mini-card">
-        <span class="hero-mini-card__label">探す</span>
-        <strong class="hero-mini-card__value">検索</strong>
-        <span class="hero-mini-card__meta">気になる語を入力して開けます。</span>
-      </article>
-      <article class="hero-mini-card">
-        <span class="hero-mini-card__label">比べる</span>
-        <strong class="hero-mini-card__value">カテゴリ</strong>
-        <span class="hero-mini-card__meta">近い概念をまとめて見られます。</span>
-      </article>
-      {featured[0] && (
-        <article class="hero-mini-card hero-mini-card--accent">
-          <span class="hero-mini-card__label">入口</span>
-          <strong class="hero-mini-card__value">{featured[0].title}</strong>
-          <span class="hero-mini-card__meta">{featured[0].shortDefinition}</span>
-        </article>
-      )}
     </div>
   </PageHero>
 
@@ -67,12 +44,17 @@ const featured = termIndex.featuredTermSlugs
 
       <div class="filter-panel filter-panel--stacked">
         <div class="filter-panel__search">
-          <label for="term-search">検索</label>
+          <div class="filter-panel__search-head">
+            <label for="term-search">検索</label>
+            <p class="muted-text" id="term-search-status" aria-live="polite">
+              {terms.length}件
+            </p>
+          </div>
           <input
             class="search-input"
             id="term-search"
             type="search"
-            placeholder="分散 / 正規分布"
+            placeholder="例: 分散 / 正規分布"
             autocomplete="off"
           />
         </div>
@@ -87,12 +69,6 @@ const featured = termIndex.featuredTermSlugs
               ))}
             </select>
           </div>
-        </div>
-
-        <div class="filter-panel__summary">
-          <p class="filter-panel__label">読み方</p>
-          <p class="filter-panel__summary-value">基礎から</p>
-          <p class="muted-text">気になる語からでも、基礎カテゴリからでも進められます。</p>
         </div>
 
         <div class="filter-panel__categories">
@@ -113,10 +89,6 @@ const featured = termIndex.featuredTermSlugs
             ))}
           </div>
         </div>
-
-        <p class="muted-text" id="term-search-status" aria-live="polite">
-          {terms.length}件を表示中
-        </p>
       </div>
 
       {terms.length > 0 ? (
@@ -132,8 +104,6 @@ const featured = termIndex.featuredTermSlugs
                 categoryKey={term.category}
                 levelLabel={getContentLevelLabel(term.level)}
                 levelKey={term.level}
-                examLabel={getExamScopeLabels(term.examScope).join('・')}
-                tags={term.tags.slice(0, 3)}
               />
             ))}
           </div>
@@ -179,7 +149,7 @@ const featured = termIndex.featuredTermSlugs
         }
       });
 
-      status.textContent = `${visible}件を表示中`;
+      status.textContent = `${visible}件`;
       if (empty instanceof HTMLElement) {
         empty.hidden = visible !== 0;
       }

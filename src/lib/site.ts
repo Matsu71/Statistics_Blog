@@ -1,8 +1,8 @@
 export const siteMeta = {
-  name: '統計ことばノート',
-  shortName: '統計ことば',
+  name: '統計ラボ',
+  shortName: '統計ラボ',
   description:
-    '統計検定2級を学ぶ人のための、1用語1ページ型の学習用語集サイトです。'
+    '統計の用語、考え方、数式、試験ポイントを整理する学習サイトです。'
 };
 
 export const navigation = [

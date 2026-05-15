@@ -16,65 +16,56 @@ interface Props {
 const { title, summary, facts, aliases = [], tags = [], takeaways } = Astro.props;
 ---
 
-<header class="term-hero">
+<header id="takeaways" class="term-hero">
   <div class="term-hero__main">
-    <p class="eyebrow">用語ページ</p>
+    <p class="eyebrow">Term</p>
     <h1 class="article-title">{title}</h1>
     <p class="article-summary">
       <MathText text={summary} />
     </p>
+
+    {takeaways.length > 0 && (
+      <section class="term-hero__takeaways" aria-labelledby="term-takeaways-title">
+        <p class="term-hero__panel-label" id="term-takeaways-title">重要ポイント</p>
+        <ul class="check-list">
+          {takeaways.map((item) => (
+            <li>
+              <MathText text={item} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+
     <div class="term-hero__actions">
       <slot />
     </div>
 
-    {aliases.length > 0 && (
-      <div class="term-hero__group">
-        <p class="term-hero__panel-label">別名</p>
-        <div class="link-row term-hero__tags" aria-label="別名">
+    <div class="term-hero__meta" aria-label="用語情報">
+      {facts.map((fact) => (
+        <span class="term-hero__meta-item">
+          <span class="term-hero__meta-label">{fact.label}</span>
+          <span class="term-hero__meta-value">{fact.value}</span>
+        </span>
+      ))}
+
+      {aliases.length > 0 && (
+        <div class="term-hero__meta-group" aria-label="別名">
+          <span class="term-hero__meta-label">別名</span>
           {aliases.map((alias) => (
-            <span class="pill">{alias}</span>
+            <span class="pill pill--quiet">{alias}</span>
           ))}
         </div>
-      </div>
-    )}
+      )}
 
-    {tags.length > 0 && (
-      <div class="term-hero__group">
-        <p class="term-hero__panel-label">タグ</p>
-        <div class="link-row term-hero__tags" aria-label="タグ">
+      {tags.length > 0 && (
+        <div class="term-hero__meta-group" aria-label="タグ">
+          <span class="term-hero__meta-label">タグ</span>
           {tags.map((tag) => (
-            <span class="pill">{tag}</span>
+            <span class="pill pill--quiet">{tag}</span>
           ))}
         </div>
-      </div>
-    )}
-  </div>
-
-  <div class="term-hero__side">
-    {facts.length > 0 && (
-      <section class="term-hero__panel term-hero__facts" aria-labelledby="term-facts-title">
-        <p class="term-hero__panel-label" id="term-facts-title">クイック情報</p>
-        <dl class="term-hero__facts-grid">
-          {facts.map((fact) => (
-            <div class="term-hero__fact">
-              <dt class="term-hero__fact-label">{fact.label}</dt>
-              <dd class="term-hero__fact-value">{fact.value}</dd>
-            </div>
-          ))}
-        </dl>
-      </section>
-    )}
-
-    <section id="takeaways" class="term-hero__panel term-hero__takeaways" aria-labelledby="term-takeaways-title">
-      <p class="term-hero__panel-label" id="term-takeaways-title">30秒で要点</p>
-      <p class="term-hero__panel-copy">この記事でわかることを短く確認します。</p>
-      <ul class="check-list">
-        {takeaways.map((item) => (
-          <li>
-            <MathText text={item} />
-          </li>
-        ))}
-      </ul>
-    </section>
+      )}
+    </div>
   </div>
 </header>
