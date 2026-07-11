@@ -1,0 +1,53 @@
+name: USDJPY H1 Backtest
+
+on:
+  push:
+    paths:
+      - "fx_backtest/backtest_usdjpy_h1.py"
+      - ".github/workflows/fx-backtest.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: python -m pip install --disable-pip-version-check pandas
+
+      - name: Download fixed USDJPY H1 dataset
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p fx_backtest/data fx_backtest/results
+          curl --fail --location --retry 3 \
+            "https://raw.githubusercontent.com/xavierchuan/quantmaster/5daefb1c128b9254605edef8cdd93c78fb45d22a/QuantResearch/data/raw/USDJPY_H1_5y.csv" \
+            --output fx_backtest/data/USDJPY_H1_5y.csv
+          echo "bda2a0a1d4676b8a04226bd9dc8a7cc4d02516d50aa6e70d44bb51676fe0344a  fx_backtest/data/USDJPY_H1_5y.csv" | sha256sum --check
+
+      - name: Run backtest
+        run: python fx_backtest/backtest_usdjpy_h1.py
+
+      - name: Save data and results in repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add fx_backtest/data/USDJPY_H1_5y.csv fx_backtest/results
+          if git diff --cached --quiet; then
+            echo "No output changes."
+          else
+            git commit -m "Add USDJPY H1 backtest data and results [skip ci]"
+            git push
+          fi
