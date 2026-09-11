@@ -63,10 +63,12 @@ for (const name of (await readdir(directory)).filter((file) => file.endsWith('.m
   assert.ok(urls.length, `no references: ${name}`);
   urls.forEach((url) => sourceUrls.add(url));
   const html = await readFile(path.join(root, 'docs/learn', meta.slug, 'index.html'), 'utf8');
-  assert.ok(html.includes(`data-lesson-id="${meta.lesson_id}"`), `not rendered: ${name}`);
+  // Static HTML optimizers may omit optional attribute quotes.
+  const renderedId = html.match(/data-lesson-id\s*=\s*["']?([A-Z0-9-]+)/)?.[1];
+  assert.equal(renderedId, meta.lesson_id, `lesson marker missing: ${name}; article=${html.match(/<article\b[^>]*>/)?.[0] ?? 'absent'}`);
   assert.ok(!html.includes('katex-error'), `math rendering error: ${name}`);
-  assert.equal((html.match(/data-question=/g) ?? []).length, questions.length, `rendered questions missing: ${name}`);
-  assert.ok(html.includes('class="katex'), `expected rendered mathematics: ${name}`);
+  assert.equal((html.match(/data-question\s*=/g) ?? []).length, questions.length, `rendered questions missing: ${name}`);
+  assert.ok(/class=(?:"[^"]*\bkatex\b[^"]*"|'[^']*\bkatex\b[^']*'|katex(?=[\s>]))/.test(html), `expected rendered mathematics: ${name}`);
   const main = body.split('## 確認問題')[0];
   const withoutReferences = body.split('## 出典・関連資料')[0];
   records.push({

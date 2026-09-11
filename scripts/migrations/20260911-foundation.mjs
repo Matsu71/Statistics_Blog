@@ -54,4 +54,9 @@ for (const filename of files.filter((name) => /^(0[1-8]-.+|README)\.md$/.test(na
     '> **2026-09-11の更新**：本書は初期設計の記録です。現在の公開学習順序は「基礎（4級・3級統合）→2級→準1級→1級」に変更し、独立した4級コースは設けません。基礎の8章・40講座構成、最初の6講座の実装、教材分量と品質基準は [09 基礎コースの現行仕様](09-foundation-course.md) を優先してください。以下の「未実装」は初期設計時点の状態です。とけたろうブログ本体は後続調査で確認できたため、その追記も09を参照してください。'
   ]);
 }
+const specificationPath = path.join(root, directory, '09-foundation-course.md');
+const specification = await readFile(specificationPath, 'utf8');
+const cleaned = specification.replace(/^全40講座は設計上の予定枠で.*$/m,
+  '全40講座は設計上の予定枠で、40講座の本文が完成したという意味ではない。正本の構成データは [foundation-course.json](../../src/data/foundation-course.json) に置く。');
+if (cleaned !== specification) await writeFile(specificationPath, cleaned, 'utf8');
 console.log('foundation policy migration completed');
