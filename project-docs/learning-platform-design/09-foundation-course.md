@@ -56,7 +56,7 @@
 
 ## 4. 基礎は8章・40講座
 
-全40講座は設計上の予定枠で、40講座の本文が完成したという意味ではない。正本の構成データは [foundation-course.json](../../src/data/foundation-course.json) ではなく、リポジトリの `src/data/foundation-course.json` に置く。文書末尾の実ファイルへのリンクを参照。
+全40講座は設計上の予定枠で、40講座の本文が完成したという意味ではない。正本の構成データは [foundation-course.json](../../src/data/foundation-course.json) に置く。
 
 |章|講座ID|数|内容と到達点|
 |---|---|---:|---|

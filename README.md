@@ -1,3 +1,18 @@
+<!-- FOUNDATION_RELEASE_20260911 -->
+## 統計の基礎コース（2026-09-11）
+
+4級・3級の内容を統合した **基礎 → 2級 → 準1級 → 1級** の学習構成へ拡張しています。基礎コースの初期構成は8章・40講座。最初の6講座・確認問題18問を実装し、残りの講座は準備中として区別しています。
+
+[基礎コース](https://Matsu71.github.io/Statistics_Blog/courses/foundation/) · [講座の構成・品質基準](project-docs/learning-platform-design/09-foundation-course.md) · [講座原稿](src/content/lessons/)
+
+基本説明は常時表示し、詳しい説明と解答は開閉できます。講座の前後移動、目次、証明等への直接リンク、印刷時の展開に対応します。確認問題は自分で考えて解答を開く形式で、自動採点や学習履歴保存はまだ実装していません。
+
+検証は `npm run generate:index && npm run verify && node scripts/validate-foundation.mjs` で行います。ブラウザ検証はPlaywright/Chromiumを用い、staging用ワークフローで実行します。検証結果は [初期リリースの検証記録](project-docs/learning-platform-design/10-foundation-validation.json) を参照してください。
+
+以下の「次期設計・未実装」は初期設計時点の記録です。現在の実装範囲は上記と09の仕様を優先します。既存の用語ページ・URLは維持しています。
+
+---
+
 # 統計ラボ
 
 統計の用語、考え方、数式、試験ポイントを整理する学習サイトです。Astro + TypeScript で構築し、静的サイトを `docs/` にビルドして GitHub Pages で公開します。

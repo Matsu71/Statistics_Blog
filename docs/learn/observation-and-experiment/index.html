@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>F05 観察と実験を区別する | 統計ラボ</title><meta name="description" content="数字に差が見えても、それだけで原因は分かりません。誰を選ぶかと、どの条件を割り当てるかを分けて考えます。"><link rel="canonical" href="https://matsu71.github.io/Statistics_Blog/learn/observation-and-experiment/"><link rel="icon" href="/Statistics_Blog/favicon.svg" type="image/svg+xml"><meta property="og:type" content="article"><meta property="og:site_name" content="統計ラボ"><meta property="og:title" content="F05 観察と実験を区別する | 統計ラボ"><meta property="og:description" content="数字に差が見えても、それだけで原因は分かりません。誰を選ぶかと、どの条件を割り当てるかを分けて考えます。"><meta property="og:url" content="https://matsu71.github.io/Statistics_Blog/learn/observation-and-experiment/"><meta property="og:image" content="https://matsu71.github.io/Statistics_Blog/og-default.svg"><meta property="og:locale" content="ja_JP"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="F05 観察と実験を区別する | 統計ラボ"><meta name="twitter:description" content="数字に差が見えても、それだけで原因は分かりません。誰を選ぶかと、どの条件を割り当てるかを分けて考えます。"><meta name="twitter:image" content="https://matsu71.github.io/Statistics_Blog/og-default.svg"><meta property="article:modified_time" content="2026-09-11T00:00:00.000Z"><link rel="stylesheet" href="/Statistics_Blog/_astro/index.CtRvb4u-.css">
+<link rel="stylesheet" href="/Statistics_Blog/_astro/index.BD0h5yHk.css"></head> <body> <a class="skip-link" href="#main-content">本文へ移動</a> <header class="site-header"> <div class="site-header__inner"> <a class="brand" href="/Statistics_Blog/"> <span class="brand__eyebrow">Statistics Glossary</span> <span class="brand__name">統計ラボ</span> <span class="brand__tagline">統計を基礎から学ぶサイト</span> </a> <nav class="site-nav" aria-label="グローバルナビゲーション"> <ul class="nav-list"> <li> <a class="nav-link" href="/Statistics_Blog/"> ホーム </a> </li><li> <a class="nav-link" href="/Statistics_Blog/courses/"> 学習コース </a> </li><li> <a class="nav-link" href="/Statistics_Blog/terms/"> 用語一覧 </a> </li><li> <a class="nav-link" href="/Statistics_Blog/topics/"> 分野解説 </a> </li> </ul> </nav> </div> </header> <main id="main-content">  <div class="learning-shell lesson-shell"> <nav class="learning-breadcrumb" aria-label="パンくず"> <a href="/Statistics_Blog/courses/">学習コース</a> <span aria-hidden="true"> / </span> <a href="/Statistics_Blog/courses/foundation/">統計の基礎</a> <span aria-hidden="true"> / </span> <span>F05</span> </nav> <header class="learning-hero"> <p class="learning-eyebrow">統計の基礎 · 第5講</p> <h1>観察と実験を区別する</h1> <p>数字に差が見えても、それだけで原因は分かりません。誰を選ぶかと、どの条件を割り当てるかを分けて考えます。</p> <p class="lesson-time">
+読む目安 9分 ＋ 確認問題 6分（編集上の目安）
+</p> </header> <section class="lesson-goals" aria-labelledby="goals"> <h2 id="goals">このページでできること</h2> <ul><li>観察研究と実験研究を、介入の有無から区別する。</li><li>無作為抽出と無作為割付の目的を説明する。</li><li>対照群・比較条件・結果の限界を確認する。</li></ul> <div class="lesson-prerequisites"> <p>前提を確認</p> <ul> <li><a href="/Statistics_Blog/learn/population-and-sampling/">母集団・標本と偏りのない選び方</a></li> </ul> </div> </section> <nav class="lesson-toc" aria-label="このページの目次"> <strong>このページの内容</strong> <ol> <li><a href="#差を見つけることと原因を確かめること">差を見つけることと、原因を確かめること</a></li><li><a href="#観察研究すでにある違いを調べる">観察研究：すでにある違いを調べる</a></li><li><a href="#実験研究条件を意図的に変える">実験研究：条件を意図的に変える</a></li><li><a href="#無作為抽出と無作為割付は別の操作">無作為抽出と無作為割付は別の操作</a></li><li><a href="#実験でも結果を読みすぎない">実験でも、結果を読みすぎない</a></li><li><a href="#確認問題">確認問題</a></li><li><a href="#詳しく確かめる">詳しく確かめる</a></li><li><a href="#まとめと次の一歩">まとめと次の一歩</a></li><li><a href="#出典関連資料">出典・関連資料</a></li> </ol> </nav> <div class="lesson-tools" data-lesson-tools hidden> <button type="button" data-expand>解答も含めてすべて開く</button> <button type="button" data-collapse>詳しい説明・解答を閉じる</button> <button type="button" data-print>印刷</button> </div> <article class="lesson-body" data-lesson-id="F05"> <h2 id="差を見つけることと原因を確かめること">差を見つけることと、原因を確かめること</h2>
+<p>学習室で、アプリ予約をした利用者の待ち時間が短かったとします。これだけで「アプリを使えば待ち時間が短くなる」と言えるでしょうか。</p>
+<p>アプリを使う人は、もともと空いている時間に来るのかもしれません。施設に慣れていて、受付の準備が早い可能性もあります。観察された差には、アプリ以外の違いも関係しているかもしれません。以下の場面や人数はすべて説明用の架空例です。</p>
+<p><strong>関連を見つけることと、何かを変えた結果としての効果を示すことは別です。</strong> この違いを理解するために、データの集め方を観察研究と実験研究に分けます。[1]</p>
+<h2 id="観察研究すでにある違いを調べる">観察研究：すでにある違いを調べる</h2>
+<p>研究者が予約方法を割り当てず、利用者が普段選んでいる方法と待ち時間を記録するなら、観察研究です。日常の状態を調べられますが、比べる人たちには予約方法以外の違いがある可能性があります。</p>
+<p>例えば、アプリ利用者の多くが午前、窓口利用者の多くが夕方に来ていたら、混雑する時間帯の違いが比較に混ざります。予約方法と待ち時間の両方に関係する時間帯は、交絡を考える際の候補です。時間帯ごとに比べるなどの工夫が必要になります。</p>
+<p>観察研究は価値が低いという意味ではありません。現実の状態を調べるうえで重要であり、倫理上・実務上の理由から介入できない問題もあります。ただし、比較した群の作られ方と、測れていない違いを含む限界を説明する必要があります。</p>
+<h2 id="実験研究条件を意図的に変える">実験研究：条件を意図的に変える</h2>
+<p>新しい受付案内が手続き時間を短くするかを調べるために、研究者が「従来の案内」と「新しい案内」を割り当てるとします。このように条件へ介入して結果を測るのが実験研究です。</p>
+<p>新しい案内を与える側を処理群、比較の基準となる側を対照群と呼べます。対照群は、何もしない群に限りません。この例では、従来の案内を受ける群が対照群です。何と比べた効果なのかを明記する必要があります。</p>
+<p>20人の参加者について、10人ずつをくじで割り当てる例を考えます。</p>
+<ol class="learning-flow" aria-label="実験の設計例">
+<li><strong>参加者20人</strong><br>同じ対象条件</li>
+<li><strong>無作為に割付</strong><br>10人ずつ</li>
+<li><strong>新しい案内 / 従来の案内</strong><br>比較する条件</li>
+<li><strong>同じ方法で測定</strong><br>手続き完了までの時間</li>
+</ol>
+<p>案内以外の条件もできるだけそろえます。一方の群だけ熟練した受付担当者が対応すれば、案内と担当者の違いを切り分けにくくなります。測定の開始・終了の基準や、途中でやめた人の扱いも事前に決めます。</p>
+<h2 id="無作為抽出と無作為割付は別の操作">無作為抽出と無作為割付は別の操作</h2>
+<p>前の講座の無作為抽出は、「誰を調査に選ぶか」を決める操作でした。ここでの無作為割付は、「参加した人にどの条件を与えるか」を決める操作です。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>操作</th><th>この例で決めること</th><th>主に考える問題</th></tr></thead><tbody><tr><td>無作為抽出</td><td>登録者から誰を選ぶか</td><td>対象全体へどこまで一般化するか</td></tr><tr><td>無作為割付</td><td>誰を新しい案内の群にするか</td><td>群間の差を効果として比較する条件</td></tr></tbody></table>
+<p>希望者20人だけで実験しても、その20人を無作為に2群へ割り付けることはできます。ただし、参加者が登録者全体を代表するとは自動的に言えません。逆に、登録者から無作為に選んでも、案内を参加者が自分で選べば、群間の違いに選択の影響が混ざる可能性があります。</p>
+<p>「ランダム」という言葉だけで研究全体を評価せず、何をランダムにしたのかを確認してください。抽出と割付の区別は、研究結果を読むときにも重要です。[2]</p>
+<h2 id="実験でも結果を読みすぎない">実験でも、結果を読みすぎない</h2>
+<p>無作為割付をしても、一回の小さな実験では、たまたま経験者が片方に多く入ることがあります。すべての特徴が完全に一致するという保証ではありません。割付で意図的な選び分けを避け、偶然の変動を考慮した推論を行うことが大切です。</p>
+<p>また、割り当てた案内を実際には見なかった人や、測定できなかった人が出る場合もあります。都合のよい結果だけを残すと、無作為化の利点を損なうことがあります。何を割り当て、誰の結果を分析したかを記録します。</p>
+<p>単に導入前の平均8分と導入後の平均6分を比べた結果なら、差は2分です。しかし、導入後に利用者数が減ったなど、同時期のほかの変化が影響した可能性があります。数値の差を計算できることと、その差の原因を確定できることを分けて説明します。</p>
+<h2 id="確認問題">確認問題</h2>
+<section class="practice-question" data-question="F05-Q1">
+<h3 id="問1観察か実験か">問1：観察か、実験か</h3>
+<p>利用者が普段選んだ予約方法と待ち時間を、研究者が変更せずに記録しました。これはどちらですか。</p>
+<details id="f05-q1-answer"><summary>解答と考え方</summary>
+<p>観察研究です。研究者が予約方法を介入として割り当てていないためです。方法と待ち時間の関連は調べられますが、関連だけで予約方法の因果効果が確定するわけではありません。</p>
+</details>
+</section>
+<section class="practice-question" data-question="F05-Q2">
+<h3 id="問2何をランダムにしたか">問2：何をランダムにしたか</h3>
+<p>希望して参加した20人を、くじで10人ずつ新旧の案内へ分けました。「登録者からの無作為抽出」と「参加者への無作為割付」のどちらを行っていますか。</p>
+<details id="f05-q2-answer"><summary>解答と考え方</summary>
+<p>無作為割付です。参加者は希望者なので、登録者からの無作為抽出とは言えません。参加者内の条件比較と、登録者全体への一般化を区別します。</p>
+</details>
+</section>
+<section class="practice-question" data-question="F05-Q3">
+<h3 id="問3前後の差をどう報告するか">問3：前後の差をどう報告するか</h3>
+<p>新しい案内の導入前が平均8分、導入後が平均6分でした。対照群はありません。「案内だけで必ず2分短縮した」と結論してよいですか。</p>
+<details id="f05-q3-answer"><summary>解答と考え方</summary>
+<p>よくありません。観測した前後差は2分ですが、利用者数・時間帯・担当者など、別の変化を除けていません。「今回の記録では導入後に平均2分短かった。ただし案内だけの効果とは切り分けられない」のように述べます。</p>
+</details>
+</section>
+<h2 id="詳しく確かめる">詳しく確かめる</h2>
+<details id="f05-counterfactual"><summary>同じ人を比べれば、原因がすべて分かるのか（因果効果の考え方）</summary>
+<p>ある参加者について、同じ状況で新しい案内を使った場合の時間を <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Y(1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">Y</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span></span></span></span>、従来の案内を使った場合の時間を <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Y(0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">Y</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span></span></span></span> と書きます。知りたい個人の効果は <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo><mo>−</mo><mi>Y</mi><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">Y(1)-Y(0)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">Y</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.2222em;">Y</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span></span></span></span> ですが、同じ一回の受付で両方の条件を同時に実現することはできません。</p>
+<p>別の日に同じ人を調べても、慣れや混雑などが変わることがあります。したがって「同じ人の前後比較なら、ほかの条件の影響が完全になくなる」とは限りません。</p>
+<p>無作為割付は、比較対象を作るための重要な方法です。ただし、実際の割付・介入・測定が適切に実施されたか、参加者同士が影響し合っていないかなども確認します。このブロックは記号を使った考え方の紹介で、無作為化推論の完全な証明ではありません。因果推論の発展教材につながる入口です。</p>
+</details>
+<h2 id="まとめと次の一歩">まとめと次の一歩</h2>
+<p>観察ではすでにある違いを調べ、実験では条件へ介入します。抽出と割付を分け、比較の条件と限界を読み取ります。これで第1章は一区切りです。第2章では、データを表や割合として正しく整理していきます。</p>
+<h2 id="出典関連資料">出典・関連資料</h2>
+<p>[1] <a href="https://www.toukei-kentei.jp/hubfs/files/grade_range/grade3_hani_20181214.pdf">統計検定3級・公式出題範囲表</a>「実験」。<br>
+[2] <a href="https://openintro-ims.netlify.app/data-design">OpenIntro, Introduction to Modern Statistics (2e), Study design</a>：観察研究・実験・無作為化と結論の範囲に関する関連資料です。参照日：2026-09-11。場面・図式・数値例・問題は独自制作です。</p> </article> <nav class="lesson-pagination" aria-label="講座を移動"> <a href="/Statistics_Blog/learn/population-and-sampling/" rel="prev"> <small>前の講座</small>母集団・標本と偏りのない選び方 </a> <a href="/Statistics_Blog/learn/ratios-and-percentages/" rel="next"> <small>次の講座</small>割合・百分率とパーセントポイント →
+</a> </nav> <p class="lesson-review">
+内容確認：出典照合・計算・説明の自己点検済み（第三者監修ではありません）。
+      例・図・問題は本講座用の独自制作です。
+</p> </div>  </main> <footer class="site-footer"> <div class="site-footer__inner"> <div> <p class="site-footer__title">統計ラボ</p> <p class="site-footer__copy">統計の用語、考え方、数式、試験ポイントを整理して学べるサイトです。</p> </div> <div class="site-footer__links"> <a href="/Statistics_Blog/terms/">用語一覧</a> <a href="/Statistics_Blog/topics/">分野解説</a> </div> </div> </footer> </body></html> <script type="module">const c=document.querySelector(".lesson-body"),o=()=>Array.from(c?.querySelectorAll("details")??[]),a=document.querySelector("[data-lesson-tools]");a&&(a.hidden=!1);document.querySelector("[data-expand]")?.addEventListener("click",()=>{o().forEach(e=>{e.open=!0})});document.querySelector("[data-collapse]")?.addEventListener("click",()=>{o().forEach(e=>{e.open=!1})});document.querySelector("[data-print]")?.addEventListener("click",()=>window.print());function l(){let e;try{e=decodeURIComponent(window.location.hash.slice(1))}catch{return}if(!e)return;const t=document.getElementById(e);if(!t)return;let n=t;for(;n;)n instanceof HTMLDetailsElement&&(n.open=!0),n=n.parentElement;requestAnimationFrame(()=>t.scrollIntoView({block:"start"}))}window.addEventListener("hashchange",l);l();let r=null;window.addEventListener("beforeprint",()=>{r===null&&(r=o().map(e=>e.open)),o().forEach(e=>{e.open=!0})});window.addEventListener("afterprint",()=>{o().forEach((e,t)=>{e.open=r?.[t]??e.open}),r=null});</script>

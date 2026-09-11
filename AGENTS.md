@@ -1,3 +1,18 @@
+<!-- FOUNDATION_POLICY_20260911 -->
+## 現行の学習コース方針（2026-09-11・この節を優先）
+
+公開する学習順序は **基礎 → 2級 → 準1級 → 1級** です。基礎は4級・3級の内容を統合し、初心者の入口とします。独立した4級コースは設けません。以下の旧来の「2級中心・用語ページ優先」は既存用語辞典の運用説明であり、サイト全体の対象や制作優先順位を制限しません。
+
+現行の基礎コース仕様は [09-foundation-course.md](project-docs/learning-platform-design/09-foundation-course.md) を参照してください。順序教材は `src/content/lessons/`、構成は `src/data/foundation-course.json`、教材schemaは `src/lib/foundation-schema.ts`、公開ルートは `src/pages/learn/[slug].astro` です。旧termsとtopicsのschema・キューは、それらの既存記事に引き続き適用します。新しいlessons原稿には旧termsのfrontmatterや生成Skillを機械的に適用しません。
+
+各講座には、目標、基本の説明、条件、具体例、3問以上の確認問題と解答・誤答理由、適切な詳しい説明、特定できる出典を用意します。重要な使用条件は隠さず、導出・発展は折りたたみます。下書きや予定講座を公開済み・全範囲対応済みとして数えません。比較対象より高品質を目指しますが、実証のない優越性を表示しません。
+
+確認は数学・初学者向け説明・範囲/出典・UIの観点を分けます。自己点検を独立監修と表示しません。実施していない複数担当者・subagentの確認を記録してはいけません。新しいlessonsの公開前には、既存の `npm run verify` と `node scripts/validate-foundation.mjs` を実行し、UI変更時は `node scripts/test-foundation-browser.mjs` も実行してください。後者はPlaywrightとChromiumが必要です。
+
+原稿とUIを変更したときは、検証した生成物 `docs/` も含めて保存します。公開前の検証はstagingブランチで行い、成功した内容だけをmainへ反映します。
+
+---
+
 # AGENTS.md
 
 ## Site Mission

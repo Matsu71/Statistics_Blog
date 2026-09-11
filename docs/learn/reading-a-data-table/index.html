@@ -1,0 +1,126 @@
+<!DOCTYPE html><html lang="ja"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>F02 データの1行・1列は何を表すか | 統計ラボ</title><meta name="description" content="表を見たら、すぐ平均を計算せずに、1件の単位・記録項目・欠けた値を確認します。行数と人数が一致しない例も扱います。"><link rel="canonical" href="https://matsu71.github.io/Statistics_Blog/learn/reading-a-data-table/"><link rel="icon" href="/Statistics_Blog/favicon.svg" type="image/svg+xml"><meta property="og:type" content="article"><meta property="og:site_name" content="統計ラボ"><meta property="og:title" content="F02 データの1行・1列は何を表すか | 統計ラボ"><meta property="og:description" content="表を見たら、すぐ平均を計算せずに、1件の単位・記録項目・欠けた値を確認します。行数と人数が一致しない例も扱います。"><meta property="og:url" content="https://matsu71.github.io/Statistics_Blog/learn/reading-a-data-table/"><meta property="og:image" content="https://matsu71.github.io/Statistics_Blog/og-default.svg"><meta property="og:locale" content="ja_JP"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="F02 データの1行・1列は何を表すか | 統計ラボ"><meta name="twitter:description" content="表を見たら、すぐ平均を計算せずに、1件の単位・記録項目・欠けた値を確認します。行数と人数が一致しない例も扱います。"><meta name="twitter:image" content="https://matsu71.github.io/Statistics_Blog/og-default.svg"><meta property="article:modified_time" content="2026-09-11T00:00:00.000Z"><link rel="stylesheet" href="/Statistics_Blog/_astro/index.CtRvb4u-.css">
+<link rel="stylesheet" href="/Statistics_Blog/_astro/index.BD0h5yHk.css"></head> <body> <a class="skip-link" href="#main-content">本文へ移動</a> <header class="site-header"> <div class="site-header__inner"> <a class="brand" href="/Statistics_Blog/"> <span class="brand__eyebrow">Statistics Glossary</span> <span class="brand__name">統計ラボ</span> <span class="brand__tagline">統計を基礎から学ぶサイト</span> </a> <nav class="site-nav" aria-label="グローバルナビゲーション"> <ul class="nav-list"> <li> <a class="nav-link" href="/Statistics_Blog/"> ホーム </a> </li><li> <a class="nav-link" href="/Statistics_Blog/courses/"> 学習コース </a> </li><li> <a class="nav-link" href="/Statistics_Blog/terms/"> 用語一覧 </a> </li><li> <a class="nav-link" href="/Statistics_Blog/topics/"> 分野解説 </a> </li> </ul> </nav> </div> </header> <main id="main-content">  <div class="learning-shell lesson-shell"> <nav class="learning-breadcrumb" aria-label="パンくず"> <a href="/Statistics_Blog/courses/">学習コース</a> <span aria-hidden="true"> / </span> <a href="/Statistics_Blog/courses/foundation/">統計の基礎</a> <span aria-hidden="true"> / </span> <span>F02</span> </nav> <header class="learning-hero"> <p class="learning-eyebrow">統計の基礎 · 第2講</p> <h1>データの1行・1列は何を表すか</h1> <p>表を見たら、すぐ平均を計算せずに、1件の単位・記録項目・欠けた値を確認します。行数と人数が一致しない例も扱います。</p> <p class="lesson-time">
+読む目安 8分 ＋ 確認問題 5分（編集上の目安）
+</p> </header> <section class="lesson-goals" aria-labelledby="goals"> <h2 id="goals">このページでできること</h2> <ul><li>観測単位・変数・観測値を区別する。</li><li>行数と人数、0と欠測を区別する。</li><li>集計前に単位・期間・重複を点検する。</li></ul> <div class="lesson-prerequisites"> <p>前提を確認</p> <ul> <li><a href="/Statistics_Blog/learn/asking-statistical-questions/">統計で答えられる問いをつくる</a></li> </ul> </div> </section> <nav class="lesson-toc" aria-label="このページの目次"> <strong>このページの内容</strong> <ol> <li><a href="#まず1件が何かを読む">まず「1件」が何かを読む</a></li><li><a href="#列は変数セルは観測値">列は変数、セルは観測値</a></li><li><a href="#未記録と0分は別の情報">「未記録」と「0分」は別の情報</a></li><li><a href="#行数をそのまま人数や独立な件数にしない">行数を、そのまま人数や独立な件数にしない</a></li><li><a href="#集計前の小さな点検">集計前の小さな点検</a></li><li><a href="#確認問題">確認問題</a></li><li><a href="#詳しく確かめる">詳しく確かめる</a></li><li><a href="#まとめと次の一歩">まとめと次の一歩</a></li><li><a href="#出典関連資料">出典・関連資料</a></li> </ol> </nav> <div class="lesson-tools" data-lesson-tools hidden> <button type="button" data-expand>解答も含めてすべて開く</button> <button type="button" data-collapse>詳しい説明・解答を閉じる</button> <button type="button" data-print>印刷</button> </div> <article class="lesson-body" data-lesson-id="F02"> <h2 id="まず1件が何かを読む">まず「1件」が何かを読む</h2>
+<p>データの表は、数字を入れるだけの箱ではありません。同じ4行の表でも、4人の記録、1人の4日分の記録、4回の受付の記録では意味が変わります。どれも行数は4ですが、調べた人数が4人とは限りません。</p>
+<p>一つの記録が何を表すかを、<strong>観測単位</strong>と呼びます。この講座では、学習室の「1回の来室」を1件として記録する例を使います。来室者を匿名のIDで区別し、同じ人が別の日に来た場合も別の1件にします。以下の表は説明用の架空データです。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>来室者ID</th><th>来室日</th><th>予約方法</th><th align="right">待ち時間（分）</th></tr></thead><tbody><tr><td>A01</td><td>9月1日</td><td>アプリ</td><td align="right">4</td></tr><tr><td>A02</td><td>9月1日</td><td>窓口</td><td align="right">0</td></tr><tr><td>A03</td><td>9月1日</td><td>ウェブ</td><td align="right">未記録</td></tr><tr><td>A01</td><td>9月2日</td><td>アプリ</td><td align="right">8</td></tr></tbody></table>
+<p>この表には4回の来室、3人の来室者が含まれます。A01の2行は日付が違うため、この記録のルールでは重複入力ではありません。「同じIDがあるから削除する」と判断してはいけません。</p>
+<h2 id="列は変数セルは観測値">列は変数、セルは観測値</h2>
+<p>記録する特徴や項目を<strong>変数</strong>、個々の記録で得られた内容を<strong>観測値</strong>と呼びます。待ち時間は変数、最初の行の「4分」は観測値です。予約方法も変数で、「アプリ」はその値です。変数は数値でなければならない、ということではありません。[1]</p>
+<p>ここでいう変数は、方程式の未知数だけを指す言葉ではありません。「観測対象ごとに値を記録する項目」と考えると分かりやすくなります。ある小さな標本の中で、たまたま全員が同じ値を持つ項目も、変数として扱えます。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>見る場所</th><th>この表での意味</th></tr></thead><tbody><tr><td>1行</td><td>1回の来室についての記録</td></tr><tr><td>待ち時間の列</td><td>各来室で測定する特徴</td></tr><tr><td>最初の行の4</td><td>A01の9月1日の待ち時間という観測値</td></tr><tr><td>来室者ID</td><td>別の来室でも同じ人と分かるための識別情報</td></tr></tbody></table>
+<p>IDは計算の対象というより、記録を対応させるために使います。IDに数字を使っても、その平均が利用者の特徴を示すわけではありません。数値の形をしていても数量とは限らない点は、次の尺度の講座で詳しく扱います。</p>
+<h2 id="未記録と0分は別の情報">「未記録」と「0分」は別の情報</h2>
+<p>A02の0分は、記録の定義に従って「待たずに受付が始まった」と分かった値です。一方、A03の未記録は、待ち時間が分からない状態です。これを<strong>欠測</strong>と呼びます。</p>
+<p>記録されている待ち時間の平均なら、4、0、8の3件を使い、</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mn>4</mn><mo>+</mo><mn>0</mn><mo>+</mo><mn>8</mn></mrow><mn>3</mn></mfrac><mo>=</mo><mn>4</mn><mtext>分</mtext></mrow><annotation encoding="application/x-tex">\frac{4+0+8}{3}=4\text{分}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">3</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">8</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">4</span><span class="mord text"><span class="mord cjk_fallback">分</span></span></span></span></span></span>
+<p>です。欠測を勝手に0にすると、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">12/4=3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">12/4</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span></span></span> 分になり、元の情報とは異なる計算になります。また、0分を「値がない」と除いても、<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">(</mo><mn>4</mn><mo>+</mo><mn>8</mn><mo stretchy="false">)</mo><mi mathvariant="normal">/</mi><mn>2</mn><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">(4+8)/2=6</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">8</span><span class="mclose">)</span><span class="mord">/2</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">6</span></span></span></span> 分と変わってしまいます。</p>
+<p>この4分は、あくまで<strong>待ち時間が記録された3件の平均</strong>です。欠測を除けば利用者全体を正しく推測できる、という結論ではありません。例えば、忙しいときほど記録が抜けるなら、記録された値だけでは長い待ち時間を見落とす可能性があります。欠測の扱いは、数値の穴埋めだけでなく、なぜ欠けたかも含めて考えます。</p>
+<h2 id="行数をそのまま人数や独立な件数にしない">行数を、そのまま人数や独立な件数にしない</h2>
+<p>上の表から「4人を調べた」と書くのは誤りです。調べた来室者はA01、A02、A03の3人です。来室ごとのサービス状況を調べるなら4件という数え方は自然ですが、人ごとの体験を比べたいなら、同じ人の複数回の記録をどうまとめるかを決めます。</p>
+<p>例えばA01の記録は4分と8分なので、その人の観測された2回の平均は6分です。人ごとの平均と、来室ごとの平均では、何を一つとして数えるかが違います。頻繁に来る人の記録が多い表で、来室をすべて同じ重みで平均すると、その人の経験が多く反映されます。</p>
+<p>さらに、同じ人の複数回の記録は、その人に共通する行動や条件を持つ場合があります。行が別だから互いに独立だとは限りません。ここでは独立性の数式は不要ですが、後で推定や検定を使うときの大切な確認事項です。</p>
+<h2 id="集計前の小さな点検">集計前の小さな点検</h2>
+<p>表を受け取ったら、1件の定義、測定単位、対象期間、欠測の記号を確認します。待ち時間の120が秒なら2分ですが、分なら120分です。単位のない数字は、そのまま比べられません。</p>
+<p>次に、同じ出来事の二重登録と、同じ対象の別の観測を区別します。来室者IDと日付だけでは、同じ日に2回来た記録を区別できない場合もあります。必要なら受付番号や時刻を追加します。「どの列の組合せが一つの出来事を識別するか」を決める作業です。</p>
+<p>最後に、集計に使った件数を結果と一緒に書きます。「平均4分」より「記録がある3件の平均4分」の方が、読み手はどの情報に基づく数字かを判断できます。これは難しい数式以前の、分析の再現性を支える習慣です。</p>
+<h2 id="確認問題">確認問題</h2>
+<section class="practice-question" data-question="F02-Q1">
+<h3 id="問1行数と人数">問1：行数と人数</h3>
+<p>本文の表について、来室記録は何件、来室者は何人、待ち時間が記録されているのは何件ですか。</p>
+<details id="f02-q1-answer"><summary>解答と考え方</summary>
+<p>来室記録は4件、来室者は3人、待ち時間の記録は3件です。A01は2回来室しています。A02の0分は有効な観測値なので、待ち時間が記録された件数に含めます。</p>
+</details>
+</section>
+<section class="practice-question" data-question="F02-Q2">
+<h3 id="問2欠測を0にすると">問2：欠測を0にすると</h3>
+<p>本文の未記録を0分として計算した平均と、記録がある値だけの平均を、それぞれ求めてください。どちらが「記録がある3件の平均」ですか。</p>
+<details id="f02-q2-answer"><summary>解答と考え方</summary>
+<p>0で埋めた計算は <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">12/4=3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">12/4</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span></span></span></span> 分、記録がある値だけの計算は <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mi mathvariant="normal">/</mi><mn>3</mn><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">12/3=4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">12/3</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span> 分です。後者が質問への答えです。前者は、未記録だった待ち時間を0分と仮定した別のデータを計算しています。どちらも、追加の検討なしに全利用者の平均とは言えません。</p>
+</details>
+</section>
+<section class="practice-question" data-question="F02-Q3">
+<h3 id="問3同じidを見つけたら">問3：同じIDを見つけたら</h3>
+<p>ある表で同じ利用者IDが2行ありました。「重複だから片方を消す」と決める前に、何を確認しますか。</p>
+<details id="f02-q3-answer"><summary>解答例と考え方</summary>
+<p>一行が人を表すのか、来室や測定を表すのかを確認し、日付・時刻・受付番号を見ます。別の来室なら残す必要があります。同じ出来事を誤って二重登録したと確認できた場合に、修正方法を記録して処理します。</p>
+</details>
+</section>
+<h2 id="詳しく確かめる">詳しく確かめる</h2>
+<details id="f02-weighting"><summary>なぜ「人ごとの平均」と「来室ごとの平均」は違うのか（重みの数値例）</summary>
+<p>欠測のない別の架空例を考えます。Pさんは1回来室して2分、Qさんは3回来室して毎回10分待ちました。来室ごとの平均は、</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>10</mn><mo>+</mo><mn>10</mn><mo>+</mo><mn>10</mn></mrow><mn>4</mn></mfrac><mo>=</mo><mn>8</mn><mtext>分</mtext><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\frac{2+10+10+10}{4}=8\text{分}.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">4</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">10</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">10</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">8</span><span class="mord text"><span class="mord cjk_fallback">分</span></span><span class="mord">.</span></span></span></span></span>
+<p>人ごとの平均待ち時間はPさんが2分、Qさんが10分なので、2人を同じ重みで平均すると、</p>
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mrow><mn>2</mn><mo>+</mo><mn>10</mn></mrow><mn>2</mn></mfrac><mo>=</mo><mn>6</mn><mtext>分</mtext><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">\frac{2+10}{2}=6\text{分}.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.0074em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">10</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord">6</span><span class="mord text"><span class="mord cjk_fallback">分</span></span><span class="mord">.</span></span></span></span></span>
+<p>8分と6分のどちらかが計算ミスなのではありません。前者は来室という出来事を等しく扱い、後者は人を等しく扱っています。知りたい対象に合う集計単位を選び、その単位を明記する必要があります。加重平均は後の講座で一般化します。</p>
+</details>
+<h2 id="まとめと次の一歩">まとめと次の一歩</h2>
+<p>表を読むときは、まず一行の意味を確認します。行数・人数・値がある件数は同じとは限らず、0と欠測も別物です。次は、各列がどの種類のデータを表すかを判断します。</p>
+<h2 id="出典関連資料">出典・関連資料</h2>
+<p>[1] <a href="https://openstax.org/books/introductory-statistics-2e/pages/1-1-definitions-of-statistics-probability-and-key-terms">OpenStax, Introductory Statistics 2e, 1.1 Definitions of Statistics, Probability, and Key Terms</a>：変数・データ・標本に関する基本用語の関連資料です。<br>
+<a href="https://openintro-ims.netlify.app/data-design">OpenIntro, Introduction to Modern Statistics (2e), Study design</a>：観測とデータ収集についての関連資料です。参照日：2026-09-11。表・計算・問題は独自制作です。</p> </article> <nav class="lesson-pagination" aria-label="講座を移動"> <a href="/Statistics_Blog/learn/asking-statistical-questions/" rel="prev"> <small>前の講座</small>統計で答えられる問いをつくる </a> <a href="/Statistics_Blog/learn/types-and-scales/" rel="next"> <small>次の講座</small>データの種類と4つの尺度 →
+</a> </nav> <p class="lesson-review">
+内容確認：出典照合・計算・説明の自己点検済み（第三者監修ではありません）。
+      例・図・問題は本講座用の独自制作です。
+</p> </div>  </main> <footer class="site-footer"> <div class="site-footer__inner"> <div> <p class="site-footer__title">統計ラボ</p> <p class="site-footer__copy">統計の用語、考え方、数式、試験ポイントを整理して学べるサイトです。</p> </div> <div class="site-footer__links"> <a href="/Statistics_Blog/terms/">用語一覧</a> <a href="/Statistics_Blog/topics/">分野解説</a> </div> </div> </footer> </body></html> <script type="module">const c=document.querySelector(".lesson-body"),o=()=>Array.from(c?.querySelectorAll("details")??[]),a=document.querySelector("[data-lesson-tools]");a&&(a.hidden=!1);document.querySelector("[data-expand]")?.addEventListener("click",()=>{o().forEach(e=>{e.open=!0})});document.querySelector("[data-collapse]")?.addEventListener("click",()=>{o().forEach(e=>{e.open=!1})});document.querySelector("[data-print]")?.addEventListener("click",()=>window.print());function l(){let e;try{e=decodeURIComponent(window.location.hash.slice(1))}catch{return}if(!e)return;const t=document.getElementById(e);if(!t)return;let n=t;for(;n;)n instanceof HTMLDetailsElement&&(n.open=!0),n=n.parentElement;requestAnimationFrame(()=>t.scrollIntoView({block:"start"}))}window.addEventListener("hashchange",l);l();let r=null;window.addEventListener("beforeprint",()=>{r===null&&(r=o().map(e=>e.open)),o().forEach(e=>{e.open=!0})});window.addEventListener("afterprint",()=>{o().forEach((e,t)=>{e.open=r?.[t]??e.open}),r=null});</script>

@@ -1,4 +1,152 @@
 {
-  "status": "not_run",
-  "note": "This file is replaced by actual content and browser test results before publication."
+  "status": "passed",
+  "checked_at": "2026-09-11T02:09:30.758Z",
+  "source_commit": "13af5be5f9b83915de05e5b5577d7d64daadab12",
+  "workflow_run_id": "34553486256",
+  "modules": 8,
+  "planned_lessons": 40,
+  "implemented_lessons": 6,
+  "planned_not_implemented": 34,
+  "original_questions": 18,
+  "records": [
+    {
+      "id": "F01",
+      "slug": "asking-statistical-questions",
+      "title": "統計で答えられる問いをつくる",
+      "status": "published",
+      "prerequisites": [],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1846,
+      "all_text_characters_approx": 2789,
+      "reading_minutes_editorial": 8,
+      "practice_minutes_editorial": 5,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F02",
+      "slug": "reading-a-data-table",
+      "title": "データの1行・1列は何を表すか",
+      "status": "published",
+      "prerequisites": [
+        "F01"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1813,
+      "all_text_characters_approx": 2637,
+      "reading_minutes_editorial": 8,
+      "practice_minutes_editorial": 5,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F03",
+      "slug": "types-and-scales",
+      "title": "データの種類と4つの尺度",
+      "status": "published",
+      "prerequisites": [
+        "F02"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1804,
+      "all_text_characters_approx": 2631,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 5,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F04",
+      "slug": "population-and-sampling",
+      "title": "母集団・標本と偏りのない選び方",
+      "status": "published",
+      "prerequisites": [
+        "F01",
+        "F02"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1729,
+      "all_text_characters_approx": 2685,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F05",
+      "slug": "observation-and-experiment",
+      "title": "観察と実験を区別する",
+      "status": "published",
+      "prerequisites": [
+        "F04"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1693,
+      "all_text_characters_approx": 2630,
+      "reading_minutes_editorial": 9,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F06",
+      "slug": "ratios-and-percentages",
+      "title": "割合・百分率とパーセントポイント",
+      "status": "published",
+      "prerequisites": [
+        "F02",
+        "F04"
+      ],
+      "questions": 3,
+      "disclosures": 5,
+      "main_text_characters_approx": 1697,
+      "all_text_characters_approx": 2663,
+      "reading_minutes_editorial": 9,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    }
+  ],
+  "source_urls": [
+    "https://bellcurve.jp/statistics/course/",
+    "https://bellcurve.jp/statistics/course/1562.html",
+    "https://openintro-ims.netlify.app/data-design",
+    "https://openstax.org/books/introductory-statistics-2e/pages/1-1-definitions-of-statistics-probability-and-key-terms",
+    "https://www.stat.go.jp/dstart/point/seminar/02/3-1.html",
+    "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade3_hani_20181214.pdf",
+    "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade4_hani_20181214.pdf"
+  ],
+  "checks": {
+    "manifest_and_ids": "passed",
+    "published_prerequisites": "passed",
+    "original_question_structure": "passed",
+    "rendered_pages_and_math": "passed",
+    "numeric_fixtures": "passed",
+    "browser": "passed"
+  },
+  "limitations": [
+    "Not an independent mathematical peer review.",
+    "Character counts strip markup, formulas and references and are approximate.",
+    "Reading time is an editorial estimate, not measured learner performance.",
+    "Planned lessons do not count as implemented syllabus coverage.",
+    "Automated tests do not establish superiority to benchmark materials."
+  ],
+  "browser": {
+    "engine": "Chromium",
+    "automated": true,
+    "viewports": [
+      375,
+      1280
+    ],
+    "height": 900,
+    "lesson_view_checks": 12,
+    "assertions": 150,
+    "page_errors": [],
+    "deep_links": "passed",
+    "keyboard_disclosures": "passed",
+    "print_event_expansion_and_restore": "passed",
+    "javascript_disabled_basic_reading": "passed",
+    "horizontal_document_overflow": "none in tested pages and widths",
+    "completed_at": "2026-09-11T02:11:02.838Z",
+    "note": "This is browser automation, not a manual visual review or a screen-reader audit."
+  }
 }
