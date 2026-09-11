@@ -1,0 +1,250 @@
+name: Release complete foundation course
+
+on:
+  push:
+    branches: ['release/foundation-v1-20260911']
+    paths:
+      - '.github/workflows/release-foundation-final.yml'
+      - 'scripts/finalize-foundation-assets-20260911.py'
+      - 'scripts/test-final-foundation-release.mjs'
+      - 'scripts/foundation-release-fixes/**'
+  workflow_dispatch:
+
+concurrency:
+  group: foundation-final-release
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pages: write
+  actions: read
+  issues: write
+
+jobs:
+  verify-and-release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      GH_TOKEN: ${{ github.token }}
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Prepare audited source corrections and original learning features
+        run: |
+          set -euo pipefail
+          mkdir -p review-assets/foundation-final
+          python -m py_compile scripts/finalize-foundation-assets-20260911.py
+          python scripts/finalize-foundation-assets-20260911.py | tee review-assets/foundation-final/preparation.log
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('src/components/SiteFooter.astro')
+          s=p.read_text()
+          if 'release-footer-links' in s and 'withReleaseBase' not in s:
+              if not s.startswith('---'):
+                  raise RuntimeError('Footer frontmatter needs manual reconciliation')
+              s=s.replace('---',"---\nimport { withBase as withReleaseBase } from '../lib/site';",1)
+              for route in ['about','editorial-policy','privacy','contact','errata','search','labs']:
+                  s=s.replace('href="/Statistics_Blog/'+route+'/"',"href={withReleaseBase('/"+route+"/')}")
+              p.write_text(s)
+          PY
+          if [ -d scripts/foundation-release-fixes ]; then
+            for file in scripts/foundation-release-fixes/*.py; do
+              [ -f "$file" ] || continue
+              python "$file"
+            done
+          fi
+          node --check scripts/test-final-foundation-release.mjs
+          node --check src/lib/foundation-labs.mjs
+          node --check src/scripts/foundation-labs.js
+      - name: Upgrade vulnerable build dependencies and save an exact lockfile
+        run: |
+          set -euo pipefail
+          node --input-type=module - <<'JS'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          const p=JSON.parse(readFileSync('package.json','utf8'));
+          p.engines={...p.engines,node:'>=22.12.0'};
+          writeFileSync('package.json',JSON.stringify(p,null,2)+'\n');
+          JS
+          npm install --save-exact astro@7.3.2 @astrojs/sitemap@latest @astrojs/markdown-remark@latest
+          npm install --save-dev --save-exact @astrojs/check@latest
+          npm audit fix --no-fund || true
+          npm audit --json > review-assets/foundation-final/npm-audit-all.json || true
+          npm audit --omit=dev --json > review-assets/foundation-final/npm-audit-production.json || true
+          node --input-type=module - <<'JS'
+          import {readFileSync,writeFileSync} from 'node:fs';
+          const all=JSON.parse(readFileSync('review-assets/foundation-final/npm-audit-all.json','utf8'));
+          const production=JSON.parse(readFileSync('review-assets/foundation-final/npm-audit-production.json','utf8'));
+          if(all.error||production.error||!all.metadata?.vulnerabilities||!production.metadata?.vulnerabilities) throw new Error('The dependency audit did not complete.');
+          const blockers=(all.metadata.vulnerabilities.high??0)+(all.metadata.vulnerabilities.critical??0);
+          const report={checked_at:new Date().toISOString(),all:all.metadata.vulnerabilities,production:production.metadata.vulnerabilities,high_or_critical_blockers:blockers,node:process.version,scope:'Installed application and build dependencies, before ephemeral browser-test tools.'};
+          writeFileSync('project-docs/learning-platform-design/20-dependency-audit.json',JSON.stringify(report,null,2)+'\n');
+          if(blockers!==0)throw new Error('High/critical dependency findings require review before release.');
+          JS
+      - name: Verify all existing and foundation content and generated pages
+        run: |
+          set -euo pipefail
+          npm run generate:index
+          npm run verify | tee review-assets/foundation-final/site-verification.log
+          node scripts/validate-foundation.mjs | tee review-assets/foundation-final/content-verification.log
+          node scripts/test-foundation-math.mjs | tee review-assets/foundation-final/math-verification.log
+          python -m pip install --disable-pip-version-check scipy==1.16.1
+          python scripts/check-foundation-oracle.py | tee review-assets/foundation-final/scipy-verification.log
+          python -m pip freeze > review-assets/foundation-final/python-environment.txt
+      - name: Verify browser behavior, responsive layouts, numerical labs and accessibility
+        run: |
+          set -euo pipefail
+          npm install --no-save --package-lock=false playwright@1.55.0 @axe-core/playwright@4.10.2
+          npx playwright install --with-deps chromium
+          sudo apt-get install -y fonts-noto-cjk
+          node scripts/test-foundation-browser.mjs | tee review-assets/foundation-final/original-browser-verification.log
+          node scripts/test-final-foundation-release.mjs | tee review-assets/foundation-final/release-browser-verification.log
+      - name: Save verified source, generated site and audit records
+        id: checkpoint
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          python - <<'PY'
+          import json,hashlib,os
+          from pathlib import Path
+          from datetime import datetime,timezone
+          doc=Path('project-docs/learning-platform-design')
+          final=json.loads((doc/'19-final-release-audit.json').read_text())
+          if final['status']!='passed' or final['lessons']!=40 or final['questions']!=129:
+              raise RuntimeError('Final release gate is not satisfied.')
+          manifest={str(p.relative_to('docs')):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path('docs').rglob('*')) if p.is_file()}
+          (doc/'22-build-manifest.json').write_text(json.dumps({'checked_at':datetime.now(timezone.utc).isoformat(),'workflow_run_id':os.environ['GITHUB_RUN_ID'],'files':manifest},ensure_ascii=False,indent=2)+'\n')
+          progress='# 基礎コース完成作業の進捗\n\n状態：全40講座・129問の公開候補の検証完了。公開URLの確認は次の工程です。\n\n本文、数式、計算、SciPy照合、リンク、全講座のブラウザ操作、3つの数値実験、全文検索、横長表とアクセシビリティの自動チェックを実行しました。結果は10・12・13・19・20の監査ファイルとCIログに保存しています。独立した人間の監修や学習効果の比較試験とは区別します。\n\n次の作業：検証した生成物をmainへ反映し、GitHub Pagesで全40講座と追加機能の公開を確認します。その後は基礎の訂正受付・利用者のつまずきの確認と、2級コースの詳細設計・制作へ進みます。\n'
+          (doc/'11-completion-progress.md').write_text(progress)
+          PY
+          git fetch origin "$GITHUB_REF_NAME" main
+          remote_head=$(git rev-parse "origin/$GITHUB_REF_NAME")
+          if [ "$remote_head" != "$GITHUB_SHA" ]; then
+            echo 'The source branch changed during verification; preserve the artifact and reconcile before publishing.' >&2
+            exit 1
+          fi
+          git add -u
+          git add src scripts project-docs
+          if ! git diff --cached --quiet; then
+            git commit -m 'release: finish and verify all 40 foundation lessons, labs and search'
+          fi
+          git push origin "HEAD:refs/heads/$GITHUB_REF_NAME"
+          echo "release_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - name: Fast-forward main without overwriting concurrent work
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git merge-base --is-ancestor origin/main HEAD
+          git push origin HEAD:refs/heads/main
+      - name: Request GitHub Pages publication and verify all public lesson URLs
+        env:
+          RELEASE_SHA: ${{ steps.checkpoint.outputs.release_sha }}
+        run: |
+          set -euo pipefail
+          gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" > review-assets/foundation-final/pages-request.json
+          python - <<'PY'
+          import os,json,re,time,subprocess,hashlib
+          from pathlib import Path
+          from urllib.request import Request,urlopen
+          from datetime import datetime,timezone
+          repo=os.environ['GITHUB_REPOSITORY']; sha=os.environ['RELEASE_SHA']
+          build=None
+          for attempt in range(90):
+              try:
+                  build=json.loads(subprocess.check_output(['gh','api',f'repos/{repo}/pages/builds/latest'],text=True))
+                  if build.get('status')=='built' and build.get('commit')==sha: break
+                  if build.get('status')=='errored' and build.get('commit')==sha: raise RuntimeError(json.dumps(build))
+              except subprocess.CalledProcessError:
+                  pass
+              time.sleep(5)
+          else: raise RuntimeError('GitHub Pages build completion for this release was not confirmed.')
+          base='https://matsu71.github.io/Statistics_Blog'
+          course=json.loads(Path('src/data/foundation-course.json').read_text())
+          lessons=[x for m in course['modules'] for x in m['lessons']]
+          routes=[(f"/learn/{x['slug']}/",x['id']) for x in lessons]
+          routes += [(path,None) for path in ['/courses/foundation/','/search/','/labs/','/labs/normal-area/','/labs/probability-frequency/','/labs/confidence-coverage/','/courses/foundation/coverage/','/about/','/editorial-policy/','/privacy/','/contact/','/errata/']]
+          checked=[]
+          for route,ident in routes:
+              for attempt in range(12):
+                  try:
+                      req=Request(base+route+'?release='+sha,headers={'User-Agent':'Statistics-Lab-Release-Verification/1.0','Cache-Control':'no-cache'})
+                      with urlopen(req,timeout=30) as response:
+                          payload=response.read();status=response.status
+                      text=payload.decode('utf-8')
+                      if ident:
+                          match=re.search(r'data-lesson-id\s*=\s*[\"\']?([A-Z0-9-]+)',text)
+                          if not match or match.group(1)!=ident: raise RuntimeError('Expected lesson marker missing.')
+                      if status!=200: raise RuntimeError(f'HTTP {status}')
+                      checked.append({'route':route,'lesson_id':ident,'status':status,'sha256':hashlib.sha256(payload).hexdigest()})
+                      break
+                  except Exception:
+                      if attempt==11: raise
+                      time.sleep(5)
+          report={'status':'published_and_http_verified','checked_at':datetime.now(timezone.utc).isoformat(),'release_commit':sha,'pages_build_status':build.get('status'),'verified_lesson_count':len(lessons),'verified_routes':checked,'next_work':'基礎の訂正受付と実利用者の理解確認を継続し、2級コースの詳細対応表と初期教材を制作する。','limitations':['独立した人間の数学監修は未実施。','学習効果の競合比較実験は未実施。','すべての実機・支援技術での検証を意味しない。','2級・準1級・1級の全順序コースが完成したという意味ではない。']}
+          doc=Path('project-docs/learning-platform-design')
+          (doc/'21-publication-check.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          progress=f'''# 基礎コース完成作業の進捗
+          
+          更新：{report['checked_at']}
+          
+          ## 今回の到達点
+          
+          **今回合意した基礎全40講座・129問について、制作、残課題の修正、競合との不足比較、数値・数式・リンク・画面・操作の検証、公開を完了しました。**
+          
+          公開コミット：`{sha}`。GitHub Pagesのビルドと全40講座・追加12ルートのHTTP確認結果を21-publication-check.jsonに保存しました。全40講座の原稿ハッシュと自動検証結果は19-final-release-audit.jsonを参照してください。
+          
+          本文を増やしただけで終えず、乱数表の具体例、棒・円・箱ひげの図、横長表の表示、3つの数値実験、全文検索、学習範囲表と訂正窓口を整えました。比較対象にない機能だと断定したり、教育効果で上回ったと実証済みのように記載したりはしていません。
+          
+          ## 次の作業
+          
+          **基礎版の訂正受付と利用者のつまずきの確認を継続し、2級コースの公式範囲への詳細対応表と初期教材の制作へ進みます。** 基礎で不足した説明や問題が見つかった場合は、先に補強してから上級内容へ広げます。
+          
+          ## 完了とは別に残る確認
+          
+          独立した人間の数学監修、実利用者による学習効果比較、すべての実機・スクリーンリーダーでの試験は未実施です。自動テストや自己点検をこれらと同一視しません。2級・準1級・1級の全コース完成は、今回の基礎40講座の完成とは別の工程です。
+          '''
+          (doc/'11-completion-progress.md').write_text('\n'.join(line.strip() for line in progress.splitlines())+'\n')
+          PY
+      - name: Save the publication receipt and close the resolved dependency finding
+        env:
+          RELEASE_SHA: ${{ steps.checkpoint.outputs.release_sha }}
+        run: |
+          set -euo pipefail
+          git add project-docs/learning-platform-design/11-completion-progress.md project-docs/learning-platform-design/21-publication-check.json
+          git commit -m 'docs: confirm foundation release URLs and record the next work'
+          git push origin "HEAD:refs/heads/$GITHUB_REF_NAME"
+          git fetch origin main
+          git merge-base --is-ancestor origin/main HEAD
+          git push origin HEAD:refs/heads/main
+          if gh api "repos/$GITHUB_REPOSITORY/issues/1" --jq .title | grep -q 'npm audit'; then
+            gh api --method POST "repos/$GITHUB_REPOSITORY/issues/1/comments" -f body="基礎コースの公開前に依存関係を更新し、lockfileを保存して再検証しました。結果は project-docs/learning-platform-design/20-dependency-audit.json、公開確認は21-publication-check.jsonです。公開コミット: $RELEASE_SHA。監査の成功は将来の脆弱性がないことを保証するものではありません。"
+            gh api --method PATCH "repos/$GITHUB_REPOSITORY/issues/1" -f state=closed -f state_reason=completed
+          fi
+      - name: Preserve failure information without publishing unverified changes
+        if: failure()
+        run: |
+          set +e
+          mkdir -p review-assets/foundation-final
+          git diff --stat > review-assets/foundation-final/pending-diff-stat.txt
+          git diff --binary -- src scripts astro.config.mjs package.json package-lock.json README.md AGENTS.md project-docs > review-assets/foundation-final/pending-source.patch
+          printf 'Release verification stopped. No success is implied. Inspect workflow run %s and the saved review artifact.\n' "$GITHUB_RUN_ID" > review-assets/foundation-final/interruption.txt
+          echo "Verification or publication did not complete. Results and pending corrections are in the review artifact." >> "$GITHUB_STEP_SUMMARY"
+      - name: Upload test results and screenshots, not dependency or font files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: foundation-final-review
+          path: |
+            review-assets/foundation-final/
+            project-docs/learning-platform-design/19-final-release-audit.json
+            project-docs/learning-platform-design/20-dependency-audit.json
+            project-docs/learning-platform-design/21-publication-check.json
+          if-no-files-found: warn
+          retention-days: 14
