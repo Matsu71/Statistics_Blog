@@ -1,0 +1,73 @@
+name: Finish grade2 verified release
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [content/grade2-complete-20260911]
+    paths:
+      - .github/workflows/finish-grade2-20260911b.yml
+      - scripts/release/finish-grade2-20260911b.py
+
+permissions:
+  contents: read
+
+concurrency:
+  group: grade2-final-release
+  cancel-in-progress: false
+
+jobs:
+  finish:
+    if: github.ref == 'refs/heads/content/grade2-complete-20260911'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: write
+      pages: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Install Japanese fonts for reproducible browser review
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-cjk
+      - name: Preserve the exact release runner before selecting the current source
+        run: cp scripts/release/finish-grade2-20260911b.py "$RUNNER_TEMP/finish-grade2.py"
+      - name: Verify all content and publish only the passing, non-conflicting artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ASTRO_TELEMETRY_DISABLED: '1'
+        run: python3 "$RUNNER_TEMP/finish-grade2.py"
+      - name: Preserve actual results, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: grade2-final-release-${{ github.run_id }}
+          path: |
+            review-assets/grade2/
+            project-docs/grade2/final-release/
+            project-docs/grade2/content-validation.json
+            project-docs/grade2/math-validation.json
+            project-docs/grade2/browser-validation.json
+          retention-days: 30
+          if-no-files-found: warn
+      - name: Summarize the observed state without inferring success
+        if: always()
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, os
+          p = Path('project-docs/grade2/final-release/status.json')
+          state = json.loads(p.read_text()) if p.exists() else {'status': 'runner_did_not_produce_a_result'}
+          lines = ['# 2級コースの最終処理', '', '**状態：' + state.get('status', 'unknown') + '**', '']
+          for key in ['lesson_count', 'question_count', 'numerical_checks', 'browser_assertions', 'resources_verified', 'verified_commit', 'error', 'next']:
+              if key in state:
+                  lines.append(f'- {key}: {state[key]}')
+          with open(os.environ['GITHUB_STEP_SUMMARY'], 'a') as out:
+              out.write('\n'.join(lines) + '\n')
+          PY
