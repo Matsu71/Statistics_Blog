@@ -1,134 +1,80 @@
-<!-- FOUNDATION_COMPLETE_20260911 -->
-# 統計ラボ：基礎コース完全版
-
-4級・3級を統合した基礎40講座、独自問題130問、操作型教材3本、本文・詳説検索、端末内の確認マーク・再開位置、公開範囲対応表を含みます。下に残る初期6講座の説明は初期版の記録です。
-
-[基礎コース](https://matsu71.github.io/Statistics_Blog/courses/foundation/) · [学習実験](https://matsu71.github.io/Statistics_Blog/labs/) · [範囲対応](https://matsu71.github.io/Statistics_Blog/coverage/foundation/) · [編集・訂正・プライバシー](https://matsu71.github.io/Statistics_Blog/about/)
-
-## 確認記録
-
-[内容レビュー](project-docs/learning-platform-design/13-foundation-content-review.md)、[競合比較と不足改善](project-docs/learning-platform-design/15-competitor-comparison-and-remediation.md)、[進捗と次の作業](project-docs/learning-platform-design/11-completion-progress.md)を保存しています。自動テストの実行結果は10・12・16・18・19番のJSONです。第三者監修・実利用者による効果検証は実施済みとは表示していません。
-
-## 再現する確認手順
-
-Node.js 22.12以上。`npm ci` の後、`node scripts/prepare-foundation-release.mjs && node scripts/finalize-foundation-docs.mjs && npm run generate:index && npm run verify && node scripts/validate-foundation.mjs && node scripts/test-foundation-math.mjs && node scripts/test-release-extras.mjs` を実行します。SciPyによる別実装の照合は `python scripts/check-foundation-oracle.py` です。
-
-ブラウザ検証はPlaywrightとChromium/WebKitを用意したうえで、`node scripts/test-foundation-browser.mjs && node scripts/test-learning-labs.mjs` を実行します。Actionsの検証ブランチでも同じ工程を実行します。
-
-検証ブランチでは、`src/data/foundation-release.json` のstageを `release_candidate` にした場合に限り、全テスト成功後に生成物と確認記録を保存します。mainへの反映は別の明示的な操作です。未検証のソースをmainへ強制上書きしません。
-
----
-
-<!-- FOUNDATION_RELEASE_20260911 -->
-## 統計の基礎コース（2026-09-11）
-
-4級・3級の内容を統合した **基礎 → 2級 → 準1級 → 1級** の学習構成へ拡張しています。基礎コースの初期構成は8章・40講座。最初の6講座・確認問題18問を実装し、残りの講座は準備中として区別しています。
-
-[基礎コース](https://Matsu71.github.io/Statistics_Blog/courses/foundation/) · [講座の構成・品質基準](project-docs/learning-platform-design/09-foundation-course.md) · [講座原稿](src/content/lessons/)
-
-基本説明は常時表示し、詳しい説明と解答は開閉できます。講座の前後移動、目次、証明等への直接リンク、印刷時の展開に対応します。確認問題は自分で考えて解答を開く形式で、自動採点や学習履歴保存はまだ実装していません。
-
-検証は `npm run generate:index && npm run verify && node scripts/validate-foundation.mjs` で行います。ブラウザ検証はPlaywright/Chromiumを用い、staging用ワークフローで実行します。検証結果は [初期リリースの検証記録](project-docs/learning-platform-design/10-foundation-validation.json) を参照してください。
-
-以下の「次期設計・未実装」は初期設計時点の記録です。現在の実装範囲は上記と09の仕様を優先します。既存の用語ページ・URLは維持しています。
-
----
-
 # 統計ラボ
 
-統計の用語、考え方、数式、試験ポイントを整理する学習サイトです。Astro + TypeScript で構築し、静的サイトを `docs/` にビルドして GitHub Pages で公開します。
+基礎から順番に学び、必要な定義・式・証明をその場で確認できる統計学習サイトです。学習順序は **基礎（統計検定4級・3級の内容を統合）→2級→準1級→1級**。独立した4級コースは設けません。
 
-## 次期学習サイトの設計（2026-09-11）
+[公開サイト](https://matsu71.github.io/Statistics_Blog/) · [学習コース](https://matsu71.github.io/Statistics_Blog/courses/)
 
-初学者から上級者まで、統計検定4級〜1級を軸に学べるサイトへの拡張設計を [project-docs/learning-platform-design/README.md](project-docs/learning-platform-design/README.md) にまとめています。
+## 公開済みの範囲
 
-既存サービス調査、級別ロードマップ、24分野・307学習単位の候補、基本と証明を分けたページ仕様、正規分布の具体的な見本、実装・品質管理の計画を含みます。設計資料であり、新UIや全教材の実装・公開が完了したものではありません。以下は現在の実装・運用方法です。
+2026-09-11時点。原稿の存在ではなく、main反映・検証済み生成物との実配信照合を確認した本数です。
 
-## 特徴
+|コース|公開講座|確認問題|状態|
+|---|---:|---:|---|
+|[基礎](https://matsu71.github.io/Statistics_Blog/courses/foundation/)|40|130|全40講座を公開確認済み|
+|[2級](https://matsu71.github.io/Statistics_Blog/courses/grade2/)|40|172|全40講座を公開確認済み|
+|[準1級](https://matsu71.github.io/Statistics_Blog/courses/pregrade1/)|6|24|P01〜P06公開。全72講座の構成中、残る66講座は未公開|
+|1級|0|0|順序コースは未実装|
+|合計|86|326|サイト全体の最終目標は継続中|
 
-- `src/content/terms/` に用語原稿を置くコンテンツ分離構成
-- `terms` と `topics` を分けた、将来拡張しやすいコレクション設計
-- `data/term-queue.json` で、公開候補と優先度を機械的に管理
-- `project-docs/editorial-style-guide.md` で、AI 生成時の表記ルールを固定
-- build 成果物を `docs/` に置き、`main` ブランチの `/docs` を GitHub Pages 公開元にする運用
-- content validation、repo lint、typecheck、build、内部リンク検証をローカルまたは Codex 実行で回せる構成
-- サイトマップ生成に対応
+講座のほかに、既存71用語の辞典を維持しています。用語記事と順序講座の件数は混ぜません。準1級の公式範囲は2026年末までと2027年以降を区別し、適用時期を目次・構成データに示しています。
 
-## 動作環境
+### 公開状態の正本
 
-- Node.js 20 以上
-- npm 10 以上を推奨
+[全体の進捗](project-docs/project-status.json)は一覧、各公開記録は実際の確認結果です。
 
-## ローカル起動
+- [基礎リリース](project-docs/foundation-release/README.md)と[その時点の公開記録](project-docs/foundation-release/publication.json)
+- [2級の公開記録](project-docs/grade2/release/publication.json)と[回収・検証記録](project-docs/grade2/release/recovery.json)
+- [準1級初期版・現在の全サイト配信確認](project-docs/pregrade1/release/publication.json)：168 HTMLページを含む242ファイル、全86講座・326問を照合
 
-```bash
-npm install
-npm run dev
-```
+後続コースの追加で共通ページの生成物は変わります。古いリリースのハッシュは、その時点の証拠です。現在のサイト全体の判定には最新の公開記録を使ってください。`src/data/*-release.json`の候補段階と、配信後の`publication.json`は違う時点を記録しています。
 
-ブラウザで `http://localhost:4321` を開きます。
+## 教材と使い方
 
-## 検証とビルド
+基本説明、数値例、重要な使用条件はそのまま表示し、解答・導出・証明は必要に応じて開けます。前提となる講座、前後の講座、目次を行き来できます。JavaScriptが無効でも基本本文・数式・開閉できる解答を読めます。
 
-```bash
+講座検索、端末内の確認マークと再開位置、記録の書き出し・削除、確率・正規分布・信頼区間の操作型教材を実装しています。確認マークは利用者の自己記録で、習得や合格可能性の自動認定ではありません。基礎・2級・準1級の保存領域を分け、検索語や学習記録を外部へ送信しません。
+
+## 原稿と構成
+
+|対象|原稿|構成の正本|
+|---|---|---|
+|基礎|`src/content/lessons/`|`src/data/foundation-course.json`|
+|2級|`src/content/grade2/`|`src/data/grade2-course.json`|
+|準1級|`src/content/pregrade1/`|`src/data/pregrade1-course.json`|
+|用語辞典|`src/content/terms/`|`data/term-queue.json`と`src/content.config.ts`|
+|公開用生成物|`docs/`|検証後のビルドと、リリースごとのハッシュ記録|
+
+次のP07・P08は[公開前の原稿フォルダ](project-docs/pregrade1/drafts/)に保存しています。2講座・8問、21件の数値検算を行いましたが、画面への組み込み・ブラウザ検証・公開は未実施です。公開6講座に加算しません。[次の工程と検算の再現方法](project-docs/pregrade1/checkpoints/03-main-published-and-next-drafts.md)を参照してください。
+
+## 開発と検証
+
+Node.js 22.12以上を使用します。通常の開発は`npm ci`の後、`npm run dev`です。
+
+準1級の現在の公開候補を再検証する基本手順：
+
+```sh
+npm ci
+node scripts/test-lesson-search-text.mjs
+node scripts/check-pregrade1-content.mjs prepare
 npm run generate:index
-npm run validate
-npm run lint
-npm run typecheck
-npm run build
-npm run validate:links
-npm run preview
+npm run verify
+node scripts/validate-foundation.mjs
+node scripts/validate-grade2.mjs
+node scripts/check-pregrade1-content.mjs validate
 ```
 
-- `npm run build` の出力先は `docs/` です。
-- `src/content/terms/` や `data/term-queue.json` を触った回は、先に `npm run generate:index` を実行します。
-- 一括確認は `npm run verify` を使います。
+数値検証は、Python・NumPy・SciPyを用いたコース別の検算と、既存のJavaScript検算を組み合わせます。ブラウザ検証にはPlaywrightのChromium/WebKitと日本語フォントが必要です。[検証ワークフロー](.github/workflows/verify-pregrade1.yml)に、使用する版と完全な実行順を保存しています。ブラウザ用依存は、サイトのロックされた依存関係と別の場所にインストールします。
 
-## GitHub Pages 公開
+現行の準1級検証・公開スクリプトは初期6講座に件数を固定しています。P07以降の追加時には、実装済みIDと構成上の予定IDを分けた件数管理へ改修し、既存の検査を削減せずに対象を増やしてください。未公開原稿の検算だけを再現する場合は`python scripts/check-pregrade1-next-drafts.py`です。
 
-1. ローカルまたは Codex 実行で `npm run build` を実行して `docs/` を更新する
-2. 生成された `docs/` を source 変更と一緒に commit / push する
-3. GitHub Pages は `main` ブランチの `/docs` をそのまま公開する
+## 品質確認の範囲
 
-GitHub 側で必要な設定と停止箇所は [project-docs/deployment.md](project-docs/deployment.md) を参照してください。
+初期準1級の最終確認は、55件の数値照合、370項目のブラウザ検証、11項目の検索テキスト単体検証に成功しています。既存の基礎・2級についても回帰検証しています。[検証結果](project-docs/pregrade1/release/final-gates.json)と[教材比較・修正の記録](project-docs/pregrade1/checkpoints/02-quality-review-and-search-fix.md)を参照してください。
 
-### URL 設定
+自己点検・別実装による数値照合・ブラウザ検査と、独立した人間の数学監修や学習効果の比較実験は区別しています。後者は未実施です。公式認定教材、合格保証、競合より高い学習効果の実証済みサービスとは表示しません。既存教材は構造・説明の役割・数学の確認に用い、文章・図・問題の転載や数字だけを替えた複製はしません。
 
-- 通常の GitHub Pages: `site-build.config.mjs` の既定値を使う
-- カスタムドメイン利用時: `PUBLIC_SITE_URL` と `PUBLIC_BASE_PATH=/` を設定し、必要なら `public/CNAME` を追加する
+## 次に行うこと
 
-## コンテンツ追加フロー
+**P07・P08を組み込み、全件再検証と公開確認を行った後、P09のガンマ・ベータ分布以降へ進みます。** 準1級の残る66講座と1級コースが、長期目標に対する未完了範囲です。
 
-### 用語ページを追加する
-
-1. `npm run pick:next-term` で候補を確認する
-2. `npm run scaffold:term -- --slug=<slug>` で安全な下書きを作る
-3. `project-docs/editorial-style-guide.md` に従って `src/content/terms/` の内容を埋める
-4. `npm run generate:index` を実行する
-5. `npm run verify` を実行する
-6. `docs/` を含めて commit / push する
-
-詳細な標準手順は [project-docs/content-workflow.md](project-docs/content-workflow.md) を参照してください。
-
-### 分野解説ページを追加する
-
-1. `src/content/topics/` に Markdown ファイルを追加する
-2. `summary`, `learning_goals`, `related_terms`, `status` などを frontmatter に書く
-3. 用語ページへの導線を `related_terms` と `sections` に入れる
-4. `npm run build` で `docs/` を更新する
-
-## 主なディレクトリ
-
-```text
-src/pages/              画面ルーティング
-src/layouts/            共通レイアウト
-src/components/         UI 部品
-src/content/terms/      用語ページ原稿
-src/content/topics/     分野解説原稿
-data/term-queue.json    用語の優先キュー
-src/lib/                サイト設定・取得処理
-scripts/                生成・検証・lint 用の CLI
-project-docs/           設計・運用ドキュメント
-docs/                   GitHub Pages 公開物
-public/                 静的アセット
-```
+詳細な制作ルールは[AGENTS.md](AGENTS.md)。以前のREADME・制作ルールは[履歴フォルダ](project-docs/history/20260911-before-course-status/)に元の内容のまま保存しました。履歴内の相対パスは元のリポジトリルートを基準とする記録であり、古い件数・制作対象・公開状態を現行仕様と混同しないでください。

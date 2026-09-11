@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "status": "in_progress",
+  "updated_date": "2026-09-11",
+  "goal": "初学者から上級者まで、基礎・2級・準1級・1級の順序教材を高品質に実装し、検証・競合比較に基づく改善・公開確認まで完了する。",
+  "course_order": ["foundation", "grade2", "pregrade1", "grade1"],
+  "courses": {
+    "foundation": {
+      "status": "published",
+      "published_lessons": 40,
+      "published_questions": 130,
+      "scope": "4級と3級の内容を統合。独立した4級コースは設けない。",
+      "url": "https://matsu71.github.io/Statistics_Blog/courses/foundation/",
+      "publication_evidence": "project-docs/foundation-release/publication.json"
+    },
+    "grade2": {
+      "status": "published",
+      "published_lessons": 40,
+      "published_questions": 172,
+      "url": "https://matsu71.github.io/Statistics_Blog/courses/grade2/",
+      "publication_evidence": "project-docs/grade2/release/publication.json"
+    },
+    "pregrade1": {
+      "status": "partially_published",
+      "planned_lessons": 72,
+      "published_lessons": 6,
+      "published_questions": 24,
+      "published_through": "P06",
+      "unpublished_lessons": 66,
+      "draft_lessons_with_numerical_checks": ["P07", "P08"],
+      "draft_questions_not_in_published_total": 8,
+      "draft_numerical_checks": 21,
+      "url": "https://matsu71.github.io/Statistics_Blog/courses/pregrade1/",
+      "publication_evidence": "project-docs/pregrade1/release/publication.json",
+      "draft_evidence": "project-docs/pregrade1/drafts/numerical-checkpoint.json",
+      "syllabus_versions": ["through-2026", "from-2027"]
+    },
+    "grade1": {
+      "status": "not_implemented",
+      "published_lessons": 0,
+      "published_questions": 0
+    }
+  },
+  "published_total": {"lessons": 86, "questions": 326},
+  "current_site_delivery_evidence": "project-docs/pregrade1/release/publication.json",
+  "current_delivery_counts": {"html_pages": 168, "public_resources_verified": 242},
+  "preservation": "既存の基礎40講座と2級40講座の原稿を変更せず、準1級を追加した。各コースの端末内記録も別管理。",
+  "next_actions": [
+    "P07・P08の草稿を公開コレクションへ組み込み、初期6講座固定の検証・公開処理を実装済みIDに基づく処理へ改修する。",
+    "既存86講座の回帰を保ち、追加後の全88講座・334問を検証する。これらは予定値であり、まだ公開数へ加算しない。",
+    "検証済み生成物をmainへ非強制で反映し、実公開ファイルを照合してpublicationと本書を更新する。",
+    "P09のガンマ・ベータ分布と後続講座を順番に制作する。"
+  ],
+  "limitations": [
+    "独立した人間の数学監修・利用者による学習効果の比較実験は未実施。",
+    "数値検算・ブラウザ検証・公開ファイル一致を、定理の証明や学習効果の優越性とは扱わない。",
+    "草稿・計画・公開済みの件数を分離する。準1級の66講座と1級は未完了。"
+  ],
+  "history": "旧READMEとAGENTSはproject-docs/history/20260911-before-course-status/に元の内容のまま保存した。"
+}
