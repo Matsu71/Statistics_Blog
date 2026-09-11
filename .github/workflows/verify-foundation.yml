@@ -26,27 +26,25 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - name: Apply the versioned course-policy migration
+        run: node scripts/migrations/20260911-foundation.mjs
       - name: Generate and verify the entire site
         run: |
           npm run generate:index
           npm run verify
-          if [ -f scripts/validate-foundation.mjs ]; then
-            node scripts/validate-foundation.mjs
-          fi
+          node scripts/validate-foundation.mjs
       - name: Test foundation pages in Chromium
         run: |
-          if [ -f scripts/test-foundation-browser.mjs ]; then
-            npm install --no-save --package-lock=false playwright@1.55.0
-            npx playwright install --with-deps chromium
-            node scripts/test-foundation-browser.mjs
-          fi
-      - name: Record generated site on the staging branch only
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+          node scripts/test-foundation-browser.mjs
+      - name: Record the verified site on the staging branch only
         if: startsWith(github.ref, 'refs/heads/content/foundation-')
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs src/generated/term-index.json
+          git add docs src/generated/term-index.json AGENTS.md README.md project-docs/learning-platform-design
           if ! git diff --cached --quiet; then
-            git commit -m 'build: regenerate verified static learning pages'
+            git commit -m 'build: regenerate verified foundation pages and record checks'
             git push origin HEAD:${{ github.ref_name }}
           fi

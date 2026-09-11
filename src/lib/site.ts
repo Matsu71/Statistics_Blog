@@ -2,11 +2,12 @@ export const siteMeta = {
   name: '統計ラボ',
   shortName: '統計ラボ',
   description:
-    '統計の用語、考え方、数式、試験ポイントを整理する学習サイトです。'
+    '統計を基礎から順番に学び、用語・考え方・数式・試験ポイントを確認できる学習サイトです。'
 };
 
 export const navigation = [
   { label: 'ホーム', href: '/' },
+  { label: '学習コース', href: '/courses/' },
   { label: '用語一覧', href: '/terms/' },
   { label: '分野解説', href: '/topics/' }
 ];

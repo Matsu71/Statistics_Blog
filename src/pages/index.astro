@@ -7,45 +7,32 @@ import { withBase } from '../lib/site';
 
 <BaseLayout
   title="ホーム"
-  description="統計の用語、考え方、数式、試験ポイントを整理する学習サイトです。"
+  description="統計を基礎から順番に学ぶ講座と、用語・数式を確認できる辞典。具体例と問題で理解を確かめます。"
 >
   <PageHero
-    eyebrow="Glossary"
+    eyebrow="Learn statistics"
     title="統計ラボ"
-    description="統計を基礎から学ぶために、用語・考え方・数式・試験ポイントを1ページずつ整理しています。"
+    description="基礎から順番に学ぶ。必要な用語を調べる。具体例と問題から、統計の考え方を身につけます。"
   >
     <div class="hero-actions">
-      <a class="button-link" href={withBase('/terms/')}>用語一覧を見る</a>
-      <a class="ghost-link" href={withBase('/topics/')}>分野解説を見る</a>
+      <a class="button-link" href={withBase('/courses/foundation/')}>基礎から学ぶ</a>
+      <a class="ghost-link" href={withBase('/terms/')}>用語を調べる</a>
     </div>
     <div class="hero-tile-grid" slot="aside">
       <article class="hero-mini-card hero-mini-card--accent">
-        <strong class="hero-mini-card__value">用語一覧</strong>
+        <strong class="hero-mini-card__value">学ぶ・確かめる</strong>
       </article>
     </div>
   </PageHero>
 
   <section class="page-section page-section--compact">
     <div class="site-shell">
-      <div class="section-head">
-        <div>
-          <h2 class="section-title">入口</h2>
-        </div>
-      </div>
-
+      <div class="section-head"><div><h2 class="section-title">入口</h2></div></div>
       <div class="card-grid">
-        <ContentCard
-          href={withBase('/terms/')}
-          title="用語一覧"
-          description="定義、例、数式、試験ポイントを用語ごとに確認できます。"
-        />
-        <ContentCard
-          href={withBase('/topics/')}
-          title="分野解説"
-          description="関連する用語をまとまりで確認できます。"
-        />
+        <ContentCard href={withBase('/courses/')} title="学習コース" description="4級・3級の内容をまとめた基礎から、順番に学べます。" />
+        <ContentCard href={withBase('/terms/')} title="用語一覧" description="定義、例、数式、試験ポイントを用語ごとに確認できます。" />
+        <ContentCard href={withBase('/topics/')} title="分野解説" description="関連する用語をまとまりで確認できます。" />
       </div>
     </div>
   </section>
-
 </BaseLayout>

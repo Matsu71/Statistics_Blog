@@ -1,6 +1,7 @@
 import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import { foundationLessons } from './lib/foundation-schema';
 
 const examScopeEnum = z.enum(['statistics_grade_2']);
 const contentLevelEnum = z.enum(['foundation', 'standard', 'advanced']);
@@ -100,4 +101,5 @@ const topics = defineCollection({
   })
 });
 
-export const collections = { terms, topics };
+// Legacy glossary schemas remain stable; sequential lessons are a separate collection.
+export const collections = { terms, topics, lessons: foundationLessons };

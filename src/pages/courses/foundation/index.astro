@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import course from '../../../data/foundation-course.json';
+import { withBase } from '../../../lib/site';
+import '../../../styles/learning.css';
+const lessons = await getCollection('lessons', ({ data }) => data.status === 'published');
+const available = new Map(lessons.map((lesson) => [lesson.data.lesson_id, lesson.data]));
+const first = course.modules.flatMap((module) => module.lessons).find((lesson) => available.has(lesson.id));
+---
+<BaseLayout title="統計の基礎コース" description="4級・3級の内容を統合した初心者向けの統計講座。図・具体例・確認問題から学び、必要な導出や詳しい説明を開けます。">
+  <div class="learning-shell">
+    <nav class="learning-breadcrumb" aria-label="パンくず"><a href={withBase('/courses/')}>学習コース</a><span aria-hidden="true"> / </span><span>統計の基礎</span></nav>
+    <header class="learning-hero"><p class="learning-eyebrow">基礎 → 2級 → 準1級 → 1級</p><h1>統計の基礎</h1><p>{course.subtitle}。具体例を読み、問題で確かめながら進めます。詳しい説明は必要なときに開けます。</p>{first && <a class="learning-button" href={withBase(`/learn/${first.slug}/`)}>最初から学ぶ</a>}</header>
+    <aside class="learning-note"><strong>読み方</strong><p>基本の説明と例題を読んだら、解答を開く前に確認問題を考えてください。折りたたんだ発展部分は、後から読んでも構いません。</p></aside>
+    <section class="course-contents" aria-label="基礎コースの目次">
+      {course.modules.map((module, index) => <section class="course-module" id={module.id}><h2><span>第{index + 1}章</span> {module.title}</h2><ol>{module.lessons.map((lesson) => <li>{available.has(lesson.id) ? <a href={withBase(`/learn/${lesson.slug}/`)}><span class="lesson-number">{lesson.id}</span><span><strong>{lesson.title}</strong><small>{lesson.objective}</small></span><span aria-hidden="true">→</span></a> : <div class="lesson-planned"><span class="lesson-number">{lesson.id}</span><span>{lesson.title}</span><small>準備中</small></div>}</li>)}</ol></section>)}
+    </section>
+    <section class="learning-note" id="scope"><h2>このコースの範囲</h2><p>4級・3級の公式出題範囲をもとに構成しています。準備中の講座はまだ読めず、現時点で全範囲の教材が揃っているわけではありません。試験の公式教材・公認講座ではありません。</p><p><a href="https://www.toukei-kentei.jp/grade/grade3/">統計検定3級の公式案内</a> · <a href="https://www.toukei-kentei.jp/grade/grade4/">4級の公式案内</a></p></section>
+  </div>
+</BaseLayout>

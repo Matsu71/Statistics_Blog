@@ -1,0 +1,65 @@
+{
+  "id": "foundation",
+  "title": "統計の基礎",
+  "subtitle": "4級・3級の内容をまとめて学び、2級へ進む",
+  "version": "2026-09-11",
+  "policy": "独立した4級コースは設けない。基礎→2級→準1級→1級。予定講座を公開済み・範囲対応済みと数えない。",
+  "modules": [
+    {"id":"B01","title":"データを読む前に","lessons":[
+      {"id":"F01","slug":"asking-statistical-questions","title":"統計で答えられる問いをつくる","objective":"対象・期間・知りたいことを決め、記述と推測を区別する","catalog_ids":["M03-01"]},
+      {"id":"F02","slug":"reading-a-data-table","title":"データの1行・1列は何を表すか","objective":"観測単位・変数・値を区別し、欠測と0を扱い分ける","catalog_ids":["M03-03","M03-14"]},
+      {"id":"F03","slug":"types-and-scales","title":"データの種類と4つの尺度","objective":"数値の見た目ではなく、順序・差・比の意味から判断する","catalog_ids":["M03-04"]},
+      {"id":"F04","slug":"population-and-sampling","title":"母集団・標本と偏りのない選び方","objective":"知りたい集団と調べた集団を分け、無作為とでたらめを区別する","catalog_ids":["M03-02","M03-05","M03-06","M03-08"]},
+      {"id":"F05","slug":"observation-and-experiment","title":"観察と実験を区別する","objective":"比較の条件を確かめ、無作為抽出と無作為割付を区別する","catalog_ids":["M03-10","M03-15"]}
+    ]},
+    {"id":"B02","title":"表とグラフで整理する","lessons":[
+      {"id":"F06","slug":"ratios-and-percentages","title":"割合・百分率とパーセントポイント","objective":"分母を決め、割合の差と増減率を計算する","catalog_ids":["M01-01"]},
+      {"id":"F07","slug":"frequency-tables","title":"度数分布表と累積度数","objective":"階級・階級値・相対度数・累積相対度数を求める","catalog_ids":["M04-01"]},
+      {"id":"F08","slug":"histograms-and-stem-leaf","title":"ヒストグラム・幹葉図と分布の形","objective":"階級幅・裾・山・外れ値を読み取る","catalog_ids":["M04-03"]},
+      {"id":"F09","slug":"choosing-basic-graphs","title":"棒・円・帯グラフを使い分ける","objective":"棒・円・帯・積み上げ・絵・面・パレート図の用途を説明する","catalog_ids":["M04-02"]},
+      {"id":"F10","slug":"cross-tables-and-mosaics","title":"クロス集計表とモザイク図","objective":"行比率・列比率を区別して2変数を比較する","catalog_ids":["M04-14"]},
+      {"id":"F11","slug":"reading-unfamiliar-graphs","title":"複合グラフ・レーダー・バブル・ローソク足","objective":"軸・面積・基準・単位を確認して特殊なグラフを読む","catalog_ids":["M04-16"]}
+    ]},
+    {"id":"B03","title":"中心と散らばりを数値で表す","lessons":[
+      {"id":"F12","slug":"mean-median-mode","title":"平均値・中央値・最頻値","objective":"代表値を計算し、分布に合う要約を選ぶ","catalog_ids":["M04-04"]},
+      {"id":"F13","slug":"weighted-and-grouped-means","title":"加重平均と度数分布表からの平均","objective":"重みと階級値の近似を区別して平均を求める","catalog_ids":["M01-09"]},
+      {"id":"F14","slug":"quartiles-and-boxplots","title":"四分位数・範囲・箱ひげ図","objective":"四分位数の計算法を明示し、中心と散らばりを比較する","catalog_ids":["M04-05","M04-06"]},
+      {"id":"F15","slug":"variance-and-standard-deviation","title":"分散と標準偏差","objective":"偏差の二乗を使う理由と分母nの意味を説明する","catalog_ids":["M04-07"]},
+      {"id":"F16","slug":"shifting-and-scaling-data","title":"値を足す・掛けると平均や分散はどう変わるか","objective":"単位変換と分散・標準偏差の性質を使う","catalog_ids":["M04-07"]},
+      {"id":"F17","slug":"standardization-and-deviation-score","title":"標準化・z値・偏差値","objective":"平均との差を共通の尺度にそろえ、正規化と混同しない","catalog_ids":["M07-09"]},
+      {"id":"F18","slug":"relative-spread-and-outliers","title":"変動係数と外れ値の点検","objective":"変動係数の条件を確認し、外れ値を機械的に削除しない","catalog_ids":["M04-08","M03-14"]}
+    ]},
+    {"id":"B04","title":"関係と時間変化を読む","lessons":[
+      {"id":"F19","slug":"scatter-covariance-correlation","title":"散布図・共分散・相関係数","objective":"関連の方向・強さと計算の意味を説明する","catalog_ids":["M04-12"]},
+      {"id":"F20","slug":"regression-line-and-prediction","title":"回帰直線・最小二乗法・予測","objective":"係数・残差・予測の範囲を読む","catalog_ids":["M12-01","M12-02"]},
+      {"id":"F21","slug":"correlation-is-not-causation","title":"相関・擬相関・因果関係","objective":"第三の変数や逆方向の関係を検討する","catalog_ids":["M03-15"]},
+      {"id":"F22","slug":"time-series-and-indices","title":"時系列・指数・増減率・移動平均","objective":"基準時点と平滑化を明示し、時間・地域の比較をする","catalog_ids":["M04-10","M04-11"]}
+    ]},
+    {"id":"B05","title":"確率を考える","lessons":[
+      {"id":"F23","slug":"chance-and-sample-space","title":"試行・事象と確率","objective":"同様に確からしい条件と標本空間を確認する","catalog_ids":["M05-01","M05-02"]},
+      {"id":"F24","slug":"complements-and-unions","title":"余事象と加法定理","objective":"少なくとも・または・両方を区別する","catalog_ids":["M05-03"]},
+      {"id":"F25","slug":"trees-and-counting","title":"樹形図と場合の数","objective":"漏れ・重複を避け、順序を区別して数える","catalog_ids":["M05-05","M05-09"]},
+      {"id":"F26","slug":"independent-trials","title":"独立な試行と繰返し","objective":"掛け算の条件と復元・非復元の違いを説明する","catalog_ids":["M05-06","M05-10"]},
+      {"id":"F27","slug":"conditional-probability-basics","title":"条件付き確率","objective":"条件で対象を絞り直して確率を求める","catalog_ids":["M05-04","M05-13"]},
+      {"id":"F28","slug":"probability-and-repetition","title":"確率と実際の頻度の違い","objective":"有限回の結果のぶれを理解し、シミュレーションを読む","catalog_ids":["M08-09","M18-01"]}
+    ]},
+    {"id":"B06","title":"確率分布を使う","lessons":[
+      {"id":"F29","slug":"random-variables-and-expectation","title":"確率変数・期待値・分散","objective":"値と確率の表から平均と散らばりを計算する","catalog_ids":["M06-01","M06-02","M06-05","M06-06"]},
+      {"id":"F30","slug":"binomial-basics","title":"二項分布","objective":"成功確率と試行回数を定めて確率を求める","catalog_ids":["M07-01"]},
+      {"id":"F31","slug":"normal-density-basics","title":"連続分布と正規分布の面積","objective":"密度の高さと確率を区別して分布を読む","catalog_ids":["M06-03","M07-08"]},
+      {"id":"F32","slug":"normal-table-and-tail-area","title":"正規分布表と1.96の使い方","objective":"片側・両側と標準化の条件を確認する","catalog_ids":["M07-09"]},
+      {"id":"F33","slug":"binomial-normal-approximation","title":"二項分布の正規近似","objective":"近似の条件と連続性補正の意味を理解する","catalog_ids":["M07-10"]}
+    ]},
+    {"id":"B07","title":"標本から全体を考える","lessons":[
+      {"id":"F34","slug":"sampling-distributions-basics","title":"標本平均・標本比率の分布","objective":"標本分布と標準誤差を元データの分布から区別する","catalog_ids":["M08-01","M08-02","M08-03","M08-04"]},
+      {"id":"F35","slug":"mean-confidence-interval-basics","title":"母平均の区間推定","objective":"母分散既知の基本式と信頼係数の意味を説明する","catalog_ids":["M10-01","M10-02"]},
+      {"id":"F36","slug":"proportion-confidence-interval-basics","title":"母比率の区間推定","objective":"近似の条件を確認して母比率の区間を求める","catalog_ids":["M10-05"]},
+      {"id":"F37","slug":"hypothesis-testing-basics","title":"仮説検定・p値・有意水準","objective":"帰無仮説のもとの確率と仮説自体の確率を区別する","catalog_ids":["M11-01","M11-02","M11-03"]},
+      {"id":"F38","slug":"mean-and-proportion-tests-basics","title":"母平均・母比率の検定を使う","objective":"対象と条件に応じて基本的な検定を使い分ける","catalog_ids":["M11-06","M11-08"]}
+    ]},
+    {"id":"B08","title":"2級へつなぐ","lessons":[
+      {"id":"F39","slug":"reporting-statistical-results","title":"方法を選び、結果と限界を伝える","objective":"問い・データ・方法・結果・限界を一つの報告にまとめる","catalog_ids":["M03-01","M03-16"]},
+      {"id":"F40","slug":"bridge-to-grade-two","title":"基礎の総合確認と2級への準備","objective":"初見の例で基礎を確かめ、数式・推定・検定の補習先を判断する","catalog_ids":["M01-08","M01-16"]}
+    ]}
+  ]
+}
