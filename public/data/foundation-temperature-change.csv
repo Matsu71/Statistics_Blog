@@ -1,0 +1,11 @@
+sample_id,temperature_change_celsius,data_kind
+S01,4,synthetic_teaching_example
+S02,5,synthetic_teaching_example
+S03,5,synthetic_teaching_example
+S04,6,synthetic_teaching_example
+S05,6,synthetic_teaching_example
+S06,7,synthetic_teaching_example
+S07,7,synthetic_teaching_example
+S08,8,synthetic_teaching_example
+S09,8,synthetic_teaching_example
+S10,9,synthetic_teaching_example
