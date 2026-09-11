@@ -1,0 +1,950 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@astrojs/language-server": {
+      "name": "@astrojs/language-server",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "volar-service-yaml"
+      ],
+      "effects": [],
+      "range": "2.14.0 - 2.16.10",
+      "nodes": [
+        "node_modules/@astrojs/language-server"
+      ],
+      "fixAvailable": true
+    },
+    "astro": {
+      "name": "astro",
+      "severity": "critical",
+      "isDirect": true,
+      "via": [
+        {
+          "source": 1117141,
+          "name": "astro",
+          "dependency": "astro",
+          "title": "Astro: XSS in define:vars via incomplete </script> tag sanitization",
+          "url": "https://github.com/advisories/GHSA-j687-52p2-xcff",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "range": "<6.1.6"
+        },
+        {
+          "source": 1118920,
+          "name": "astro",
+          "dependency": "astro",
+          "title": "Astro: Server island encrypted parameters vulnerable to cross-component replay",
+          "url": "https://github.com/advisories/GHSA-xr5h-phrj-8vxv",
+          "severity": "low",
+          "cwe": [
+            "CWE-79",
+            "CWE-323"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "range": "<6.1.10"
+        },
+        {
+          "source": 1123700,
+          "name": "astro",
+          "dependency": "astro",
+          "title": "Astro: XSS via Unescaped Attribute Names in Spread Props",
+          "url": "https://github.com/advisories/GHSA-jrpj-wcv7-9fh9",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 4.2,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:L/I:L/A:N"
+          },
+          "range": "<6.4.6"
+        },
+        {
+          "source": 1139373,
+          "name": "astro",
+          "dependency": "astro",
+          "title": "Astro: XSS via unescaped spread attribute names in renderHTMLElement (incomplete fix for CVE-2026-54298)",
+          "url": "https://github.com/advisories/GHSA-f48w-9m4c-m7f5",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<7.0.6"
+        },
+        {
+          "source": 1139375,
+          "name": "astro",
+          "dependency": "astro",
+          "title": "Astro: Cross-site scripting via unescaped transition:* directive values on hydrated islands",
+          "url": "https://github.com/advisories/GHSA-7pw4-f3q4-r2p2",
+          "severity": "low",
+          "cwe": [
+            "CWE-79",
+            "CWE-83",
+            "CWE-116"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=3.10.0 <7.0.4"
+        },
+        {
+          "source": 1139376,
+          "name": "astro",
+          "dependency": "astro",
+          "title": "Astro: Reflected XSS via unescaped View Transition animation properties",
+          "url": "https://github.com/advisories/GHSA-4g3v-8h47-v7g6",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=2.9.0 <=7.0.9"
+        },
+        {
+          "source": 1139377,
+          "name": "astro",
+          "dependency": "astro",
+          "title": "Astro: Host header SSRF in prerendered error page fetch",
+          "url": "https://github.com/advisories/GHSA-2pvr-wf23-7pc7",
+          "severity": "high",
+          "cwe": [
+            "CWE-20",
+            "CWE-918"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:C/C:H/I:L/A:N"
+          },
+          "range": "<6.4.6"
+        },
+        {
+          "source": 1139378,
+          "name": "astro",
+          "dependency": "astro",
+          "title": "Astro: Reflected XSS via unescaped slot name",
+          "url": "https://github.com/advisories/GHSA-8hv8-536x-4wqp",
+          "severity": "high",
+          "cwe": [
+            "CWE-79",
+            "CWE-80"
+          ],
+          "cvss": {
+            "score": 7.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:H/A:N"
+          },
+          "range": "<6.3.3"
+        },
+        {
+          "source": 1193723,
+          "name": "astro",
+          "dependency": "astro",
+          "title": "Astro: Remote code execution through AVIF image optimization",
+          "url": "https://github.com/advisories/GHSA-26w7-cxv4-gfx2",
+          "severity": "critical",
+          "cwe": [
+            "CWE-125",
+            "CWE-787"
+          ],
+          "cvss": {
+            "score": 9.8,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": "<7.2.8"
+        },
+        {
+          "source": 1193724,
+          "name": "astro",
+          "dependency": "astro",
+          "title": "Astro: Authorization bypass from missing path-segment boundary check when stripping the configured base",
+          "url": "https://github.com/advisories/GHSA-376h-93r7-7g6f",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-187"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=7.2.3"
+        },
+        "esbuild",
+        "sharp"
+      ],
+      "effects": [],
+      "range": "<=7.2.7",
+      "nodes": [
+        "node_modules/astro"
+      ],
+      "fixAvailable": {
+        "name": "astro",
+        "version": "7.3.2",
+        "isSemVerMajor": true
+      }
+    },
+    "defu": {
+      "name": "defu",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1116102,
+          "name": "defu",
+          "dependency": "defu",
+          "title": "defu: Prototype pollution via `__proto__` key in defaults argument",
+          "url": "https://github.com/advisories/GHSA-737v-mqg7-c878",
+          "severity": "high",
+          "cwe": [
+            "CWE-1321"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": "<=6.1.4"
+        }
+      ],
+      "effects": [],
+      "range": "<=6.1.4",
+      "nodes": [
+        "node_modules/defu"
+      ],
+      "fixAvailable": true
+    },
+    "devalue": {
+      "name": "devalue",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1120448,
+          "name": "devalue",
+          "dependency": "devalue",
+          "title": "Svelte devalue: DoS via sparse array deserialization",
+          "url": "https://github.com/advisories/GHSA-77vg-94rm-hx3p",
+          "severity": "high",
+          "cwe": [
+            "CWE-770"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=5.6.3 <=5.8.0"
+        }
+      ],
+      "effects": [],
+      "range": "5.6.3 - 5.8.0",
+      "nodes": [
+        "node_modules/devalue"
+      ],
+      "fixAvailable": true
+    },
+    "esbuild": {
+      "name": "esbuild",
+      "severity": "low",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1120680,
+          "name": "esbuild",
+          "dependency": "esbuild",
+          "title": "esbuild allows arbitrary file read when running the development server on Windows",
+          "url": "https://github.com/advisories/GHSA-g7r4-m6w7-qqqr",
+          "severity": "low",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 2.5,
+            "vectorString": "CVSS:3.1/AV:L/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "range": ">=0.27.3 <0.28.1"
+        }
+      ],
+      "effects": [
+        "astro"
+      ],
+      "range": "0.27.3 - 0.28.0",
+      "nodes": [
+        "node_modules/esbuild"
+      ],
+      "fixAvailable": {
+        "name": "astro",
+        "version": "7.3.2",
+        "isSemVerMajor": true
+      }
+    },
+    "fast-uri": {
+      "name": "fast-uri",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1124064,
+          "name": "fast-uri",
+          "dependency": "fast-uri",
+          "title": "fast-uri vulnerable to host confusion via literal backslash authority delimiter",
+          "url": "https://github.com/advisories/GHSA-v2hh-gcrm-f6hx",
+          "severity": "high",
+          "cwe": [
+            "CWE-436"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": ">=3.0.0 <=3.1.3"
+        },
+        {
+          "source": 1130720,
+          "name": "fast-uri",
+          "dependency": "fast-uri",
+          "title": "fast-uri vulnerable to host confusion via backslash authority introducer",
+          "url": "https://github.com/advisories/GHSA-7p8r-x3mc-p8w7",
+          "severity": "high",
+          "cwe": [
+            "CWE-436"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": ">=3.0.0 <3.1.5"
+        },
+        {
+          "source": 1145559,
+          "name": "fast-uri",
+          "dependency": "fast-uri",
+          "title": "fast-uri vulnerable to path traversal via percent-encoded dot segments",
+          "url": "https://github.com/advisories/GHSA-q3j6-qgpj-74h6",
+          "severity": "high",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": ">=3.0.0 <=3.1.0"
+        },
+        {
+          "source": 1153168,
+          "name": "fast-uri",
+          "dependency": "fast-uri",
+          "title": "fast-uri vulnerable to host confusion via percent-encoded authority delimiters",
+          "url": "https://github.com/advisories/GHSA-v39h-62p7-jpjc",
+          "severity": "high",
+          "cwe": [
+            "CWE-140",
+            "CWE-436"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": ">=3.0.0 <=3.1.1"
+        },
+        {
+          "source": 1158524,
+          "name": "fast-uri",
+          "dependency": "fast-uri",
+          "title": "fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization",
+          "url": "https://github.com/advisories/GHSA-f65p-4m7j-42xc",
+          "severity": "high",
+          "cwe": [
+            "CWE-20",
+            "CWE-918"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": ">=3.0.0 <3.1.6"
+        },
+        {
+          "source": 1158530,
+          "name": "fast-uri",
+          "dependency": "fast-uri",
+          "title": "fast-uri vulnerable to host confusion via percent-encoded scheme normalization",
+          "url": "https://github.com/advisories/GHSA-jqff-g426-hqxp",
+          "severity": "high",
+          "cwe": [
+            "CWE-177"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": ">=3.0.0 <3.1.6"
+        },
+        {
+          "source": 1182133,
+          "name": "fast-uri",
+          "dependency": "fast-uri",
+          "title": "fast-uri vulnerable to host confusion via failed IDN canonicalization",
+          "url": "https://github.com/advisories/GHSA-4c8g-83qw-93j6",
+          "severity": "high",
+          "cwe": [
+            "CWE-436",
+            "CWE-551"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+          },
+          "range": ">=3.0.0 <3.1.3"
+        }
+      ],
+      "effects": [],
+      "range": "3.0.0 - 3.1.5",
+      "nodes": [
+        "node_modules/fast-uri"
+      ],
+      "fixAvailable": true
+    },
+    "js-yaml": {
+      "name": "js-yaml",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1121860,
+          "name": "js-yaml",
+          "dependency": "js-yaml",
+          "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+          "url": "https://github.com/advisories/GHSA-h67p-54hq-rp68",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-407"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": ">=4.0.0 <=4.1.1"
+        },
+        {
+          "source": 1123911,
+          "name": "js-yaml",
+          "dependency": "js-yaml",
+          "title": "js-yaml: YAML merge-key chains can force quadratic CPU consumption",
+          "url": "https://github.com/advisories/GHSA-52cp-r559-cp3m",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-407"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=4.0.0 <4.3.0"
+        },
+        {
+          "source": 1138115,
+          "name": "js-yaml",
+          "dependency": "js-yaml",
+          "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) — CVE-2026-59870 fix not backported",
+          "url": "https://github.com/advisories/GHSA-5p4m-2wfm-xmqj",
+          "severity": "high",
+          "cwe": [
+            "CWE-407"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=4.0.0 <4.3.1"
+        },
+        {
+          "source": 1193727,
+          "name": "js-yaml",
+          "dependency": "js-yaml",
+          "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+          "url": "https://github.com/advisories/GHSA-2883-xcg3-v3hh",
+          "severity": "high",
+          "cwe": [
+            "CWE-400",
+            "CWE-407"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": ">=4.0.0 <4.3.2"
+        }
+      ],
+      "effects": [],
+      "range": "4.0.0 - 4.3.1",
+      "nodes": [
+        "node_modules/js-yaml"
+      ],
+      "fixAvailable": true
+    },
+    "nanoid": {
+      "name": "nanoid",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1138811,
+          "name": "nanoid",
+          "dependency": "nanoid",
+          "title": "nanoid: non-secure generators can loop indefinitely with negative size",
+          "url": "https://github.com/advisories/GHSA-28wg-ghj8-5hjv",
+          "severity": "high",
+          "cwe": [
+            "CWE-835"
+          ],
+          "cvss": {
+            "score": 5.9,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<3.3.16"
+        },
+        {
+          "source": 1139427,
+          "name": "nanoid",
+          "dependency": "nanoid",
+          "title": "nanoid: custom generators can loop indefinitely when size is zero",
+          "url": "https://github.com/advisories/GHSA-2v37-7h3g-55p8",
+          "severity": "high",
+          "cwe": [
+            "CWE-835"
+          ],
+          "cvss": {
+            "score": 5.9,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<3.3.18"
+        },
+        {
+          "source": 1153189,
+          "name": "nanoid",
+          "dependency": "nanoid",
+          "title": "nanoid: Integer Overflow or Wraparound",
+          "url": "https://github.com/advisories/GHSA-xwg4-73v4-xw9w",
+          "severity": "high",
+          "cwe": [
+            "CWE-190"
+          ],
+          "cvss": {
+            "score": 7.4,
+            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+          },
+          "range": "<3.3.12"
+        }
+      ],
+      "effects": [],
+      "range": "<=3.3.17",
+      "nodes": [
+        "node_modules/nanoid"
+      ],
+      "fixAvailable": true
+    },
+    "postcss": {
+      "name": "postcss",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1117015,
+          "name": "postcss",
+          "dependency": "postcss",
+          "title": "PostCSS has XSS via Unescaped </style> in its CSS Stringify Output",
+          "url": "https://github.com/advisories/GHSA-qx2v-qp2m-jg93",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "range": "<8.5.10"
+        },
+        {
+          "source": 1124252,
+          "name": "postcss",
+          "dependency": "postcss",
+          "title": "PostCSS: Arbitrary file read and information disclosure via attacker-controlled sourceMappingURL in CSS comments",
+          "url": "https://github.com/advisories/GHSA-6g55-p6wh-862q",
+          "severity": "high",
+          "cwe": [
+            "CWE-22",
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": "<=8.5.11"
+        },
+        {
+          "source": 1130709,
+          "name": "postcss",
+          "dependency": "postcss",
+          "title": "PostCSS: incomplete fix of GHSA-6g55-p6wh-862q — attacker-controlled sourceMappingURL reads arbitrary .map files when `from` is unset",
+          "url": "https://github.com/advisories/GHSA-fxqj-rqcc-2cmp",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-22",
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=8.5.22"
+        },
+        {
+          "source": 1139510,
+          "name": "postcss",
+          "dependency": "postcss",
+          "title": "PostCSS: Path Traversal in Previous Source Map Auto-Loading (sourceMappingURL) leads to Arbitrary .map File Disclosure",
+          "url": "https://github.com/advisories/GHSA-r28c-9q8g-f849",
+          "severity": "high",
+          "cwe": [
+            "CWE-22"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": "<=8.5.17"
+        }
+      ],
+      "effects": [],
+      "range": "<=8.5.22",
+      "nodes": [
+        "node_modules/postcss"
+      ],
+      "fixAvailable": true
+    },
+    "sharp": {
+      "name": "sharp",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1124066,
+          "name": "sharp",
+          "dependency": "sharp",
+          "title": "sharp inherited vulnerabilities in libvips: CVE-2026-33327, CVE-2026-33328, CVE-2026-35590, CVE-2026-35591",
+          "url": "https://github.com/advisories/GHSA-f88m-g3jw-g9cj",
+          "severity": "high",
+          "cwe": [
+            "CWE-1395"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<0.35.0"
+        },
+        {
+          "source": 1193725,
+          "name": "sharp",
+          "dependency": "sharp",
+          "title": "sharp: Vulnerabilities in libheif: GHSA-g89c-p67h-r497 and GHSA-2jg2-4ch7-h545",
+          "url": "https://github.com/advisories/GHSA-rgj7-g3m4-5g8c",
+          "severity": "high",
+          "cwe": [
+            "CWE-122"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<0.35.4"
+        }
+      ],
+      "effects": [
+        "astro"
+      ],
+      "range": "<=0.35.4-rc.0",
+      "nodes": [
+        "node_modules/sharp"
+      ],
+      "fixAvailable": {
+        "name": "astro",
+        "version": "7.3.2",
+        "isSemVerMajor": true
+      }
+    },
+    "smol-toml": {
+      "name": "smol-toml",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1193945,
+          "name": "smol-toml",
+          "dependency": "smol-toml",
+          "title": "smol-toml: Denial of Service via malformed TOML documents",
+          "url": "https://github.com/advisories/GHSA-7w5x-hrqm-74c2",
+          "severity": "high",
+          "cwe": [
+            "CWE-606",
+            "CWE-835"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=1.7.0"
+        }
+      ],
+      "effects": [],
+      "range": "<=1.7.0",
+      "nodes": [
+        "node_modules/smol-toml"
+      ],
+      "fixAvailable": true
+    },
+    "svgo": {
+      "name": "svgo",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1139518,
+          "name": "svgo",
+          "dependency": "svgo",
+          "title": "SVGO removeScripts plugin leaves some executable scripts intact",
+          "url": "https://github.com/advisories/GHSA-2p49-hgcm-8545",
+          "severity": "high",
+          "cwe": [
+            "CWE-79",
+            "CWE-184"
+          ],
+          "cvss": {
+            "score": 8.2,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N"
+          },
+          "range": ">=4.0.0 <4.0.2"
+        },
+        {
+          "source": 1193735,
+          "name": "svgo",
+          "dependency": "svgo",
+          "title": "SVGO: removeScripts allows executable links through namespace and control-character bypasses",
+          "url": "https://github.com/advisories/GHSA-w27v-7q3p-w38r",
+          "severity": "high",
+          "cwe": [
+            "CWE-79",
+            "CWE-184"
+          ],
+          "cvss": {
+            "score": 8.2,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:L/A:N"
+          },
+          "range": ">=4.0.0 <4.1.0"
+        },
+        {
+          "source": 1193738,
+          "name": "svgo",
+          "dependency": "svgo",
+          "title": "SVGO: removeScripts incompletely sanitizes executable HTML in SVG foreignObject elements",
+          "url": "https://github.com/advisories/GHSA-4vpr-x523-8j87",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-79"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "range": ">=4.0.0 <4.1.0"
+        }
+      ],
+      "effects": [],
+      "range": "4.0.0 - 4.0.2",
+      "nodes": [
+        "node_modules/svgo"
+      ],
+      "fixAvailable": true
+    },
+    "vite": {
+      "name": "vite",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1116229,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite Vulnerable to Path Traversal in Optimized Deps `.map` Handling",
+          "url": "https://github.com/advisories/GHSA-4w7w-66w2-5vf9",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-22",
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=6.4.1"
+        },
+        {
+          "source": 1116234,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "Vite Vulnerable to Arbitrary File Read via Vite Dev Server WebSocket",
+          "url": "https://github.com/advisories/GHSA-p9ff-h696-f583",
+          "severity": "high",
+          "cwe": [
+            "CWE-200",
+            "CWE-306"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": ">=6.0.0 <=6.4.1"
+        },
+        {
+          "source": 1120784,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "launch-editor: NTLMv2 hash disclosure via UNC path handling on Windows",
+          "url": "https://github.com/advisories/GHSA-v6wh-96g9-6wx3",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-73",
+            "CWE-522"
+          ],
+          "cvss": {
+            "score": 0,
+            "vectorString": null
+          },
+          "range": "<=6.4.2"
+        },
+        {
+          "source": 1123525,
+          "name": "vite",
+          "dependency": "vite",
+          "title": "vite: `server.fs.deny` bypass on Windows alternate paths",
+          "url": "https://github.com/advisories/GHSA-fx2h-pf6j-xcff",
+          "severity": "high",
+          "cwe": [
+            "CWE-22",
+            "CWE-200"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          },
+          "range": "<=6.4.2"
+        }
+      ],
+      "effects": [],
+      "range": "<=6.4.2",
+      "nodes": [
+        "node_modules/vite"
+      ],
+      "fixAvailable": true
+    },
+    "volar-service-yaml": {
+      "name": "volar-service-yaml",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "yaml-language-server"
+      ],
+      "effects": [
+        "@astrojs/language-server"
+      ],
+      "range": "<=0.0.70",
+      "nodes": [
+        "node_modules/volar-service-yaml"
+      ],
+      "fixAvailable": true
+    },
+    "yaml": {
+      "name": "yaml",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1115556,
+          "name": "yaml",
+          "dependency": "yaml",
+          "title": "yaml is vulnerable to Stack Overflow via deeply nested YAML collections",
+          "url": "https://github.com/advisories/GHSA-48c2-rrv3-qjmp",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-674"
+          ],
+          "cvss": {
+            "score": 4.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": ">=2.0.0 <2.8.3"
+        }
+      ],
+      "effects": [
+        "yaml-language-server"
+      ],
+      "range": "2.0.0 - 2.8.2",
+      "nodes": [
+        "node_modules/yaml-language-server/node_modules/yaml"
+      ],
+      "fixAvailable": true
+    },
+    "yaml-language-server": {
+      "name": "yaml-language-server",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "yaml"
+      ],
+      "effects": [
+        "volar-service-yaml"
+      ],
+      "range": "1.11.1-08d5f7b.0 - 1.21.1-f1f5a94.0 || 1.22.1-0ae5603.0 - 1.22.1-fc5f874.0",
+      "nodes": [
+        "node_modules/yaml-language-server"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 1,
+      "moderate": 4,
+      "high": 10,
+      "critical": 1,
+      "total": 16
+    },
+    "dependencies": {
+      "prod": 290,
+      "dev": 68,
+      "optional": 107,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 464
+    }
+  }
+}

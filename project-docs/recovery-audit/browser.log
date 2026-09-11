@@ -1,0 +1,20 @@
+{
+  "engine": "Chromium",
+  "automated": true,
+  "viewports": [
+    375,
+    1280
+  ],
+  "height": 900,
+  "lesson_view_checks": 80,
+  "assertions": 898,
+  "page_errors": [],
+  "deep_links": "passed",
+  "keyboard_disclosures": "passed",
+  "print_event_expansion_and_restore": "passed",
+  "javascript_disabled_basic_reading": "passed",
+  "horizontal_document_overflow": "none in tested pages and widths",
+  "completed_at": "2026-09-11T05:54:44.968Z",
+  "note": "This is browser automation, not a manual visual review or a screen-reader audit."
+}
+foundation browser tests passed

@@ -1,0 +1,519 @@
+{
+  "checked_at": "2026-09-11T05:54:46.451486+00:00",
+  "source_commit": "cdac1add4f401d20fffb944e40bfe1650ff52100",
+  "workflow_run_id": "34567288549",
+  "branch": "content/foundation-complete-20260911",
+  "outcomes": {
+    "install": "success",
+    "build": "success",
+    "content": "success",
+    "browser": "success"
+  },
+  "all_40_foundation_ids_present": true,
+  "missing_lesson_ids": [],
+  "lesson_files": 40,
+  "exercise_count_from_markup": 129,
+  "duplicate_question_ids": [],
+  "automated_checks_passed": true,
+  "release_authorized": false,
+  "release_note": "This recovery workflow never merges or publishes. Test success does not establish a full mathematical, syllabus, competitor, or human usability audit.",
+  "records": [
+    {
+      "path": "src/content/lessons/asking-statistical-questions.md",
+      "lesson_id": "F01",
+      "sha256": "37f9d6b98eb3ce8feedc31774fd16ccd4f15a29976231a622cb083add199558c",
+      "question_ids": [
+        "F01-Q1",
+        "F01-Q2",
+        "F01-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/binomial-basics.md",
+      "lesson_id": "F30",
+      "sha256": "4d3e11f0d349eb65fa4accb754a601f831967be5460531b68955e198b51dbce6",
+      "question_ids": [
+        "F30-Q1",
+        "F30-Q2",
+        "F30-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/binomial-normal-approximation.md",
+      "lesson_id": "F33",
+      "sha256": "7c080d452d49d628ea58c3c21d0d822d13cfddf9a330f1c95280b6f11a7dd657",
+      "question_ids": [
+        "F33-Q1",
+        "F33-Q2",
+        "F33-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/bridge-to-grade-two.md",
+      "lesson_id": "F40",
+      "sha256": "244c2d1cd3d935cbfcf93d1c4812c89052ce4b22a09c3453abbdcef33ad2d8b4",
+      "question_ids": [
+        "F40-Q1",
+        "F40-Q2",
+        "F40-Q3",
+        "F40-Q4",
+        "F40-Q5",
+        "F40-Q6",
+        "F40-Q7",
+        "F40-Q8",
+        "F40-Q9",
+        "F40-Q10",
+        "F40-Q11",
+        "F40-Q12"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/chance-and-sample-space.md",
+      "lesson_id": "F23",
+      "sha256": "19bb241340ea210fc5400323ce226b8ade1e33d3650580b54fdbc13d42899c09",
+      "question_ids": [
+        "F23-Q1",
+        "F23-Q2",
+        "F23-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/choosing-basic-graphs.md",
+      "lesson_id": "F09",
+      "sha256": "ab8a30cff7ad4bb9fef982a2a8f84ec816a07d643e0ea095eab27e2462f5d1a5",
+      "question_ids": [
+        "F09-Q1",
+        "F09-Q2",
+        "F09-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/complements-and-unions.md",
+      "lesson_id": "F24",
+      "sha256": "7802354d082a316529dc4496f21c42981b01422827802b7c221ddc56d3116214",
+      "question_ids": [
+        "F24-Q1",
+        "F24-Q2",
+        "F24-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/conditional-probability-basics.md",
+      "lesson_id": "F27",
+      "sha256": "1c1a8712c18bfffa67c8c802f64e88e973f7ea1c387d5a47ab015dd82b313573",
+      "question_ids": [
+        "F27-Q1",
+        "F27-Q2",
+        "F27-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/correlation-is-not-causation.md",
+      "lesson_id": "F21",
+      "sha256": "c117ede91a0c54d3c7f79151bbe0b3db8a18c5821a73c3c79b1ff7b753db3e0d",
+      "question_ids": [
+        "F21-Q1",
+        "F21-Q2",
+        "F21-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/cross-tables-and-mosaics.md",
+      "lesson_id": "F10",
+      "sha256": "405c494c4a42112c30927e46951e25dd16dc044cfca85972266f79c5b07859d2",
+      "question_ids": [
+        "F10-Q1",
+        "F10-Q2",
+        "F10-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/frequency-tables.md",
+      "lesson_id": "F07",
+      "sha256": "9146dfe7c377e210ded83c7c7e0b1fe930c0f66ffbade277fef203162da73e60",
+      "question_ids": [
+        "F07-Q1",
+        "F07-Q2",
+        "F07-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/histograms-and-stem-leaf.md",
+      "lesson_id": "F08",
+      "sha256": "af96c26470dff7435f575b9edf42f239dddf0b8177bf9d02cc371ccb5db93784",
+      "question_ids": [
+        "F08-Q1",
+        "F08-Q2",
+        "F08-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/hypothesis-testing-basics.md",
+      "lesson_id": "F37",
+      "sha256": "d07e8905be45a8cf50df01e7cf10dc78305897a09770f48a9135754976c81bf2",
+      "question_ids": [
+        "F37-Q1",
+        "F37-Q2",
+        "F37-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/independent-trials.md",
+      "lesson_id": "F26",
+      "sha256": "bbff02d9c6c33a8910db584f1fdbc67a283d36eab9bbe8e22983e83203679ea6",
+      "question_ids": [
+        "F26-Q1",
+        "F26-Q2",
+        "F26-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/mean-and-proportion-tests-basics.md",
+      "lesson_id": "F38",
+      "sha256": "dfb5520a4d04fe8e9dcc1947f9f78bccd7c553e6c41755f5d08d31219b3bcebe",
+      "question_ids": [
+        "F38-Q1",
+        "F38-Q2",
+        "F38-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/mean-confidence-interval-basics.md",
+      "lesson_id": "F35",
+      "sha256": "b778d28140259a137aa780c9d86587b7f15ff86ea0f11dfe5f83003f8f7e3cc7",
+      "question_ids": [
+        "F35-Q1",
+        "F35-Q2",
+        "F35-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/mean-median-mode.md",
+      "lesson_id": "F12",
+      "sha256": "ced076d1c1480727f4fcc63d8e641103aaf528c66e41277b6d2a9b1521a6bcac",
+      "question_ids": [
+        "F12-Q1",
+        "F12-Q2",
+        "F12-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/normal-density-basics.md",
+      "lesson_id": "F31",
+      "sha256": "cd37fe4cf03c639d0ac97b7b749bfca6040a80a8a7e04f7e6857e0fd81528a23",
+      "question_ids": [
+        "F31-Q1",
+        "F31-Q2",
+        "F31-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/normal-table-and-tail-area.md",
+      "lesson_id": "F32",
+      "sha256": "3d83b19612c948cc9150624300c662abe22d435bf9014a65fcbeea87fcb39a51",
+      "question_ids": [
+        "F32-Q1",
+        "F32-Q2",
+        "F32-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/observation-and-experiment.md",
+      "lesson_id": "F05",
+      "sha256": "fac19412e6a453576bed0ae1c92b099b75f0056c984dd3faaebdd10e251119c0",
+      "question_ids": [
+        "F05-Q1",
+        "F05-Q2",
+        "F05-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/population-and-sampling.md",
+      "lesson_id": "F04",
+      "sha256": "845d2fb814c65e13036c57676db903dede69f76719805fc44b07976e7b9db054",
+      "question_ids": [
+        "F04-Q1",
+        "F04-Q2",
+        "F04-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/probability-and-repetition.md",
+      "lesson_id": "F28",
+      "sha256": "ab484e980a55b7b538be158a6f4a581b50c45fc1fb6080aacd59f0bffe9e1e09",
+      "question_ids": [
+        "F28-Q1",
+        "F28-Q2",
+        "F28-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/proportion-confidence-interval-basics.md",
+      "lesson_id": "F36",
+      "sha256": "3b8846b9c125681057d420b931e56ca310ab0e87256db47098312d41384ade00",
+      "question_ids": [
+        "F36-Q1",
+        "F36-Q2",
+        "F36-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/quartiles-and-boxplots.md",
+      "lesson_id": "F14",
+      "sha256": "540d3fec4e95eb9dcf3422cec239915b1ea38d4b57dd0ae9ef5310314be58c13",
+      "question_ids": [
+        "F14-Q1",
+        "F14-Q2",
+        "F14-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/random-variables-and-expectation.md",
+      "lesson_id": "F29",
+      "sha256": "010ab8eb6987b5e7ed4d5db727c1856e500acf0f5b29103ea35120d8d7af161b",
+      "question_ids": [
+        "F29-Q1",
+        "F29-Q2",
+        "F29-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/ratios-and-percentages.md",
+      "lesson_id": "F06",
+      "sha256": "1001ce9448d3d2fd9b40708155a3672cb8b63980b3493a97483c737f1a97116c",
+      "question_ids": [
+        "F06-Q1",
+        "F06-Q2",
+        "F06-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/reading-a-data-table.md",
+      "lesson_id": "F02",
+      "sha256": "ac7d4cd492a1f1936fe6f9b5a5906af90570ff2b3448102fbd105d7242ef45de",
+      "question_ids": [
+        "F02-Q1",
+        "F02-Q2",
+        "F02-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/reading-unfamiliar-graphs.md",
+      "lesson_id": "F11",
+      "sha256": "c69fa8d0aed304f41b53a65aeb84a21100ba420a82220c9d1da847398df1ab87",
+      "question_ids": [
+        "F11-Q1",
+        "F11-Q2",
+        "F11-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/regression-line-and-prediction.md",
+      "lesson_id": "F20",
+      "sha256": "5f0350528180088d71b918b7f2a39d7bb8970cc409f9585b4a750bfd690bb58e",
+      "question_ids": [
+        "F20-Q1",
+        "F20-Q2",
+        "F20-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/relative-spread-and-outliers.md",
+      "lesson_id": "F18",
+      "sha256": "f270b0e7f9669bcfeea6d0e4b1dbeb1041802cbda9fdf6b4016338d112134791",
+      "question_ids": [
+        "F18-Q1",
+        "F18-Q2",
+        "F18-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/reporting-statistical-results.md",
+      "lesson_id": "F39",
+      "sha256": "4f0d4a825c163e1192ddb152e3a5c852d6464deac118525366f9bf2dac609a56",
+      "question_ids": [
+        "F39-Q1",
+        "F39-Q2",
+        "F39-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/sampling-distributions-basics.md",
+      "lesson_id": "F34",
+      "sha256": "aea6ca84b3565e00b753ef7bf8723ec7661d8603a56ba21cc7048790e0665962",
+      "question_ids": [
+        "F34-Q1",
+        "F34-Q2",
+        "F34-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/scatter-covariance-correlation.md",
+      "lesson_id": "F19",
+      "sha256": "be391e9dfae39e5458a4ada04f7c3d1dde2d5ae0332435a6901d426ec0273d3f",
+      "question_ids": [
+        "F19-Q1",
+        "F19-Q2",
+        "F19-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/shifting-and-scaling-data.md",
+      "lesson_id": "F16",
+      "sha256": "b84359af1ec4663d4da7fc0d2c9655fd08ff109e5c15ff0c7276d4924bbf613b",
+      "question_ids": [
+        "F16-Q1",
+        "F16-Q2",
+        "F16-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/standardization-and-deviation-score.md",
+      "lesson_id": "F17",
+      "sha256": "e27f9a64c2a6e36f912fc81508912fa7a38c3ee4a3084b0f15d6fd5e32cce9b2",
+      "question_ids": [
+        "F17-Q1",
+        "F17-Q2",
+        "F17-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/time-series-and-indices.md",
+      "lesson_id": "F22",
+      "sha256": "2fcab66283431a1ff40aa8658aaba730ce421b3d9cd44e0a456a7a269ac6c177",
+      "question_ids": [
+        "F22-Q1",
+        "F22-Q2",
+        "F22-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/trees-and-counting.md",
+      "lesson_id": "F25",
+      "sha256": "6e8ba5f80a92e8c28770d4690cfc03b7f59eae91afc1a7b0a96c512c08fa09d1",
+      "question_ids": [
+        "F25-Q1",
+        "F25-Q2",
+        "F25-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/types-and-scales.md",
+      "lesson_id": "F03",
+      "sha256": "9001e54c4e0eeb22b40159e142f84a12ccd9893ad563614ff8f398ff15600fbe",
+      "question_ids": [
+        "F03-Q1",
+        "F03-Q2",
+        "F03-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/variance-and-standard-deviation.md",
+      "lesson_id": "F15",
+      "sha256": "9e258906a00a23667b7dbfd8e230da617698ff7765865802ed9d93b74c92e1a1",
+      "question_ids": [
+        "F15-Q1",
+        "F15-Q2",
+        "F15-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    },
+    {
+      "path": "src/content/lessons/weighted-and-grouped-means.md",
+      "lesson_id": "F13",
+      "sha256": "59be12d89701e106700f090e65878de02a3ddeb8ed368471f01c1570bb74a3b4",
+      "question_ids": [
+        "F13-Q1",
+        "F13-Q2",
+        "F13-Q3"
+      ],
+      "required_headings_present": true,
+      "manual_mathematical_review": "not_established_by_this_workflow"
+    }
+  ],
+  "next_actions": [
+    "Read the real test outcomes and fix every failing check.",
+    "Review all lesson formulas, examples, answers and diagrams against their stated assumptions.",
+    "Verify complete grade 3/4 syllabus alignment and compare representative lessons against primary competitor materials.",
+    "Correct remaining mobile-table, boxplot-coordinate and random-number-table issues if still present.",
+    "Verify interactive labs and their navigation; distinguish implemented from planned features.",
+    "Rebuild, re-test and merge the reviewed release candidate without force; verify the deployed public pages."
+  ]
+}

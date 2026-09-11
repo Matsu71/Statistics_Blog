@@ -1,0 +1,214 @@
+
+> stats-grade2-glossary@0.1.0 generate:index
+> node scripts/generate-term-index.mjs
+
+generate:index wrote src/generated/term-index.json (71 published term(s))
+
+> stats-grade2-glossary@0.1.0 verify
+> npm run quality:content && npm run quality:site && npm run quality:build
+
+
+> stats-grade2-glossary@0.1.0 quality:content
+> npm run validate
+
+
+> stats-grade2-glossary@0.1.0 validate
+> npm run validate:term-queue && npm run validate:content -- --strict
+
+
+> stats-grade2-glossary@0.1.0 validate:term-queue
+> node scripts/validate-term-queue.mjs
+
+term-queue validation passed (71 items checked)
+
+> stats-grade2-glossary@0.1.0 validate:content
+> node scripts/validate-content.mjs --strict
+
+content validation passed (71 queue item(s), 71 content file(s) checked)
+
+> stats-grade2-glossary@0.1.0 quality:site
+> npm run lint && npm run typecheck
+
+
+> stats-grade2-glossary@0.1.0 lint
+> node scripts/lint-repo.mjs
+
+lint passed (21 docs file(s), 72 content file(s) checked)
+
+> stats-grade2-glossary@0.1.0 typecheck
+> ASTRO_TELEMETRY_DISABLED=1 astro check
+
+[2m05:47:29[22m [34m[content][39m Syncing content
+LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "℃" (8451) [unknownSymbol]
+No character metrics for '℃' in style 'Main-Regular' and mode 'text'
+LaTeX-incompatible input and strict mode is set to 'warn': Unrecognized Unicode character "℃" (8451) [unknownSymbol]
+No character metrics for '℃' in style 'Main-Regular' and mode 'text'
+[2m05:47:30[22m [34m[content][39m Synced content
+[2m05:47:30[22m [34m[types][39m Generated [2m1.87s[22m
+[2m05:47:30[22m [34m[check][39m Getting diagnostics for Astro files in /home/runner/work/Statistics_Blog/Statistics_Blog...
+Result (49 files): 
+- 0 errors
+- 0 warnings
+- 0 hints
+
+
+> stats-grade2-glossary@0.1.0 quality:build
+> npm run build && npm run validate:links
+
+
+> stats-grade2-glossary@0.1.0 build
+> ASTRO_TELEMETRY_DISABLED=1 astro build
+
+[2m05:47:37[22m [34m[content][39m Syncing content
+[2m05:47:37[22m [34m[content][39m Synced content
+[2m05:47:37[22m [34m[types][39m Generated [2m565ms[22m
+[2m05:47:37[22m [34m[build][39m output: [34m"static"[39m
+[2m05:47:37[22m [34m[build][39m mode: [34m"static"[39m
+[2m05:47:37[22m [34m[build][39m directory: [34m/home/runner/work/Statistics_Blog/Statistics_Blog/docs/[39m
+[2m05:47:37[22m [34m[build][39m Collecting build info...
+[2m05:47:37[22m [34m[build][39m [32m✓ Completed in 590ms.[39m
+[2m05:47:37[22m [34m[build][39m Building static entrypoints...
+[2m05:47:39[22m [34m[vite][39m [32m✓ built in 1.45s[39m
+[2m05:47:39[22m [34m[build][39m [32m✓ Completed in 1.48s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m05:47:39[22m [34m[vite][39m transforming...
+[2m05:47:39[22m [34m[vite][39m [32m✓[39m 1 modules transformed.
+[2m05:47:39[22m [34m[vite][39m rendering chunks...
+[2m05:47:39[22m [34m[vite][39m [32m✓ built in 13ms[39m
+
+[42m[30m generating static routes [39m[49m
+[2m05:47:39[22m [32m▶[39m src/pages/courses/foundation/index.astro
+[2m05:47:39[22m   [34m└─[39m [2m/courses/foundation/index.html[22m [2m(+44ms)[22m 
+[2m05:47:39[22m [32m▶[39m src/pages/courses/index.astro
+[2m05:47:39[22m   [34m└─[39m [2m/courses/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m [32m▶[39m src/pages/learn/[slug].astro
+[2m05:47:39[22m   [34m├─[39m [2m/learn/asking-statistical-questions/index.html[22m [2m(+4ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/binomial-basics/index.html[22m [2m(+4ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/binomial-normal-approximation/index.html[22m [2m(+4ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/bridge-to-grade-two/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/choosing-basic-graphs/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/chance-and-sample-space/index.html[22m [2m(+5ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/complements-and-unions/index.html[22m [2m(+6ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/conditional-probability-basics/index.html[22m [2m(+3ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/correlation-is-not-causation/index.html[22m [2m(+3ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/cross-tables-and-mosaics/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/frequency-tables/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/histograms-and-stem-leaf/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/hypothesis-testing-basics/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/independent-trials/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/mean-and-proportion-tests-basics/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/mean-median-mode/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/mean-confidence-interval-basics/index.html[22m [2m(+1ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/normal-density-basics/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/normal-table-and-tail-area/index.html[22m [2m(+1ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/observation-and-experiment/index.html[22m [2m(+1ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/population-and-sampling/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/probability-and-repetition/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/proportion-confidence-interval-basics/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/quartiles-and-boxplots/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/ratios-and-percentages/index.html[22m [2m(+3ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/random-variables-and-expectation/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/reading-a-data-table/index.html[22m [2m(+1ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/reading-unfamiliar-graphs/index.html[22m [2m(+1ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/relative-spread-and-outliers/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/regression-line-and-prediction/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/reporting-statistical-results/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/sampling-distributions-basics/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/shifting-and-scaling-data/index.html[22m [2m(+4ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/scatter-covariance-correlation/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/standardization-and-deviation-score/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/time-series-and-indices/index.html[22m [2m(+2ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/trees-and-counting/index.html[22m [2m(+1ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/types-and-scales/index.html[22m [2m(+1ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/learn/variance-and-standard-deviation/index.html[22m [2m(+1ms)[22m 
+[2m05:47:39[22m   [34m└─[39m [2m/learn/weighted-and-grouped-means/index.html[22m [2m(+1ms)[22m 
+[2m05:47:39[22m [32m▶[39m src/pages/terms/index.astro
+[2m05:47:39[22m   [34m└─[39m [2m/terms/index.html[22m [2m(+3ms)[22m 
+[2m05:47:39[22m [32m▶[39m src/pages/terms/[...slug].astro
+[2m05:47:39[22m   [34m├─[39m [2m/terms/mean/index.html[22m [2m(+26ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/range/index.html[22m [2m(+9ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/variance/index.html[22m [2m(+15ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/standard-deviation/index.html[22m [2m(+11ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/coefficient-of-variation/index.html[22m [2m(+11ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/median/index.html[22m [2m(+11ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/mode/index.html[22m [2m(+9ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/quartile/index.html[22m [2m(+9ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/interquartile-range/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/histogram/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/box-plot/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/population/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/sample/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/random-sampling/index.html[22m [2m(+12ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/sample-mean/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/standard-error/index.html[22m [2m(+16ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/population-mean/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/unbiased-variance/index.html[22m [2m(+15ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/population-variance/index.html[22m [2m(+9ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/central-limit-theorem/index.html[22m [2m(+13ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/sample-variance/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/law-of-large-numbers/index.html[22m [2m(+11ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/sample-space/index.html[22m [2m(+6ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/event/index.html[22m [2m(+7ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/probability/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/conditional-probability/index.html[22m [2m(+11ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/independence/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/bayes-theorem/index.html[22m [2m(+11ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/probability-variable/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/expected-value/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/probability-distribution/index.html[22m [2m(+9ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/probability-mass-function/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/probability-density-function/index.html[22m [2m(+7ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/normal-distribution/index.html[22m [2m(+9ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/cumulative-distribution-function/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/bernoulli-distribution/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/binomial-distribution/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/poisson-distribution/index.html[22m [2m(+6ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/geometric-distribution/index.html[22m [2m(+7ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/standard-normal-distribution/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/t-distribution/index.html[22m [2m(+13ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/chi-square-distribution/index.html[22m [2m(+15ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/f-distribution/index.html[22m [2m(+11ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/standardization/index.html[22m [2m(+14ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/z-score/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/scatter-plot/index.html[22m [2m(+5ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/covariance/index.html[22m [2m(+9ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/correlation-coefficient/index.html[22m [2m(+12ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/no-correlation/index.html[22m [2m(+6ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/hypothesis-testing/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/regression-line/index.html[22m [2m(+12ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/estimation/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/null-hypothesis/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/alternative-hypothesis/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/one-sided-test/index.html[22m [2m(+13ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/two-sided-test/index.html[22m [2m(+14ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/test-statistic/index.html[22m [2m(+9ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/estimator/index.html[22m [2m(+12ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/p-value/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/significance-level/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/rejection-region/index.html[22m [2m(+11ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/point-estimation/index.html[22m [2m(+7ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/type-i-error/index.html[22m [2m(+7ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/type-ii-error/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/simple-linear-regression/index.html[22m [2m(+10ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/unbiased-estimator/index.html[22m [2m(+11ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/interval-estimation/index.html[22m [2m(+8ms)[22m 
+[2m05:47:39[22m   [34m├─[39m [2m/terms/least-squares-method/index.html[22m [2m(+12ms)[22m 
+[2m05:47:40[22m   [34m├─[39m [2m/terms/confidence-interval/index.html[22m [2m(+9ms)[22m 
+[2m05:47:40[22m   [34m├─[39m [2m/terms/residual/index.html[22m [2m(+9ms)[22m 
+[2m05:47:40[22m   [34m└─[39m [2m/terms/coefficient-of-determination/index.html[22m [2m(+12ms)[22m 
+[2m05:47:40[22m [32m▶[39m src/pages/topics/index.astro
+[2m05:47:40[22m   [34m└─[39m [2m/topics/index.html[22m [2m(+1ms)[22m 
+[2m05:47:40[22m [32m▶[39m src/pages/topics/[...slug].astro
+[2m05:47:40[22m [32m▶[39m src/pages/index.astro
+[2m05:47:40[22m   [34m└─[39m [2m/index.html[22m [2m(+1ms)[22m 
+[2m05:47:40[22m [32m✓ Completed in 888ms.
+[39m
+[2m05:47:40[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `docs`
+[2m05:47:40[22m [34m[build][39m 116 page(s) built in [1m3.02s[22m
+[2m05:47:40[22m [34m[build][39m [1mComplete![22m
+
+> stats-grade2-glossary@0.1.0 validate:links
+> node scripts/validate-dist-links.mjs
+
+validate:links passed (116 HTML file(s) checked)
