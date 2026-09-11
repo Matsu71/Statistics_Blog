@@ -33,7 +33,7 @@ jobs:
           mkdir -p review-assets/grade2-resume project-docs/grade2/release
           python3 scripts/grade2-release-control.py capture
       - run: npm ci
-      - name: Prepare a separate manuscript review copy
+      - name: Prepare and polish the separate manuscript review copy
         run: |
           python3 -m pip install --quiet numpy==2.3.5 scipy==1.17.0
           python3 scripts/import-grade2-iris.py
@@ -41,6 +41,7 @@ jobs:
           python3 scripts/prepare-grade2-complete-release.py
           node scripts/prepare-grade2.mjs
           python3 scripts/resume-grade2-review.py prepare
+          python3 scripts/polish-grade2-review.py
           node scripts/prepare-grade2.mjs
           python3 scripts/grade2-release-control.py marker
       - name: Verify source, all course pages and formulas
@@ -60,16 +61,29 @@ jobs:
           python3 scripts/check-grade2-references.py | tee review-assets/grade2-resume/references.log
           npm audit --json > project-docs/grade2/release/npm-audit.json || true
           node -e "const r=require('./project-docs/grade2/release/npm-audit.json');if(!r.metadata?.vulnerabilities||r.metadata.vulnerabilities.high||r.metadata.vulnerabilities.critical)process.exit(1)"
-      - name: Test the full experience in Chromium and WebKit
+      - name: Install both browser engines and Japanese fonts
         run: |
-          set -euo pipefail
           npm install --no-save --package-lock=false playwright@1.55.0
           npx playwright install --with-deps chromium webkit
-          sudo apt-get update -qq
           sudo apt-get install -y fonts-noto-cjk
-          node scripts/test-foundation-browser.mjs > review-assets/grade2-resume/foundation-browser.log
-          node scripts/test-learning-labs.mjs > review-assets/grade2-resume/learning-labs.log
-          node scripts/test-grade2-browser.mjs > review-assets/grade2-resume/grade2-browser.log
+      - name: Regress the existing foundation and learning tools
+        timeout-minutes: 12
+        run: |
+          node scripts/test-foundation-browser.mjs > review-assets/grade2-resume/foundation-browser.log 2>&1 &
+          FOUNDATION_PID=$!
+          node scripts/test-learning-labs.mjs > review-assets/grade2-resume/learning-labs.log 2>&1 &
+          LAB_PID=$!
+          result=0
+          wait "$FOUNDATION_PID" || result=1
+          wait "$LAB_PID" || result=1
+          cat review-assets/grade2-resume/foundation-browser.log
+          cat review-assets/grade2-resume/learning-labs.log
+          exit "$result"
+      - name: Verify all grade2 lessons and every coverage link
+        timeout-minutes: 12
+        run: |
+          set -euo pipefail
+          node scripts/test-grade2-browser.mjs 2>&1 | tee review-assets/grade2-resume/grade2-browser.log
       - name: Seal only the verified manuscript copies
         run: |
           python3 scripts/grade2-release-control.py gate
