@@ -1,0 +1,115 @@
+{
+  "id": "pregrade1",
+  "title": "統計検定準1級コース",
+  "subtitle": "確率の道具から、推測・多変量解析・因果推論へ",
+  "planned_lessons": 72,
+  "checked_at": "2026-09-11",
+  "syllabus": {
+    "official_page": "https://www.toukei-kentei.jp/grade/grade_pre-1",
+    "versions": [
+      {"id":"through-2026","label":"2026年12月31日まで","effective_until":"2026-12-31","pdf":"https://www.toukei-kentei.jp/hubfs/files/grade_range/grade1semi_hani_190628_2.pdf","printed_date":"2018年6月28日"},
+      {"id":"from-2027","label":"2027年1月1日以降","effective_from":"2027-01-01","pdf":"https://www.toukei-kentei.jp/hubfs/files/20.grade/grade_range/grade1semi_hani_20270101.pdf","printed_date":"2027年1月1日"}
+    ],
+    "note":"両版の全2ページを確認。版間の明記・配置の違いを記録し、ある用語が旧版に単独で載っていないことを旧試験の対象外とは断定しない。72講座は制作計画であり、全項目の本文・問題の完成や合格保証を意味しない。"
+  },
+  "modules": [
+    {"id":"P-A","title":"確率の道具を使い分ける","scope":"両版p.1 確率と確率変数","lessons":[
+      {"id":"P01","slug":"conditional-expectation","title":"条件付き期待値と反復期待値","objective":"条件で分布を絞り、重みを戻して全体の平均へつなぐ"},
+      {"id":"P02","slug":"conditional-variance","title":"条件付き分散と全分散の公式","objective":"群内のばらつきと群間の違いを分け、予測と個数の和へ使う"},
+      {"id":"P03","slug":"moment-generating-functions","title":"モーメント母関数と存在条件","objective":"微分からモーメントを求め、存在範囲と独立性を確かめる"},
+      {"id":"P04","slug":"probability-generating-functions","title":"確率母関数と個数の和","objective":"係数・微分・合成の意味を、個数の確率へ戻す"},
+      {"id":"P05","slug":"multivariate-transformations","title":"多変量の変数変換とヤコビアン","objective":"変換後の範囲と面積の係数を一緒に求める"},
+      {"id":"P06","slug":"modes-of-convergence","title":"概収束・確率収束・分布収束","objective":"三つの近づき方を定義と反例で区別する","revision_note":"2027版で各収束が明記。旧版の極限定理を理解する補助にもなる。"},
+      {"id":"P07","slug":"slutsky-delta-and-extremes","title":"連続写像・スルツキー・デルタ法と極値","objective":"極限の置換と近似を使い、最大値の分布との違いを読む","revision_note":"2027版で連続写像・スルツキーが明記。極値とデルタ法は両版で扱う。"}
+    ]},
+    {"id":"P-B","title":"分布を広げてモデルを選ぶ","scope":"両版p.1 種々の確率分布","lessons":[
+      {"id":"P08","slug":"multinomial-and-count-models","title":"多項分布と離散分布の関係","objective":"成功数・待ち回数・カテゴリ別個数をモデルの条件で選ぶ"},
+      {"id":"P09","slug":"gamma-beta-distributions","title":"ガンマ分布・ベータ分布とパラメータ","objective":"和と比の分布を導き、尺度と率を混同しない"},
+      {"id":"P10","slug":"cauchy-lognormal-boxcox","title":"コーシー・対数正規分布とBox–Cox変換","objective":"モーメントの存在と変換の目的を区別する","revision_note":"Box–Cox変換は2027版で明記。"},
+      {"id":"P11","slug":"multivariate-normal-geometry","title":"多変量正規分布と二次形式","objective":"共分散行列から周辺・条件付き分布・独立性を読む"},
+      {"id":"P12","slug":"noncentral-sampling-distributions","title":"非心t・カイ二乗・F分布","objective":"帰無仮説以外での分布を検出力に結び付ける"}
+    ]},
+    {"id":"P-C","title":"推定を根拠から組み立てる","scope":"両版p.1 統計的推測（推定）","lessons":[
+      {"id":"P13","slug":"order-statistics","title":"順序統計量と分位点","objective":"最小・最大と一般の順序統計量の分布を求める"},
+      {"id":"P14","slug":"sufficiency-factorization","title":"十分統計量と分解定理","objective":"母数に関する情報を失わない要約を見つける"},
+      {"id":"P15","slug":"likelihood-estimation","title":"尤度・最尤推定と境界","objective":"定義域と停留点・境界を比べて推定値を選ぶ"},
+      {"id":"P16","slug":"moments-least-squares","title":"モーメント法と最小二乗法","objective":"何を一致・最小化させる推定かを説明する"},
+      {"id":"P17","slug":"bias-consistency-efficiency","title":"バイアス・一致性・相対効率","objective":"有限標本の誤差と漸近的な性質を分ける"},
+      {"id":"P18","slug":"score-fisher-information","title":"スコアとフィッシャー情報量","objective":"対数尤度の傾きと曲がりを不確かさへ結び付ける"},
+      {"id":"P19","slug":"cramer-rao-inequality","title":"クラメール–ラオの不等式","objective":"正則条件と等号成立を確かめて分散の下限を使う"},
+      {"id":"P20","slug":"asymptotic-mle-and-kl","title":"最尤推定量の漸近正規性とKL情報量","objective":"有限標本の正規性と漸近近似を混同しない"},
+      {"id":"P21","slug":"confidence-pivots-coverage","title":"ピボット量・信頼区間・被覆確率","objective":"一側限界を含め、どの確率で構成した区間かを説明する"},
+      {"id":"P22","slug":"gauss-markov-gls","title":"ガウス–マルコフの定理と一般化最小二乗","objective":"線形不偏推定の範囲と誤差共分散の役割を確かめる"}
+    ]},
+    {"id":"P-D","title":"検定を導き、選び分ける","scope":"両版p.1 統計的推測（検定）","lessons":[
+      {"id":"P23","slug":"neyman-pearson","title":"ネイマン–ピアソンの基本定理","objective":"サイズを固定して検出力を比較する"},
+      {"id":"P24","slug":"likelihood-ratio-tests","title":"尤度比検定と漸近カイ二乗近似","objective":"制約付きと制約なしの尤度を比べる"},
+      {"id":"P25","slug":"wald-and-score-tests","title":"ワルド検定とスコア検定","objective":"どの母数値で情報量を評価するかを見分ける"},
+      {"id":"P26","slug":"power-multiple-comparisons","title":"検出力・標本サイズ・多重比較","objective":"検出したい差と誤判定の制御を事前に定める"},
+      {"id":"P27","slug":"normal-and-count-tests","title":"正規モデルと計数モデルの検定","objective":"相関・比率・発生率の仮説と分布を対応させる"},
+      {"id":"P28","slug":"rank-tests","title":"ウィルコクソン・符号付き順位・Kruskal–Wallis","objective":"独立群と対応、分布形の仮定を確かめる"},
+      {"id":"P29","slug":"permutation-rank-correlation","title":"並べ替え検定と順位相関","objective":"交換可能性と独立性を検定の根拠へ戻す"}
+    ]},
+    {"id":"P-E","title":"ベイズと確率過程","scope":"両版p.2 ベイズ法・マルコフ連鎖と確率過程","lessons":[
+      {"id":"P30","slug":"bayesian-updating","title":"事前分布・事後分布・予測分布","objective":"パラメータの不確かさと次の観測の変動を分ける"},
+      {"id":"P31","slug":"conjugacy-hierarchical-models","title":"共役事前分布と階層ベイズ","objective":"部分的な情報共有と事前分布への感度を考える"},
+      {"id":"P32","slug":"markov-transition","title":"マルコフ連鎖と推移確率","objective":"状態と時間を定義して複数ステップの確率を求める"},
+      {"id":"P33","slug":"stationary-recurrence","title":"既約性・再帰性・定常分布","objective":"定常分布の存在と分布の収束を区別する"},
+      {"id":"P34","slug":"random-walks","title":"ランダムウォークと到達確率","objective":"境界条件から確率の方程式を組み立てる"},
+      {"id":"P35","slug":"poisson-brownian-processes","title":"ポアソン過程とブラウン運動","objective":"増分の分布・独立性・時間尺度をそろえる"},
+      {"id":"P36","slug":"metropolis-gibbs","title":"Metropolis–Hastingsとギブス法","objective":"定常分布と混合・収束診断を分けて扱う"}
+    ]},
+    {"id":"P-F","title":"回帰を拡張する","scope":"両版p.2 回帰分析","lessons":[
+      {"id":"P37","slug":"ridge-lasso-cp","title":"リッジ・Lasso・変数選択","objective":"正則化と尺度・予測誤差・モデル選択を結び付ける","revision_note":"2027版でL2正則化とMallowsのCpが明記。"},
+      {"id":"P38","slug":"regression-influence","title":"レバレッジ・残差・Cookの距離","objective":"外れた観測と影響の大きい観測を区別する","revision_note":"2027版でCookの距離が明記。"},
+      {"id":"P39","slug":"logistic-probit","title":"ロジスティック回帰とプロビット","objective":"確率・オッズ・線形予測子を区別する"},
+      {"id":"P40","slug":"glm-poisson","title":"一般化線形モデルとポアソン回帰","objective":"分布族・リンク・オフセットを組み合わせる","revision_note":"2027版でポアソン回帰が明記。"},
+      {"id":"P41","slug":"survival-kaplan-meier","title":"打ち切りとKaplan–Meier推定","objective":"リスク集合を更新して生存確率を求める","revision_note":"2027版でKaplan–Meier推定量が明記。"},
+      {"id":"P42","slug":"cox-proportional-hazards","title":"Cox比例ハザードモデル","objective":"ハザード比と生存確率、比例性の仮定を区別する"},
+      {"id":"P43","slug":"neural-networks","title":"ニューラルネットワークと汎化","objective":"損失・学習・検証データの役割を説明する"}
+    ]},
+    {"id":"P-G","title":"実験と標本調査を設計する","scope":"両版p.2 分散分析と実験計画法・標本調査法","lessons":[
+      {"id":"P44","slug":"factorial-anova","title":"二元配置分散分析と交互作用","objective":"主効果と交互作用を設計と自由度へ対応させる"},
+      {"id":"P45","slug":"randomized-blocks","title":"乱塊法・ブロック計画","objective":"比較単位と余分な変動を分ける"},
+      {"id":"P46","slug":"fractional-factorial-arrays","title":"一部実施要因計画と直交配列","objective":"少ない実験で失う情報と交絡を理解する"},
+      {"id":"P47","slug":"survey-design-estimation","title":"有限母集団・層化・多段抽出の推定","objective":"抽出確率・重み・補正を設計と一致させる"}
+    ]},
+    {"id":"P-H","title":"多変量データを要約・分類する","scope":"両版p.2 多変量解析","lessons":[
+      {"id":"P48","slug":"principal-components","title":"主成分分析・負荷量・寄与率","objective":"標準化と固有値を確認して次元を縮める"},
+      {"id":"P49","slug":"linear-quadratic-discriminant","title":"線形判別と二次判別","objective":"共分散と事前確率の仮定から境界を読む"},
+      {"id":"P50","slug":"svm-roc-auc","title":"SVM・混同行列・ROC・AUC","objective":"しきい値と評価対象の割合による違いを読む"},
+      {"id":"P51","slug":"clustering-distances","title":"距離行列・階層クラスタ・K-means","objective":"尺度・距離・結合法で結果が変わる理由を説明する"},
+      {"id":"P52","slug":"factor-analysis","title":"因子分析・共通性・回転","objective":"観測変数の共分散を潜在因子と独自因子へ分ける"},
+      {"id":"P53","slug":"structural-equation-models","title":"構造方程式・パス図・識別","objective":"図と方程式、識別条件と因果の主張を区別する"},
+      {"id":"P54","slug":"multidimensional-canonical","title":"多次元尺度構成と正準相関","objective":"距離の配置と二組の変数の関連を使い分ける"},
+      {"id":"P55","slug":"correspondence-quantification","title":"対応分析と数量化法","objective":"カテゴリを数値化する目的と図の解釈を整理する"}
+    ]},
+    {"id":"P-I","title":"時系列をモデル化する","scope":"両版p.2 時系列解析","lessons":[
+      {"id":"P56","slug":"stationarity-acf-pacf","title":"定常性・自己相関・偏自己相関","objective":"トレンドと依存を区別してモデルの手掛かりを読む"},
+      {"id":"P57","slug":"ar-ma-models","title":"AR・MA・ARMAモデル","objective":"安定性・可逆性と予測を結び付ける"},
+      {"id":"P58","slug":"arima-differences","title":"ARIMA・階差・季節性","objective":"変換した系列と元の予測値を対応させる"},
+      {"id":"P59","slug":"spectra-periodograms","title":"スペクトルとペリオドグラム","objective":"時間領域と周波数領域の見方をつなぐ"},
+      {"id":"P60","slug":"state-space-serial-diagnostics","title":"状態空間モデルと系列相関の診断","objective":"潜在状態・観測誤差・DW比の条件を整理する"}
+    ]},
+    {"id":"P-J","title":"分割表と条件付き独立","scope":"両版p.2 分割表","lessons":[
+      {"id":"P61","slug":"odds-exact-association","title":"オッズ比・正確検定・関連の強さ","objective":"周辺を固定する検定と効果の尺度を区別する"},
+      {"id":"P62","slug":"loglinear-models","title":"対数線形モデルと階層性","objective":"セル平均のモデルと独立性を対応させる"},
+      {"id":"P63","slug":"graphical-independence","title":"グラフィカルモデルと条件付き独立","objective":"分割表と正規モデルのグラフが示す条件を読む"}
+    ]},
+    {"id":"P-K","title":"欠測・モデル選択・計算","scope":"両版p.2 不完全データ・モデル選択・シミュレーション","lessons":[
+      {"id":"P64","slug":"missing-data-imputation","title":"欠測メカニズム・削除・補完","objective":"MCAR・MAR・MNARと識別できる情報を区別する"},
+      {"id":"P65","slug":"expectation-maximization","title":"EMアルゴリズム","objective":"潜在データの期待と尤度の最大化を交互に行う"},
+      {"id":"P66","slug":"aic-bic-cross-validation","title":"AIC・BIC・交差検証","objective":"評価したいリスクとモデル選択の仮定をそろえる","revision_note":"2027版でBICが明記。"},
+      {"id":"P67","slug":"monte-carlo-bootstrap-jackknife","title":"乱数・棄却法・モンテカルロ・再標本化","objective":"乱数誤差、標本誤差、再標本化の前提を区別する"}
+    ]},
+    {"id":"P-L","title":"統計的因果推論へ進む","scope":"2027版p.2 統計的因果推論。旧版の因果図・SEMの発展も兼ねる。","lessons":[
+      {"id":"P68","slug":"causal-dags","title":"因果DAG・d分離・介入","objective":"観察した関連と介入の効果を区別する","revision_note":"2027版で独立した項目群として明記。"},
+      {"id":"P69","slug":"backdoor-frontdoor","title":"バックドア・フロントドア基準","objective":"調整の可否を図の条件と式から判断する","revision_note":"2027版で明記。"},
+      {"id":"P70","slug":"direct-indirect-instruments","title":"直接効果・間接効果・操作変数","objective":"追加仮定と識別できる効果を区別する","revision_note":"2027版の因果推論・因子分析とSEMに対応。"}
+    ]},
+    {"id":"P-M","title":"分析と演習で結び付ける","scope":"全体の方法選択・解釈を横断","lessons":[
+      {"id":"P71","slug":"pregrade1-reproducible-case","title":"実データの分析・診断・報告","objective":"原データから計算を再現し、方法選択と限界を説明する"},
+      {"id":"P72","slug":"pregrade1-integrated-practice","title":"準1級総合演習と1級への接続","objective":"初見の複合問題を解き、前提・式・解釈を点検する"}
+    ]}
+  ]
+}
