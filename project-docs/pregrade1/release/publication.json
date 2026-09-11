@@ -1,8 +1,8 @@
 {
   "status": "published_and_live_verified",
-  "checked_at": "2026-09-11T12:59:29.067449+00:00",
-  "verified_commit": "95f7636a9653277526452bab54cb22ebce09816f",
-  "workflow_run_id": "34601748614",
+  "checked_at": "2026-09-11T13:09:34.993453+00:00",
+  "verified_commit": "c216ea4ab96f718bf65e34ea44fb492db7dd3dfc",
+  "workflow_run_id": "34602707532",
   "source_commit": "c25b2cf951404ab5e89413088f69eb12c0996b15",
   "lesson_count": 6,
   "question_count": 24,
