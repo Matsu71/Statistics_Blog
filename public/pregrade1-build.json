@@ -1,0 +1,26 @@
+{
+  "release": "pregrade1-initial",
+  "source_commit": "e7ba1b2502c69d27aafd2effb1a8fcd4dab7e58a",
+  "workflow_run_id": "34597371514",
+  "lesson_count": 6,
+  "question_count": 24,
+  "planned_lessons": 72,
+  "existing_courses": {
+    "foundation": {
+      "lessons": 40,
+      "questions": 130
+    },
+    "grade2": {
+      "lessons": 40,
+      "questions": 172
+    }
+  },
+  "lesson_source_sha256": {
+    "src/content/pregrade1/conditional-expectation.md": "f6065b1adbcfdfc3c116110b31b2515a9db69b39eca3e836c6fa3929121aa3b7",
+    "src/content/pregrade1/conditional-variance.md": "88bd0156936a0d923e31ef79648adfcf90edf7b6d75fc27ff303e7241c8c05ef",
+    "src/content/pregrade1/moment-generating-functions.md": "f09459ea2818b32132626b05a777df93897c8233a65d418ab8cbb78d2d7f8776",
+    "src/content/pregrade1/probability-generating-functions.md": "5063fd79d54e0ddb1d2b52e4fa38fed5f56e68c40d33ddaaceff0e47e4ed5754",
+    "src/content/pregrade1/multivariate-transformations.md": "65b6b6a921dc31afe90b85dd01d78f0c3cbd570f6e29a62c2ae8c19951137a81",
+    "src/content/pregrade1/modes-of-convergence.md": "b94971c5399c83814f0ad5c48d5fd6991ea37b670df54f8404a3a16cf1360f2c"
+  }
+}

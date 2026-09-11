@@ -1,0 +1,231 @@
+{
+  "status": "passed",
+  "source_commit": "e7ba1b2502c69d27aafd2effb1a8fcd4dab7e58a",
+  "checked_at": "2026-09-11T12:08:42.149Z",
+  "lesson_count": 6,
+  "question_count": 24,
+  "planned_lessons": 72,
+  "records": [
+    {
+      "id": "P01",
+      "slug": "conditional-expectation",
+      "title": "条件付き期待値と反復期待値",
+      "path": "src/content/pregrade1/conditional-expectation.md",
+      "source_sha256": "f6065b1adbcfdfc3c116110b31b2515a9db69b39eca3e836c6fa3929121aa3b7",
+      "questions": 4,
+      "question_ids": [
+        "P01-Q1",
+        "P01-Q2",
+        "P01-Q3",
+        "P01-Q4"
+      ],
+      "disclosures": 5,
+      "detail_ids": [
+        "p01-q1-answer",
+        "p01-q2-answer",
+        "p01-q3-answer",
+        "p01-q4-answer",
+        "p01-tower-proof"
+      ],
+      "prerequisites": [
+        "G08",
+        "G09"
+      ],
+      "main_text_characters_approx": 1539,
+      "total_text_characters_approx": 2443,
+      "source_urls": [
+        "https://www.statlect.com/fundamentals-of-probability/conditional-expectation",
+        "https://www.toukei-kentei.jp/grade/grade_pre-1"
+      ],
+      "review_status": "self_checked",
+      "html_sha256": "739df4a91c4fcf61b039ca992faacd447a331cf1735e9c947aded1c94fcac7f6"
+    },
+    {
+      "id": "P02",
+      "slug": "conditional-variance",
+      "title": "条件付き分散と全分散の公式",
+      "path": "src/content/pregrade1/conditional-variance.md",
+      "source_sha256": "88bd0156936a0d923e31ef79648adfcf90edf7b6d75fc27ff303e7241c8c05ef",
+      "questions": 4,
+      "question_ids": [
+        "P02-Q1",
+        "P02-Q2",
+        "P02-Q3",
+        "P02-Q4"
+      ],
+      "disclosures": 6,
+      "detail_ids": [
+        "p02-q1-answer",
+        "p02-q2-answer",
+        "p02-q3-answer",
+        "p02-q4-answer",
+        "p02-total-variance-proof",
+        "p02-prediction-proof"
+      ],
+      "prerequisites": [
+        "P01",
+        "G09",
+        "G13"
+      ],
+      "main_text_characters_approx": 1625,
+      "total_text_characters_approx": 2672,
+      "source_urls": [
+        "https://www.statlect.com/fundamentals-of-probability/conditional-expectation",
+        "https://www.toukei-kentei.jp/grade/grade_pre-1"
+      ],
+      "review_status": "self_checked",
+      "html_sha256": "18930f3a40029220cddbb76f3d9a64f8e8ffe3ac20d28a8047fb8f477a6ddfc2"
+    },
+    {
+      "id": "P03",
+      "slug": "moment-generating-functions",
+      "title": "モーメント母関数と存在条件",
+      "path": "src/content/pregrade1/moment-generating-functions.md",
+      "source_sha256": "f09459ea2818b32132626b05a777df93897c8233a65d418ab8cbb78d2d7f8776",
+      "questions": 4,
+      "question_ids": [
+        "P03-Q1",
+        "P03-Q2",
+        "P03-Q3",
+        "P03-Q4"
+      ],
+      "disclosures": 6,
+      "detail_ids": [
+        "p03-q1-answer",
+        "p03-q2-answer",
+        "p03-q3-answer",
+        "p03-q4-answer",
+        "p03-differentiation-proof",
+        "p03-lognormal-counterexample"
+      ],
+      "prerequisites": [
+        "G09",
+        "G10",
+        "G13"
+      ],
+      "main_text_characters_approx": 1431,
+      "total_text_characters_approx": 2472,
+      "source_urls": [
+        "https://www.statlect.com/fundamentals-of-probability/moment-generating-function",
+        "https://www.toukei-kentei.jp/grade/grade_pre-1"
+      ],
+      "review_status": "self_checked",
+      "html_sha256": "a806b4b4d97f87a85cc84991f5ddb26d223b8c2f237e476b3241c50e4d62d732"
+    },
+    {
+      "id": "P04",
+      "slug": "probability-generating-functions",
+      "title": "確率母関数と個数の和",
+      "path": "src/content/pregrade1/probability-generating-functions.md",
+      "source_sha256": "5063fd79d54e0ddb1d2b52e4fa38fed5f56e68c40d33ddaaceff0e47e4ed5754",
+      "questions": 4,
+      "question_ids": [
+        "P04-Q1",
+        "P04-Q2",
+        "P04-Q3",
+        "P04-Q4"
+      ],
+      "disclosures": 6,
+      "detail_ids": [
+        "p04-q1-answer",
+        "p04-q2-answer",
+        "p04-q3-answer",
+        "p04-q4-answer",
+        "p04-derivatives-proof",
+        "p04-composition-proof"
+      ],
+      "prerequisites": [
+        "P02",
+        "P03",
+        "G11",
+        "G13"
+      ],
+      "main_text_characters_approx": 1487,
+      "total_text_characters_approx": 2559,
+      "source_urls": [
+        "https://www.maths.dur.ac.uk/users/ostap.hryniv/teaching/Probability2/Probability2-notes.html",
+        "https://www.toukei-kentei.jp/grade/grade_pre-1"
+      ],
+      "review_status": "self_checked",
+      "html_sha256": "d9a5291fcce787fedb1de04e90810b2cc8597478e2e356e29c548f852d38a8fd"
+    },
+    {
+      "id": "P05",
+      "slug": "multivariate-transformations",
+      "title": "多変量の変数変換とヤコビアン",
+      "path": "src/content/pregrade1/multivariate-transformations.md",
+      "source_sha256": "65b6b6a921dc31afe90b85dd01d78f0c3cbd570f6e29a62c2ae8c19951137a81",
+      "questions": 4,
+      "question_ids": [
+        "P05-Q1",
+        "P05-Q2",
+        "P05-Q3",
+        "P05-Q4"
+      ],
+      "disclosures": 5,
+      "detail_ids": [
+        "p05-q1-answer",
+        "p05-q2-answer",
+        "p05-q3-answer",
+        "p05-q4-answer",
+        "p05-change-of-variables-proof"
+      ],
+      "prerequisites": [
+        "G08",
+        "G10",
+        "P02"
+      ],
+      "main_text_characters_approx": 1496,
+      "total_text_characters_approx": 2447,
+      "source_urls": [
+        "https://online.stat.psu.edu/stat414/Lesson23",
+        "https://www.statlect.com/fundamentals-of-probability/functions-of-random-vectors",
+        "https://www.toukei-kentei.jp/grade/grade_pre-1"
+      ],
+      "review_status": "self_checked",
+      "html_sha256": "470efc7038d2ea9d36faafc0ff437adf87eec53a291adca34a2f911ea9b9dead"
+    },
+    {
+      "id": "P06",
+      "slug": "modes-of-convergence",
+      "title": "概収束・確率収束・分布収束",
+      "path": "src/content/pregrade1/modes-of-convergence.md",
+      "source_sha256": "b94971c5399c83814f0ad5c48d5fd6991ea37b670df54f8404a3a16cf1360f2c",
+      "questions": 4,
+      "question_ids": [
+        "P06-Q1",
+        "P06-Q2",
+        "P06-Q3",
+        "P06-Q4"
+      ],
+      "disclosures": 6,
+      "detail_ids": [
+        "p06-q1-answer",
+        "p06-q2-answer",
+        "p06-q3-answer",
+        "p06-q4-answer",
+        "p06-implications-proof",
+        "p06-typewriter-counterexample"
+      ],
+      "prerequisites": [
+        "G10",
+        "G16",
+        "P01"
+      ],
+      "main_text_characters_approx": 1573,
+      "total_text_characters_approx": 2800,
+      "source_urls": [
+        "https://www.maths.dur.ac.uk/users/ostap.hryniv/teaching/Probability2/Probability2-notes.html",
+        "https://www.statlect.com/asymptotic-theory/convergence-in-distribution",
+        "https://www.toukei-kentei.jp/grade/grade_pre-1"
+      ],
+      "review_status": "self_checked",
+      "html_sha256": "0b48b00e5517b64dd8db73ab97f450d0fafd0cde40310866f8b94e057cee6a91"
+    }
+  ],
+  "limitations": [
+    "Structure does not prove mathematical correctness.",
+    "Character counts exclude formulas, markup and references and are approximate.",
+    "Only authored lessons count as implemented."
+  ]
+}

@@ -1,0 +1,783 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-11T12:08:53.892914+00:00",
+  "source_commit": "e7ba1b2502c69d27aafd2effb1a8fcd4dab7e58a",
+  "lesson_count": 6,
+  "numerical_checks": 55,
+  "checks": [
+    {
+      "lesson": "P01",
+      "name": "joint normalizes and conditional rows normalize",
+      "computed": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P01",
+      "name": "conditional means from exact rational table",
+      "computed": [
+        2.0,
+        2.8
+      ],
+      "expected": [
+        2.0,
+        2.8
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "2.8",
+        "0.7/0.25"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P01",
+      "name": "tower expectation vs direct marginal expectation",
+      "computed": [
+        2.2,
+        2.2
+      ],
+      "expected": [
+        2.2,
+        2.2
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "2.2",
+        "2.4"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P01",
+      "name": "conditional second moment is not squared mean",
+      "computed": [
+        10.4,
+        7.84
+      ],
+      "expected": [
+        10.4,
+        7.84
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "10.4",
+        "7.84"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P01",
+      "name": "constant conditional mean but unequal conditional distributions",
+      "computed": [
+        0.0,
+        0.0,
+        1.0,
+        0.5
+      ],
+      "expected": [
+        0.0,
+        0.0,
+        1.0,
+        0.5
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P02",
+      "name": "within-group variances",
+      "computed": [
+        1.6,
+        2.56
+      ],
+      "expected": [
+        1.6,
+        2.56
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "1.60",
+        "2.56"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P02",
+      "name": "total variance via conditioning vs original joint table",
+      "computed": [
+        1.84,
+        0.12,
+        1.96
+      ],
+      "expected": [
+        1.84,
+        0.12,
+        1.96
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "1.84",
+        "0.12",
+        "1.96"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P02",
+      "name": "constant groups can have nonzero total variance",
+      "computed": 4.0,
+      "expected": 4.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "分散4"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P02",
+      "name": "prediction risks by enumerating every cell",
+      "computed": [
+        1.84,
+        1.96
+      ],
+      "expected": [
+        1.84,
+        1.96
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P02",
+      "name": "random sum from Poisson mixture moments",
+      "computed": [
+        15.000000000000004,
+        87.0
+      ],
+      "expected": [
+        15.0,
+        87.0
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "87",
+        "75"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P03",
+      "name": "finite-support MGF at zero and log(2)",
+      "computed": [
+        1.0,
+        1.3
+      ],
+      "expected": [
+        1.0,
+        1.3
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "1.3"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P03",
+      "name": "first two moments and variance by direct expectation",
+      "computed": [
+        -0.20000000000000007,
+        2.2,
+        2.16
+      ],
+      "expected": [
+        -0.2,
+        2.2,
+        2.16
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "2.16"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P03",
+      "name": "affine transformation calculated on actual support",
+      "computed": [
+        3.4000000000000004,
+        19.439999999999998
+      ],
+      "expected": [
+        3.4,
+        19.44
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "3.4",
+        "19.44"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P03",
+      "name": "dependent double vs independent sum MGF",
+      "computed": [
+        2.425,
+        1.6900000000000002
+      ],
+      "expected": [
+        2.425,
+        1.69
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "2.425",
+        "1.69"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P03",
+      "name": "exponential MGF integral and moments",
+      "computed": [
+        2.0000000000000004,
+        0.4999999999999997,
+        0.2500000000000002
+      ],
+      "expected": [
+        2.0,
+        0.5,
+        0.25
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "t<2",
+        "M_X(1)=2"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P03",
+      "name": "lognormal finite moment k=1",
+      "computed": 1.648721270700128,
+      "expected": 1.6487212707001282,
+      "absolute_tolerance": 1e-08,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P03",
+      "name": "lognormal finite moment k=2",
+      "computed": 7.389056098930651,
+      "expected": 7.38905609893065,
+      "absolute_tolerance": 1e-08,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P03",
+      "name": "lognormal finite moment k=3",
+      "computed": 90.01713130052183,
+      "expected": 90.01713130052181,
+      "absolute_tolerance": 1e-08,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P04",
+      "name": "PGF boundary values and coefficient recovery",
+      "computed": [
+        0.2,
+        1.0,
+        0.3
+      ],
+      "expected": [
+        0.2,
+        1.0,
+        0.3
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "0.2",
+        "0.6"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P04",
+      "name": "factorial moment and variance",
+      "computed": [
+        1.1,
+        0.6,
+        0.49
+      ],
+      "expected": [
+        1.1,
+        0.6,
+        0.49
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "1.7",
+        "0.49"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P04",
+      "name": "independent sum coefficient vs direct enumeration",
+      "computed": [
+        0.37,
+        0.37,
+        0.5
+      ],
+      "expected": [
+        0.37,
+        0.37,
+        0.5
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "0.37",
+        "0.5"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P04",
+      "name": "thinning empty probability from conditional binomial formula",
+      "computed": 0.3678794411714422,
+      "expected": 0.36787944117144233,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "0.367879"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P04",
+      "name": "thinning expected count via Poisson mixture",
+      "computed": 0.9999999999999997,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P04",
+      "name": "PGF composition thinning at s=0",
+      "computed": 0.3678794411714423,
+      "expected": 0.36787944117144233,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P04",
+      "name": "PGF composition thinning at s=0.3",
+      "computed": 0.4965853037914093,
+      "expected": 0.4965853037914095,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P04",
+      "name": "PGF composition thinning at s=0.7",
+      "computed": 0.7408182206817178,
+      "expected": 0.7408182206817179,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P04",
+      "name": "PGF composition thinning at s=1",
+      "computed": 0.9999999999999999,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P05",
+      "name": "inverse Jacobian determinant",
+      "computed": 0.5,
+      "expected": 0.5,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "1/2"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P05",
+      "name": "support cross-sections",
+      "computed": [
+        -0.5,
+        0.5,
+        -1.0,
+        1.0,
+        -0.5,
+        0.5
+      ],
+      "expected": [
+        -0.5,
+        0.5,
+        -1.0,
+        1.0,
+        -0.5,
+        0.5
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "−0.5<D<0.5"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P05",
+      "name": "transformed density normalizes",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P05",
+      "name": "sum CDF at one half by transformed-region integral",
+      "computed": 0.125,
+      "expected": 0.125,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "0.125"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P05",
+      "name": "sum mean and variance from density",
+      "computed": [
+        1.0,
+        0.16666666666666674
+      ],
+      "expected": [
+        1.0,
+        0.16666666666666666
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "1/6"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P05",
+      "name": "impossible pair reconstructed to negative Y",
+      "computed": -0.15000000000000002,
+      "expected": -0.15,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "−0.15"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P05",
+      "name": "exponential ratio marginal integrates to one and P(R<=.25)",
+      "computed": [
+        0.9999999999999994,
+        0.24999999999999986
+      ],
+      "expected": [
+        1.0,
+        0.25
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "0.25"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P05",
+      "name": "positive marginal events with impossible joint event",
+      "computed": [
+        0.125,
+        0.03125,
+        0.0
+      ],
+      "expected": [
+        0.125,
+        0.03125,
+        0.0
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "Chebyshev bound at two sample sizes",
+      "computed": [
+        0.09999999999999998,
+        0.009999999999999998
+      ],
+      "expected": [
+        0.1,
+        0.01
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "0.1",
+        "0.01"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "rare-spike finite-n probability and moments",
+      "computed": [
+        0.01,
+        1.0,
+        100.0
+      ],
+      "expected": [
+        0.01,
+        1.0,
+        100.0
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "0.01",
+        "E[Y_n]=1"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "alternating same-law variables at n=1",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "alternating same-law variables at n=2",
+      "computed": 0.0,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "alternating same-law variables at n=7",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "alternating same-law variables at n=20",
+      "computed": 0.0,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "CDF counterexample discontinuity and continuity points",
+      "computed": [
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "expected": [
+        0.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [
+        "F_n(0)=0",
+        "F(0)=1"
+      ],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter interval length at n=37",
+      "computed": 0.03125,
+      "expected": 0.03125,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.0, k=1",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.0, k=3",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.0, k=6",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.125, k=1",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.125, k=3",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.125, k=6",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.314159, k=1",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.314159, k=3",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.314159, k=6",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.999, k=1",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.999, k=3",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    },
+    {
+      "lesson": "P06",
+      "name": "typewriter one visit per block for u=0.999, k=6",
+      "computed": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-10,
+      "displayed_anchors": [],
+      "status": "passed"
+    }
+  ],
+  "sources": {
+    "P01": {
+      "path": "src/content/pregrade1/conditional-expectation.md",
+      "sha256": "f6065b1adbcfdfc3c116110b31b2515a9db69b39eca3e836c6fa3929121aa3b7"
+    },
+    "P06": {
+      "path": "src/content/pregrade1/modes-of-convergence.md",
+      "sha256": "b94971c5399c83814f0ad5c48d5fd6991ea37b670df54f8404a3a16cf1360f2c"
+    },
+    "P05": {
+      "path": "src/content/pregrade1/multivariate-transformations.md",
+      "sha256": "65b6b6a921dc31afe90b85dd01d78f0c3cbd570f6e29a62c2ae8c19951137a81"
+    },
+    "P04": {
+      "path": "src/content/pregrade1/probability-generating-functions.md",
+      "sha256": "5063fd79d54e0ddb1d2b52e4fa38fed5f56e68c40d33ddaaceff0e47e4ed5754"
+    },
+    "P02": {
+      "path": "src/content/pregrade1/conditional-variance.md",
+      "sha256": "88bd0156936a0d923e31ef79648adfcf90edf7b6d75fc27ff303e7241c8c05ef"
+    },
+    "P03": {
+      "path": "src/content/pregrade1/moment-generating-functions.md",
+      "sha256": "f09459ea2818b32132626b05a777df93897c8233a65d418ab8cbb78d2d7f8776"
+    }
+  },
+  "environment": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "limits": [
+    "Finite numerical checks do not prove asymptotic convergence, existence or uniqueness theorems.",
+    "Proof assumptions and nonnumerical explanations are reviewed separately.",
+    "No independent human mathematical peer review is claimed."
+  ]
+}
