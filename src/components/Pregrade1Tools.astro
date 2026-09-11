@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import { withBase } from '../lib/site';
+import { lessonSearchText } from '../lib/lesson-search-text.mjs';
 import '../styles/learning-extras.css';
 interface Props { lessonId?: string; }
 const { lessonId } = Astro.props;
@@ -8,7 +9,7 @@ const lessons = await getCollection('pregrade1', ({ data }) => data.status === '
 const entries = lessons.map((entry) => ({
   id: entry.data.lesson_id, title: entry.data.title,
   url: withBase(`/learn/pregrade1/${entry.data.slug}/`),
-  text: lessonId ? '' : `${entry.data.title} ${entry.data.description} ${(entry.body ?? '').replace(/<[^>]*>/g, ' ')}`
+  text: lessonId ? '' : `${entry.data.title} ${entry.data.description} ${lessonSearchText(entry.body ?? '')}`
 }));
 const serialized = JSON.stringify(entries).replace(/</g, '\\u003c');
 ---

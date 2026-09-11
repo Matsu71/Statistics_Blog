@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import './test-lesson-search-text.mjs';
 import { readFile, stat, writeFile, mkdir } from 'node:fs/promises';
 import { createServer } from 'node:http';
 import { once } from 'node:events';
@@ -74,6 +75,7 @@ try{
       equal(await page.locator('.lesson-planned').count(),72-report.lesson_count);
       equal(await page.locator('#syllabus-versions a[href$=".pdf"]').count(),2);
       await page.locator('#pregrade1-search').fill('ヤコビアン');ok(await page.locator('[data-p-id="P05"]').isVisible());
+      await page.locator('#pregrade1-search').fill('連立方程式');ok(await page.locator('[data-p-id="P05"]').isVisible(),'inequality must not delete searchable prose');
       await page.locator('#pregrade1-search').fill('存在しない検索xyz987');equal(await page.locator('.course-module:visible').count(),0);
       await page.locator('#pregrade1-search').fill('');equal(await page.locator('[data-p-id]:visible').count(),72);
       await page.goto(url('/learn/pregrade1/conditional-expectation/#p01-tower-proof'),{waitUntil:'networkidle'});
@@ -104,7 +106,7 @@ try{
   equal(errors.length,0,errors.join('\n'));
   const evidence={status:'passed',checked_at:new Date().toISOString(),source_commit:process.env.GITHUB_SHA??null,
     assertions,lesson_views:views.length,views,page_errors:errors,
-    checks:['mobile and desktop','all solutions expanded','number legibility','TOC and next links','native disclosure keyboard','deep link','print restore','search','export and isolated clear','malformed storage','blocked storage','JavaScript disabled'],
+    checks:['mobile and desktop','all solutions expanded','number legibility','TOC and next links','native disclosure keyboard','deep link','print restore','search including prose after inequalities','export and isolated clear','malformed storage','blocked storage','JavaScript disabled'],
     limitations:['Screenshots are stored separately for visual review.','Automated browsers do not establish learner outcomes or substitute for an independent accessibility audit.']};
   await writeFile('project-docs/pregrade1/checks/browser.json',JSON.stringify(evidence,null,2)+'\n');
   console.log(JSON.stringify({...evidence,views:undefined},null,2));
