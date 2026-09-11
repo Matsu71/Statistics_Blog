@@ -7,9 +7,16 @@ import '../../styles/learning.css';
 
 export async function getStaticPaths() {
   const lessons = await getCollection('lessons', ({ data }) => data.status === 'published');
-  return lessons.map((lesson) => ({ params: { slug: lesson.data.slug }, props: { lesson } }));
+  return lessons.map((lesson) => ({
+    params: { slug: lesson.data.slug },
+    props: { lesson }
+  }));
 }
-interface Props { lesson: CollectionEntry<'lessons'>; }
+
+interface Props {
+  lesson: CollectionEntry<'lessons'>;
+}
+
 const { lesson } = Astro.props;
 const { Content, headings } = await render(lesson);
 const published = await getCollection('lessons', ({ data }) => data.status === 'published');
@@ -18,35 +25,117 @@ const ordered = course.modules.flatMap((module) => module.lessons);
 const position = ordered.findIndex((entry) => entry.id === lesson.data.lesson_id);
 const previous = position > 0 ? ordered[position - 1] : undefined;
 const next = ordered[position + 1];
-const prerequisites = lesson.data.prerequisites.map((id) => lookup.get(id)).filter((entry) => entry !== undefined);
+const prerequisites = lesson.data.prerequisites
+  .map((id) => lookup.get(id))
+  .filter((entry) => entry !== undefined);
 const toc = headings.filter((heading) => heading.depth === 2);
 ---
-<BaseLayout title={`${lesson.data.lesson_id} ${lesson.data.title}`} description={lesson.data.description} ogType="article" updatedAt={lesson.data.updated_at}>
+
+<BaseLayout
+  title={`${lesson.data.lesson_id} ${lesson.data.title}`}
+  description={lesson.data.description}
+  ogType="article"
+  updatedAt={lesson.data.updated_at}
+>
   <div class="learning-shell lesson-shell">
-    <nav class="learning-breadcrumb" aria-label="パンくず"><a href={withBase('/courses/')}>学習コース</a><span aria-hidden="true"> / </span><a href={withBase('/courses/foundation/')}>統計の基礎</a><span aria-hidden="true"> / </span><span>{lesson.data.lesson_id}</span></nav>
-    <header class="learning-hero"><p class="learning-eyebrow">統計の基礎 · 第{position + 1}講</p><h1>{lesson.data.title}</h1><p>{lesson.data.description}</p><p class="lesson-time">読む目安 {lesson.data.reading_minutes}分 ＋ 確認問題 {lesson.data.practice_minutes}分（編集上の目安）</p></header>
-    <section class="lesson-goals" aria-labelledby="goals"><h2 id="goals">このページでできること</h2><ul>{lesson.data.goals.map((goal) => <li>{goal}</li>)}</ul>{prerequisites.length > 0 && <p>前提を確認：{prerequisites.map((entry, index) => <>{index > 0 && ' / '}<a href={withBase(`/learn/${entry.slug}/`)}>{entry.title}</a></>)}</section>
-    <nav class="lesson-toc" aria-label="このページの目次"><strong>このページの内容</strong><ol>{toc.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav>
-    <div class="lesson-tools" data-lesson-tools hidden><button type="button" data-expand>解答も含めてすべて開く</button><button type="button" data-collapse>詳しい説明・解答を閉じる</button><button type="button" data-print>印刷</button></div>
-    <article class="lesson-body" data-lesson-id={lesson.data.lesson_id}><Content /></article>
-    <nav class="lesson-pagination" aria-label="講座を移動">
-      {previous && lookup.has(previous.id) ? <a href={withBase(`/learn/${previous.slug}/`)} rel="prev"><small>前の講座</small>{previous.title}</a> : <a href={withBase('/courses/foundation/')}>コースの目次</a>}
-      {next && lookup.has(next.id) ? <a href={withBase(`/learn/${next.slug}/`)} rel="next"><small>次の講座</small>{next.title} →</a> : <a href={withBase('/courses/foundation/')}>ここまでの内容を復習する →</a>}
+    <nav class="learning-breadcrumb" aria-label="パンくず">
+      <a href={withBase('/courses/')}>学習コース</a>
+      <span aria-hidden="true"> / </span>
+      <a href={withBase('/courses/foundation/')}>統計の基礎</a>
+      <span aria-hidden="true"> / </span>
+      <span>{lesson.data.lesson_id}</span>
     </nav>
-    <p class="lesson-review">内容確認：{lesson.data.review_status === 'independently_reviewed' ? '別担当者による確認済み' : '出典照合・計算・説明の自己点検済み（第三者監修ではありません）'}。例・図・問題は本講座用の独自制作です。</p>
+
+    <header class="learning-hero">
+      <p class="learning-eyebrow">統計の基礎 · 第{position + 1}講</p>
+      <h1>{lesson.data.title}</h1>
+      <p>{lesson.data.description}</p>
+      <p class="lesson-time">
+        読む目安 {lesson.data.reading_minutes}分 ＋ 確認問題 {lesson.data.practice_minutes}分（編集上の目安）
+      </p>
+    </header>
+
+    <section class="lesson-goals" aria-labelledby="goals">
+      <h2 id="goals">このページでできること</h2>
+      <ul>{lesson.data.goals.map((goal) => <li>{goal}</li>)}</ul>
+      {prerequisites.length > 0 && (
+        <div class="lesson-prerequisites">
+          <p>前提を確認</p>
+          <ul>
+            {prerequisites.map((entry) => (
+              <li><a href={withBase(`/learn/${entry.slug}/`)}>{entry.title}</a></li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </section>
+
+    <nav class="lesson-toc" aria-label="このページの目次">
+      <strong>このページの内容</strong>
+      <ol>
+        {toc.map((heading) => (
+          <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
+        ))}
+      </ol>
+    </nav>
+
+    <div class="lesson-tools" data-lesson-tools hidden>
+      <button type="button" data-expand>解答も含めてすべて開く</button>
+      <button type="button" data-collapse>詳しい説明・解答を閉じる</button>
+      <button type="button" data-print>印刷</button>
+    </div>
+
+    <article class="lesson-body" data-lesson-id={lesson.data.lesson_id}>
+      <Content />
+    </article>
+
+    <nav class="lesson-pagination" aria-label="講座を移動">
+      {previous && lookup.has(previous.id) ? (
+        <a href={withBase(`/learn/${previous.slug}/`)} rel="prev">
+          <small>前の講座</small>{previous.title}
+        </a>
+      ) : (
+        <a href={withBase('/courses/foundation/')}>コースの目次</a>
+      )}
+      {next && lookup.has(next.id) ? (
+        <a href={withBase(`/learn/${next.slug}/`)} rel="next">
+          <small>次の講座</small>{next.title} →
+        </a>
+      ) : (
+        <a href={withBase('/courses/foundation/')}>ここまでの内容を復習する →</a>
+      )}
+    </nav>
+
+    <p class="lesson-review">
+      内容確認：{lesson.data.review_status === 'independently_reviewed'
+        ? '別担当者による確認済み'
+        : '出典照合・計算・説明の自己点検済み（第三者監修ではありません）'}。
+      例・図・問題は本講座用の独自制作です。
+    </p>
   </div>
 </BaseLayout>
+
 <script>
   const article = document.querySelector<HTMLElement>('.lesson-body');
   const disclosures = () => Array.from(article?.querySelectorAll<HTMLDetailsElement>('details') ?? []);
   const tools = document.querySelector<HTMLElement>('[data-lesson-tools]');
   if (tools) tools.hidden = false;
-  document.querySelector('[data-expand]')?.addEventListener('click', () => disclosures().forEach((item) => { item.open = true; }));
-  document.querySelector('[data-collapse]')?.addEventListener('click', () => disclosures().forEach((item) => { item.open = false; }));
+
+  document.querySelector('[data-expand]')?.addEventListener('click', () => {
+    disclosures().forEach((item) => { item.open = true; });
+  });
+  document.querySelector('[data-collapse]')?.addEventListener('click', () => {
+    disclosures().forEach((item) => { item.open = false; });
+  });
   document.querySelector('[data-print]')?.addEventListener('click', () => window.print());
+
   function revealHash() {
     let id: string;
-    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch { return; }
+    try {
+      id = decodeURIComponent(window.location.hash.slice(1));
+    } catch {
+      return;
+    }
     if (!id) return;
     const target = document.getElementById(id);
     if (!target) return;
@@ -59,6 +148,7 @@ const toc = headings.filter((heading) => heading.depth === 2);
   }
   window.addEventListener('hashchange', revealHash);
   revealHash();
+
   let printState: boolean[] | null = null;
   window.addEventListener('beforeprint', () => {
     if (printState === null) printState = disclosures().map((item) => item.open);
