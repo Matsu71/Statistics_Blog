@@ -1,0 +1,32 @@
+{
+  "version": "2026-09-11",
+  "scope": "foundation",
+  "review_status": "self_checked",
+  "note": "公式範囲の項目群と講座・理解確認の対応。公式の公認・問題再現・合格保証ではなく、同じ項目群内の全難度・全出題形式を網羅したという意味でもありません。",
+  "sources": [
+    {"id":"G3","title":"統計検定3級 出題範囲表（2020年4月より実施）","url":"https://www.toukei-kentei.jp/hubfs/files/grade_range/grade3_hani_20181214.pdf","document_date":"2018-12-14","checked_at":"2026-09-11"},
+    {"id":"G4","title":"統計検定4級 出題範囲表（2020年4月より実施）","url":"https://www.toukei-kentei.jp/hubfs/files/grade_range/grade4_hani_20181214.pdf","document_date":"2018-12-14","checked_at":"2026-09-11"}
+  ],
+  "rows": [
+    {"id":"C01","topic":"問い・問題解決の進め方","source_ids":["G4"],"source_locator":"p.1 統計的問題解決の方法","lesson_ids":["F01","F39","F40"],"question_ids":["F01-Q1","F39-Q3"],"focus":"対象・期間・調査計画・分析・結論のつながり。結果と限界を分ける。"},
+    {"id":"C02","topic":"データの種類・尺度","source_ids":["G3","G4"],"source_locator":"p.1 データの種類","lesson_ids":["F02","F03"],"question_ids":["F02-Q1","F03-Q1","F03-Q2","F03-Q3"],"focus":"量的・質的、名義・順序・間隔・比例、測定と記録精度。"},
+    {"id":"C03","topic":"母集団・標本・調査","source_ids":["G3","G4"],"source_locator":"p.1 標本調査","lesson_ids":["F04","F34"],"question_ids":["F04-Q1","F04-Q2","F04-Q3","F04-Q4"],"focus":"全数・標本調査、抽出枠、無作為抽出、非回答。乱数表の読み方と重複・範囲外の扱い。"},
+    {"id":"C04","topic":"観察と実験","source_ids":["G3"],"source_locator":"p.1 実験","lesson_ids":["F05","F21"],"question_ids":["F05-Q1","F05-Q2","F05-Q3"],"focus":"介入、対照群、無作為抽出と割付、結果を一般化する条件。"},
+    {"id":"C05","topic":"基本的なグラフ","source_ids":["G3","G4"],"source_locator":"p.1 統計グラフ（1変数・基本的な見方）","lesson_ids":["F08","F09","F22"],"question_ids":["F08-Q2","F09-Q1","F09-Q2","F09-Q3"],"focus":"棒・折れ線・円・帯・積み上げ・絵・面・パレート図・ドットプロット。軸、分母、重複回答の点検。"},
+    {"id":"C06","topic":"複合・レーダー・バブル・ローソク足","source_ids":["G3","G4"],"source_locator":"p.1 統計グラフ（4級は主に複合グラフ）","lesson_ids":["F11"],"question_ids":["F11-Q1","F11-Q2","F11-Q3"],"focus":"軸と単位、面積・半径の違い、レーダーの順序依存、四本値。"},
+    {"id":"C07","topic":"度数分布表と累積","source_ids":["G3","G4"],"source_locator":"p.1 データの集計・度数分布表","lesson_ids":["F06","F07","F13","F15"],"question_ids":["F07-Q1","F07-Q2","F07-Q3","F13-Q2"],"focus":"度数・相対度数・階級・階級値・幅・累積。表からの統計量は近似であること。"},
+    {"id":"C08","topic":"クロス集計・モザイク図","source_ids":["G3","G4"],"source_locator":"p.1 クロス集計表・2変数の統計グラフ","lesson_ids":["F10","F21","F27"],"question_ids":["F10-Q1","F10-Q2","F10-Q3"],"focus":"行・列・全体の割合、周辺度数、モザイクの幅・高さ・面積。"},
+    {"id":"C09","topic":"時間的・空間的データ","source_ids":["G3","G4"],"source_locator":"p.1 時系列データ／時間的・空間的データ","lesson_ids":["F06","F22"],"question_ids":["F06-Q2","F22-Q1","F22-Q2","F22-Q3"],"focus":"指数、増減率、移動平均、基準時点・地域の分母。"},
+    {"id":"C10","topic":"平均・中央値・最頻値","source_ids":["G3","G4"],"source_locator":"p.1 データの代表値／中心の位置","lesson_ids":["F12","F13"],"question_ids":["F12-Q1","F12-Q2","F12-Q3","F13-Q1"],"focus":"代表値の役割と限界、加重平均、中央値と両端の中点の違い。"},
+    {"id":"C11","topic":"散らばり・四分位数・箱ひげ図","source_ids":["G3","G4"],"source_locator":"p.1 散らばり／分布の散らばり・箱ひげ図","lesson_ids":["F14","F18"],"question_ids":["F14-Q1","F14-Q2","F14-Q3","F18-Q3"],"focus":"最小・最大・範囲、四分位数、IQR、計算慣習、ひげと外れ値候補。"},
+    {"id":"C12","topic":"分散・標準偏差・偏差値・変動係数","source_ids":["G3"],"source_locator":"p.1 1変数データの散らばり","lesson_ids":["F15","F16","F17","F18"],"question_ids":["F15-Q1","F15-Q2","F16-Q2","F17-Q1","F18-Q1"],"focus":"分母nとn−1、単位、一次変換、z値、正規分布の仮定と標準化の区別。"},
+    {"id":"C13","topic":"分布を示す図","source_ids":["G3","G4"],"source_locator":"p.1 ヒストグラム／散らばりのグラフ","lesson_ids":["F07","F08","F14"],"question_ids":["F07-Q2","F08-Q1","F08-Q2","F08-Q3"],"focus":"ヒストグラムの面積、累積相対度数、幹葉、単峰・多峰、裾・外れ値。"},
+    {"id":"C14","topic":"共分散・相関・擬相関・因果","source_ids":["G3"],"source_locator":"p.1 2変数データ／相関","lesson_ids":["F19","F21"],"question_ids":["F19-Q1","F19-Q2","F19-Q3","F21-Q1","F21-Q3"],"focus":"散布図、対応を保つ集計、rの性質、非線形の反例、混合集団と因果の区別。"},
+    {"id":"C15","topic":"回帰直線・最小二乗・予測","source_ids":["G3"],"source_locator":"p.1 回帰直線","lesson_ids":["F20"],"question_ids":["F20-Q1","F20-Q2","F20-Q3"],"focus":"回帰係数、切片、予測と残差、外挿、平方完成による導出。"},
+    {"id":"C16","topic":"確率・試行・条件付き確率","source_ids":["G3","G4"],"source_locator":"p.1 確率／確率の基礎","lesson_ids":["F23","F24","F25","F26","F27","F28"],"question_ids":["F23-Q3","F24-Q1","F25-Q1","F26-Q1","F26-Q3","F27-Q2","F28-Q3"],"focus":"標本空間、等確率、樹形図、余事象、加法、独立と排反、条件の向き、頻度の変動。"},
+    {"id":"C17","topic":"確率変数・二項分布・正規分布","source_ids":["G3"],"source_locator":"p.1 確率分布","lesson_ids":["F29","F30","F31","F32","F33"],"question_ids":["F29-Q1","F30-Q1","F31-Q1","F32-Q1","F33-Q1"],"focus":"期待値・分散・標準偏差、密度と面積、分布表、1.96、連続性補正と近似条件。"},
+    {"id":"C18","topic":"標本平均・標本比率の分布","source_ids":["G3"],"source_locator":"p.1 統計的推測・標本分布","lesson_ids":["F34"],"question_ids":["F34-Q1","F34-Q2","F34-Q3"],"focus":"SDとSE、独立性、中心極限定理、有限母集団補正、不偏分散の根拠。"},
+    {"id":"C19","topic":"母平均・母比率の区間推定","source_ids":["G3"],"source_locator":"p.1 統計的推測・区間推定","lesson_ids":["F35","F36","F39"],"question_ids":["F35-Q1","F35-Q2","F35-Q3","F36-Q1","F36-Q2","F39-Q1"],"focus":"被覆率、母分散既知・未知、zとt、比率の近似条件、信用区間との区別。"},
+    {"id":"C20","topic":"母平均・母比率の仮説検定","source_ids":["G3"],"source_locator":"p.1 統計的推測・仮説検定","lesson_ids":["F37","F38","F39","F40"],"question_ids":["F37-Q1","F37-Q2","F37-Q3","F38-Q1","F38-Q2","F39-Q2"],"focus":"帰無・対立、有意水準、片側・両側、p値、誤りと検出力、非有意の解釈。"}
+  ]
+}

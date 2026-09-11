@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import { normalDensity, normalSF } from '../../lib/learning-math.mjs';
+import '../../styles/learning.css';
+import '../../styles/learning-extras.css';
+const defaultCurve = Array.from({length:321},(_,i)=>{const z=-4+i/40;return `${i ? 'L':'M'}${60+(z+4)*65},${245-normalDensity(z)*480}`;}).join(' ');
+---
+<BaseLayout title="図を動かして学ぶ" description="正規分布の面積、試行の相対度数、信頼区間の被覆率を、条件を変えて確かめる統計の学習実験です。">
+  <div class="learning-shell">
+    <nav class="learning-breadcrumb" aria-label="パンくず"><a href={withBase('/courses/foundation/')}>統計の基礎</a><span> / 図を動かして学ぶ</span></nav>
+    <header class="learning-hero"><h1>図を動かして学ぶ</h1><p>まず結果を予想し、条件を一つだけ変え、なぜ変わったかを説明します。計算や図は、指定したモデルの実験です。実測データや一般的な定理の証明ではありません。</p></header>
+    <nav class="lab-nav" aria-label="学習実験を選ぶ"><a href="#normal">正規分布の面積</a><a href="#frequency">確率と相対度数</a><a href="#confidence">信頼区間の繰返し</a></nav>
+    <noscript><p class="learning-note">操作する機能にはJavaScriptを使います。無効な場合も、初期例と説明・元の講座は読めます。</p></noscript>
+
+    <section class="lesson-body lab-section" id="normal" data-lab="normal" aria-labelledby="normal-heading">
+      <h2 id="normal-heading">正規分布：片側と両側を比べる</h2>
+      <p><strong>予想：</strong>z=1.96を固定して右側から両端へ切り替えると、確率はどうなりますか。平均や標準偏差を変え、同じz値が元の単位ではどこに対応するかも考えます。</p>
+      <form class="lab-form" id="normal-form" hidden>
+        <label>平均 μ<input name="mu" type="number" min="-100000" max="100000" step="any" value="50" required /></label>
+        <label>標準偏差 σ<input name="sigma" type="number" min="0.0001" max="100000" step="any" value="10" required /></label>
+        <label>境界 z<input name="z" type="number" min="-8" max="8" step="any" value="1.96" required /></label>
+        <label>求める領域<select name="mode"><option value="upper">右側 Z ≥ z</option><option value="lower">左側 Z ≤ z</option><option value="central">中央 |Z| ≤ |z|</option><option value="two">両端 |Z| ≥ |z|</option></select></label>
+        <button type="submit">面積を計算する</button>
+      </form>
+      <p class="lab-note">横軸は標準化したzです。中央・両端の指定では境界の絶対値を使います。元の値Xが正規分布に従うモデルです。</p>
+      <p role="alert" data-lab-error></p>
+      <p class="lab-result" data-lab-result aria-live="polite">初期例：平均50、標準偏差10。z=1.96はX=69.6に対応し、右側確率は約{(100*normalSF(1.96)).toFixed(5)}%です。両端なら約5%、中央なら約95%です。</p>
+      <svg data-lab-chart viewBox="0 0 640 300" role="img" aria-label="標準正規分布の初期の曲線。操作すると選んだ領域を塗ります。"><path d="M60 245H580" stroke="currentColor"/><path d={defaultCurve} fill="none" stroke="#144a56" stroke-width="2"/><text x="300" y="275" fill="currentColor">0</text></svg>
+      <p class="lab-note">図の表示範囲の外にも裾は続きます。数値は塗った画素の面積ではなく、分布の式から直接計算します。標準化だけで任意の分布が正規分布になるわけではありません。</p>
+      <p><strong>確かめる：</strong>境界を0、1、1.96、2へ変え、右側と中央の確率を比較してください。<a href={withBase('/learn/normal-table-and-tail-area/')}>F32の分布表・1.96の説明へ戻る</a></p>
+    </section>
+
+    <section class="lesson-body lab-section" id="frequency" data-lab="frequency" aria-labelledby="frequency-heading">
+      <h2 id="frequency-heading">確率と相対度数：回数を増やす</h2>
+      <p><strong>予想：</strong>成功確率が0.5でも、観測割合は毎回0.5でしょうか。10回と1,000回を比べ、近づき方が単調かどうかを見ます。</p>
+      <form class="lab-form" id="frequency-form" hidden>
+        <label>成功確率 p<input name="p" type="number" min="0" max="1" step="any" value="0.5" required /></label>
+        <label>試行回数<input name="n" type="number" min="1" max="2000" step="1" value="100" required /></label>
+        <label>乱数の初期値（seed）<input name="seed" type="number" min="1" max="2147483646" step="1" value="12345" required /></label>
+        <button type="submit">同じ条件で実行する</button>
+      </form>
+      <p role="alert" data-lab-error></p>
+      <p class="lab-result" data-lab-result aria-live="polite">説明用の列 H H T H T H T T T T では10回中4回成功し、相対度数は40%です。成功確率50%というモデルでも、このように割合はぶれます。</p>
+      <svg data-lab-chart viewBox="0 0 640 300" role="img" aria-label="試行後の成功割合。操作すると回数ごとの割合を線で表示します。"><text x="55" y="100" fill="currentColor">実行すると、各回までの成功割合を表示します。</text></svg>
+      <p class="lab-note">共通のpによる独立試行を擬似乱数で模擬します。同じ生成器・seed・条件なら同じ列です。新しい列を見るにはseedを変えてください。暗号用途や実機の乱数品質を保証する生成器ではありません。</p>
+      <p><strong>確かめる：</strong>最終割合だけでなく、途中でpから遠ざかる区間も探してください。<a href={withBase('/learn/probability-and-repetition/')}>F28の大数の法則と注意点へ戻る</a></p>
+    </section>
+
+    <section class="lesson-body lab-section" id="confidence" data-lab="confidence" aria-labelledby="confidence-heading">
+      <h2 id="confidence-heading">信頼区間：95%は何の割合か</h2>
+      <p><strong>予想：</strong>同じ条件で100本の95%信頼区間を作ると、必ず95本が母平均を含むでしょうか。nだけを4倍にして区間の幅も比べてください。</p>
+      <form class="lab-form" id="confidence-form" hidden>
+        <label>母平均 μ<input name="mu" type="number" min="-100000" max="100000" step="any" value="50" required /></label>
+        <label>既知の母標準偏差 σ<input name="sigma" type="number" min="0.0001" max="100000" step="any" value="10" required /></label>
+        <label>標本サイズ n<input name="n" type="number" min="1" max="100000" step="1" value="25" required /></label>
+        <label>区間を作る回数<input name="repetitions" type="number" min="1" max="2000" step="1" value="100" required /></label>
+        <label>信頼係数<select name="level"><option value="90">90%</option><option value="95" selected>95%</option><option value="99">99%</option></select></label>
+        <label>乱数の初期値（seed）<input name="seed" type="number" min="1" max="2147483646" step="1" value="12345" required /></label>
+        <button type="submit">区間を繰り返し作る</button>
+      </form>
+      <p role="alert" data-lab-error></p>
+      <p class="lab-result" data-lab-result aria-live="polite">初期条件：母平均50、既知の母標準偏差10、n=25では平均の標準誤差は2です。95%区間の半幅は約3.91993になります。</p>
+      <svg data-lab-chart viewBox="0 0 640 350" role="img" aria-label="繰り返し作った信頼区間。操作すると、母平均を含まない区間を破線で表示します。"><text x="55" y="100" fill="currentColor">実行すると、母平均と区間を比較します。</text></svg>
+      <div data-interval-table></div>
+      <p class="lab-note">独立な正規標本・母分散既知のモデルです。標本平均をその正確な分布N(μ,σ²/n)から直接生成します。n個ずつの観測値を実測したデータではありません。集計は全反復、図は最初の50本まで、表は最初の10本までです。破線は母平均を含まない区間で、色だけに頼らず区別します。</p>
+      <p><strong>確かめる：</strong>母平均は固定で、区間が標本ごとに動くことを説明してください。<a href={withBase('/learn/mean-confidence-interval-basics/')}>F35の被覆率・区間の導出へ戻る</a></p>
+    </section>
+    <p class="learning-note">これらは本サイト用の独自実装です。計算の前提と証明は各講座、確認方法は<a href={withBase('/about/#review')}>編集・確認方針</a>で読めます。</p>
+  </div>
+</BaseLayout>
+<script>
+  import { normalDensity, normalSF, normalCDF, seededRandom, coverageSimulation } from '../../lib/learning-math.mjs';
+  type Interval = { index: number; mean: number; lower: number; upper: number; covers: boolean };
+  const NS = 'http://www.w3.org/2000/svg';
+  function svgElement(tag: string, attrs: Record<string, string | number>, text?: string) {
+    const node = document.createElementNS(NS, tag);
+    Object.entries(attrs).forEach(([name, value]) => node.setAttribute(name, String(value)));
+    if (text !== undefined) node.textContent = text;
+    return node;
+  }
+  function label(svg: SVGElement, x: number, y: number, text: string, anchor = 'middle') {
+    svg.append(svgElement('text', { x, y, fill: 'currentColor', 'font-size': 14, 'text-anchor': anchor }, text));
+  }
+  function number(form: HTMLFormElement, name: string) {
+    const input = form.elements.namedItem(name) as HTMLInputElement | HTMLSelectElement;
+    const value = Number(input.value);
+    if (!Number.isFinite(value)) throw new Error('有限の数値を入力してください。');
+    return value;
+  }
+  function chart(section: HTMLElement, title: string, height = 300) {
+    const svg = section.querySelector<SVGSVGElement>('[data-lab-chart]')!;
+    svg.replaceChildren(svgElement('title', {}, title)); svg.setAttribute('aria-label', title); svg.setAttribute('viewBox', `0 0 640 ${height}`);
+    return svg;
+  }
+  const precise = (n: number) => Math.abs(n) > 0 && Math.abs(n) < 0.00001 ? n.toExponential(6) : Number(n.toPrecision(9)).toString();
+  function normal(section: HTMLElement, form: HTMLFormElement) {
+    const mu = number(form,'mu'), sigma=number(form,'sigma'), z=number(form,'z');
+    if (!(sigma > 0)) throw new Error('標準偏差は0より大きい値が必要です。');
+    const mode = (form.elements.namedItem('mode') as HTMLSelectElement).value;
+    const probability = mode === 'upper' ? normalSF(z) : mode === 'lower' ? normalCDF(z) : mode === 'central' ? 1-2*normalSF(Math.abs(z)) : 2*normalSF(Math.abs(z));
+    const result = section.querySelector<HTMLElement>('[data-lab-result]')!;
+    result.dataset.probability=String(probability);
+    const threshold = mode === 'central' || mode === 'two' ? `境界はX=${precise(mu-sigma*Math.abs(z))}と${precise(mu+sigma*Math.abs(z))}` : `z=${z}はX=${precise(mu+sigma*z)}に対応`;
+    result.textContent=`${threshold}。選んだ領域の確率は ${precise(probability)}（${precise(probability*100)}%）です。`;
+    const svg=chart(section, `標準正規分布：${result.textContent}`), span=Math.max(4,Math.abs(z)+.5), x=(v:number)=>60+(v+span)*520/(2*span), y=(v:number)=>245-480*normalDensity(v);
+    function shade(a:number,b:number) {
+      if (a>=b) return;
+      const line=Array.from({length:101},(_,i)=>{const v=a+(b-a)*i/100;return `L${x(v)},${y(v)}`;}).join(' ');
+      svg.append(svgElement('path',{d:`M${x(a)},245 ${line} L${x(b)},245 Z`,fill:'#b2d5db'}));
+    }
+    if(mode==='upper')shade(z,span);else if(mode==='lower')shade(-span,z);else if(mode==='central')shade(-Math.abs(z),Math.abs(z));else{shade(-span,-Math.abs(z));shade(Math.abs(z),span);}
+    const line=Array.from({length:401},(_,i)=>{const v=-span+2*span*i/400;return `${i?'L':'M'}${x(v)},${y(v)}`;}).join(' ');
+    svg.append(svgElement('path',{d:line,stroke:'#144a56','stroke-width':2,fill:'none'}),svgElement('path',{d:'M60 245H580',stroke:'currentColor'}));
+    for(let j=0;j<5;j++){const v=-span+span*j/2;label(svg,x(v),268,Number(v.toFixed(2)).toString());}
+    label(svg,320,293,'z（標準化した値）');
+  }
+  function frequency(section: HTMLElement, form: HTMLFormElement) {
+    const p=number(form,'p'), n=number(form,'n'), seed=number(form,'seed'), random=seededRandom(seed);
+    if(!Number.isInteger(n)||n<1||n>2000||p<0||p>1)throw new Error('確率は0〜1、試行回数は1〜2000の整数で指定してください。');
+    let successes=0;
+    const values=Array.from({length:n},(_,i)=>{if(random()<p)successes++;return {i:i+1,q:successes/(i+1)};});
+    const result=section.querySelector<HTMLElement>('[data-lab-result]')!;
+    result.dataset.successes=String(successes);result.dataset.trials=String(n);
+    result.textContent=`${n}回中${successes}回成功。観測割合は${precise(successes/n)}、モデルのpは${p}です。seed=${seed}。`;
+    const svg=chart(section,`試行ごとの相対度数。${result.textContent}`),x=(i:number)=>60+i/n*520,y=(q:number)=>245-q*200;
+    svg.append(svgElement('path',{d:'M60 35V245H580',stroke:'currentColor',fill:'none'}),svgElement('path',{d:`M60 ${y(p)}H580`,stroke:'#77512b','stroke-dasharray':'6 4','stroke-width':2,fill:'none'}));
+    const d=values.map((v,i)=>`${i?'L':'M'}${x(v.i)},${y(v.q)}`).join(' ');
+    svg.append(svgElement('path',{d,stroke:'#144a56','stroke-width':2,fill:'none'}));
+    if(n===1)svg.append(svgElement('circle',{cx:x(1),cy:y(values[0].q),r:4,fill:'#144a56'}));
+    for(const q of [0,.5,1])label(svg,35,y(q)+5,String(q));
+    label(svg,60,270,'0');label(svg,580,270,String(n));label(svg,320,294,'試行回数（実線：観測割合、破線：モデルのp）');
+  }
+  function confidence(section: HTMLElement, form: HTMLFormElement) {
+    const args={mu:number(form,'mu'),sigma:number(form,'sigma'),n:number(form,'n'),repetitions:number(form,'repetitions'),level:number(form,'level'),seed:number(form,'seed')};
+    const output=coverageSimulation(args) as { se:number; half:number; covered:number; intervals:Interval[] };
+    const result=section.querySelector<HTMLElement>('[data-lab-result]')!;
+    result.dataset.covered=String(output.covered);result.dataset.half=String(output.half);
+    result.textContent=`${args.repetitions}本中${output.covered}本が母平均を含みました（${precise(100*output.covered/args.repetitions)}%）。設定は${args.level}%信頼区間。SE=${precise(output.se)}、半幅=${precise(output.half)}。有限回なので設定値と一致するとは限りません。`;
+    const shown=output.intervals.slice(0,50), low=Math.min(args.mu,...shown.map(v=>v.lower)), high=Math.max(args.mu,...shown.map(v=>v.upper)), padding=(high-low)*.07 || 1, a=low-padding,b=high+padding;
+    const height=Math.max(260,shown.length*9+80),svg=chart(section,`信頼区間の最初の${shown.length}本。${result.textContent}`,height),x=(v:number)=>60+(v-a)/(b-a)*520;
+    svg.append(svgElement('path',{d:`M${x(args.mu)} 25V${height-50}`,stroke:'currentColor','stroke-width':2,fill:'none'}));
+    shown.forEach((v,i)=>{const y=35+i*(height-100)/Math.max(1,shown.length-1);svg.append(svgElement('line',{x1:x(v.lower),x2:x(v.upper),y1:y,y2:y,stroke:v.covers?'#144a56':'#8b4224','stroke-width':2,'stroke-dasharray':v.covers?'none':'4 3'}));});
+    for(let j=0;j<3;j++){const v=a+(b-a)*j/2;label(svg,x(v),height-26,Number(v.toPrecision(5)).toString());}
+    label(svg,320,height-4,`横軸：元の単位 ／ 縦線：母平均 ${args.mu}`);
+    const table=document.createElement('table');const caption=document.createElement('caption');caption.textContent='最初の10本まで（数値は表示用に丸めています）';table.append(caption);
+    const head=document.createElement('thead'),row=document.createElement('tr');
+    for(const title of ['回','下限','標本平均','上限','母平均を含む']){const th=document.createElement('th');th.scope='col';th.textContent=title;row.append(th);}head.append(row);table.append(head);
+    const body=document.createElement('tbody');
+    output.intervals.slice(0,10).forEach(v=>{const row=document.createElement('tr');for(const value of [String(v.index),precise(v.lower),precise(v.mean),precise(v.upper),v.covers?'含む':'含まない']){const td=document.createElement('td');td.textContent=value;row.append(td);}body.append(row);});table.append(body);
+    section.querySelector('[data-interval-table]')?.replaceChildren(table);
+  }
+  const functions: Record<string,(section:HTMLElement,form:HTMLFormElement)=>void>={normal,frequency,confidence};
+  document.querySelectorAll<HTMLElement>('[data-lab]').forEach(section=>{
+    const form=section.querySelector<HTMLFormElement>('form')!,error=section.querySelector<HTMLElement>('[data-lab-error]')!;
+    const run=()=>{error.textContent='';if(!form.reportValidity())return;try{functions[section.dataset.lab!](section,form);}catch(e){error.textContent=e instanceof Error?e.message:'入力値を確認してください。';}};
+    form.hidden=false;form.addEventListener('submit',event=>{event.preventDefault();run();});run();
+  });
+</script>

@@ -1,0 +1,89 @@
+---
+import { getCollection } from 'astro:content';
+import { withBase } from '../lib/site';
+import '../styles/learning-extras.css';
+interface Props { lessonId?: string; }
+const { lessonId } = Astro.props;
+const entries = await getCollection('lessons', ({ data }) => data.status === 'published');
+const index = entries.map((entry) => ({
+  id: entry.data.lesson_id, title: entry.data.title,
+  url: withBase(`/learn/${entry.data.slug}/`),
+  text: lessonId ? '' : `${entry.data.title} ${entry.data.description} ${(entry.body ?? '').replace(/<[^>]+>/g, ' ')}`
+}));
+const serialized = JSON.stringify(index).replace(/</g, '\\u003c');
+---
+<section class="learning-utility" data-learning-utility data-current-lesson={lessonId ?? ''} hidden aria-label="検索と端末内の学習メモ">
+  {!lessonId && <div class="learning-search"><label for="foundation-search">講座を検索</label><input id="foundation-search" type="search" placeholder="例：標準誤差、乱数表、証明" autocomplete="off" /><p class="utility-muted">講座の本文・問題・詳しい説明を検索します。</p><p data-search-result role="status" aria-live="polite"></p></div>}
+  <div class="learning-memory">
+    {lessonId && <label class="memory-check"><input type="checkbox" data-mark-reviewed /> この講座を確認した</label>}
+    <div class="utility-actions">
+      {lessonId && <button type="button" data-save-place>ここを再開位置にする</button>}
+      <a data-resume hidden>保存した位置から再開</a>
+      <button type="button" data-export-memory>学習メモを書き出す</button>
+      <button type="button" data-clear-memory>学習メモを削除</button>
+    </div>
+    <p class="utility-muted">自分で付ける確認マークです。理解度・合格率の自動判定ではありません。記録はこのブラウザだけに保存し、別端末には同期しません。</p>
+    <p data-memory-status role="status" aria-live="polite"></p>
+  </div>
+  <script type="application/json" id="foundation-search-index" set:html={serialized}></script>
+</section>
+<script>
+  type Entry = { id: string; title: string; url: string; text: string };
+  type Memory = { version: 1; reviewed: string[]; last: string | null };
+  const utility = document.querySelector<HTMLElement>('[data-learning-utility]');
+  if (utility) {
+    const entries: Entry[] = JSON.parse(document.getElementById('foundation-search-index')?.textContent ?? '[]');
+    const byId = new Map(entries.map((entry) => [entry.id, entry]));
+    const key = 'statistics-lab:foundation:memory:v1';
+    const current = utility.dataset.currentLesson ?? '';
+    const status = utility.querySelector<HTMLElement>('[data-memory-status]')!;
+    const resume = utility.querySelector<HTMLAnchorElement>('[data-resume]')!;
+    const reviewed = utility.querySelector<HTMLInputElement>('[data-mark-reviewed]');
+    let memory: Memory = { version: 1, reviewed: [], last: null };
+    let available = true;
+    try {
+      const value = JSON.parse(localStorage.getItem(key) ?? 'null');
+      if (value?.version === 1 && Array.isArray(value.reviewed)) {
+        memory = { version: 1, reviewed: [...new Set<string>(value.reviewed.filter((id: unknown): id is string => typeof id === 'string' && byId.has(id)))], last: typeof value.last === 'string' && byId.has(value.last) ? value.last : null };
+      }
+    } catch { available = false; }
+    function render(message = '') {
+      if (reviewed) reviewed.checked = memory.reviewed.includes(current);
+      const place = memory.last ? byId.get(memory.last) : undefined;
+      resume.hidden = !place;
+      if (place) { resume.href = place.url; resume.textContent = `再開：${place.id} ${place.title}`; }
+      status.textContent = message || (available ? `確認マーク：${memory.reviewed.length} / ${entries.length}講座` : '端末内保存を利用できません。本文・問題・検索はそのまま使えます。');
+    }
+    function save(message: string) {
+      try { localStorage.setItem(key, JSON.stringify(memory)); available = true; render(message); }
+      catch { available = false; render('保存できませんでした。このページ内の表示だけに反映しています。教材はそのまま使えます。'); }
+    }
+    reviewed?.addEventListener('change', () => {
+      memory.reviewed = reviewed.checked ? [...new Set([...memory.reviewed, current])] : memory.reviewed.filter((id) => id !== current);
+      save('確認マークを更新しました。');
+    });
+    utility.querySelector('[data-save-place]')?.addEventListener('click', () => { if (byId.has(current)) { memory.last = current; save('再開位置を保存しました。'); } });
+    utility.querySelector('[data-clear-memory]')?.addEventListener('click', () => {
+      if (!window.confirm('このブラウザに保存した確認マークと再開位置を削除しますか。')) return;
+      try { localStorage.removeItem(key); memory = { version: 1, reviewed: [], last: null }; render('学習メモを削除しました。'); }
+      catch { render('保存領域にアクセスできず、削除を確認できませんでした。ブラウザ設定からサイトデータを確認してください。'); }
+    });
+    utility.querySelector('[data-export-memory]')?.addEventListener('click', () => {
+      const url = URL.createObjectURL(new Blob([JSON.stringify(memory, null, 2)], { type: 'application/json' }));
+      const link = document.createElement('a'); link.href = url; link.download = 'statistics-foundation-memory.json'; link.click();
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+    const input = document.getElementById('foundation-search') as HTMLInputElement | null;
+    const normalize = (text: string) => text.normalize('NFKC').toLocaleLowerCase('ja');
+    input?.addEventListener('input', () => {
+      const words = normalize(input.value).trim().split(/\s+/).filter(Boolean);
+      const matching = new Set(entries.filter((entry) => words.every((word) => normalize(`${entry.id} ${entry.text}`).includes(word))).map((entry) => entry.id));
+      document.querySelectorAll<HTMLElement>('.course-contents li').forEach((row) => { row.hidden = !matching.has(row.querySelector('.lesson-number')?.textContent?.trim() ?? ''); });
+      document.querySelectorAll<HTMLElement>('.course-module').forEach((module) => { module.hidden = !module.querySelector('li:not([hidden])'); });
+      const result = utility.querySelector<HTMLElement>('[data-search-result]');
+      if (result) result.textContent = words.length ? `${matching.size}講座が見つかりました。${matching.size ? '' : '短い語句や別の表現でもお試しください。'}` : '';
+    });
+    utility.hidden = false;
+    render();
+  }
+</script>

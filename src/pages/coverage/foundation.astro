@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/site';
+import coverage from '../../data/foundation-coverage.json';
+import '../../styles/learning.css';
+import '../../styles/learning-extras.css';
+const lessons = await getCollection('lessons', ({data})=>data.status==='published');
+const byId = new Map(lessons.map((lesson)=>[lesson.data.lesson_id,lesson.data]));
+---
+<BaseLayout title="基礎コースと出題範囲の対応" description="統計検定4級・3級の公式範囲と、基礎講座・確認問題を対応させた一覧です。公開範囲と教材の位置づけを確認できます。">
+<div class="learning-shell">
+<nav class="learning-breadcrumb" aria-label="パンくず"><a href={withBase('/courses/foundation/')}>統計の基礎</a><span> / 範囲の対応</span></nav>
+<header class="learning-hero"><h1>基礎コースと出題範囲</h1><p>4級・3級の内容を一つの基礎コースにまとめています。公式資料をもとに整理した項目群ごとに、学ぶ講座と理解を確認する問題を示します。</p></header>
+<aside class="learning-note"><strong>表の読み方</strong><p>{coverage.note}</p><p>対応は編集上の自己点検です。動画、有料問題集、本試験の全形式を代替するという評価ではありません。確認日：{coverage.version}。</p></aside>
+{coverage.rows.map((row)=><section class="course-module" id={row.id}><h2>{row.topic}</h2><div style="padding:0 1.2rem 1.2rem"><p>{row.focus}</p><p class="utility-muted">参照箇所：{row.source_ids.join(' / ')} · {row.source_locator}</p><p>{row.lesson_ids.map((id,index)=>{const lesson=byId.get(id);return <>{index>0 && ' ／ '}{lesson?<a href={withBase(`/learn/${lesson.slug}/`)}>{id} {lesson.title}</a>:<span>{id}（未公開）</span>}</>;})}</p><p class="utility-muted">確認問題：{row.question_ids.map((qid,index)=>{const id=qid.split('-')[0],lesson=byId.get(id),anchor=qid.toLowerCase()+'-answer';return <>{index>0 && '、'}{lesson?<a href={withBase(`/learn/${lesson.slug}/#${anchor}`)}>{qid}</a>:<span>{qid}</span>}</>;})}</p></div></section>)}
+<section class="learning-note"><h2>公式資料</h2>{coverage.sources.map(source=><p><a href={source.url}>{source.id}：{source.title}</a>（PDF記載日 {source.document_date}）</p>)}<p>資料の記載日と適用開始日は異なる場合があります。試験の最新案内は公式サイトで確認してください。</p></section>
+<p><a href={withBase('/learn/bridge-to-grade-two/')}>総合確認へ進む</a> · <a href={withBase('/about/#errata')}>対応の誤り・不足を知らせる</a></p>
+</div>
+</BaseLayout>
