@@ -1,0 +1,147 @@
+name: Recovery release audit
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['content/foundation-complete-20260911']
+    paths: ['.github/workflows/recovery-release-audit.yml']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recovery-audit-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Create an audit directory
+        run: mkdir -p project-docs/recovery-audit
+      - name: Install locked dependencies
+        id: install
+        run: npm ci 2>&1 | tee project-docs/recovery-audit/install.log
+      - name: Verify source, types, build and links
+        id: build
+        run: |
+          set -o pipefail
+          npm run generate:index 2>&1 | tee project-docs/recovery-audit/build.log
+          npm run verify 2>&1 | tee -a project-docs/recovery-audit/build.log
+      - name: Validate the entire foundation course
+        id: content
+        run: |
+          set -o pipefail
+          node scripts/validate-foundation.mjs 2>&1 | tee project-docs/recovery-audit/content.log
+      - name: Browser regression tests
+        id: browser
+        run: |
+          set -o pipefail
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium
+          node scripts/test-foundation-browser.mjs 2>&1 | tee project-docs/recovery-audit/browser.log
+      - name: Capture dependency advisories without modifying the lockfile
+        id: security
+        if: always() && steps.install.outcome == 'success'
+        shell: bash
+        run: |
+          set +e
+          npm audit --json > project-docs/recovery-audit/npm-audit.json
+          result=$?
+          printf '%s\n' "$result" > project-docs/recovery-audit/npm-audit-exit-code.txt
+          exit 0
+      - name: Persist factual audit summary
+        if: always()
+        env:
+          INSTALL_OUTCOME: ${{ steps.install.outcome }}
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          CONTENT_OUTCOME: ${{ steps.content.outcome }}
+          BROWSER_OUTCOME: ${{ steps.browser.outcome }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import json, os, re, hashlib
+          from datetime import datetime, timezone
+
+          root = Path('.')
+          out = root / 'project-docs/recovery-audit'
+          out.mkdir(parents=True, exist_ok=True)
+          records = []
+          for p in sorted((root / 'src/content/lessons').glob('*.md')):
+              raw = p.read_text(encoding='utf-8')
+              match = re.search(r'^lesson_id:\s*(F\d{2})\s*$', raw, re.M)
+              questions = re.findall(r'data-question=[\"\x27]([^\"\x27]+)', raw)
+              records.append({
+                  'path': p.as_posix(),
+                  'lesson_id': match.group(1) if match else None,
+                  'sha256': hashlib.sha256(raw.encode('utf-8')).hexdigest(),
+                  'question_ids': questions,
+                  'required_headings_present': all(h in raw for h in [
+                      '## 確認問題', '## 詳しく確かめる',
+                      '## まとめと次の一歩', '## 出典・関連資料']),
+                  'manual_mathematical_review': 'not_established_by_this_workflow'
+              })
+          statuses = {name: os.environ.get(name.upper() + '_OUTCOME', 'unknown')
+                      for name in ['install', 'build', 'content', 'browser']}
+          expected = {f'F{i:02d}' for i in range(1, 41)}
+          actual = {x['lesson_id'] for x in records if x['lesson_id']}
+          all_ids = [q for record in records for q in record['question_ids']]
+          report = {
+              'checked_at': datetime.now(timezone.utc).isoformat(),
+              'source_commit': os.environ.get('GITHUB_SHA'),
+              'workflow_run_id': os.environ.get('GITHUB_RUN_ID'),
+              'branch': os.environ.get('GITHUB_REF_NAME'),
+              'outcomes': statuses,
+              'all_40_foundation_ids_present': expected <= actual,
+              'missing_lesson_ids': sorted(expected - actual),
+              'lesson_files': len(records),
+              'exercise_count_from_markup': len(all_ids),
+              'duplicate_question_ids': sorted({q for q in all_ids if all_ids.count(q) > 1}),
+              'automated_checks_passed': all(x == 'success' for x in statuses.values()),
+              'release_authorized': False,
+              'release_note': 'This recovery workflow never merges or publishes. Test success does not establish a full mathematical, syllabus, competitor, or human usability audit.',
+              'records': records,
+              'next_actions': [
+                  'Read the real test outcomes and fix every failing check.',
+                  'Review all lesson formulas, examples, answers and diagrams against their stated assumptions.',
+                  'Verify complete grade 3/4 syllabus alignment and compare representative lessons against primary competitor materials.',
+                  'Correct remaining mobile-table, boxplot-coordinate and random-number-table issues if still present.',
+                  'Verify interactive labs and their navigation; distinguish implemented from planned features.',
+                  'Rebuild, re-test and merge the reviewed release candidate without force; verify the deployed public pages.'
+              ]
+          }
+          (out / 'latest.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+          print(json.dumps({k: v for k, v in report.items() if k != 'records'}, ensure_ascii=False, indent=2))
+          PY
+      - name: Save audit evidence as an artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: statistics-recovery-audit-${{ github.run_id }}
+          path: project-docs/recovery-audit/
+          retention-days: 14
+          if-no-files-found: error
+      - name: Checkpoint only audit evidence on the working branch
+        if: always() && github.ref == 'refs/heads/content/foundation-complete-20260911'
+        env:
+          TARGET_BRANCH: content/foundation-complete-20260911
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project-docs/recovery-audit/
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs: checkpoint recovery audit evidence [skip ci]'
+            if ! git push origin "HEAD:$TARGET_BRANCH"; then
+              echo 'Branch advanced during verification; evidence remains in the workflow artifact. No force push was attempted.'
+              exit 1
+            fi
+          fi
