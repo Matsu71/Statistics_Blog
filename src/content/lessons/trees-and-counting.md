@@ -138,4 +138,4 @@ $$
 
 ## 出典・関連資料
 
-[統計検定3級・公式出題範囲表](https://www.toukei-kentei.jp/hubfs/files/grade_range/grade3_hani_20181214.pdf)「場合の数」。[とけたろう・2級チートシート](https://toketarou.com/cheatsheet/)は確率計算の関連教材への入口です。確認日2026-09-11。樹形表・役割の例・演習・組合せの導出は独自制作です。
+[統計検定3級・公式出題範囲表](https://www.toukei-kentei.jp/hubfs/files/grade_range/grade3_hani_20181214.pdf)の確率分野に向けた数え上げの補習です。[とけたろう・2級チートシート](https://toketarou.com/cheatsheet/)は確率計算の関連教材への入口です。確認日2026-09-11。樹形表・役割の例・演習・組合せの導出は独自制作です。

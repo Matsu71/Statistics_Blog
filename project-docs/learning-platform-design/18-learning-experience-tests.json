@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-11T06:58:40.438Z",
+  "source_commit": "0acf49d7d473073dfc6762e3de0aa4f80e0cd3a9",
+  "assertions": 470,
+  "engines": [
+    {
+      "engine": "Chromium",
+      "assertions": 235,
+      "lesson_mobile_checks": 40,
+      "features": [
+        "content and proof search",
+        "explicit local memory save/delete",
+        "storage denied",
+        "normal tails and domain validation",
+        "seed replay",
+        "p=0/p=1",
+        "CI width scaling",
+        "interval table",
+        "no-JS fallback",
+        "mobile/desktop geometry"
+      ],
+      "page_errors": []
+    },
+    {
+      "engine": "WebKit",
+      "assertions": 235,
+      "lesson_mobile_checks": 40,
+      "features": [
+        "content and proof search",
+        "explicit local memory save/delete",
+        "storage denied",
+        "normal tails and domain validation",
+        "seed replay",
+        "p=0/p=1",
+        "CI width scaling",
+        "interval table",
+        "no-JS fallback",
+        "mobile/desktop geometry"
+      ],
+      "page_errors": []
+    }
+  ],
+  "screenshots": "review-assets/screenshots",
+  "limitations": [
+    "Automated browser checks are not human usability testing or full accessibility certification.",
+    "Screenshot images require visual review.",
+    "Independent numerical function checks are recorded separately."
+  ]
+}

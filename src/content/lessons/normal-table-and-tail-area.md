@@ -79,6 +79,10 @@ XがN(50,10²)に従うとします。上側約2.5%の境界は $50+1.96\times10
 
 元の値の単位、μ、σを確認し、Nの第2引数に分散が書かれていたら平方根を取って標準偏差に戻します。式への代入より前に、何が正規分布に従うとされているかを確認します。
 
+<h2 id="try-lab">動かして確かめる</h2>
+
+[片側・両側を切り替えて面積を確かめる](../../labs/#normal)。操作前に結果を予想し、操作後に変わった量と変わらなかった量を説明してください。図を動かした結果は、一般的な数学の証明とは区別します。
+
 ## 確認問題
 
 <section class="practice-question" data-question="F32-Q1">
@@ -140,4 +144,4 @@ $$
 
 ## 出典・関連資料
 
-[NIST・Normal Distribution](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3661.htm)と[Statlect・Normal distribution](https://www.statlect.com/probability-distributions/normal-distribution)の分布関数・分位点。確認日2026-09-11。表は正規分布関数から再計算して丸めた独自の抜粋で、例・演習・式の記述は独自制作です。
+[1] [NIST・Normal Distribution](https://www.itl.nist.gov/div898/handbook/eda/section3/eda3661.htm)と[Statlect・Normal distribution](https://www.statlect.com/probability-distributions/normal-distribution)の分布関数・分位点。確認日2026-09-11。表は正規分布関数から再計算して丸めた独自の抜粋で、例・演習・式の記述は独自制作です。

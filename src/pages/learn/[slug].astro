@@ -3,6 +3,7 @@ import { getCollection, render, type CollectionEntry } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { withBase } from '../../lib/site';
 import course from '../../data/foundation-course.json';
+import LearningTools from '../../components/LearningTools.astro';
 import '../../styles/learning.css';
 
 export async function getStaticPaths() {
@@ -84,6 +85,8 @@ const toc = headings.filter((heading) => heading.depth === 2);
       <button type="button" data-collapse>詳しい説明・解答を閉じる</button>
       <button type="button" data-print>印刷</button>
     </div>
+
+    <LearningTools lessonId={lesson.data.lesson_id} />
 
     <article class="lesson-body" data-lesson-id={lesson.data.lesson_id}>
       <Content />

@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-11T06:58:40.493Z",
+  "source_commit": "0acf49d7d473073dfc6762e3de0aa4f80e0cd3a9",
+  "lessons": 40,
+  "questions": 130,
+  "coverage_groups": 20,
+  "correction_checks": [
+    "F04 random-number worked example and fourth problem",
+    "F07 cumulative graph",
+    "F14 boxplot linear scale",
+    "F19 scatterplot origin",
+    "F20 fitted line and vertical residuals",
+    "F39 legible vertical data table",
+    "Four links to interactive labs",
+    "Forty lessons and 130 original questions",
+    "Twenty coverage groups with resolvable lesson/question/source IDs",
+    "Editorial, corrections and privacy routes"
+  ],
+  "scope": "Structural and specified source corrections only; does not prove all mathematical statements."
+}

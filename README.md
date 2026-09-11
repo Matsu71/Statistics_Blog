@@ -1,3 +1,24 @@
+<!-- FOUNDATION_COMPLETE_20260911 -->
+# 統計ラボ：基礎コース完全版
+
+4級・3級を統合した基礎40講座、独自問題130問、操作型教材3本、本文・詳説検索、端末内の確認マーク・再開位置、公開範囲対応表を含みます。下に残る初期6講座の説明は初期版の記録です。
+
+[基礎コース](https://matsu71.github.io/Statistics_Blog/courses/foundation/) · [学習実験](https://matsu71.github.io/Statistics_Blog/labs/) · [範囲対応](https://matsu71.github.io/Statistics_Blog/coverage/foundation/) · [編集・訂正・プライバシー](https://matsu71.github.io/Statistics_Blog/about/)
+
+## 確認記録
+
+[内容レビュー](project-docs/learning-platform-design/13-foundation-content-review.md)、[競合比較と不足改善](project-docs/learning-platform-design/15-competitor-comparison-and-remediation.md)、[進捗と次の作業](project-docs/learning-platform-design/11-completion-progress.md)を保存しています。自動テストの実行結果は10・12・16・18・19番のJSONです。第三者監修・実利用者による効果検証は実施済みとは表示していません。
+
+## 再現する確認手順
+
+Node.js 22.12以上。`npm ci` の後、`node scripts/prepare-foundation-release.mjs && node scripts/finalize-foundation-docs.mjs && npm run generate:index && npm run verify && node scripts/validate-foundation.mjs && node scripts/test-foundation-math.mjs && node scripts/test-release-extras.mjs` を実行します。SciPyによる別実装の照合は `python scripts/check-foundation-oracle.py` です。
+
+ブラウザ検証はPlaywrightとChromium/WebKitを用意したうえで、`node scripts/test-foundation-browser.mjs && node scripts/test-learning-labs.mjs` を実行します。Actionsの検証ブランチでも同じ工程を実行します。
+
+検証ブランチでは、`src/data/foundation-release.json` のstageを `release_candidate` にした場合に限り、全テスト成功後に生成物と確認記録を保存します。mainへの反映は別の明示的な操作です。未検証のソースをmainへ強制上書きしません。
+
+---
+
 <!-- FOUNDATION_RELEASE_20260911 -->
 ## 統計の基礎コース（2026-09-11）
 
