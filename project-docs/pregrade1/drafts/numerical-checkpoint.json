@@ -1,0 +1,36 @@
+{
+  "status": "draft_numerical_checks_passed",
+  "checked_at": "2026-09-11T13:04:44.379409+00:00",
+  "execution_environment": "local working container, Python with NumPy and SciPy",
+  "source_commit": null,
+  "draft_lessons": 2,
+  "draft_questions": 8,
+  "numerical_checks": 21,
+  "sources": {
+    "P07": {
+      "path": "project-docs/pregrade1/drafts/slutsky-delta-and-extremes.md",
+      "sha256": "278b5c91039943aeb074dba8c1e8509e640389cc7ebad1d1d939d1881f1172c6"
+    },
+    "P08": {
+      "path": "project-docs/pregrade1/drafts/multinomial-and-count-models.md",
+      "sha256": "8b416aad0d62d55e19baefb1daa9eacffd9c3d9774dbb094eef65cad07bec848"
+    }
+  },
+  "reproduce": "python scripts/check-pregrade1-next-drafts.py",
+  "reproduction_output": "project-docs/pregrade1/drafts/numerical-checks.json",
+  "checked_examples": [
+    "P07: transformed standard error and direct derivative of logarithm",
+    "P07: scaled normal variance and squared-normal versus chi-square CDFs",
+    "P07: finite maximum distribution versus its limiting exponential approximation",
+    "P08: all 28 possible count combinations, normalization and a displayed probability",
+    "P08: mean vector, full covariance matrix, fixed-total variance and singularity",
+    "P08: combined-category and conditional binomial distributions",
+    "P08: every conditional independent-Poisson probability and the joint MGF"
+  ],
+  "limits": [
+    "The source files are drafts outside the rendered collection; no browser or release approval is claimed.",
+    "The result is a recorded local run, not a GitHub Actions run.",
+    "Finite numerical checks are not proofs of asymptotic theorems or independent human review."
+  ],
+  "next": "Integrate P07-P08, generalize the initial-six-only validation and release counts without reducing checks, and verify the new build before publication."
+}
