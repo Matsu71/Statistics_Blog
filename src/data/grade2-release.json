@@ -1,9 +1,12 @@
 {
   "stage": "authoring",
   "target_lessons": 40,
-  "authored_through": null,
+  "authored_through": "G08",
+  "authored_lessons": 8,
+  "authored_questions": 32,
   "scope": "grade2",
   "started_from": "907657df5aa273b1a8d69e393c2b1dff6dccff8b",
   "date": "2026-09-11",
-  "next": "公式範囲と既存教材の対応を記録し、G01から本文・独自問題・根拠を制作。基礎コースを保全したまま全件検証後に公開。"
+  "next": "G09以降の本文・独自問題を制作し、2級専用ルート・検索・復習・範囲対応を実装。全件監査後に公開。",
+  "verification": "原稿の自己点検段階。全40件の自動検証・公開は未実施。"
 }
