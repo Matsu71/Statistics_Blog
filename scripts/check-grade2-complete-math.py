@@ -157,7 +157,7 @@ def run():
     a,b=4/10,9/20
     df=(a+b)**2/(a*a/9+b*b/19)
     se=math.sqrt(a+b)
-    check('G21','Welch SE and degrees of freedom',[se,df],[math.sqrt(.85),25.410662824],tolerance=.001)
+    check('G21','Welch SE and degrees of freedom',[se,df],[math.sqrt(.85),Fraction(49419,1945)],tolerance=1e-9)
     pooled=(9*4+19*9)/28
     check('G21','pooled variance',pooled,Fraction(207,28))
     paired=[1,2,2,3,2]
@@ -183,6 +183,16 @@ def run():
     continuous_n=((stats.norm.ppf(.95)+stats.norm.ppf(.8))*10/5)**2
     check('G26','ceiling of one-sided known-variance sample size',math.ceil(continuous_n),25)
     check('G26','reducing alpha lowers power at fixed positive effect',float(stats.norm.sf(stats.norm.ppf(.99)-2.5)<power),1)
+    check('G26','n=24 falls short while n=25 meets 80-percent power',
+          [float(stats.norm.sf(stats.norm.ppf(.95)-.5*math.sqrt(24))<.8),
+           float(stats.norm.sf(stats.norm.ppf(.95)-.5*math.sqrt(25))>=.8)],[1,1])
+    low_target=.01; a=.05; delta=.1; sigma=10
+    bound=max(0.,stats.norm.ppf(1-a)+stats.norm.ppf(low_target))*sigma/delta
+    n_required=max(1,math.ceil(bound**2))
+    check('G26','sample-size boundary with a below-alpha power target',
+          [n_required,float(stats.norm.sf(stats.norm.ppf(1-a)-delta*math.sqrt(n_required)/sigma)>=low_target)],[1,1])
+    if '1−β>α' not in SOURCES['G26']['text']:
+        raise ValueError('The reviewed positivity condition must remain in the manuscript')
     check('G27','same statistic different reference distributions',[2*stats.norm.sf(2),2*stats.t.sf(2,24)],[.04550,.05694],tolerance=5e-6)
     check('G27','unknown-variance interval',104+np.array([-1,1])*stats.t.ppf(.975,24)*2,[99.8722,108.1278],tolerance=5e-5)
     check('G28','Welch statistic',3/se,3.25396,tolerance=5e-6)

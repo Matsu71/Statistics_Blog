@@ -37,6 +37,7 @@ const toc = headings.filter((heading) => heading.depth === 2);
     <nav class="lesson-toc" aria-label="このページの目次"><strong>このページの内容</strong><ol>{toc.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav>
     <div class="lesson-tools" data-g2-lesson-tools hidden><button type="button" data-g2-expand>解答も含めてすべて開く</button><button type="button" data-g2-collapse>詳しい説明・解答を閉じる</button><button type="button" data-g2-print>印刷</button></div>
     <Grade2Tools lessonId={lesson.data.lesson_id} />
+    <p class="grade2-table-note">横長の表や数式は、その部分を横へスクロールして確認できます。</p>
     <article class="lesson-body" data-lesson-id={lesson.data.lesson_id}><Content /></article>
     <nav class="lesson-pagination" aria-label="講座を移動">
       {previous && available.has(previous.id) ? <a href={withBase(`/learn/grade2/${previous.slug}/`)} rel="prev"><small>前の講座</small>{previous.title}</a> : <a href={withBase('/courses/grade2/')}>2級コースの目次</a>}
@@ -48,6 +49,21 @@ const toc = headings.filter((heading) => heading.depth === 2);
 <script>
   const root = document.querySelector<HTMLElement>('[data-grade2-lesson]');
   if (root) {
+    // Preserve native table semantics; make only overflowing tables focusable.
+    function refreshScrollableTables() {
+      root?.querySelectorAll<HTMLTableElement>('.lesson-body table').forEach((table, index) => {
+        if (table.scrollWidth > table.clientWidth + 1) {
+          table.tabIndex = 0;
+          table.setAttribute('aria-label', `表${index + 1}。左右の矢印キーでもスクロールできます。`);
+        } else {
+          table.removeAttribute('tabindex');
+          table.removeAttribute('aria-label');
+        }
+      });
+    }
+    void document.fonts.ready.then(refreshScrollableTables);
+    window.addEventListener('resize', refreshScrollableTables);
+    root?.addEventListener('toggle', refreshScrollableTables, true);
     const details = () => Array.from(root.querySelectorAll<HTMLDetailsElement>('.lesson-body details'));
     const tools = root.querySelector<HTMLElement>('[data-g2-lesson-tools]');
     if (tools) tools.hidden = false;

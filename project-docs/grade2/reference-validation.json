@@ -1,0 +1,1041 @@
+{
+  "status": "passed_with_retrieval_limits",
+  "checked_at": "2026-09-11T10:33:39.885086+00:00",
+  "unique_urls": 42,
+  "missing_urls": [],
+  "unconfirmed_urls": [
+    "https://online.stat.psu.edu/stat506/"
+  ],
+  "records": [
+    {
+      "url": "https://archive.ics.uci.edu/dataset/53/iris",
+      "citations": [
+        {
+          "path": "src/content/grade2/reproducible-case-study.md",
+          "label": "UCI Machine Learning Repository: Iris"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://archive.ics.uci.edu/dataset/53/iris",
+      "content_type": "text/html",
+      "bytes_read": 585455,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "a65180be8502ae7b341b5b38767f47251863c99b4dd6287fbe76c38ec69da47b",
+      "title": "UCI Machine Learning Repository",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/proportion-difference-intervals.md",
+          "label": "SciPy: BinomTestResult.proportion_ci"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html",
+      "content_type": "text/html",
+      "bytes_read": 29658,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "f814ec0f37b40bee7d8165fa589d48b810c64b7dd2706284d27da5364a95a5e8",
+      "title": "proportion_ci — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/one-two-proportion-tests.md",
+          "label": "SciPy: binomial test"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html",
+      "content_type": "text/html",
+      "bytes_read": 33798,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "0f161b5a7127b6616c8ba13fe39bbe73ac73abfe2633e2c5e93626bb39bfa5cb",
+      "title": "binomtest — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/chi-square-f-distributions.md",
+          "label": "SciPy: chi-square distribution"
+        },
+        {
+          "path": "src/content/grade2/variance-ratio-intervals.md",
+          "label": "SciPy: chi-square distribution"
+        },
+        {
+          "path": "src/content/grade2/variance-ratio-tests.md",
+          "label": "SciPy: chi-square distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2.html",
+      "content_type": "text/html",
+      "bytes_read": 40686,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "155d84ae70a59e66253d38a5e69e59c3ef7879de8c50ed45d1fc4dea3e443268",
+      "title": "scipy.stats.chi2 — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chisquare.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/goodness-of-fit.md",
+          "label": "SciPy: chi-square goodness-of-fit test"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chisquare.html",
+      "content_type": "text/html",
+      "bytes_read": 46228,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "e7edda000772ac59b5e2dc07633a86ee227ee02b885bec61e316851e15f387cf",
+      "title": "chisquare — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.contingency.chi2_contingency.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/contingency-table-independence.md",
+          "label": "SciPy: chi2_contingency"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.contingency.chi2_contingency.html",
+      "content_type": "text/html",
+      "bytes_read": 45732,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "e17434a25a4831cd76ee1c61d5f99fc56a6e69ee072bd9d7754e6aa044236ec3",
+      "title": "chi2_contingency — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/poisson-exponential.md",
+          "label": "SciPy: exponential distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html",
+      "content_type": "text/html",
+      "bytes_read": 39470,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "5e6c79ed7bb080597b15269f88293605635e3d847ee07cf32254a73b0158f521",
+      "title": "scipy.stats.expon — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/chi-square-f-distributions.md",
+          "label": "SciPy: F distribution"
+        },
+        {
+          "path": "src/content/grade2/reading-analysis-output.md",
+          "label": "SciPy: F distribution"
+        },
+        {
+          "path": "src/content/grade2/variance-ratio-intervals.md",
+          "label": "SciPy: F distribution"
+        },
+        {
+          "path": "src/content/grade2/variance-ratio-tests.md",
+          "label": "SciPy: F distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f.html",
+      "content_type": "text/html",
+      "bytes_read": 41559,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "dc4013d6c2e06acb39c031be4ee382916a9459b61a74c813a78aec9a6463f7e7",
+      "title": "scipy.stats.f — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/one-way-anova.md",
+          "label": "SciPy: one-way ANOVA"
+        },
+        {
+          "path": "src/content/grade2/reproducible-case-study.md",
+          "label": "SciPy: one-way ANOVA"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html",
+      "content_type": "text/html",
+      "bytes_read": 46618,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "f1f260998e47f0d7d994c8a08574901fdaa828cba0ce80fc47af47e125ce43a7",
+      "title": "f_oneway — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.fisher_exact.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/contingency-table-independence.md",
+          "label": "SciPy: Fisher exact test"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.fisher_exact.html",
+      "content_type": "text/html",
+      "bytes_read": 52796,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "8ad133c2b1678039fd44095c988d46c8a0db07657ca80b0f524c221a1bf63c84",
+      "title": "fisher_exact — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.geom.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/geometric-negative-binomial.md",
+          "label": "SciPy: geometric distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.geom.html",
+      "content_type": "text/html",
+      "bytes_read": 38617,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "09b7b55af13eaec212ad23edabe51a9d272409e135e2169dc28905ceba320f2f",
+      "title": "scipy.stats.geom — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/regression-estimation-standard-errors.md",
+          "label": "SciPy: linregress"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html",
+      "content_type": "text/html",
+      "bytes_read": 42528,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "67a8e60d6b6271d226b5fb44920c82121786229d6ff65809b18c0562e8b2a04d",
+      "title": "linregress — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.multivariate_normal.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/normal-and-bivariate-normal.md",
+          "label": "SciPy: multivariate normal distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.multivariate_normal.html",
+      "content_type": "text/html",
+      "bytes_read": 38672,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "c7c5b17d76eebfcec9d68e7dbff0c677333a4cb91a2e3d8cecf2fb204d534792",
+      "title": "scipy.stats.multivariate_normal — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.nbinom.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/geometric-negative-binomial.md",
+          "label": "SciPy: negative binomial distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.nbinom.html",
+      "content_type": "text/html",
+      "bytes_read": 41939,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "8d9ba351094c94804c52d9d519e2f1929e260877aaf4a4c1d74763795fea711a",
+      "title": "scipy.stats.nbinom — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/errors-power-sample-size.md",
+          "label": "SciPy: normal distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html",
+      "content_type": "text/html",
+      "bytes_read": 38642,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "3596d32784c43caac94b8c7a01890f17aef08370fa6ff011b8bbc97ee9d50e14",
+      "title": "scipy.stats.norm — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/partial-correlation-and-intervals.md",
+          "label": "SciPy: Pearson correlation"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html",
+      "content_type": "text/html",
+      "bytes_read": 56550,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "9999856b875cf15abcad22654b16bd3d2801f89eef28b42a048114e93eac68c3",
+      "title": "pearsonr — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.poisson.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/poisson-exponential.md",
+          "label": "SciPy: Poisson distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.poisson.html",
+      "content_type": "text/html",
+      "bytes_read": 37943,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "9b4a81b955e0e86b09f042b59ebd25805a627ebe865714a89184f220c584f82e",
+      "title": "scipy.stats.poisson — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/mean-confidence-intervals.md",
+          "label": "SciPy: Student t distribution"
+        },
+        {
+          "path": "src/content/grade2/regression-tests-and-prediction.md",
+          "label": "SciPy: Student t distribution"
+        },
+        {
+          "path": "src/content/grade2/student-t-and-quantiles.md",
+          "label": "SciPy: Student t distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html",
+      "content_type": "text/html",
+      "bytes_read": 40264,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "d66f14f5732ad7a24701f99c03b0acc28cec6d8b0d31549c027e2460e1a2be58",
+      "title": "scipy.stats.t — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_1samp.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/one-mean-tests.md",
+          "label": "SciPy: one-sample t-test"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_1samp.html",
+      "content_type": "text/html",
+      "bytes_read": 45678,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "55788e93559af17c9f9bb8213c5f9b54807da4ea6020b00745dff737e616205a",
+      "title": "ttest_1samp — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/mean-difference-intervals.md",
+          "label": "SciPy: independent-samples t-test"
+        },
+        {
+          "path": "src/content/grade2/reproducible-case-study.md",
+          "label": "SciPy: independent-samples t-test"
+        },
+        {
+          "path": "src/content/grade2/two-mean-and-paired-tests.md",
+          "label": "SciPy: independent t-test"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html",
+      "content_type": "text/html",
+      "bytes_read": 54277,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "9a741ff7024c4f4023b53e081d2f62f233b9cf44382743466ea58c43f9524c8c",
+      "title": "ttest_ind — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/mean-difference-intervals.md",
+          "label": "SciPy: paired t-test"
+        },
+        {
+          "path": "src/content/grade2/two-mean-and-paired-tests.md",
+          "label": "SciPy: paired t-test"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html",
+      "content_type": "text/html",
+      "bytes_read": 38976,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "6f7340192fb34475231464c609b083b39b20ee6f1ad78074e4b77e22cfdcf108",
+      "title": "ttest_rel — SciPy v1.18.0 Manual",
+      "status": "reachable"
+    },
+    {
+      "url": "https://online.stat.psu.edu/stat506/",
+      "citations": [
+        {
+          "path": "src/content/grade2/sampling-and-finite-populations.md",
+          "label": "Penn State STAT 506"
+        }
+      ],
+      "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1000)>",
+      "attempts": 3,
+      "status": "retrieval_unconfirmed"
+    },
+    {
+      "url": "https://openintro-ims.netlify.app/inference-one-mean",
+      "citations": [
+        {
+          "path": "src/content/grade2/mean-confidence-intervals.md",
+          "label": "OpenIntro: Inference for a single mean"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://openintro-ims.netlify.app/inference-one-mean",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes_read": 159298,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "32dc2505d073341a59e16eaa84607ebddbe72385bb3a124e5baab0738bc73b35",
+      "title": "Introduction to Modern Statistics (2e) - 19  Inference for a single mean",
+      "status": "reachable"
+    },
+    {
+      "url": "https://openintro-ims.netlify.app/model-slr",
+      "citations": [
+        {
+          "path": "src/content/grade2/partial-correlation-and-intervals.md",
+          "label": "OpenIntro: Linear regression"
+        },
+        {
+          "path": "src/content/grade2/regression-estimation-standard-errors.md",
+          "label": "OpenIntro: Linear regression with a single predictor"
+        },
+        {
+          "path": "src/content/grade2/regression-tests-and-prediction.md",
+          "label": "OpenIntro: Linear regression"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://openintro-ims.netlify.app/model-slr",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes_read": 200351,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "289e4f4fccf7543628a3ebddbac5646373be8b6c5d48ea2c8e514dca711315de",
+      "title": "Introduction to Modern Statistics (2e) - 7  Linear regression with a single predictor",
+      "status": "reachable"
+    },
+    {
+      "url": "https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events",
+      "citations": [
+        {
+          "path": "src/content/grade2/conditional-probability-and-bayes.md",
+          "label": "OpenStax: Independent and Mutually Exclusive Events"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events",
+      "content_type": "text/html",
+      "bytes_read": 325215,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "ec69bfa5bd96cb46baa9f68632800bf84d53632f6051eedba24bd1cea47fcb30",
+      "title": "3.2 Independent and Mutually Exclusive Events - Introductory Statistics 2e | OpenStax",
+      "status": "reachable"
+    },
+    {
+      "url": "https://toketarou.com/cheatsheet/",
+      "citations": [
+        {
+          "path": "src/content/grade2/growth-indices-autocorrelation.md",
+          "label": "とけたろう・2級チートシート"
+        },
+        {
+          "path": "src/content/grade2/lorenz-and-gini.md",
+          "label": "とけたろう・2級チートシート"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://toketarou.com/cheatsheet/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes_read": 527179,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "a03ba479c4d4b9dd59ca9f37f0306a070b8814adab13f23659231b9a9968554b",
+      "title": "【完全網羅】統計検定®２級チートシート | とけたろうブログ",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/autocopl.htm",
+      "citations": [
+        {
+          "path": "src/content/grade2/growth-indices-autocorrelation.md",
+          "label": "NIST: Autocorrelation Plot"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/autocopl.htm",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 15361,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "ee84366e3c45f7c6ebf8e72f82b047ee2b1dfe696b7bcb22007827d16bf46521",
+      "title": "1.3.3.1. Autocorrelation Plot",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm",
+      "citations": [
+        {
+          "path": "src/content/grade2/hypotheses-p-values-and-tails.md",
+          "label": "NIST：t検定の関連資料"
+        },
+        {
+          "path": "src/content/grade2/one-mean-tests.md",
+          "label": "NIST：t検定の関連資料"
+        },
+        {
+          "path": "src/content/grade2/student-t-and-quantiles.md",
+          "label": "NIST：t検定の関連資料"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 15135,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "f3f632a6276378f57ded12beb0770b106282a70df24e6be8d62f29419f42da36",
+      "title": "1.3.5.3. Two-Sample t-Test for Equal Means",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm",
+      "citations": [
+        {
+          "path": "src/content/grade2/variance-skewness-kurtosis.md",
+          "label": "NIST: Measures of Skewness and Kurtosis"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 15611,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "e21dccd8814c4b48b2fd2dd0639128a308d7472f17aea11859c32208d15eb666",
+      "title": "1.3.5.11. Measures of Skewness and Kurtosis",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3662.htm",
+      "citations": [
+        {
+          "path": "src/content/grade2/density-cdf-transformation.md",
+          "label": "NIST: Uniform Distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3662.htm",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 13486,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "0f65818f8347c138343ae55ac01756be398a29cd6d5001807b440a5e2b657477",
+      "title": "1.3.6.6.2. Uniform Distribution",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm",
+      "citations": [
+        {
+          "path": "src/content/grade2/binomial-hypergeometric.md",
+          "label": "NIST: Binomial Distribution"
+        },
+        {
+          "path": "src/content/grade2/laws-limits-and-approximations.md",
+          "label": "NIST: Binomial Distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 10258,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "a77db9df52ba268fb2f6b5a1bc6469c96cc28d5b7f8a1689611a561075de6418",
+      "title": "1.3.6.6.18. Binomial Distribution",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc42.htm",
+      "citations": [
+        {
+          "path": "src/content/grade2/growth-indices-autocorrelation.md",
+          "label": "NIST: Moving Average or Smoothing Techniques"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc42.htm",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 19920,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "feb5ead32f0c6fb8898ba405e1752caf6183e1747034a21a53c5b62181496e3e",
+      "title": "6.4.2. What are Moving Average or Smoothing Techniques?",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc222.htm",
+      "citations": [
+        {
+          "path": "src/content/grade2/errors-power-sample-size.md",
+          "label": "NIST: Sample sizes required"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/prc/section2/prc222.htm",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 15688,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "b6c24c7725946325350f068faca5e18da86f17da7ed33fd20a0ea8672504ed28",
+      "title": "7.2.2.2. Sample sizes required",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri331.htm",
+      "citations": [
+        {
+          "path": "src/content/grade2/randomization-replication-blocking.md",
+          "label": "NIST: Completely randomized designs"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri331.htm",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 11010,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "454c9dc990cc5703d7bae93c9ecef896bb1896b1da887fd037eac68b6de99627",
+      "title": "5.3.3.1. Completely randomized designs",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri332.htm",
+      "citations": [
+        {
+          "path": "src/content/grade2/randomization-replication-blocking.md",
+          "label": "Randomized block designs"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.itl.nist.gov/div898/handbook/pri/section3/pri332.htm",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 20338,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "e280a69767708d52f2ab92dc0e46cef97bb52ee4cd1473805091f9c2fb6b5a50",
+      "title": "5.3.3.2. Randomized block designs",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.openintro.org/book/os/",
+      "citations": [
+        {
+          "path": "src/content/grade2/errors-power-sample-size.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/goodness-of-fit.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/grade2-integrated-practice.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/hypotheses-p-values-and-tails.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/laws-limits-and-approximations.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/model-diagnostics-and-collinearity.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/multiple-regression-and-dummies.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/one-two-proportion-tests.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/one-way-anova.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/parameters-statistics-and-notation.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/proportion-difference-intervals.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/sampling-mean-proportion-variance.md",
+          "label": "OpenIntro Statistics"
+        },
+        {
+          "path": "src/content/grade2/unbiased-consistent-mse.md",
+          "label": "OpenIntro Statistics"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.openintro.org/book/os/",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes_read": 153092,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "3dcfa947bd3927ffc590cb3d26a16bf862557ddb2b771c1035d640068f2de283",
+      "title": "OpenIntro Statistics",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.statlect.com/glossary/joint-probability-mass-function",
+      "citations": [
+        {
+          "path": "src/content/grade2/expectation-variance-covariance.md",
+          "label": "Statlect: Joint probability mass function"
+        },
+        {
+          "path": "src/content/grade2/joint-marginal-independent.md",
+          "label": "Statlect: Joint probability mass function"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.statlect.com/glossary/joint-probability-mass-function",
+      "content_type": "text/html",
+      "bytes_read": 63221,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "79931e514ef754a5996bb98a2b5c52c5014d820dbec4cf620225d5b631f7f427",
+      "title": "Joint probability mass function",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.statlect.com/probability-distributions/normal-distribution",
+      "citations": [
+        {
+          "path": "src/content/grade2/normal-and-bivariate-normal.md",
+          "label": "Statlect: Normal distribution"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.statlect.com/probability-distributions/normal-distribution",
+      "content_type": "text/html",
+      "bytes_read": 94063,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "7de5d3a2e073a1d9094d0cff5cf39afb394dcecfd27226783492ac56b99cdf93",
+      "title": "Normal distribution | Properties, proofs, exercises",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/multiple-regression-and-dummies.md",
+          "label": "statsmodels: OLS"
+        },
+        {
+          "path": "src/content/grade2/reading-analysis-output.md",
+          "label": "statsmodels: OLS"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 60541,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "a9ca12b9e18010a78170133e50f293c8d88c49e13bb9288360f0388bb8354a21",
+      "title": "statsmodels.regression.linear_model.OLS — statsmodels 0.15.0",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.outliers_influence.variance_inflation_factor.html",
+      "citations": [
+        {
+          "path": "src/content/grade2/model-diagnostics-and-collinearity.md",
+          "label": "statsmodels: variance_inflation_factor"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.statsmodels.org/stable/generated/statsmodels.stats.outliers_influence.variance_inflation_factor.html",
+      "content_type": "text/html; charset=utf-8",
+      "bytes_read": 83622,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "b03aef015223ca9015174158ad2bfba361bad78521af2bd6fc7a60e5ee30e1b1",
+      "title": "statsmodels.stats.outliers_influence.variance_inflation_factor — statsmodels 0.15.0",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.toukei-kentei.jp/grade/grade_pre-1",
+      "citations": [
+        {
+          "path": "src/content/grade2/grade2-integrated-practice.md",
+          "label": "統計検定準1級・公式案内"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.toukei-kentei.jp/grade/grade_pre-1",
+      "content_type": "text/html; charset=UTF-8",
+      "bytes_read": 133756,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "1bad31ab7cac16cb284983b8518320edb27e0054f50ea2f1dbbe39f5ab1a4771",
+      "title": "統計検定準１級｜統計検定：Japan Statistical Society Certificate",
+      "status": "reachable"
+    },
+    {
+      "url": "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf",
+      "citations": [
+        {
+          "path": "src/content/grade2/binomial-hypergeometric.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/chi-square-f-distributions.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/conditional-probability-and-bayes.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/contingency-table-independence.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/density-cdf-transformation.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/errors-power-sample-size.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/expectation-variance-covariance.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/geometric-negative-binomial.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/goodness-of-fit.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/grade2-integrated-practice.md",
+          "label": "統計検定2級・公式出題範囲"
+        },
+        {
+          "path": "src/content/grade2/growth-indices-autocorrelation.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/hypotheses-p-values-and-tails.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/joint-marginal-independent.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/laws-limits-and-approximations.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/lorenz-and-gini.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/mean-confidence-intervals.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/mean-difference-intervals.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/model-diagnostics-and-collinearity.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/multiple-regression-and-dummies.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/normal-and-bivariate-normal.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/one-mean-tests.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/one-two-proportion-tests.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/one-way-anova.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/parameters-statistics-and-notation.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/partial-correlation-and-intervals.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/poisson-exponential.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/proportion-difference-intervals.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/randomization-replication-blocking.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/reading-analysis-output.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/regression-estimation-standard-errors.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/regression-tests-and-prediction.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/sampling-and-finite-populations.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/sampling-mean-proportion-variance.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/student-t-and-quantiles.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/two-mean-and-paired-tests.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/unbiased-consistent-mse.md",
+          "label": "統計検定2級・公式範囲"
+        },
+        {
+          "path": "src/content/grade2/variance-ratio-intervals.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/variance-ratio-tests.md",
+          "label": "公式2級範囲"
+        },
+        {
+          "path": "src/content/grade2/variance-skewness-kurtosis.md",
+          "label": "統計検定2級・公式範囲"
+        }
+      ],
+      "http_status": 200,
+      "final_url": "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf",
+      "content_type": "application/pdf",
+      "bytes_read": 85060,
+      "attempts": 1,
+      "content_hash_scope": "complete response body",
+      "response_sha256": "5a412215129501002f49ccd8c590fd172e61c77ab213560e58971baee463bcf3",
+      "status": "reachable"
+    }
+  ],
+  "limits": [
+    "HTTP success and a matching title establish reachability, not a full mathematical source audit.",
+    "Blocked or unconfirmed pages are not described as newly read or verified.",
+    "PDF availability is not evidence that its tables were visually inspected by this script."
+  ]
+}

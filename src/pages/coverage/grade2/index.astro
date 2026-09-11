@@ -12,7 +12,7 @@ function questionUrl(id: string) {
   const lesson = lookup.get(id.split('-Q')[0]);
   if (!lesson || !lesson.body.includes(`data-question="${id}"`)) return null;
   // The question heading remains visible; do not automatically reveal the answer.
-  return `${lesson.url}#${id.toLowerCase()}`;
+  return id.startsWith('G') ? `${lesson.url}#${id.toLowerCase()}` : `${lesson.url}#確認問題`; 
 }
 ---
 <BaseLayout title="2級の出題範囲と講座・演習の対応" description="公式範囲の項目群から2級と基礎の講座・独自問題を確認します。制作予定と、実際に読める内容を区別しています。">

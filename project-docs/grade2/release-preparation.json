@@ -1,0 +1,45 @@
+{
+  "status": "candidate_prepared_not_yet_verified",
+  "prepared_at": "2026-09-11T10:33:15.456065+00:00",
+  "lesson_count": 40,
+  "question_count": 172,
+  "corrections": [
+    {
+      "path": "src/content/grade2/hypotheses-p-values-and-tails.md",
+      "before": "e281b2016372060773f1d27d7ae026033cf7411d206fa7ba37a4b439188c162c",
+      "after": "8d507980c78195f26753c7a83d7d7ddd4198f1a25120f51b01de7977ef02dfe0"
+    },
+    {
+      "path": "src/content/grade2/variance-ratio-intervals.md",
+      "before": "d219877966f3fd395656b18e8c5cf5b47fc177d2a0014da070451f4d0a33e721",
+      "after": "1c4b01fec52e8b4e4c35b2bd5c53f1e07b0b60c3f89c066992ba1719a760bf86"
+    },
+    {
+      "path": "src/content/grade2/joint-marginal-independent.md",
+      "before": "a86f9120a8cb7599907c858485d91a6324ce0bdb25d6c0d504bb851f8dc44c1f",
+      "after": "17b43f7b346ac6bdfc6db171a0c8a9606b8823838c26569e87005dd5d550c83a"
+    },
+    {
+      "path": "src/content/grade2/student-t-and-quantiles.md",
+      "before": "f18024ccceb181264007b5a3762c6654cfd0f5f2333e18cd7eccaab56b764f48",
+      "after": "32722fb5e2f2e9b79e78ce566b4716a2004092cb84cfd4c51e97d4bb12eff9bc"
+    },
+    {
+      "path": "src/content/grade2/one-mean-tests.md",
+      "before": "4744729fdcfbd74834abd3ef1958c872d0581c677dc93128e732e6b8d7544e2d",
+      "after": "0824a769678d13c3d82e37fd31f0c188e4f5360ff4412dc01b354f61352f0620"
+    },
+    {
+      "path": "scripts/check-grade2-complete-math.py",
+      "before": "f6f7d988c037ecaa790d711fa0719a2b533dad8e1352991d7810ed7952c884c5",
+      "after": "625e063050c89d4487837cb186191e1bcffb9e709279fc7b01c3fdd2c18442bc"
+    },
+    {
+      "path": "project-docs/grade2/04-comparison-and-remediation.md",
+      "before": "8e463444197cd3b00d0a1a630f0654e22bc32417f8ce31f73068971fcf3442fc",
+      "after": "7ef52328a6982938805283817c9dd2a9eae369b03f664a772f7824901664df06"
+    }
+  ],
+  "next": "Execute the complete quality gates. Do not mark published before live verification.",
+  "foundation_manuscripts_modified_by_this_script": false
+}

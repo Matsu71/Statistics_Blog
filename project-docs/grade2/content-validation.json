@@ -1,0 +1,1277 @@
+{
+  "status": "structure_passed",
+  "source_commit": "e05ccb06ffacd982c98d083f9b28067b727341bf",
+  "checked_at": "2026-09-11T10:33:32.782Z",
+  "stage": "release_candidate",
+  "planned_lessons": 40,
+  "authored_lessons": 40,
+  "original_questions": 172,
+  "complete_course": true,
+  "records": [
+    {
+      "id": "G01",
+      "slug": "parameters-statistics-and-notation",
+      "title": "母数・推定量・観測値と総和記号",
+      "questions": 4,
+      "question_ids": [
+        "G01-Q1",
+        "G01-Q2",
+        "G01-Q3",
+        "G01-Q4"
+      ],
+      "source_sha256": "b1918e0d53fb3763b19a6000fadda683310327609d77b77a9fc50cd0230443c4",
+      "html_sha256": "c15fc55f2fc4c9a845e07d7b88b7d70fae9dc2dde71461ce547b64bf3ae7c417",
+      "prerequisites": [
+        "F15",
+        "F29",
+        "F34"
+      ],
+      "main_characters_approx": 1334,
+      "total_characters_approx": 2166,
+      "references": [
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf",
+        "https://www.openintro.org/book/os/"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G02",
+      "slug": "variance-skewness-kurtosis",
+      "title": "分散・歪度・尖度と定義の違い",
+      "questions": 4,
+      "question_ids": [
+        "G02-Q1",
+        "G02-Q2",
+        "G02-Q3",
+        "G02-Q4"
+      ],
+      "source_sha256": "93339c94c33c5fa0e0381b1eba7b3babf13979e2ef7f07f6d845925a40d8332f",
+      "html_sha256": "1d906b7b2be623a7b0daf69e33f73314137a6121da6296cc10f243fbe5198e58",
+      "prerequisites": [
+        "G01",
+        "F14",
+        "F18"
+      ],
+      "main_characters_approx": 1308,
+      "total_characters_approx": 1933,
+      "references": [
+        "https://www.itl.nist.gov/div898/handbook/eda/section3/eda35b.htm",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G03",
+      "slug": "lorenz-and-gini",
+      "title": "ローレンツ曲線とジニ係数",
+      "questions": 4,
+      "question_ids": [
+        "G03-Q1",
+        "G03-Q2",
+        "G03-Q3",
+        "G03-Q4"
+      ],
+      "source_sha256": "cbee18e21d981cdf511e9d29498f4b74205cc4205170b8c0755a34c6f431a46f",
+      "html_sha256": "483312643a1df07099d9b69f9848081f42c813960a1a8b4d280ab90504f04993",
+      "prerequisites": [
+        "G01",
+        "F06",
+        "F07"
+      ],
+      "main_characters_approx": 1568,
+      "total_characters_approx": 2335,
+      "references": [
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf",
+        "https://toketarou.com/cheatsheet/"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G04",
+      "slug": "growth-indices-autocorrelation",
+      "title": "幾何平均・指数・系列相関",
+      "questions": 4,
+      "question_ids": [
+        "G04-Q1",
+        "G04-Q2",
+        "G04-Q3",
+        "G04-Q4"
+      ],
+      "source_sha256": "1d49fbd528ab26928c6fdeb96bf50be90b37b0a5acfccb09819edf564cab26b0",
+      "html_sha256": "f7f807e39d6c6a0cf361279346f3ad44e67e2bade799d3fa70b85412714e58b5",
+      "prerequisites": [
+        "F22",
+        "G01"
+      ],
+      "main_characters_approx": 1459,
+      "total_characters_approx": 2192,
+      "references": [
+        "https://www.itl.nist.gov/div898/handbook/eda/section3/autocopl.htm",
+        "https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc42.htm",
+        "https://toketarou.com/cheatsheet/",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G05",
+      "slug": "sampling-and-finite-populations",
+      "title": "標本抽出法と有限母集団補正",
+      "questions": 4,
+      "question_ids": [
+        "G05-Q1",
+        "G05-Q2",
+        "G05-Q3",
+        "G05-Q4"
+      ],
+      "source_sha256": "419593db5376d3178b9aeae28b28a775069bf691674cd09d9b0eb43a697c9a45",
+      "html_sha256": "76a4d83db59bed7a51777826098d5ece3bbf176e1274a452b24198080c29f0ec",
+      "prerequisites": [
+        "F04",
+        "F13",
+        "G01"
+      ],
+      "main_characters_approx": 1473,
+      "total_characters_approx": 2291,
+      "references": [
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf",
+        "https://online.stat.psu.edu/stat506/"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G06",
+      "slug": "randomization-replication-blocking",
+      "title": "実験計画とフィッシャーの3原則",
+      "questions": 4,
+      "question_ids": [
+        "G06-Q1",
+        "G06-Q2",
+        "G06-Q3",
+        "G06-Q4"
+      ],
+      "source_sha256": "13aa4df8814e7bac923c9edc29fa6072c0f78b98660ecdca42f061c19faeae16",
+      "html_sha256": "4662b1e6c0f4a7e86080b973a077701613c989ed33f65f80235a01dea22a469c",
+      "prerequisites": [
+        "F05",
+        "G05"
+      ],
+      "main_characters_approx": 1723,
+      "total_characters_approx": 2565,
+      "references": [
+        "https://www.itl.nist.gov/div898/handbook/pri/section3/pri331.htm",
+        "https://www.itl.nist.gov/div898/handbook/pri/section3/pri332.htm",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G07",
+      "slug": "conditional-probability-and-bayes",
+      "title": "条件付き確率とベイズの定理",
+      "questions": 4,
+      "question_ids": [
+        "G07-Q1",
+        "G07-Q2",
+        "G07-Q3",
+        "G07-Q4"
+      ],
+      "source_sha256": "ce8921ad1ca60c2a42c1218c1cd156b24085dbe4d8395de95e9c3ea3c499e1e4",
+      "html_sha256": "e3579d80e73caa3415bbddb5f32b0fd3e34524b124a6b0872ec7478176f9e422",
+      "prerequisites": [
+        "F24",
+        "F26",
+        "F27",
+        "G01"
+      ],
+      "main_characters_approx": 1290,
+      "total_characters_approx": 2073,
+      "references": [
+        "https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G08",
+      "slug": "joint-marginal-independent",
+      "title": "同時分布・周辺分布・独立",
+      "questions": 4,
+      "question_ids": [
+        "G08-Q1",
+        "G08-Q2",
+        "G08-Q3",
+        "G08-Q4"
+      ],
+      "source_sha256": "fd2d0f22b208425b81605a280a283838a08e90de9043ab2e443da63c1c1f1625",
+      "html_sha256": "3de1f919e985fe164be593bcdccf6f8dc8a5550e98fe9fe4bba741c088ed82dd",
+      "prerequisites": [
+        "G07",
+        "F29"
+      ],
+      "main_characters_approx": 1431,
+      "total_characters_approx": 2136,
+      "references": [
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf",
+        "https://www.statlect.com/glossary/joint-probability-mass-function"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G09",
+      "slug": "expectation-variance-covariance",
+      "title": "期待値・分散・共分散と和や差",
+      "questions": 4,
+      "question_ids": [
+        "G09-Q1",
+        "G09-Q2",
+        "G09-Q3",
+        "G09-Q4"
+      ],
+      "source_sha256": "e67b54a30e73acc8e1f7521f290eb6e6eb168d916f76b3bfaa690d54c4182749",
+      "html_sha256": "5aed005414723fe4af5439dba2f992dd08271f6bf1872e4acc9cad594d3fa3b9",
+      "prerequisites": [
+        "G08",
+        "F15",
+        "F16"
+      ],
+      "main_characters_approx": 1563,
+      "total_characters_approx": 2264,
+      "references": [
+        "https://www.statlect.com/glossary/joint-probability-mass-function",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G10",
+      "slug": "density-cdf-transformation",
+      "title": "密度・分布関数・変数変換",
+      "questions": 4,
+      "question_ids": [
+        "G10-Q1",
+        "G10-Q2",
+        "G10-Q3",
+        "G10-Q4"
+      ],
+      "source_sha256": "ff71a9da1cc7634de82d1ee8aca12688b0f1933a8d9f45fab1cda95e1bae9c62",
+      "html_sha256": "c4a6f1d1e2cc328aaeca67de9b22b28fb1f10c4369e3c7b2e2049fb5c46a183f",
+      "prerequisites": [
+        "G08",
+        "G09",
+        "F31"
+      ],
+      "main_characters_approx": 1518,
+      "total_characters_approx": 1179,
+      "references": [
+        "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3662.htm",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G11",
+      "slug": "binomial-hypergeometric",
+      "title": "二項分布と超幾何分布",
+      "questions": 4,
+      "question_ids": [
+        "G11-Q1",
+        "G11-Q2",
+        "G11-Q3",
+        "G11-Q4"
+      ],
+      "source_sha256": "32c77b607a17b0a2d1ceef89ba71b796ab11fc4ac1f35b9887f60e7ce7142801",
+      "html_sha256": "5ffa5bae66221d2be601e677667e26780f901fff3ffeca68b15f0fd93e00f467",
+      "prerequisites": [
+        "G05",
+        "G09",
+        "F25"
+      ],
+      "main_characters_approx": 1365,
+      "total_characters_approx": 2102,
+      "references": [
+        "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G12",
+      "slug": "geometric-negative-binomial",
+      "title": "幾何分布と負の二項分布",
+      "questions": 4,
+      "question_ids": [
+        "G12-Q1",
+        "G12-Q2",
+        "G12-Q3",
+        "G12-Q4"
+      ],
+      "source_sha256": "8376995abb561723fa63d762a81c596521ff66821ff07a85275d76e7e02084d8",
+      "html_sha256": "2b860063eea3f3689cd6ef4eb42f5b954f82c9e251bbc0f711d8442b05cfb00b",
+      "prerequisites": [
+        "G07",
+        "G09",
+        "G11"
+      ],
+      "main_characters_approx": 1455,
+      "total_characters_approx": 625,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.geom.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.nbinom.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G13",
+      "slug": "poisson-exponential",
+      "title": "ポアソン分布と指数分布",
+      "questions": 4,
+      "question_ids": [
+        "G13-Q1",
+        "G13-Q2",
+        "G13-Q3",
+        "G13-Q4"
+      ],
+      "source_sha256": "3fdebb96db38bea81ea22c3d310a736056a982454e71d3d7f7035c99a99cd3d3",
+      "html_sha256": "65b87623ca48f8a7aeab810e70a13d8faf5f936d453e9b3af8005c7049fe912d",
+      "prerequisites": [
+        "G10",
+        "G11",
+        "G12"
+      ],
+      "main_characters_approx": 1517,
+      "total_characters_approx": 2201,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.poisson.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.expon.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G14",
+      "slug": "normal-and-bivariate-normal",
+      "title": "正規分布と2変量正規分布",
+      "questions": 4,
+      "question_ids": [
+        "G14-Q1",
+        "G14-Q2",
+        "G14-Q3",
+        "G14-Q4"
+      ],
+      "source_sha256": "cfb2f05448d63ae7666d970c09e545aae5455168a9469dd0c4353915113ac061",
+      "html_sha256": "e621324e6440e0dc747dce78f0e0f4f1c59cdb4a7e8a33043f96910cd7206dda",
+      "prerequisites": [
+        "F31",
+        "F32",
+        "G08",
+        "G09",
+        "G10"
+      ],
+      "main_characters_approx": 1424,
+      "total_characters_approx": 1432,
+      "references": [
+        "https://www.statlect.com/probability-distributions/normal-distribution",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.multivariate_normal.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G15",
+      "slug": "sampling-mean-proportion-variance",
+      "title": "標本平均・標本比率・不偏分散",
+      "questions": 4,
+      "question_ids": [
+        "G15-Q1",
+        "G15-Q2",
+        "G15-Q3",
+        "G15-Q4"
+      ],
+      "source_sha256": "8cf3f2c924f40224287bffe455402449dd6749cb3b53e8e626938626cc85eda8",
+      "html_sha256": "3bc44f39fe022650cd2a78f5ee81b246ecc0d680ae93423a05d7f078d3188b5b",
+      "prerequisites": [
+        "G01",
+        "G09",
+        "G11",
+        "G14"
+      ],
+      "main_characters_approx": 1467,
+      "total_characters_approx": 2210,
+      "references": [
+        "https://www.openintro.org/book/os/",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G16",
+      "slug": "laws-limits-and-approximations",
+      "title": "大数の法則・中心極限定理・正規近似",
+      "questions": 4,
+      "question_ids": [
+        "G16-Q1",
+        "G16-Q2",
+        "G16-Q3",
+        "G16-Q4"
+      ],
+      "source_sha256": "b294ca949aa2a5abdff6ad5e3e714dd5755f775e3596154cd5fc63794d82cee6",
+      "html_sha256": "5d02c550d4b2887c150dda9c614d1e5c034612a94ec5006c3e4aa7d73b95e9a3",
+      "prerequisites": [
+        "G11",
+        "G14",
+        "G15"
+      ],
+      "main_characters_approx": 1440,
+      "total_characters_approx": 1321,
+      "references": [
+        "https://www.openintro.org/book/os/",
+        "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G17",
+      "slug": "student-t-and-quantiles",
+      "title": "t分布と分布表の読み方",
+      "questions": 4,
+      "question_ids": [
+        "G17-Q1",
+        "G17-Q2",
+        "G17-Q3",
+        "G17-Q4"
+      ],
+      "source_sha256": "6bf2fa061954e782073f7de9426135c1ddbd5b2ccdb02cfb433ccb87c85f802e",
+      "html_sha256": "ad7bf9fe4a6029366d32e94a55a11f6132dc759e8f9f5b084ef5ff78c02d13bf",
+      "prerequisites": [
+        "G14",
+        "G15",
+        "G16"
+      ],
+      "main_characters_approx": 1358,
+      "total_characters_approx": 2210,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html",
+        "https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G18",
+      "slug": "chi-square-f-distributions",
+      "title": "カイ二乗分布・F分布と分位点",
+      "questions": 4,
+      "question_ids": [
+        "G18-Q1",
+        "G18-Q2",
+        "G18-Q3",
+        "G18-Q4"
+      ],
+      "source_sha256": "f11b08d7f1e51517bb201ff0921844e26d628ab069499fdd07db8d1498a4cbe2",
+      "html_sha256": "ce1cbb5dd0b9b9345d10cd3070fd589aa5b0af75ee44eea9aaf08f3609d2f9b0",
+      "prerequisites": [
+        "G14",
+        "G15",
+        "G17"
+      ],
+      "main_characters_approx": 1425,
+      "total_characters_approx": 2252,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G19",
+      "slug": "unbiased-consistent-mse",
+      "title": "不偏性・一致性・平均二乗誤差",
+      "questions": 4,
+      "question_ids": [
+        "G19-Q1",
+        "G19-Q2",
+        "G19-Q3",
+        "G19-Q4"
+      ],
+      "source_sha256": "f9cbee9256e55437f2ee36ae6c08cca63e47fb19d7eb8abc58ead17eb0911a53",
+      "html_sha256": "c9f887d67332ff3b8a4df7fc4e99cf091de7e69286b37f23c6985b5f427dc994",
+      "prerequisites": [
+        "G01",
+        "G15",
+        "G16"
+      ],
+      "main_characters_approx": 1666,
+      "total_characters_approx": 2426,
+      "references": [
+        "https://www.openintro.org/book/os/",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G20",
+      "slug": "mean-confidence-intervals",
+      "title": "母平均の区間推定：zとt",
+      "questions": 4,
+      "question_ids": [
+        "G20-Q1",
+        "G20-Q2",
+        "G20-Q3",
+        "G20-Q4"
+      ],
+      "source_sha256": "9d9552c2438dc0602259fa4c70c12a2dea0817e28ca76553eb45080223c20e2e",
+      "html_sha256": "f0d6a9a3999cc7f3a13a088de9f9fdae4c6b3d92bee14560ef2ee30949f1a85d",
+      "prerequisites": [
+        "G15",
+        "G17",
+        "G19"
+      ],
+      "main_characters_approx": 1496,
+      "total_characters_approx": 2275,
+      "references": [
+        "https://openintro-ims.netlify.app/inference-one-mean",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G21",
+      "slug": "mean-difference-intervals",
+      "title": "平均差の区間推定：対応と等分散",
+      "questions": 4,
+      "question_ids": [
+        "G21-Q1",
+        "G21-Q2",
+        "G21-Q3",
+        "G21-Q4"
+      ],
+      "source_sha256": "b9f52c89a886a0eb22e4743866405c187a6378e6a9b73f7c04872733ea51376b",
+      "html_sha256": "03f82af5aad8c7232e0673702a442f09f92af8a4c3695134e4f934cb90e9e0c0",
+      "prerequisites": [
+        "G09",
+        "G17",
+        "G20"
+      ],
+      "main_characters_approx": 1349,
+      "total_characters_approx": 2211,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G22",
+      "slug": "proportion-difference-intervals",
+      "title": "母比率と比率差の区間推定",
+      "questions": 4,
+      "question_ids": [
+        "G22-Q1",
+        "G22-Q2",
+        "G22-Q3",
+        "G22-Q4"
+      ],
+      "source_sha256": "a996fed08a1370912014e0bd15b5fc3051a7c42fd8854a3f3ce568a8757e25f0",
+      "html_sha256": "2fe9f9563e23012a33de9a95d144e70be591086b2943f1834ef857444c35d667",
+      "prerequisites": [
+        "G11",
+        "G15",
+        "G16",
+        "G20",
+        "G21"
+      ],
+      "main_characters_approx": 1594,
+      "total_characters_approx": 2392,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html",
+        "https://www.openintro.org/book/os/",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G23",
+      "slug": "variance-ratio-intervals",
+      "title": "母分散と分散比の区間推定",
+      "questions": 4,
+      "question_ids": [
+        "G23-Q1",
+        "G23-Q2",
+        "G23-Q3",
+        "G23-Q4"
+      ],
+      "source_sha256": "3675c09d08bea57bcd19c4c634e160e84647d87cc1b5447848f48a03c8275622",
+      "html_sha256": "d940b92b7f7baa2a552fb81279d9bdd83d80b20841b1c6c09ef544ca4a7cb00d",
+      "prerequisites": [
+        "G15",
+        "G18",
+        "G20",
+        "G21"
+      ],
+      "main_characters_approx": 1409,
+      "total_characters_approx": 2221,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G24",
+      "slug": "partial-correlation-and-intervals",
+      "title": "相関行列・偏相関・相関の区間推定",
+      "questions": 4,
+      "question_ids": [
+        "G24-Q1",
+        "G24-Q2",
+        "G24-Q3",
+        "G24-Q4"
+      ],
+      "source_sha256": "731e718414ae6ceeca54e5268d9851f83e912bc021c4dee77233fb8dbf5f33ac",
+      "html_sha256": "d603dad4ae2dcae33912dffac8429881f65945f88af18d69442903b55f0fca7a",
+      "prerequisites": [
+        "G08",
+        "G09",
+        "G14",
+        "G17",
+        "G20"
+      ],
+      "main_characters_approx": 1521,
+      "total_characters_approx": 1756,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.pearsonr.html",
+        "https://openintro-ims.netlify.app/model-slr",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G25",
+      "slug": "hypotheses-p-values-and-tails",
+      "title": "仮説・p値・片側と両側",
+      "questions": 4,
+      "question_ids": [
+        "G25-Q1",
+        "G25-Q2",
+        "G25-Q3",
+        "G25-Q4"
+      ],
+      "source_sha256": "ff3dc4024f4a4c3338a3fcd528bb2d543a0eb0baae0664159961344fd0e3cc32",
+      "html_sha256": "fe2550980468c133ad9090cb406d21f6b41f8d9a66c71ee5b3e93b7a8115c2fc",
+      "prerequisites": [
+        "G14",
+        "G17",
+        "G19",
+        "G20"
+      ],
+      "main_characters_approx": 1432,
+      "total_characters_approx": 2173,
+      "references": [
+        "https://www.openintro.org/book/os/",
+        "https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G26",
+      "slug": "errors-power-sample-size",
+      "title": "2種類の過誤・検出力・標本サイズ",
+      "questions": 4,
+      "question_ids": [
+        "G26-Q1",
+        "G26-Q2",
+        "G26-Q3",
+        "G26-Q4"
+      ],
+      "source_sha256": "38a95e7b3f41e385ea2400e5adbaf69bc5b33ddd7554cc15ab839c240f6d4023",
+      "html_sha256": "0479f5526f8573d3d177bcbaf55bca3038cb229484d79ea77a6403ae4f6202e8",
+      "prerequisites": [
+        "G14",
+        "G15",
+        "G20",
+        "G25"
+      ],
+      "main_characters_approx": 1503,
+      "total_characters_approx": 1834,
+      "references": [
+        "https://www.openintro.org/book/os/",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.norm.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf",
+        "https://www.itl.nist.gov/div898/handbook/prc/section2/prc222.htm"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G27",
+      "slug": "one-mean-tests",
+      "title": "一つの母平均の検定",
+      "questions": 4,
+      "question_ids": [
+        "G27-Q1",
+        "G27-Q2",
+        "G27-Q3",
+        "G27-Q4"
+      ],
+      "source_sha256": "d848f30c8c850b3f23402c48897dcca5a0d96195a1871ae9acfeef897e4b0bad",
+      "html_sha256": "9ec9636e94771de60d9461a4c9479b9fbde6580c951ca9ce40dc1445e59b2b37",
+      "prerequisites": [
+        "G17",
+        "G20",
+        "G25",
+        "G26"
+      ],
+      "main_characters_approx": 1414,
+      "total_characters_approx": 2173,
+      "references": [
+        "https://www.itl.nist.gov/div898/handbook/eda/section3/eda353.htm",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_1samp.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G28",
+      "slug": "two-mean-and-paired-tests",
+      "title": "平均差の検定：独立2群と対応あり",
+      "questions": 4,
+      "question_ids": [
+        "G28-Q1",
+        "G28-Q2",
+        "G28-Q3",
+        "G28-Q4"
+      ],
+      "source_sha256": "db5c942af2d4ea0d633cdc9cbf26729b9694947aa06e8847b5fb96d28f179545",
+      "html_sha256": "deb95ed4d4d4a70b9b5e9f600ee6405e0958ba79d42ac5ee80af84ab132cf103",
+      "prerequisites": [
+        "G21",
+        "G25",
+        "G26",
+        "G27"
+      ],
+      "main_characters_approx": 1485,
+      "total_characters_approx": 2290,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_rel.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G29",
+      "slug": "one-two-proportion-tests",
+      "title": "母比率と比率差の検定",
+      "questions": 4,
+      "question_ids": [
+        "G29-Q1",
+        "G29-Q2",
+        "G29-Q3",
+        "G29-Q4"
+      ],
+      "source_sha256": "c9eade09fbc1578b659fbdc80eb2eeb9a8d5af9d66f719dc36b81aac0962b400",
+      "html_sha256": "77b5ec3dd2b21feedd601c2114fb6551191233760db2d93ff29f68ac31be29aa",
+      "prerequisites": [
+        "G11",
+        "G16",
+        "G22",
+        "G25",
+        "G26"
+      ],
+      "main_characters_approx": 1445,
+      "total_characters_approx": 881,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html",
+        "https://www.openintro.org/book/os/",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G30",
+      "slug": "variance-ratio-tests",
+      "title": "母分散と分散比の検定",
+      "questions": 4,
+      "question_ids": [
+        "G30-Q1",
+        "G30-Q2",
+        "G30-Q3",
+        "G30-Q4"
+      ],
+      "source_sha256": "6b80ffc1160291de9220856d6eb5693983cfd5c2b4e68f00d04e57c5013298c6",
+      "html_sha256": "870ed78811fbd1a5e69fd6e4e6287af787eada39fa5c42294a8f90a4353b8f62",
+      "prerequisites": [
+        "G18",
+        "G23",
+        "G25",
+        "G28"
+      ],
+      "main_characters_approx": 1428,
+      "total_characters_approx": 2221,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chi2.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G31",
+      "slug": "goodness-of-fit",
+      "title": "カイ二乗適合度検定",
+      "questions": 4,
+      "question_ids": [
+        "G31-Q1",
+        "G31-Q2",
+        "G31-Q3",
+        "G31-Q4"
+      ],
+      "source_sha256": "e781d63210a191c9effe97950eadb2794092cf31bc25c94830db069afe20511e",
+      "html_sha256": "d2813030362d590084221233ca22b7667414e5944931a201ba8d9b8b016f3c2a",
+      "prerequisites": [
+        "G11",
+        "G18",
+        "G25",
+        "G29"
+      ],
+      "main_characters_approx": 1530,
+      "total_characters_approx": 2355,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.chisquare.html",
+        "https://www.openintro.org/book/os/",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G32",
+      "slug": "contingency-table-independence",
+      "title": "クロス集計と独立性の検定",
+      "questions": 4,
+      "question_ids": [
+        "G32-Q1",
+        "G32-Q2",
+        "G32-Q3",
+        "G32-Q4"
+      ],
+      "source_sha256": "4ee2b7499f09d77fe4df2f56c2a2cb07bf8d2b9f0c3e1cd1994cc94887863097",
+      "html_sha256": "a893d0d4a13f393313a9bfde1c58b3fbc98d666a512b9d013617ecfa229e4e11",
+      "prerequisites": [
+        "G08",
+        "G18",
+        "G29",
+        "G31"
+      ],
+      "main_characters_approx": 1831,
+      "total_characters_approx": 2787,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.contingency.chi2_contingency.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.fisher_exact.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G33",
+      "slug": "regression-estimation-standard-errors",
+      "title": "単回帰の推定と標準誤差",
+      "questions": 4,
+      "question_ids": [
+        "G33-Q1",
+        "G33-Q2",
+        "G33-Q3",
+        "G33-Q4"
+      ],
+      "source_sha256": "b3652569a1b74e9d597ba396cbecf08ff7013a6df0af12d8d38acceca44b3abf",
+      "html_sha256": "b94cceaecf327767f3f08fdfaa1ae9b117899cd6f3b6c0b91eaf9e41f6115933",
+      "prerequisites": [
+        "F20",
+        "G09",
+        "G15",
+        "G17",
+        "G24"
+      ],
+      "main_characters_approx": 1463,
+      "total_characters_approx": 2297,
+      "references": [
+        "https://openintro-ims.netlify.app/model-slr",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.linregress.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G34",
+      "slug": "regression-tests-and-prediction",
+      "title": "回帰の検定・信頼区間・予測区間",
+      "questions": 4,
+      "question_ids": [
+        "G34-Q1",
+        "G34-Q2",
+        "G34-Q3",
+        "G34-Q4"
+      ],
+      "source_sha256": "1fde4a642d9164e045af58ef6c1310a03cdae91006718d0bdc1682793e14256b",
+      "html_sha256": "8498586d526c2b197ca50a47da9b6bb70222f19d4f6a31a1d46f3ca0441850b2",
+      "prerequisites": [
+        "G17",
+        "G20",
+        "G25",
+        "G27",
+        "G33"
+      ],
+      "main_characters_approx": 1807,
+      "total_characters_approx": 2651,
+      "references": [
+        "https://openintro-ims.netlify.app/model-slr",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.t.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G35",
+      "slug": "multiple-regression-and-dummies",
+      "title": "重回帰・偏回帰係数・ダミー変数",
+      "questions": 4,
+      "question_ids": [
+        "G35-Q1",
+        "G35-Q2",
+        "G35-Q3",
+        "G35-Q4"
+      ],
+      "source_sha256": "bc2315fb8bdbd9301abb5311073c5fe8a3d0dcac09771d3912952565bfd8be65",
+      "html_sha256": "bb985e333b7197375fddda078eb8ff9903b4e9a2f7f79ab4fc5687d82cddfd6b",
+      "prerequisites": [
+        "G08",
+        "G24",
+        "G33",
+        "G34"
+      ],
+      "main_characters_approx": 1708,
+      "total_characters_approx": 2564,
+      "references": [
+        "https://www.openintro.org/book/os/",
+        "https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G36",
+      "slug": "model-diagnostics-and-collinearity",
+      "title": "残差診断・多重共線性・調整済み決定係数",
+      "questions": 4,
+      "question_ids": [
+        "G36-Q1",
+        "G36-Q2",
+        "G36-Q3",
+        "G36-Q4"
+      ],
+      "source_sha256": "2dd742aa5cbb92f378dfe1efaa980c1eabd116abdeec184039f63a3f9cd090c7",
+      "html_sha256": "ede479c50c3ae65f84d807c1fa85fdc18476689cadab265204382ca54f67cad5",
+      "prerequisites": [
+        "G24",
+        "G33",
+        "G34",
+        "G35"
+      ],
+      "main_characters_approx": 2019,
+      "total_characters_approx": 2928,
+      "references": [
+        "https://www.statsmodels.org/stable/generated/statsmodels.stats.outliers_influence.variance_inflation_factor.html",
+        "https://www.openintro.org/book/os/",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G37",
+      "slug": "one-way-anova",
+      "title": "一元配置分散分析",
+      "questions": 4,
+      "question_ids": [
+        "G37-Q1",
+        "G37-Q2",
+        "G37-Q3",
+        "G37-Q4"
+      ],
+      "source_sha256": "b1bcf103c88d356ef256db6588e048e528c2fa9297f82c1d3569f42ad7d5aab1",
+      "html_sha256": "4430d86f0fd097495cff92875ac0293f44d9a1ea3d2bc3b572630e8602874247",
+      "prerequisites": [
+        "G06",
+        "G18",
+        "G25",
+        "G28",
+        "G33",
+        "G35"
+      ],
+      "main_characters_approx": 1769,
+      "total_characters_approx": 2614,
+      "references": [
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html",
+        "https://www.openintro.org/book/os/",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G38",
+      "slug": "reading-analysis-output",
+      "title": "解析出力を読み、手法を選ぶ",
+      "questions": 4,
+      "question_ids": [
+        "G38-Q1",
+        "G38-Q2",
+        "G38-Q3",
+        "G38-Q4"
+      ],
+      "source_sha256": "b685eb6cc1ff7544307d2bfd265f342bd205a415eee707b685053469dc8b6d37",
+      "html_sha256": "44f6fe3a7c05882707957f7b87e35472a9df34872df23c3dc63be9f4778899e7",
+      "prerequisites": [
+        "G25",
+        "G29",
+        "G34",
+        "G35",
+        "G36",
+        "G37"
+      ],
+      "main_characters_approx": 1887,
+      "total_characters_approx": 2820,
+      "references": [
+        "https://www.statsmodels.org/stable/generated/statsmodels.regression.linear_model.OLS.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f.html",
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G39",
+      "slug": "reproducible-case-study",
+      "title": "データから分析と報告を再現する",
+      "questions": 4,
+      "question_ids": [
+        "G39-Q1",
+        "G39-Q2",
+        "G39-Q3",
+        "G39-Q4"
+      ],
+      "source_sha256": "71fec374d7caafee3d17d86c92a8878da592b3fbcb5ca1684885830c6b51b00e",
+      "html_sha256": "19ca94a2039d384f07be2a03084009f31f1b9838569b6bad0271c50fd3b4cb6b",
+      "prerequisites": [
+        "G05",
+        "G21",
+        "G28",
+        "G35",
+        "G36",
+        "G38"
+      ],
+      "main_characters_approx": 2219,
+      "total_characters_approx": 3374,
+      "references": [
+        "https://archive.ics.uci.edu/dataset/53/iris",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html",
+        "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.f_oneway.html"
+      ],
+      "review_status": "self_checked"
+    },
+    {
+      "id": "G40",
+      "slug": "grade2-integrated-practice",
+      "title": "2級の総合演習と準1級への接続",
+      "questions": 16,
+      "question_ids": [
+        "G40-Q1",
+        "G40-Q2",
+        "G40-Q3",
+        "G40-Q4",
+        "G40-Q5",
+        "G40-Q6",
+        "G40-Q7",
+        "G40-Q8",
+        "G40-Q9",
+        "G40-Q10",
+        "G40-Q11",
+        "G40-Q12",
+        "G40-Q13",
+        "G40-Q14",
+        "G40-Q15",
+        "G40-Q16"
+      ],
+      "source_sha256": "46e8b30a9bf36a49b71ec56c19df96c9983d9028b4092a4fb40e810cf230ca45",
+      "html_sha256": "72efb7bc9518221814dc0580ca286468f3c32dc8b1fee3c1b3936ab3908383b4",
+      "prerequisites": [
+        "G04",
+        "G05",
+        "G09",
+        "G18",
+        "G24",
+        "G26",
+        "G30",
+        "G32",
+        "G34",
+        "G36",
+        "G37",
+        "G38",
+        "G39"
+      ],
+      "main_characters_approx": 321,
+      "total_characters_approx": 4415,
+      "references": [
+        "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf",
+        "https://www.toukei-kentei.jp/grade/grade_pre-1",
+        "https://www.openintro.org/book/os/"
+      ],
+      "review_status": "self_checked"
+    }
+  ],
+  "coverage": [
+    {
+      "id": "G2-S01",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S02",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S03",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S04",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S05",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S06",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S07",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S08",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S09",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S10",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S11",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S12",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S13",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S14",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S15",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S16",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S17",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S18",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S19",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S20",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S21",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S22",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S23",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S24",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S25",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S26",
+      "status": "implemented",
+      "missing": []
+    },
+    {
+      "id": "G2-S27",
+      "status": "implemented",
+      "missing": []
+    }
+  ],
+  "limitations": [
+    "Structural checks do not prove mathematical or pedagogical correctness.",
+    "Character counts omit markup, formulas and references.",
+    "Independent numerical and browser tests are recorded separately."
+  ]
+}

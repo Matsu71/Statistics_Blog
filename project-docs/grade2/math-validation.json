@@ -1,0 +1,2058 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-11T10:33:34.472188+00:00",
+  "source_commit": "e05ccb06ffacd982c98d083f9b28067b727341bf",
+  "workflow_run_id": "34589747612",
+  "lesson_count": 40,
+  "covered_lessons": [
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08",
+    "G09",
+    "G10",
+    "G11",
+    "G12",
+    "G13",
+    "G14",
+    "G15",
+    "G16",
+    "G17",
+    "G18",
+    "G19",
+    "G20",
+    "G21",
+    "G22",
+    "G23",
+    "G24",
+    "G25",
+    "G26",
+    "G27",
+    "G28",
+    "G29",
+    "G30",
+    "G31",
+    "G32",
+    "G33",
+    "G34",
+    "G35",
+    "G36",
+    "G37",
+    "G38",
+    "G39",
+    "G40"
+  ],
+  "numerical_checks": 145,
+  "check_count": 145,
+  "checks": [
+    {
+      "lesson_id": "G01",
+      "name": "sum, mean and sum of squares",
+      "actual": [
+        20.0,
+        5.0,
+        120.0,
+        400.0
+      ],
+      "expected": [
+        20.0,
+        5.0,
+        120.0,
+        400.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G01",
+      "name": "population and sample variance",
+      "actual": [
+        5.0,
+        6.666666666666667
+      ],
+      "expected": [
+        5.0,
+        6.666666666666667
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G01",
+      "name": "sum of deviations from an arbitrary center",
+      "actual": 12.0,
+      "expected": 12.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G02",
+      "name": "central moments",
+      "actual": [
+        1.5,
+        1.5,
+        4.5
+      ],
+      "expected": [
+        1.5,
+        1.5,
+        4.5
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G02",
+      "name": "moment skew and raw/excess kurtosis",
+      "actual": [
+        0.816496580927726,
+        2.0,
+        -1.0
+      ],
+      "expected": [
+        0.816496580927726,
+        2.0,
+        -1.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G02",
+      "name": "unbiased variance",
+      "actual": 2.0,
+      "expected": 2.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G03",
+      "name": "pairwise Gini",
+      "actual": 0.375,
+      "expected": 0.375,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G03",
+      "name": "translation is not scale invariance",
+      "actual": 0.1875,
+      "expected": 0.1875,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G03",
+      "name": "Lorenz trapezoids",
+      "actual": 0.3125,
+      "expected": 0.3125,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G04",
+      "name": "geometric growth rate",
+      "actual": 0.03923048454132627,
+      "expected": 0.039230484541326494,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G04",
+      "name": "Laspeyres and Paasche price indices",
+      "actual": [
+        137.5,
+        135.0
+      ],
+      "expected": [
+        137.5,
+        135.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G04",
+      "name": "full-mean lag-one autocorrelation",
+      "actual": 0.25,
+      "expected": 0.25,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G04",
+      "name": "Pearson correlation of shifted slices is different",
+      "actual": 0.9999999999999998,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G05",
+      "name": "stratified weighted mean",
+      "actual": 14.4,
+      "expected": 14.4,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G05",
+      "name": "finite population variance using N-1 convention",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G05",
+      "name": "enumerated simple random sample means",
+      "actual": [
+        6.0,
+        3.3333333333333335
+      ],
+      "expected": [
+        6.0,
+        3.3333333333333335
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G06",
+      "name": "blocked differences",
+      "actual": [
+        2.0,
+        2.0
+      ],
+      "expected": [
+        2.0,
+        2.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G06",
+      "name": "allocation count",
+      "actual": 6.0,
+      "expected": 6.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G07",
+      "name": "total defect probability",
+      "actual": 0.032,
+      "expected": 0.032,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G07",
+      "name": "posterior factory B",
+      "actual": 0.6250000000000001,
+      "expected": 0.625,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G07",
+      "name": "changed prior factory B",
+      "actual": 0.2173913043478261,
+      "expected": 0.21739130434782608,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G07",
+      "name": "independent union",
+      "actual": 0.7,
+      "expected": 0.7,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G08",
+      "name": "marginal means and covariance",
+      "actual": [
+        0.5,
+        0.4,
+        0.09999999999999998
+      ],
+      "expected": [
+        0.5,
+        0.4,
+        0.1
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G08",
+      "name": "correlation",
+      "actual": 0.40824829046386296,
+      "expected": 0.4082482904638631,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G08",
+      "name": "zero covariance with nonlinear dependence",
+      "actual": 0.0,
+      "expected": 0.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G09",
+      "name": "sum moments",
+      "actual": [
+        0.9,
+        0.69
+      ],
+      "expected": [
+        0.9,
+        0.69
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G09",
+      "name": "difference moments",
+      "actual": [
+        0.1,
+        0.29000000000000004
+      ],
+      "expected": [
+        0.1,
+        0.29
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G09",
+      "name": "linear combination moments",
+      "actual": [
+        5.6,
+        0.8399999999999999
+      ],
+      "expected": [
+        5.6,
+        0.84
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G09",
+      "name": "correlated standard deviations",
+      "actual": [
+        3.0,
+        19.0
+      ],
+      "expected": [
+        3.0,
+        19.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G10",
+      "name": "density normalization and moments by quadrature",
+      "actual": [
+        1.0,
+        0.6666666666666667,
+        0.5
+      ],
+      "expected": [
+        1.0,
+        0.6666666666666666,
+        0.5
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G10",
+      "name": "density probability",
+      "actual": 0.25,
+      "expected": 0.25,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G10",
+      "name": "uniform probability mean variance",
+      "actual": [
+        0.5,
+        3.0,
+        3.0
+      ],
+      "expected": [
+        0.5,
+        3.0,
+        3.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G10",
+      "name": "two inverse branches",
+      "actual": 0.5,
+      "expected": 0.5,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G11",
+      "name": "binomial probability mean variance",
+      "actual": [
+        0.34559999999999974,
+        2.0,
+        1.1999999999999997
+      ],
+      "expected": [
+        0.3456,
+        2.0,
+        1.2
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G11",
+      "name": "hypergeometric probability mean variance",
+      "actual": [
+        0.3,
+        1.2,
+        0.56
+      ],
+      "expected": [
+        0.3,
+        1.2,
+        0.56
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G11",
+      "name": "binomial counterpart",
+      "actual": 0.2880000000000001,
+      "expected": 0.288,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G12",
+      "name": "geometric trials",
+      "actual": [
+        0.14699999999999996,
+        3.3333333333333335,
+        7.777777777777779
+      ],
+      "expected": [
+        0.147,
+        3.3333333333333335,
+        7.777777777777778
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G12",
+      "name": "negative-binomial failures correspond to total five",
+      "actual": 0.12348,
+      "expected": 0.12348,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G12",
+      "name": "failure moments",
+      "actual": [
+        4.666666666666667,
+        15.555555555555555
+      ],
+      "expected": [
+        4.666666666666667,
+        15.555555555555555
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G12",
+      "name": "memoryless residual wait",
+      "actual": 0.4900000000000001,
+      "expected": 0.49,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G13",
+      "name": "one-hour count probability",
+      "actual": 0.40600584970983794,
+      "expected": 0.4060058497098381,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G13",
+      "name": "continuous waiting probability",
+      "actual": 0.36787944117144233,
+      "expected": 0.36787944117144233,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G13",
+      "name": "two-hour count probability",
+      "actual": 0.14652511110987343,
+      "expected": 0.14652511110987343,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G13",
+      "name": "waiting moments",
+      "actual": [
+        0.5,
+        0.25
+      ],
+      "expected": [
+        0.5,
+        0.25
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G14",
+      "name": "conditional mean and variance",
+      "actual": [
+        21.5,
+        6.75
+      ],
+      "expected": [
+        21.5,
+        6.75
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G14",
+      "name": "linear combination variance",
+      "actual": 13.0,
+      "expected": 13.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G14",
+      "name": "standardized tail",
+      "actual": 0.024997895148220435,
+      "expected": 0.024997895148220435,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G15",
+      "name": "sample mean variance and standard error",
+      "actual": [
+        9.0,
+        3.0
+      ],
+      "expected": [
+        9.0,
+        3.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G15",
+      "name": "sample proportion variance and SE",
+      "actual": [
+        0.0021,
+        0.0458257569495584
+      ],
+      "expected": [
+        0.0021,
+        0.0458257569495584
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G15",
+      "name": "sample variance from observed values",
+      "actual": 6.666666666666667,
+      "expected": 6.666666666666667,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G15",
+      "name": "dependent mean variance",
+      "actual": 4.5,
+      "expected": 4.5,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G16",
+      "name": "Chebyshev mean bound",
+      "actual": 0.09,
+      "expected": 0.09,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G16",
+      "name": "binomial exact central tail by symmetry",
+      "actual": 0.5397946186935889,
+      "expected": 0.5397946186935894,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G16",
+      "name": "continuity corrected central tail",
+      "actual": 0.539827837277029,
+      "expected": 0.53983,
+      "absolute_tolerance": 5e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G16",
+      "name": "continuity corrected right tail",
+      "actual": 0.18406012534675947,
+      "expected": 0.18406,
+      "absolute_tolerance": 5e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G17",
+      "name": "t15 critical value",
+      "actual": 2.131449545559776,
+      "expected": 2.131449545559323,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G17",
+      "name": "t15 two-sided probability",
+      "actual": 0.06394500728472015,
+      "expected": 0.06395,
+      "absolute_tolerance": 6e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G17",
+      "name": "t statistic and df",
+      "actual": [
+        2.0,
+        15.0
+      ],
+      "expected": [
+        2.0,
+        15.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G18",
+      "name": "chi-square moments",
+      "actual": [
+        9.0,
+        18.0
+      ],
+      "expected": [
+        9.0,
+        18.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G18",
+      "name": "chi-square2 quantiles via exponential",
+      "actual": [
+        0.10258658877510106,
+        5.991464547107979
+      ],
+      "expected": [
+        0.10258658877510116,
+        5.991464547107982
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G18",
+      "name": "F2,2 inverse quantiles",
+      "actual": [
+        0.052631578947368425,
+        18.999999999999982
+      ],
+      "expected": [
+        0.05263157894736842,
+        19.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G18",
+      "name": "F reciprocal with unequal degrees",
+      "actual": 0.14799090490898478,
+      "expected": 0.14799090490898487,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G19",
+      "name": "MSE decomposition example",
+      "actual": 7.0,
+      "expected": 7.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G19",
+      "name": "shrinkage MSE at mu=2",
+      "actual": 0.8000000000000002,
+      "expected": 0.8,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G19",
+      "name": "shrinkage MSE at mu=10",
+      "actual": 4.639999999999999,
+      "expected": 4.64,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G20",
+      "name": "known-sigma confidence interval",
+      "actual": [
+        48.08,
+        55.92
+      ],
+      "expected": [
+        48.08,
+        55.92
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G20",
+      "name": "unknown-sigma confidence interval",
+      "actual": [
+        47.73710090888045,
+        56.26289909111955
+      ],
+      "expected": [
+        47.7371,
+        56.2629
+      ],
+      "absolute_tolerance": 2e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G20",
+      "name": "sample size and half-width",
+      "actual": 1.96,
+      "expected": 1.96,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G21",
+      "name": "Welch SE and degrees of freedom",
+      "actual": [
+        0.9219544457292888,
+        25.408226221079694
+      ],
+      "expected": [
+        0.9219544457292888,
+        25.40822622107969
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G21",
+      "name": "pooled variance",
+      "actual": 7.392857142857143,
+      "expected": 7.392857142857143,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G21",
+      "name": "paired mean variance and SE",
+      "actual": [
+        2.0,
+        0.5,
+        0.31622776601683794
+      ],
+      "expected": [
+        2.0,
+        0.5,
+        0.31622776601683794
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G21",
+      "name": "paired confidence interval",
+      "actual": [
+        1.1220109669149172,
+        2.8779890330850826
+      ],
+      "expected": [
+        1.1220109669149172,
+        2.8779890330850826
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G22",
+      "name": "one proportion Wald interval",
+      "actual": [
+        0.30398000208289944,
+        0.4960199979171006
+      ],
+      "expected": [
+        0.30398,
+        0.49602
+      ],
+      "absolute_tolerance": 5e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G22",
+      "name": "difference of proportions Wald interval",
+      "actual": [
+        -0.015123933219813146,
+        0.21512393321981316
+      ],
+      "expected": [
+        -0.01512,
+        0.21512
+      ],
+      "absolute_tolerance": 5e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G22",
+      "name": "Wilson boundary by quadratic",
+      "actual": [
+        0.0,
+        0.2775401687666164
+      ],
+      "expected": [
+        0.0,
+        0.2775401687666166
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G23",
+      "name": "normal variance interval",
+      "actual": [
+        1.8924690865737568,
+        13.331410154076606
+      ],
+      "expected": [
+        1.89,
+        13.33
+      ],
+      "absolute_tolerance": 0.006,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G23",
+      "name": "variance ratio interval",
+      "actual": [
+        0.05128205128205133,
+        77.99999999999999
+      ],
+      "expected": [
+        0.05128205128205128,
+        78.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G23",
+      "name": "positive transformations of intervals",
+      "actual": [
+        2.0,
+        5.0,
+        0.25,
+        2.0
+      ],
+      "expected": [
+        2.0,
+        5.0,
+        0.25,
+        2.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G24",
+      "name": "partial correlation",
+      "actual": 0.7216878364870322,
+      "expected": 0.7216878364870322,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G24",
+      "name": "rounded Fisher confidence interval",
+      "actual": [
+        0.0738018869581825,
+        0.7717642387256564
+      ],
+      "expected": [
+        0.074,
+        0.772
+      ],
+      "absolute_tolerance": 0.001,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G24",
+      "name": "null-correlation t statistic",
+      "actual": 2.449489742783178,
+      "expected": 2.449489742783178,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G25",
+      "name": "upper lower and two-sided probabilities",
+      "actual": [
+        0.022750131948179195,
+        0.9772498680518208,
+        0.04550026389635839
+      ],
+      "expected": [
+        0.02275,
+        0.97725,
+        0.0455
+      ],
+      "absolute_tolerance": 5e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G25",
+      "name": "data-selected one-sided rejection rate",
+      "actual": 0.10000000000000009,
+      "expected": 0.1,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G26",
+      "name": "power for specified positive effect",
+      "actual": 0.803764940015494,
+      "expected": 0.804,
+      "absolute_tolerance": 0.0006,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G26",
+      "name": "ceiling of one-sided known-variance sample size",
+      "actual": 25.0,
+      "expected": 25.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G26",
+      "name": "reducing alpha lowers power at fixed positive effect",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G26",
+      "name": "n=24 falls short while n=25 meets 80-percent power",
+      "actual": [
+        1.0,
+        1.0
+      ],
+      "expected": [
+        1.0,
+        1.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G26",
+      "name": "sample-size boundary with a below-alpha power target",
+      "actual": [
+        1.0,
+        1.0
+      ],
+      "expected": [
+        1.0,
+        1.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G27",
+      "name": "same statistic different reference distributions",
+      "actual": [
+        0.04550026389635839,
+        0.05693984993659173
+      ],
+      "expected": [
+        0.0455,
+        0.05694
+      ],
+      "absolute_tolerance": 5e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G27",
+      "name": "unknown-variance interval",
+      "actual": [
+        99.87220287674396,
+        108.12779712325604
+      ],
+      "expected": [
+        99.8722,
+        108.1278
+      ],
+      "absolute_tolerance": 5e-05,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G28",
+      "name": "Welch statistic",
+      "actual": 3.2539568672798427,
+      "expected": 3.25396,
+      "absolute_tolerance": 5e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G28",
+      "name": "pooled standard error and statistic",
+      "actual": [
+        1.0530567750261957,
+        2.8488492464476787
+      ],
+      "expected": [
+        1.05306,
+        2.84885
+      ],
+      "absolute_tolerance": 6e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G28",
+      "name": "paired t",
+      "actual": 6.324555320336758,
+      "expected": 6.324555320336759,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G28",
+      "name": "paired two-sided probability",
+      "actual": 0.0031982021523353065,
+      "expected": 0.0032,
+      "absolute_tolerance": 5e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G29",
+      "name": "one-proportion null standard error and statistic",
+      "actual": [
+        0.05,
+        1.9999999999999996
+      ],
+      "expected": [
+        0.05,
+        2.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G29",
+      "name": "two-proportion null z and p",
+      "actual": [
+        1.7320508075688776,
+        0.08326451666355032
+      ],
+      "expected": [
+        1.7320508075688772,
+        0.08326
+      ],
+      "absolute_tolerance": 5e-06,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G29",
+      "name": "small-binomial exact lower tail",
+      "actual": 0.34867844009999993,
+      "expected": 0.3486784401000001,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G30",
+      "name": "variance test statistic and rejection",
+      "actual": [
+        25.0,
+        1.0
+      ],
+      "expected": [
+        25.0,
+        1.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G30",
+      "name": "equal-tail F test",
+      "actual": 0.6666666666666666,
+      "expected": 0.6666666666666666,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G31",
+      "name": "Pearson goodness-of-fit statistic",
+      "actual": 4.64,
+      "expected": 4.64,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G31",
+      "name": "goodness-of-fit tail",
+      "actual": 0.2001374153373323,
+      "expected": 0.2001374153373323,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G31",
+      "name": "zero observed positive expected contribution",
+      "actual": 10.0,
+      "expected": 10.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G32",
+      "name": "independence expected table",
+      "actual": [
+        [
+          25.0,
+          25.0
+        ],
+        [
+          25.0,
+          25.0
+        ]
+      ],
+      "expected": [
+        [
+          25.0,
+          25.0
+        ],
+        [
+          25.0,
+          25.0
+        ]
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G32",
+      "name": "uncorrected independence test",
+      "actual": [
+        4.0,
+        1.0,
+        0.04550026389635857
+      ],
+      "expected": [
+        4.0,
+        1.0,
+        0.04550026389635839
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G32",
+      "name": "Yates versus uncorrected result",
+      "actual": [
+        3.24,
+        0.07186063822585143
+      ],
+      "expected": [
+        3.24,
+        0.07186063822585158
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G33",
+      "name": "OLS coefficients versus exact algebra",
+      "actual": [
+        0.9999999999999979,
+        1.1428571428571437
+      ],
+      "expected": [
+        1.0,
+        1.1428571428571428
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G33",
+      "name": "OLS residuals",
+      "actual": [
+        -0.14285714285714146,
+        0.7142857142857149,
+        0.5714285714285712,
+        -1.571428571428573,
+        -0.7142857142857171,
+        1.1428571428571397
+      ],
+      "expected": [
+        -0.14285714285714285,
+        0.7142857142857143,
+        0.5714285714285714,
+        -1.5714285714285714,
+        -0.7142857142857143,
+        1.1428571428571428
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G33",
+      "name": "residual variance",
+      "actual": [
+        5.142857142857144,
+        4.0,
+        1.285714285714286
+      ],
+      "expected": [
+        5.142857142857143,
+        4.0,
+        1.2857142857142858
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G33",
+      "name": "slope and intercept variance",
+      "actual": [
+        1.1142857142857145,
+        0.07346938775510206
+      ],
+      "expected": [
+        1.1142857142857143,
+        0.07346938775510205
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G33",
+      "name": "library slope standard error",
+      "actual": 0.27105237087157524,
+      "expected": 0.2710523708715754,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G34",
+      "name": "slope t and overall F",
+      "actual": [
+        4.216370213557841,
+        17.777777777777796
+      ],
+      "expected": [
+        4.216370213557839,
+        17.77777777777778
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G34",
+      "name": "linear regression p value",
+      "actual": 0.013516881521817509,
+      "expected": 0.013516881521817499,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G34",
+      "name": "mean-response and prediction estimated variances",
+      "actual": [
+        0.2142857142857142,
+        1.5000000000000002
+      ],
+      "expected": [
+        0.21428571428571427,
+        1.5
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G34",
+      "name": "rounded response intervals",
+      "actual": [
+        3.714755657846384,
+        6.285244342153616
+      ],
+      "expected": [
+        3.71,
+        6.29
+      ],
+      "absolute_tolerance": 0.01,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G35",
+      "name": "multiple regression coefficients",
+      "actual": [
+        10.000000000000016,
+        1.9999999999999902,
+        3.0000000000000235
+      ],
+      "expected": [
+        10.0,
+        2.0,
+        3.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G35",
+      "name": "multiple-regression residuals",
+      "actual": [
+        0.9999999999999929,
+        -0.9999999999999964,
+        -0.9999999999999858,
+        1.0000000000000213,
+        0.9999999999999698,
+        -1.0000000000000213,
+        -1.0000000000000107,
+        0.9999999999999964
+      ],
+      "expected": [
+        1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G35",
+      "name": "residual square sum and df",
+      "actual": [
+        7.999999999999989,
+        5.0,
+        1.5999999999999979
+      ],
+      "expected": [
+        8.0,
+        5.0,
+        1.6
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G35",
+      "name": "interaction example is a separate model",
+      "actual": 7.5,
+      "expected": 7.5,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G36",
+      "name": "R-squared and adjusted R-squared",
+      "actual": [
+        66.0,
+        0.8787878787878789,
+        0.8303030303030305
+      ],
+      "expected": [
+        66.0,
+        0.8787878787878788,
+        0.8303030303030303
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G36",
+      "name": "VIF from auxiliary R-squared",
+      "actual": 10.000000000000002,
+      "expected": 10.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G37",
+      "name": "one-way ANOVA square sums",
+      "actual": [
+        24.0,
+        6.0,
+        30.0
+      ],
+      "expected": [
+        24.0,
+        6.0,
+        30.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G37",
+      "name": "one-way ANOVA F and exact tail",
+      "actual": [
+        12.0,
+        0.008000000000000002
+      ],
+      "expected": [
+        12.0,
+        0.008
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G38",
+      "name": "coefficient variances reconstructed from design",
+      "actual": [
+        1.3999999999999981,
+        0.1599999999999998,
+        0.7999999999999989
+      ],
+      "expected": [
+        1.4,
+        0.16,
+        0.8
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G38",
+      "name": "overall F with two predictors",
+      "actual": 18.12500000000003,
+      "expected": 18.125,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G38",
+      "name": "overall F analytic tail",
+      "actual": 0.005115229559763372,
+      "expected": 0.00511522955976339,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G39",
+      "name": "preserved case row count",
+      "actual": 150.0,
+      "expected": 150.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G39",
+      "name": "source standard deviations and standard errors",
+      "actual": [
+        0.17366399648018407,
+        0.46991097723995795,
+        0.5518946956639834
+      ],
+      "expected": [
+        0.17366399648018407,
+        0.46991097723995795,
+        0.5518946956639834
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G39",
+      "name": "reported Welch t",
+      "actual": 39.492719391538095,
+      "expected": 39.492719391538095,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G39",
+      "name": "reported Welch probability",
+      "actual": 9.934432957587636e-46,
+      "expected": 9.934432957587636e-46,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q1 sum notation",
+      "actual": [
+        3.0,
+        35.0,
+        81.0,
+        4.0
+      ],
+      "expected": [
+        3.0,
+        35.0,
+        81.0,
+        4.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q2 Gini",
+      "actual": 0.5,
+      "expected": 0.5,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q3 geometric growth",
+      "actual": 0.09544511501033215,
+      "expected": 0.09544511501033215,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q4 finite population correction",
+      "actual": 1.6,
+      "expected": 1.6,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q5 conditional probability",
+      "actual": [
+        0.24000000000000005,
+        0.6666666666666666
+      ],
+      "expected": [
+        0.24,
+        0.6666666666666666
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q6 covariance and difference variance",
+      "actual": [
+        0.10000000000000003,
+        0.2899999999999999
+      ],
+      "expected": [
+        0.1,
+        0.29
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q7 nonreplacement probability",
+      "actual": 0.10714285714285715,
+      "expected": 0.10714285714285714,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q8 geometric probability and mean",
+      "actual": [
+        0.10546875,
+        4.0
+      ],
+      "expected": [
+        0.10546875,
+        4.0
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q9 sample mean tail",
+      "actual": 0.024997895148220373,
+      "expected": 0.024997895148220435,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q10 known-sigma interval",
+      "actual": [
+        9.02,
+        10.98
+      ],
+      "expected": [
+        9.02,
+        10.98
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q11 MSE comparison",
+      "actual": [
+        2.0,
+        1.25
+      ],
+      "expected": [
+        2.0,
+        1.25
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q12 paired t",
+      "actual": 3.872983346207417,
+      "expected": 3.872983346207417,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q13 goodness-of-fit",
+      "actual": [
+        8.4,
+        0.014995576820477707
+      ],
+      "expected": [
+        8.4,
+        0.014995576820477703
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q14 OLS coefficients and residual variance",
+      "actual": [
+        0.6999999999999993,
+        1.2000000000000004,
+        1.7999999999999998,
+        0.8999999999999999
+      ],
+      "expected": [
+        0.7,
+        1.2,
+        1.8,
+        0.9
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q15 ANOVA table",
+      "actual": [
+        12.0,
+        0.008000000000000002
+      ],
+      "expected": [
+        12.0,
+        0.008
+      ],
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    },
+    {
+      "lesson_id": "G40",
+      "name": "Q16 actual case byte provenance",
+      "actual": 1.0,
+      "expected": 1.0,
+      "absolute_tolerance": 1e-09,
+      "relative_tolerance": 1e-09,
+      "status": "passed"
+    }
+  ],
+  "failure": null,
+  "sources": {
+    "G01": {
+      "path": "src/content/grade2/parameters-statistics-and-notation.md",
+      "sha256": "b1918e0d53fb3763b19a6000fadda683310327609d77b77a9fc50cd0230443c4"
+    },
+    "G02": {
+      "path": "src/content/grade2/variance-skewness-kurtosis.md",
+      "sha256": "93339c94c33c5fa0e0381b1eba7b3babf13979e2ef7f07f6d845925a40d8332f"
+    },
+    "G03": {
+      "path": "src/content/grade2/lorenz-and-gini.md",
+      "sha256": "cbee18e21d981cdf511e9d29498f4b74205cc4205170b8c0755a34c6f431a46f"
+    },
+    "G04": {
+      "path": "src/content/grade2/growth-indices-autocorrelation.md",
+      "sha256": "1d49fbd528ab26928c6fdeb96bf50be90b37b0a5acfccb09819edf564cab26b0"
+    },
+    "G05": {
+      "path": "src/content/grade2/sampling-and-finite-populations.md",
+      "sha256": "419593db5376d3178b9aeae28b28a775069bf691674cd09d9b0eb43a697c9a45"
+    },
+    "G06": {
+      "path": "src/content/grade2/randomization-replication-blocking.md",
+      "sha256": "13aa4df8814e7bac923c9edc29fa6072c0f78b98660ecdca42f061c19faeae16"
+    },
+    "G07": {
+      "path": "src/content/grade2/conditional-probability-and-bayes.md",
+      "sha256": "ce8921ad1ca60c2a42c1218c1cd156b24085dbe4d8395de95e9c3ea3c499e1e4"
+    },
+    "G08": {
+      "path": "src/content/grade2/joint-marginal-independent.md",
+      "sha256": "fd2d0f22b208425b81605a280a283838a08e90de9043ab2e443da63c1c1f1625"
+    },
+    "G09": {
+      "path": "src/content/grade2/expectation-variance-covariance.md",
+      "sha256": "e67b54a30e73acc8e1f7521f290eb6e6eb168d916f76b3bfaa690d54c4182749"
+    },
+    "G10": {
+      "path": "src/content/grade2/density-cdf-transformation.md",
+      "sha256": "ff71a9da1cc7634de82d1ee8aca12688b0f1933a8d9f45fab1cda95e1bae9c62"
+    },
+    "G11": {
+      "path": "src/content/grade2/binomial-hypergeometric.md",
+      "sha256": "32c77b607a17b0a2d1ceef89ba71b796ab11fc4ac1f35b9887f60e7ce7142801"
+    },
+    "G12": {
+      "path": "src/content/grade2/geometric-negative-binomial.md",
+      "sha256": "8376995abb561723fa63d762a81c596521ff66821ff07a85275d76e7e02084d8"
+    },
+    "G13": {
+      "path": "src/content/grade2/poisson-exponential.md",
+      "sha256": "3fdebb96db38bea81ea22c3d310a736056a982454e71d3d7f7035c99a99cd3d3"
+    },
+    "G14": {
+      "path": "src/content/grade2/normal-and-bivariate-normal.md",
+      "sha256": "cfb2f05448d63ae7666d970c09e545aae5455168a9469dd0c4353915113ac061"
+    },
+    "G15": {
+      "path": "src/content/grade2/sampling-mean-proportion-variance.md",
+      "sha256": "8cf3f2c924f40224287bffe455402449dd6749cb3b53e8e626938626cc85eda8"
+    },
+    "G16": {
+      "path": "src/content/grade2/laws-limits-and-approximations.md",
+      "sha256": "b294ca949aa2a5abdff6ad5e3e714dd5755f775e3596154cd5fc63794d82cee6"
+    },
+    "G17": {
+      "path": "src/content/grade2/student-t-and-quantiles.md",
+      "sha256": "6bf2fa061954e782073f7de9426135c1ddbd5b2ccdb02cfb433ccb87c85f802e"
+    },
+    "G18": {
+      "path": "src/content/grade2/chi-square-f-distributions.md",
+      "sha256": "f11b08d7f1e51517bb201ff0921844e26d628ab069499fdd07db8d1498a4cbe2"
+    },
+    "G19": {
+      "path": "src/content/grade2/unbiased-consistent-mse.md",
+      "sha256": "f9cbee9256e55437f2ee36ae6c08cca63e47fb19d7eb8abc58ead17eb0911a53"
+    },
+    "G20": {
+      "path": "src/content/grade2/mean-confidence-intervals.md",
+      "sha256": "9d9552c2438dc0602259fa4c70c12a2dea0817e28ca76553eb45080223c20e2e"
+    },
+    "G21": {
+      "path": "src/content/grade2/mean-difference-intervals.md",
+      "sha256": "b9f52c89a886a0eb22e4743866405c187a6378e6a9b73f7c04872733ea51376b"
+    },
+    "G22": {
+      "path": "src/content/grade2/proportion-difference-intervals.md",
+      "sha256": "a996fed08a1370912014e0bd15b5fc3051a7c42fd8854a3f3ce568a8757e25f0"
+    },
+    "G23": {
+      "path": "src/content/grade2/variance-ratio-intervals.md",
+      "sha256": "3675c09d08bea57bcd19c4c634e160e84647d87cc1b5447848f48a03c8275622"
+    },
+    "G24": {
+      "path": "src/content/grade2/partial-correlation-and-intervals.md",
+      "sha256": "731e718414ae6ceeca54e5268d9851f83e912bc021c4dee77233fb8dbf5f33ac"
+    },
+    "G25": {
+      "path": "src/content/grade2/hypotheses-p-values-and-tails.md",
+      "sha256": "ff3dc4024f4a4c3338a3fcd528bb2d543a0eb0baae0664159961344fd0e3cc32"
+    },
+    "G26": {
+      "path": "src/content/grade2/errors-power-sample-size.md",
+      "sha256": "38a95e7b3f41e385ea2400e5adbaf69bc5b33ddd7554cc15ab839c240f6d4023"
+    },
+    "G27": {
+      "path": "src/content/grade2/one-mean-tests.md",
+      "sha256": "d848f30c8c850b3f23402c48897dcca5a0d96195a1871ae9acfeef897e4b0bad"
+    },
+    "G28": {
+      "path": "src/content/grade2/two-mean-and-paired-tests.md",
+      "sha256": "db5c942af2d4ea0d633cdc9cbf26729b9694947aa06e8847b5fb96d28f179545"
+    },
+    "G29": {
+      "path": "src/content/grade2/one-two-proportion-tests.md",
+      "sha256": "c9eade09fbc1578b659fbdc80eb2eeb9a8d5af9d66f719dc36b81aac0962b400"
+    },
+    "G30": {
+      "path": "src/content/grade2/variance-ratio-tests.md",
+      "sha256": "6b80ffc1160291de9220856d6eb5693983cfd5c2b4e68f00d04e57c5013298c6"
+    },
+    "G31": {
+      "path": "src/content/grade2/goodness-of-fit.md",
+      "sha256": "e781d63210a191c9effe97950eadb2794092cf31bc25c94830db069afe20511e"
+    },
+    "G32": {
+      "path": "src/content/grade2/contingency-table-independence.md",
+      "sha256": "4ee2b7499f09d77fe4df2f56c2a2cb07bf8d2b9f0c3e1cd1994cc94887863097"
+    },
+    "G33": {
+      "path": "src/content/grade2/regression-estimation-standard-errors.md",
+      "sha256": "b3652569a1b74e9d597ba396cbecf08ff7013a6df0af12d8d38acceca44b3abf"
+    },
+    "G34": {
+      "path": "src/content/grade2/regression-tests-and-prediction.md",
+      "sha256": "1fde4a642d9164e045af58ef6c1310a03cdae91006718d0bdc1682793e14256b"
+    },
+    "G35": {
+      "path": "src/content/grade2/multiple-regression-and-dummies.md",
+      "sha256": "bc2315fb8bdbd9301abb5311073c5fe8a3d0dcac09771d3912952565bfd8be65"
+    },
+    "G36": {
+      "path": "src/content/grade2/model-diagnostics-and-collinearity.md",
+      "sha256": "2dd742aa5cbb92f378dfe1efaa980c1eabd116abdeec184039f63a3f9cd090c7"
+    },
+    "G37": {
+      "path": "src/content/grade2/one-way-anova.md",
+      "sha256": "b1bcf103c88d356ef256db6588e048e528c2fa9297f82c1d3569f42ad7d5aab1"
+    },
+    "G38": {
+      "path": "src/content/grade2/reading-analysis-output.md",
+      "sha256": "b685eb6cc1ff7544307d2bfd265f342bd205a415eee707b685053469dc8b6d37"
+    },
+    "G39": {
+      "path": "src/content/grade2/reproducible-case-study.md",
+      "sha256": "71fec374d7caafee3d17d86c92a8878da592b3fbcb5ca1684885830c6b51b00e"
+    },
+    "G40": {
+      "path": "src/content/grade2/grade2-integrated-practice.md",
+      "sha256": "46e8b30a9bf36a49b71ec56c19df96c9983d9028b4092a4fb40e810cf230ca45"
+    }
+  },
+  "environment": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "limits": [
+    "Examples and stated calculations are independently recomputed; this is not proof of every textual assertion.",
+    "Editorial assumptions, explanations, and references require the separately documented content review.",
+    "This is not independent human mathematical peer review or a learning-outcome experiment."
+  ]
+}

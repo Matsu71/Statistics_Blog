@@ -1,11 +1,19 @@
 {
-  "stage":"checkpoint",
-  "target_lessons":40,
-  "authored_through":"G08",
-  "authored_lessons":8,
-  "authored_questions":32,
-  "scope":"grade2",
-  "started_from":"907657df5aa273b1a8d69e393c2b1dff6dccff8b",
-  "date":"2026-09-11",
-  "next":"G09以降の制作と、初期8講座・2級UIの検証。基礎コースの回帰テストを維持し、全40講座が揃って検証されるまで公開完了としない。"
+  "stage": "release_candidate",
+  "target_lessons": 40,
+  "authored_through": "G40",
+  "authored_lessons": 40,
+  "authored_questions": 172,
+  "scope": "grade2",
+  "started_from": "907657df5aa273b1a8d69e393c2b1dff6dccff8b",
+  "date": "2026-09-11",
+  "next": "Verify the copied candidate, bind evidence, then publish the verified files only.",
+  "version": "grade2-1.0.0",
+  "questions": 172,
+  "limitations": [
+    "Not independent human mathematical peer review.",
+    "Not a controlled comparison of learning outcomes.",
+    "Pre-grade1 and grade1 complete course texts are not part of this release."
+  ],
+  "review_workspace": "review/grade2/20260911/candidate"
 }

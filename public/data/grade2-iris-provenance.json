@@ -1,0 +1,35 @@
+{
+  "dataset": "Iris",
+  "creator": "R. A. Fisher",
+  "year": 1936,
+  "repository": "UCI Machine Learning Repository",
+  "doi": "10.24432/C56C76",
+  "source_page": "https://archive.ics.uci.edu/dataset/53/iris",
+  "download_url": "https://archive.ics.uci.edu/static/public/53/iris.zip",
+  "source_file": "bezdekIris.data",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "license_checked_date": "2026-09-11",
+  "retrieved_at": "2026-09-11T10:33:14.583506+00:00",
+  "archive_sha256": "d11fe30213d36434a0879aab7cb00ce3c812eb7ba2495874438abff7b7b762e9",
+  "source_file_sha256": "0fed2a99db77ec533a62dc66894d3ec6df3b58b6a8f3cf4a6b47e4086b7f97dc",
+  "csv_sha256": "7866a81bd4601f74577a9cd0a7f03b35dcb0c361cf1e578a3930697524b0edeb",
+  "rows": 150,
+  "class_counts": {
+    "Iris-setosa": 50,
+    "Iris-versicolor": 50,
+    "Iris-virginica": 50
+  },
+  "modifications": [
+    "Added descriptive CSV header with measurement units; excluded blank trailing lines; retained numeric strings and row order from bezdekIris.data."
+  ],
+  "version_note": "UCI distributes iris.data and bezdekIris.data; its description notes differences from the Fisher article. This course pins bezdekIris.data and does not silently combine versions.",
+  "limits": [
+    "A historical observational dataset, not a randomized treatment experiment or a newly collected representative sample."
+  ],
+  "teaching_case_csv_sha256": "7866a81bd4601f74577a9cd0a7f03b35dcb0c361cf1e578a3930697524b0edeb",
+  "teaching_case_measurement": "petal_length_cm",
+  "preserved_observations": 150,
+  "identical_numeric_rows_extra_occurrences": 1,
+  "identical_rows_policy": "Preserve the published rows; equal measurements do not alone establish duplicate subjects."
+}

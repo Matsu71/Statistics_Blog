@@ -1,0 +1,745 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-11T10:45:40.821Z",
+  "source_commit": "e05ccb06ffacd982c98d083f9b28067b727341bf",
+  "assertions": 2030,
+  "views": 120,
+  "results": [
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G01",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G02",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G03",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G04",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G05",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G06",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G07",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G08",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G09",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G10",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G11",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G12",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G13",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G14",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G15",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G16",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G17",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G18",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G19",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G20",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G21",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G22",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G23",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G24",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G25",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G26",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G27",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G28",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G29",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G30",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G31",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G32",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G33",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G34",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G35",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G36",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G37",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G38",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G39",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 375,
+      "lesson": "G40",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G01",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G02",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G03",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G04",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G05",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G06",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G07",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G08",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G09",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G10",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G11",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G12",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G13",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G14",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G15",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G16",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G17",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G18",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G19",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G20",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G21",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G22",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G23",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G24",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G25",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G26",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G27",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G28",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G29",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G30",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G31",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G32",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G33",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G34",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G35",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G36",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G37",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G38",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G39",
+      "status": "passed"
+    },
+    {
+      "engine": "Chromium",
+      "width": 1280,
+      "lesson": "G40",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G01",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G02",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G03",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G04",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G05",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G06",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G07",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G08",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G09",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G10",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G11",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G12",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G13",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G14",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G15",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G16",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G17",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G18",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G19",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G20",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G21",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G22",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G23",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G24",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G25",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G26",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G27",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G28",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G29",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G30",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G31",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G32",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G33",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G34",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G35",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G36",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G37",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G38",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G39",
+      "status": "passed"
+    },
+    {
+      "engine": "WebKit",
+      "width": 375,
+      "lesson": "G40",
+      "status": "passed"
+    }
+  ],
+  "page_errors": [],
+  "tested": [
+    "all authored grade2 pages",
+    "mobile and desktop layout",
+    "keyboard details",
+    "deep links",
+    "print expand/restore",
+    "full-text search",
+    "isolated local memory",
+    "syllabus links",
+    "JavaScript-disabled basic reading"
+  ],
+  "limits": [
+    "Automated browsers are not user studies or a screen-reader audit.",
+    "Screenshots require separate visual review."
+  ]
+}

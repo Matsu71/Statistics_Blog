@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "computed_at": "2026-09-11T10:33:15.357246+00:00",
+  "csv_sha256": "7866a81bd4601f74577a9cd0a7f03b35dcb0c361cf1e578a3930697524b0edeb",
+  "import_provenance_file": "public/data/grade2-iris-provenance.json",
+  "row_count": 150,
+  "summaries": {
+    "setosa": {
+      "n": 50,
+      "mean": 1.462,
+      "variance_ddof1": 0.030159183673469387,
+      "sd_ddof1": 0.17366399648018407,
+      "se_mean": 0.024559797911818976,
+      "minimum": 1.0,
+      "maximum": 1.9
+    },
+    "versicolor": {
+      "n": 50,
+      "mean": 4.26,
+      "variance_ddof1": 0.22081632653061228,
+      "sd_ddof1": 0.46991097723995795,
+      "se_mean": 0.06645544771207433,
+      "minimum": 3.0,
+      "maximum": 5.1
+    },
+    "virginica": {
+      "n": 50,
+      "mean": 5.552,
+      "variance_ddof1": 0.30458775510204084,
+      "sd_ddof1": 0.5518946956639834,
+      "se_mean": 0.07804969636097771,
+      "minimum": 4.5,
+      "maximum": 6.9
+    }
+  },
+  "welch": {
+    "difference_definition": "versicolor - setosa",
+    "difference": 2.798,
+    "se": 0.0708485017772545,
+    "df": 62.13976789553875,
+    "t": 39.492719391538095,
+    "p_two_sided": 9.934432957587636e-46,
+    "ci95": [
+      2.6563821992116283,
+      2.9396178007883718
+    ]
+  },
+  "anova_computation_crosscheck_only": {
+    "ss_between": 437.1028,
+    "ss_within": 27.222600000000003,
+    "ss_total": 464.3254,
+    "df": [
+      2,
+      147
+    ],
+    "f": 1180.161182252981,
+    "p": 2.8567766109619814e-91
+  },
+  "checks": [
+    "setosa: mean statistics vs NumPy",
+    "setosa: variance statistics vs NumPy",
+    "versicolor: mean statistics vs NumPy",
+    "versicolor: variance statistics vs NumPy",
+    "virginica: mean statistics vs NumPy",
+    "virginica: variance statistics vs NumPy",
+    "Welch statistic",
+    "Welch df",
+    "Welch p",
+    "Welch CI lower",
+    "Welch CI upper",
+    "ANOVA partition",
+    "ANOVA F",
+    "ANOVA p"
+  ],
+  "check_count": 14,
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "lesson_sha256": "0e7a1ab230a26c04f1817345160e864d807fa0b7f530a736d601ad8e1b7b4b49",
+  "limitations": [
+    "Not a newly collected random sample or randomized experiment.",
+    "Numerical agreement does not verify normality, equal variance, independence, representativeness, or causality.",
+    "No independent human mathematical peer review is claimed."
+  ]
+}

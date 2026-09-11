@@ -46,13 +46,21 @@ try {
           assert.ok(await page.locator('.katex').count()>0);assertions++;
           const geometry=await page.evaluate(()=>[document.documentElement.clientWidth,document.documentElement.scrollWidth]);
           assert.ok(geometry[1]<=geometry[0]+2,`${name} ${lesson.id} ${width} overflow ${geometry}`);assertions++;
+          const brokenNumbers=await page.locator('.lesson-body td[align="right"]').evaluateAll(cells=>cells.flatMap(cell=>{
+            const text=(cell.textContent??'').trim();
+            if(!/^[+\-−]?[0-9]+(?:\.[0-9]+)?(?:e[+\-]?[0-9]+)?%?$/i.test(text))return [];
+            const range=document.createRange();range.selectNodeContents(cell);
+            const lines=new Set(Array.from(range.getClientRects()).map(rect=>Math.round(rect.top)));
+            return lines.size>1?[text]:[];
+          }));
+          assert.deepEqual(brokenNumbers,[],`${name} ${lesson.id}: number split across lines`);assertions++;
           const ids=await page.locator('[id]').evaluateAll(items=>items.map(item=>item.id));
           assert.equal(ids.length,new Set(ids).size,`${lesson.id}: duplicate IDs`);assertions++;
           const first=page.locator('.lesson-body details').first();await first.locator('summary').focus();await page.keyboard.press('Enter');
           assert.ok(await first.evaluate(e=>e.open));assertions++;
           await page.locator('[data-g2-collapse]').click();
           assert.equal(await page.locator('.lesson-body details[open]').count(),0);assertions++;
-          if(['G03','G18','G23','G33','G39'].includes(lesson.id)&&width===375&&name==='Chromium') await page.screenshot({path:`review-assets/grade2/screens/${lesson.id}-${width}.png`,fullPage:true});
+          if(['G03','G18','G23','G25','G26','G33','G35','G38','G39','G40'].includes(lesson.id)&&width===375&&name==='Chromium') await page.screenshot({path:`review-assets/grade2/screens/${lesson.id}-${width}.png`,fullPage:true});
           results.push({engine:name,width,lesson:lesson.id,status:'passed'});
         }
       }
@@ -80,7 +88,10 @@ try {
       assert.equal(await page.locator('.course-module').count(),27);assertions++;
       const links=await page.locator('[data-grade2-coverage] a[href*="#"]').evaluateAll(items=>items.map(item=>item.href));
       for(const target of [...new Set(links)]) {
-        const response=await page.goto(target,{waitUntil:'domcontentloaded'});assert.equal(response.status(),200);assertions++;
+        const documentUrl=new URL(target);documentUrl.hash='';
+        const http=await page.request.get(documentUrl.href);assert.equal(http.status(),200);assertions++;
+        await page.goto(target,{waitUntil:'domcontentloaded'});
+        assert.equal(new URL(page.url()).pathname,documentUrl.pathname);assertions++;
         const id=decodeURIComponent(new URL(target).hash.slice(1));
         assert.ok(await page.evaluate(id=>Boolean(document.getElementById(id)),id),`missing coverage anchor: ${target}`);assertions++;
       }

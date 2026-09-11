@@ -10,7 +10,7 @@ const index = lessons.map((entry) => ({
   url: withBase(`/learn/grade2/${entry.data.slug}/`),
   text: lessonId ? '' : `${entry.data.title} ${entry.data.description} ${(entry.body ?? '').replace(/<[^>]+>/g, ' ')}`
 }));
-const serialized = JSON.stringify(index).replace(/</g, '\u003c');
+const serialized = JSON.stringify(index).replace(/</g, '\\u003c');
 ---
 <section class="learning-utility" data-grade2-utility data-current-grade2={lessonId ?? ''} hidden aria-label="2級講座の検索と端末内の学習記録">
   {!lessonId && (
