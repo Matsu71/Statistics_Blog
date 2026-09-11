@@ -1,0 +1,77 @@
+{
+  "id": "grade2",
+  "title": "統計検定2級コース",
+  "subtitle": "基礎から、条件を確かめて推定・検定・回帰を使う",
+  "version": "2026-09-11",
+  "syllabus": {
+    "id": "grade2-official-snapshot-20260911",
+    "page_url": "https://www.toukei-kentei.jp/grade/grade2/",
+    "page_version_label": "202409版",
+    "pdf_url": "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade2_hani_20181214.pdf",
+    "pdf_printed_date": "2018/12/14",
+    "checked_at": "2026-09-11",
+    "note": "公式ページに実際にリンクされているPDFを本文とページ画像で確認。ページの版名とPDF記載日を混同しない。"
+  },
+  "modules": [
+    {"id":"G-A","title":"基礎を2級の道具へつなぐ","lessons":[
+      {"id":"G01","slug":"parameters-statistics-and-notation","title":"母数・推定量・観測値と総和記号","objective":"ランダムに変わる量と観測後の数値を区別し、式を読む"},
+      {"id":"G02","slug":"variance-skewness-kurtosis","title":"分散・歪度・尖度と定義の違い","objective":"nとn−1、高次の中心モーメント、外れ値の影響を区別する"},
+      {"id":"G03","slug":"lorenz-and-gini","title":"ローレンツ曲線とジニ係数","objective":"累積比率の図から面積を計算し、不均等を解釈する"},
+      {"id":"G04","slug":"growth-indices-autocorrelation","title":"幾何平均・指数・系列相関","objective":"成長率を連鎖させ、基準時点と時間依存を読む"}
+    ]},
+    {"id":"G-B","title":"推測できるデータを集める","lessons":[
+      {"id":"G05","slug":"sampling-and-finite-populations","title":"標本抽出法と有限母集団補正","objective":"抽出法と重みを選び、標本誤差と偏りを区別する"},
+      {"id":"G06","slug":"randomization-replication-blocking","title":"実験計画とフィッシャーの3原則","objective":"無作為化・反復・局所管理の役割を実験の設計へ使う"}
+    ]},
+    {"id":"G-C","title":"確率モデルを組み立てる","lessons":[
+      {"id":"G07","slug":"conditional-probability-and-bayes","title":"条件付き確率とベイズの定理","objective":"条件の向きと分母を確かめ、多段階の確率を求める"},
+      {"id":"G08","slug":"joint-marginal-independent","title":"同時分布・周辺分布・独立","objective":"二変数の表から周辺と条件付き分布を作る"},
+      {"id":"G09","slug":"expectation-variance-covariance","title":"期待値・分散・共分散と和や差","objective":"共分散を残す必要があるか判断して線形結合を計算する"},
+      {"id":"G10","slug":"density-cdf-transformation","title":"密度・分布関数・変数変換","objective":"積分を面積として使い、変換後の値域と密度を求める"}
+    ]},
+    {"id":"G-D","title":"分布を選び、確率を求める","lessons":[
+      {"id":"G11","slug":"binomial-hypergeometric","title":"二項分布と超幾何分布","objective":"復元の有無と固定した試行回数から成功数の分布を選ぶ"},
+      {"id":"G12","slug":"geometric-negative-binomial","title":"幾何分布と負の二項分布","objective":"何を数えて止めるかを定め、値域と式を対応させる"},
+      {"id":"G13","slug":"poisson-exponential","title":"ポアソン分布と指数分布","objective":"単位時間あたりの回数と待ち時間を区別する"},
+      {"id":"G14","slug":"normal-and-bivariate-normal","title":"正規分布と2変量正規分布","objective":"標準化・線形結合・条件付き分布を条件とともに使う"}
+    ]},
+    {"id":"G-E","title":"標本分布から推測へ","lessons":[
+      {"id":"G15","slug":"sampling-mean-proportion-variance","title":"標本平均・標本比率・不偏分散","objective":"標本分布の平均と分散を求め、n−1の根拠を説明する"},
+      {"id":"G16","slug":"laws-limits-and-approximations","title":"大数の法則・中心極限定理・正規近似","objective":"不等式の上界と近似を区別し、連続修正を使う"},
+      {"id":"G17","slug":"student-t-and-quantiles","title":"t分布と分布表の読み方","objective":"標準誤差の推定と自由度の意味を理解して分位点を読む"},
+      {"id":"G18","slug":"chi-square-f-distributions","title":"カイ二乗分布・F分布と分位点","objective":"二乗和と分散比から分布を選び、裾と自由度を対応させる"}
+    ]},
+    {"id":"G-F","title":"母数を推定する","lessons":[
+      {"id":"G19","slug":"unbiased-consistent-mse","title":"不偏性・一致性・平均二乗誤差","objective":"推定量の性質を有限標本と極限に分けて評価する"},
+      {"id":"G20","slug":"mean-confidence-intervals","title":"母平均の区間推定：zとt","objective":"分散既知・未知の条件で区間を作り被覆率を解釈する"},
+      {"id":"G21","slug":"mean-difference-intervals","title":"平均差の区間推定：対応と等分散","objective":"対応あり、分散既知、等分散、Welchを選び分ける"},
+      {"id":"G22","slug":"proportion-difference-intervals","title":"母比率と比率差の区間推定","objective":"近似の条件と標準誤差を確かめ、区間を作る"},
+      {"id":"G23","slug":"variance-ratio-intervals","title":"母分散と分散比の区間推定","objective":"非対称な分位点を使い、不等式の逆数操作を理解する"},
+      {"id":"G24","slug":"partial-correlation-and-intervals","title":"相関行列・偏相関・相関の区間推定","objective":"関連の調整とFisher変換を、因果推論と区別して使う"}
+    ]},
+    {"id":"G-G","title":"仮説を検定する","lessons":[
+      {"id":"G25","slug":"hypotheses-p-values-and-tails","title":"仮説・p値・片側と両側","objective":"仮説のもとでの確率と仮説が真の確率を区別する"},
+      {"id":"G26","slug":"errors-power-sample-size","title":"2種類の過誤・検出力・標本サイズ","objective":"効果と標準誤差から検出力を考える"},
+      {"id":"G27","slug":"one-mean-tests","title":"一つの母平均の検定","objective":"z検定とt検定を選び、統計量・p値・結論を結ぶ"},
+      {"id":"G28","slug":"two-mean-and-paired-tests","title":"平均差の検定：独立2群と対応あり","objective":"データの対応と分散の条件から検定を選ぶ"},
+      {"id":"G29","slug":"one-two-proportion-tests","title":"母比率と比率差の検定","objective":"帰無仮説のもとの比率を使って標準誤差を求める"},
+      {"id":"G30","slug":"variance-ratio-tests","title":"母分散と分散比の検定","objective":"正規性・自由度・片側両側を確認して分散を比べる"}
+    ]},
+    {"id":"G-H","title":"カテゴリの度数を比べる","lessons":[
+      {"id":"G31","slug":"goodness-of-fit","title":"カイ二乗適合度検定","objective":"期待度数・推定した母数・自由度を対応させる"},
+      {"id":"G32","slug":"contingency-table-independence","title":"クロス集計と独立性の検定","objective":"周辺合計から期待度数を求め、関連と効果を区別する"}
+    ]},
+    {"id":"G-I","title":"回帰と分散分析で説明する","lessons":[
+      {"id":"G33","slug":"regression-estimation-standard-errors","title":"単回帰の推定と標準誤差","objective":"最小二乗・残差分散・係数の不確かさをつなぐ"},
+      {"id":"G34","slug":"regression-tests-and-prediction","title":"回帰の検定・信頼区間・予測区間","objective":"平均応答と新しい観測の予測を区別する"},
+      {"id":"G35","slug":"multiple-regression-and-dummies","title":"重回帰・偏回帰係数・ダミー変数","objective":"ほかの変数を一定とする意味と基準カテゴリを読む"},
+      {"id":"G36","slug":"model-diagnostics-and-collinearity","title":"残差診断・多重共線性・調整済み決定係数","objective":"当てはまりとモデルの条件・予測性能を別々に評価する"},
+      {"id":"G37","slug":"one-way-anova","title":"一元配置分散分析","objective":"平方和・自由度・F比を計算し、全体検定を解釈する"}
+    ]},
+    {"id":"G-J","title":"出力を読み、問題を解決する","lessons":[
+      {"id":"G38","slug":"reading-analysis-output","title":"解析出力を読み、手法を選ぶ","objective":"係数表・分散分析表・区間を計算と結び付けて読む"},
+      {"id":"G39","slug":"reproducible-case-study","title":"データから分析と報告を再現する","objective":"原データ・出典・手順・結果・限界を一つの分析にそろえる"},
+      {"id":"G40","slug":"grade2-integrated-practice","title":"2級の総合演習と準1級への接続","objective":"初見の混合問題で条件・方法・解釈を確かめる"}
+    ]}
+  ]
+}

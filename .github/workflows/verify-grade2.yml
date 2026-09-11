@@ -1,0 +1,80 @@
+name: Verify grade2 course
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ['content/grade2-*']
+    paths:
+      - .github/workflows/verify-grade2.yml
+      - src/data/grade2-release.json
+
+permissions:
+  contents: write
+
+concurrency:
+  group: grade2-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Read requested stage
+        id: stage
+        run: echo "value=$(node -p "require('./src/data/grade2-release.json').stage")" >> "$GITHUB_OUTPUT"
+      - name: Install locked dependencies
+        if: steps.stage.outputs.value != 'authoring'
+        run: npm ci
+      - name: Verify courses
+        if: steps.stage.outputs.value != 'authoring'
+        run: |
+          node scripts/prepare-grade2.mjs
+          npm run generate:index
+          npm run verify
+          node scripts/validate-foundation.mjs
+          node scripts/test-foundation-math.mjs
+          node scripts/test-release-extras.mjs
+          node scripts/validate-grade2.mjs
+          python3 -m pip install --quiet scipy
+          python3 scripts/check-grade2-math.py
+      - name: Verify browser behavior
+        if: steps.stage.outputs.value != 'authoring'
+        run: |
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium webkit
+          sudo apt-get install -y fonts-noto-cjk
+          node scripts/test-foundation-browser.mjs
+          node scripts/test-learning-labs.mjs
+          node scripts/test-grade2-browser.mjs
+      - name: Package source and factual evidence
+        if: always()
+        run: |
+          mkdir -p review-assets/grade2
+          tar --exclude='*.ttf' --exclude='*.woff' --exclude='*.woff2' -czf review-assets/grade2/source.tar.gz src scripts public data project-docs package.json package-lock.json astro.config.mjs site-build.config.mjs tsconfig.json AGENTS.md README.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: grade2-review-${{ github.run_id }}
+          path: |
+            review-assets/grade2/
+            project-docs/grade2/
+          retention-days: 14
+      - name: Save verified release candidate on the working branch
+        if: steps.stage.outputs.value == 'release_candidate'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src scripts public docs project-docs/grade2 AGENTS.md README.md
+          if ! git diff --cached --quiet; then
+            git commit -m 'build: save verified grade2 course and evidence [skip ci]'
+            git push origin HEAD:${{ github.ref_name }}
+          fi
