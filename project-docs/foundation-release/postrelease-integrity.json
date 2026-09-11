@@ -1,0 +1,2166 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-11T07:29:01.255974+00:00",
+  "checked_repository_commit": "a5141099b0343b9425973e605d801ee67b118bd4",
+  "released_source_commit": "0acf49d7d473073dfc6762e3de0aa4f80e0cd3a9",
+  "workflow_run_id": "34574573167",
+  "workflow_url": "https://github.com/Matsu71/Statistics_Blog/actions/runs/34574573167",
+  "html_pages": 119,
+  "resources_checked": 188,
+  "lesson_count": 40,
+  "question_count": 130,
+  "checks": {
+    "all_resources_match": true,
+    "all_40_lesson_ids": true,
+    "all_130_unique_questions": true,
+    "exact_public_marker": true,
+    "committed_release_hashes": true
+  },
+  "failures": [],
+  "resources": [
+    {
+      "path": "docs/_astro/BaseLayout.BH8f0zag.css",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/BaseLayout.BH8f0zag.css",
+      "expected_sha256": "e4d6bd81e2dd44b65f0c58caff4d8fa4347ba819206ee094faa556c7b32c118d",
+      "http_status": 200,
+      "actual_sha256": "e4d6bd81e2dd44b65f0c58caff4d8fa4347ba819206ee094faa556c7b32c118d",
+      "bytes": 52841,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_AMS-Regular.BQhdFMY1.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_AMS-Regular.BQhdFMY1.woff2",
+      "expected_sha256": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+      "http_status": 200,
+      "actual_sha256": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+      "bytes": 28076,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_AMS-Regular.DMm9YOAa.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_AMS-Regular.DMm9YOAa.woff",
+      "expected_sha256": "30da91e84c893f875e252689faebdc590b2871145e8adc7f9a9d4dbd8ce0b251",
+      "http_status": 200,
+      "actual_sha256": "30da91e84c893f875e252689faebdc590b2871145e8adc7f9a9d4dbd8ce0b251",
+      "bytes": 33516,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_AMS-Regular.DRggAlZN.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_AMS-Regular.DRggAlZN.ttf",
+      "expected_sha256": "68534840bcfdd2bffb6f0e8deb48684dd01e7f04ea2813267577afb906de1d13",
+      "http_status": 200,
+      "actual_sha256": "68534840bcfdd2bffb6f0e8deb48684dd01e7f04ea2813267577afb906de1d13",
+      "bytes": 63632,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Bold.ATXxdsX0.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Bold.ATXxdsX0.ttf",
+      "expected_sha256": "07d8e303ce4fc12b4bb54f1004170dd190a1f3db45d400fe68060df3e0897268",
+      "http_status": 200,
+      "actual_sha256": "07d8e303ce4fc12b4bb54f1004170dd190a1f3db45d400fe68060df3e0897268",
+      "bytes": 12368,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Bold.BEiXGLvX.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Bold.BEiXGLvX.woff",
+      "expected_sha256": "1ae6bd7475590e97e7f145a89e09ccde322f7a6bc0b91607b1c8b8ee28290fed",
+      "http_status": 200,
+      "actual_sha256": "1ae6bd7475590e97e7f145a89e09ccde322f7a6bc0b91607b1c8b8ee28290fed",
+      "bytes": 7716,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2",
+      "expected_sha256": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c",
+      "http_status": 200,
+      "actual_sha256": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c",
+      "bytes": 6912,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Regular.CTRA-rTL.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Regular.CTRA-rTL.woff",
+      "expected_sha256": "3398dd02302557a793f2863f88e02d96ce10df2abffa07c8e9fa90775116e65c",
+      "http_status": 200,
+      "actual_sha256": "3398dd02302557a793f2863f88e02d96ce10df2abffa07c8e9fa90775116e65c",
+      "bytes": 7656,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2",
+      "expected_sha256": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b",
+      "http_status": 200,
+      "actual_sha256": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b",
+      "bytes": 6908,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Regular.wX97UBjC.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Regular.wX97UBjC.ttf",
+      "expected_sha256": "ed0b74372feefcbb9c0666b2e210da37b7e49fa7fbbf3eeb11db5f693dacfbb7",
+      "http_status": 200,
+      "actual_sha256": "ed0b74372feefcbb9c0666b2e210da37b7e49fa7fbbf3eeb11db5f693dacfbb7",
+      "bytes": 12344,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Bold.BdnERNNW.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Bold.BdnERNNW.ttf",
+      "expected_sha256": "9163df9c7122432e6495b4229fa9071cf9ae86a758ae5efc4924ec2e1a6dbce1",
+      "http_status": 200,
+      "actual_sha256": "9163df9c7122432e6495b4229fa9071cf9ae86a758ae5efc4924ec2e1a6dbce1",
+      "bytes": 19584,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Bold.BsDP51OF.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Bold.BsDP51OF.woff",
+      "expected_sha256": "9be7ceb88004ab8ad124082246fbfcca4091e36385d4ec6ed1df67375dad50fb",
+      "http_status": 200,
+      "actual_sha256": "9be7ceb88004ab8ad124082246fbfcca4091e36385d4ec6ed1df67375dad50fb",
+      "bytes": 13296,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Bold.CL6g_b3V.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Bold.CL6g_b3V.woff2",
+      "expected_sha256": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f",
+      "http_status": 200,
+      "actual_sha256": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f",
+      "bytes": 11348,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Regular.CB_wures.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Regular.CB_wures.ttf",
+      "expected_sha256": "1e6f9579e90e2cac37f8f60a597c436e075c114385652b7cbeb0dec0421291b3",
+      "http_status": 200,
+      "actual_sha256": "1e6f9579e90e2cac37f8f60a597c436e075c114385652b7cbeb0dec0421291b3",
+      "bytes": 19572,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Regular.CTYiF6lA.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Regular.CTYiF6lA.woff2",
+      "expected_sha256": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc",
+      "http_status": 200,
+      "actual_sha256": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc",
+      "bytes": 11316,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Regular.Dxdc4cR9.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Regular.Dxdc4cR9.woff",
+      "expected_sha256": "5e28753be717dac97f559f49bc10be9cf3c124ddcabda6659d11cb68febc6463",
+      "http_status": 200,
+      "actual_sha256": "5e28753be717dac97f559f49bc10be9cf3c124ddcabda6659d11cb68febc6463",
+      "bytes": 13208,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Bold.Cx986IdX.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Bold.Cx986IdX.woff2",
+      "expected_sha256": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+      "http_status": 200,
+      "actual_sha256": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+      "bytes": 25324,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Bold.Jm3AIy58.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Bold.Jm3AIy58.woff",
+      "expected_sha256": "c76c5d696297d51b9cb1639c7da4334f0e7dec81b42b11213b5e25ef671bb822",
+      "http_status": 200,
+      "actual_sha256": "c76c5d696297d51b9cb1639c7da4334f0e7dec81b42b11213b5e25ef671bb822",
+      "bytes": 29912,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Bold.waoOVXN0.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Bold.waoOVXN0.ttf",
+      "expected_sha256": "138ac28d1663b3037e9c5f52371fa5c63d8324f4a38d22cd573e6ea3a3fd0cf8",
+      "http_status": 200,
+      "actual_sha256": "138ac28d1663b3037e9c5f52371fa5c63d8324f4a38d22cd573e6ea3a3fd0cf8",
+      "bytes": 51336,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2",
+      "expected_sha256": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b",
+      "http_status": 200,
+      "actual_sha256": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b",
+      "bytes": 16780,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-BoldItalic.DzxPMmG6.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-BoldItalic.DzxPMmG6.ttf",
+      "expected_sha256": "70ee1f64a20f2048c21940ef46d0144fd215baa953ca69afd1e31e98544f708f",
+      "http_status": 200,
+      "actual_sha256": "70ee1f64a20f2048c21940ef46d0144fd215baa953ca69afd1e31e98544f708f",
+      "bytes": 32968,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-BoldItalic.SpSLRI95.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-BoldItalic.SpSLRI95.woff",
+      "expected_sha256": "a6f7ec0d846ac7ad975adb8959c37ed49b94acbc4ae436db9ce9e20287e4a64c",
+      "http_status": 200,
+      "actual_sha256": "a6f7ec0d846ac7ad975adb8959c37ed49b94acbc4ae436db9ce9e20287e4a64c",
+      "bytes": 19412,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Italic.3WenGoN9.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Italic.3WenGoN9.ttf",
+      "expected_sha256": "0d85ae7cc30f23790a7f1a58c4a112fdca8aae769b6ba11429af1d98b1b6cb3a",
+      "http_status": 200,
+      "actual_sha256": "0d85ae7cc30f23790a7f1a58c4a112fdca8aae769b6ba11429af1d98b1b6cb3a",
+      "bytes": 33580,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Italic.BMLOBm91.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Italic.BMLOBm91.woff",
+      "expected_sha256": "f1d6ef86f3b11a528bd5185199bd2443ecb2b0dead96d88674b5a2c12be24bdf",
+      "http_status": 200,
+      "actual_sha256": "f1d6ef86f3b11a528bd5185199bd2443ecb2b0dead96d88674b5a2c12be24bdf",
+      "bytes": 19676,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Italic.NWA7e6Wa.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Italic.NWA7e6Wa.woff2",
+      "expected_sha256": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267",
+      "http_status": 200,
+      "actual_sha256": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267",
+      "bytes": 16988,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Regular.B22Nviop.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Regular.B22Nviop.woff2",
+      "expected_sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+      "http_status": 200,
+      "actual_sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+      "bytes": 26272,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Regular.Dr94JaBh.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Regular.Dr94JaBh.woff",
+      "expected_sha256": "c6368d87e8a1a3a5d337623d83d8dc4b868f242a9ad476237d6f8d1e0f168cdc",
+      "http_status": 200,
+      "actual_sha256": "c6368d87e8a1a3a5d337623d83d8dc4b868f242a9ad476237d6f8d1e0f168cdc",
+      "bytes": 30772,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Regular.ypZvNtVU.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Regular.ypZvNtVU.ttf",
+      "expected_sha256": "d0332f52868370fd83ae7fa46470f90c8f2eab2fcf12bc4f88080b340c95a830",
+      "http_status": 200,
+      "actual_sha256": "d0332f52868370fd83ae7fa46470f90c8f2eab2fcf12bc4f88080b340c95a830",
+      "bytes": 53580,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-BoldItalic.B3XSjfu4.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-BoldItalic.B3XSjfu4.ttf",
+      "expected_sha256": "f9377ab0271cda59af24bcffbd46a4d0c8a3572ffafdbb38de2ad5ea7b0d5ee5",
+      "http_status": 200,
+      "actual_sha256": "f9377ab0271cda59af24bcffbd46a4d0c8a3572ffafdbb38de2ad5ea7b0d5ee5",
+      "bytes": 31196,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2",
+      "expected_sha256": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1",
+      "http_status": 200,
+      "actual_sha256": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1",
+      "bytes": 16400,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-BoldItalic.iY-2wyZ7.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-BoldItalic.iY-2wyZ7.woff",
+      "expected_sha256": "850c0af5c2238497febaf5e461d880bf458c341f42f4f330f1b1ab5698b1998e",
+      "http_status": 200,
+      "actual_sha256": "850c0af5c2238497febaf5e461d880bf458c341f42f4f330f1b1ab5698b1998e",
+      "bytes": 18668,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-Italic.DA0__PXp.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-Italic.DA0__PXp.woff",
+      "expected_sha256": "8a8d244581371912b8f3f5a23e2437cb2a59cd9bcaebb0346e722c05737a2571",
+      "http_status": 200,
+      "actual_sha256": "8a8d244581371912b8f3f5a23e2437cb2a59cd9bcaebb0346e722c05737a2571",
+      "bytes": 18748,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-Italic.flOr_0UB.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-Italic.flOr_0UB.ttf",
+      "expected_sha256": "08ce98e51b04d58945a301e639e02b6998af29fdfd61a7b8afdd07bbfc479d4a",
+      "http_status": 200,
+      "actual_sha256": "08ce98e51b04d58945a301e639e02b6998af29fdfd61a7b8afdd07bbfc479d4a",
+      "bytes": 31308,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-Italic.t53AETM-.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-Italic.t53AETM-.woff2",
+      "expected_sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+      "http_status": 200,
+      "actual_sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+      "bytes": 16440,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Bold.CFMepnvq.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Bold.CFMepnvq.ttf",
+      "expected_sha256": "1ece03f79f95277d57dc7f6b435a74e1379b0d46104a8530286b60ff49369ea0",
+      "http_status": 200,
+      "actual_sha256": "1ece03f79f95277d57dc7f6b435a74e1379b0d46104a8530286b60ff49369ea0",
+      "bytes": 24504,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Bold.D1sUS0GD.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Bold.D1sUS0GD.woff2",
+      "expected_sha256": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62",
+      "http_status": 200,
+      "actual_sha256": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62",
+      "bytes": 12216,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Bold.DbIhKOiC.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Bold.DbIhKOiC.woff",
+      "expected_sha256": "ece03cfd83e22c212cdef66feb8442d25a083beb988db3f1883f3f9738d750ba",
+      "http_status": 200,
+      "actual_sha256": "ece03cfd83e22c212cdef66feb8442d25a083beb988db3f1883f3f9738d750ba",
+      "bytes": 14408,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Italic.C3H0VqGB.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Italic.C3H0VqGB.woff2",
+      "expected_sha256": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a",
+      "http_status": 200,
+      "actual_sha256": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a",
+      "bytes": 12028,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Italic.DN2j7dab.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Italic.DN2j7dab.woff",
+      "expected_sha256": "91ee67500cc0129aa0ace3ac5c61ff1692102f0f31d02b69347fba35dcb75bf2",
+      "http_status": 200,
+      "actual_sha256": "91ee67500cc0129aa0ace3ac5c61ff1692102f0f31d02b69347fba35dcb75bf2",
+      "bytes": 14112,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Italic.YYjJ1zSn.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Italic.YYjJ1zSn.ttf",
+      "expected_sha256": "3931dd81faed86ba021bb2bbdc36f5bed9a38d6b4f4077aca59b265aa1b02083",
+      "http_status": 200,
+      "actual_sha256": "3931dd81faed86ba021bb2bbdc36f5bed9a38d6b4f4077aca59b265aa1b02083",
+      "bytes": 22364,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Regular.BNo7hRIc.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Regular.BNo7hRIc.ttf",
+      "expected_sha256": "f36ea897e19f4a2e571d1e900e4e3710e438deb05a842486045ba0a3e616a4ad",
+      "http_status": 200,
+      "actual_sha256": "f36ea897e19f4a2e571d1e900e4e3710e438deb05a842486045ba0a3e616a4ad",
+      "bytes": 19436,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Regular.CS6fqUqJ.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Regular.CS6fqUqJ.woff",
+      "expected_sha256": "11e4dc8a6471ff6d6ee561d53d10fde8f7489e798257ff449c5d37c197435605",
+      "http_status": 200,
+      "actual_sha256": "11e4dc8a6471ff6d6ee561d53d10fde8f7489e798257ff449c5d37c197435605",
+      "bytes": 12316,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2",
+      "expected_sha256": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342",
+      "http_status": 200,
+      "actual_sha256": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342",
+      "bytes": 10344,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Script-Regular.C5JkGWo-.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Script-Regular.C5JkGWo-.ttf",
+      "expected_sha256": "1c67f068fea8bb09bf099c088b1cf64bd27516a6e07f4684344873564bb66a67",
+      "http_status": 200,
+      "actual_sha256": "1c67f068fea8bb09bf099c088b1cf64bd27516a6e07f4684344873564bb66a67",
+      "bytes": 16648,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Script-Regular.D3wIWfF6.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Script-Regular.D3wIWfF6.woff2",
+      "expected_sha256": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b",
+      "http_status": 200,
+      "actual_sha256": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b",
+      "bytes": 9644,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Script-Regular.D5yQViql.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Script-Regular.D5yQViql.woff",
+      "expected_sha256": "d96cdf2b3bdd4d64a8fd5f74a4c467f123a8a73931cd435889f08ffaf9bf947a",
+      "http_status": 200,
+      "actual_sha256": "d96cdf2b3bdd4d64a8fd5f74a4c467f123a8a73931cd435889f08ffaf9bf947a",
+      "bytes": 10588,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size1-Regular.C195tn64.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size1-Regular.C195tn64.woff",
+      "expected_sha256": "c943cc986384f59e86bea5fd7dc50a9c4dfe567a7c05eb40d6790720dead97c9",
+      "http_status": 200,
+      "actual_sha256": "c943cc986384f59e86bea5fd7dc50a9c4dfe567a7c05eb40d6790720dead97c9",
+      "bytes": 6496,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size1-Regular.Dbsnue_I.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size1-Regular.Dbsnue_I.ttf",
+      "expected_sha256": "95b6d2f1a50173bfedb8c63e1d1c99b10427d0a4df4201cb44513b226951a22b",
+      "http_status": 200,
+      "actual_sha256": "95b6d2f1a50173bfedb8c63e1d1c99b10427d0a4df4201cb44513b226951a22b",
+      "bytes": 12228,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size1-Regular.mCD8mA8B.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size1-Regular.mCD8mA8B.woff2",
+      "expected_sha256": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+      "http_status": 200,
+      "actual_sha256": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+      "bytes": 5468,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size2-Regular.B7gKUWhC.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size2-Regular.B7gKUWhC.ttf",
+      "expected_sha256": "a6b2099fb555c60e3a0db3a08842ebf1d732c6eb4e4bf44913613bed4fc4e39b",
+      "http_status": 200,
+      "actual_sha256": "a6b2099fb555c60e3a0db3a08842ebf1d732c6eb4e4bf44913613bed4fc4e39b",
+      "bytes": 11508,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size2-Regular.Dy4dx90m.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size2-Regular.Dy4dx90m.woff2",
+      "expected_sha256": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+      "http_status": 200,
+      "actual_sha256": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+      "bytes": 5208,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size2-Regular.oD1tc_U0.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size2-Regular.oD1tc_U0.woff",
+      "expected_sha256": "2014c523c3210bcc166648c4d4cc57f05b747df07a24277bf71c51e67dc79e3d",
+      "http_status": 200,
+      "actual_sha256": "2014c523c3210bcc166648c4d4cc57f05b747df07a24277bf71c51e67dc79e3d",
+      "bytes": 6188,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size3-Regular.CTq5MqoE.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size3-Regular.CTq5MqoE.woff",
+      "expected_sha256": "6ab6b62e9b62dae2c00dd90f791bd10950be0ecc3490d7d6045f51c2e8fe0949",
+      "http_status": 200,
+      "actual_sha256": "6ab6b62e9b62dae2c00dd90f791bd10950be0ecc3490d7d6045f51c2e8fe0949",
+      "bytes": 4420,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size3-Regular.DgpXs0kz.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size3-Regular.DgpXs0kz.ttf",
+      "expected_sha256": "500e04d54f0d51666332c9d2089aa803be22aa878eca539e59fa53c6e522b082",
+      "http_status": 200,
+      "actual_sha256": "500e04d54f0d51666332c9d2089aa803be22aa878eca539e59fa53c6e522b082",
+      "bytes": 7588,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size4-Regular.BF-4gkZK.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size4-Regular.BF-4gkZK.woff",
+      "expected_sha256": "99f9c6750b489c9462bf04900bd3f939df9b829339daaaaa99ef5495cdddea58",
+      "http_status": 200,
+      "actual_sha256": "99f9c6750b489c9462bf04900bd3f939df9b829339daaaaa99ef5495cdddea58",
+      "bytes": 5980,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size4-Regular.DWFBv043.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size4-Regular.DWFBv043.ttf",
+      "expected_sha256": "c647367d1dd4e162468717d020e1fc0f1dc5c26ebfdffbe55261713bf88c5877",
+      "http_status": 200,
+      "actual_sha256": "c647367d1dd4e162468717d020e1fc0f1dc5c26ebfdffbe55261713bf88c5877",
+      "bytes": 10364,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size4-Regular.Dl5lxZxV.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size4-Regular.Dl5lxZxV.woff2",
+      "expected_sha256": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+      "http_status": 200,
+      "actual_sha256": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+      "bytes": 4928,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Typewriter-Regular.C0xS9mPB.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Typewriter-Regular.C0xS9mPB.woff",
+      "expected_sha256": "e14fed02b1aba7ce9f5afd5844b5d0321b22351febc720e0de8b8723527609f7",
+      "http_status": 200,
+      "actual_sha256": "e14fed02b1aba7ce9f5afd5844b5d0321b22351febc720e0de8b8723527609f7",
+      "bytes": 16028,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Typewriter-Regular.CO6r4hn1.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Typewriter-Regular.CO6r4hn1.woff2",
+      "expected_sha256": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
+      "http_status": 200,
+      "actual_sha256": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
+      "bytes": 13568,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Typewriter-Regular.D3Ib7_Hf.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Typewriter-Regular.D3Ib7_Hf.ttf",
+      "expected_sha256": "f01f3e87d9c6a61c0c081ceb577abd864eb00a612f7ac1620dd6915fad2ef5aa",
+      "http_status": 200,
+      "actual_sha256": "f01f3e87d9c6a61c0c081ceb577abd864eb00a612f7ac1620dd6915fad2ef5aa",
+      "bytes": 27556,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/index.astro_astro_type_script_index_0_lang.k1XEYLJ-.js",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/index.astro_astro_type_script_index_0_lang.k1XEYLJ-.js",
+      "expected_sha256": "d7a22c04ef027eba4cde5339548b711370a2fbd691183da0b52bbc59cd20a8cc",
+      "http_status": 200,
+      "actual_sha256": "d7a22c04ef027eba4cde5339548b711370a2fbd691183da0b52bbc59cd20a8cc",
+      "bytes": 7271,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/learning.YS5pRHi2.css",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/learning.YS5pRHi2.css",
+      "expected_sha256": "5af790e807e1dc3d704823bf3c77abb400d9ae1684f8aa570c447bcda36b0297",
+      "http_status": 200,
+      "actual_sha256": "5af790e807e1dc3d704823bf3c77abb400d9ae1684f8aa570c447bcda36b0297",
+      "bytes": 7413,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/about/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/about/",
+      "expected_sha256": "8e24202642fa2045ed095c7e5882c8cab637693b6de3d58389681d1cc70714fc",
+      "http_status": 200,
+      "actual_sha256": "8e24202642fa2045ed095c7e5882c8cab637693b6de3d58389681d1cc70714fc",
+      "bytes": 8676,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/courses/foundation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/courses/foundation/",
+      "expected_sha256": "0e94b3531100f9d3a94837207e45e0149cea2a0d7ed6d6ea4625595f62983234",
+      "http_status": 200,
+      "actual_sha256": "0e94b3531100f9d3a94837207e45e0149cea2a0d7ed6d6ea4625595f62983234",
+      "bytes": 334768,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/courses/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/courses/",
+      "expected_sha256": "3b87846ebf0f560d1159085de0137b334b0d6ecea05f6f006794555b8b3b08a8",
+      "http_status": 200,
+      "actual_sha256": "3b87846ebf0f560d1159085de0137b334b0d6ecea05f6f006794555b8b3b08a8",
+      "bytes": 4105,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/coverage/foundation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/coverage/foundation/",
+      "expected_sha256": "d5f010f9f2e87690709356c4ea37d83d6ca8995ab8504ae613a0e779d048055d",
+      "http_status": 200,
+      "actual_sha256": "d5f010f9f2e87690709356c4ea37d83d6ca8995ab8504ae613a0e779d048055d",
+      "bytes": 28350,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/data/foundation-temperature-change.csv",
+      "url": "https://matsu71.github.io/Statistics_Blog/data/foundation-temperature-change.csv",
+      "expected_sha256": "a6d3b34ffd0274a60ca6d5660005b572ae75e5b8559cc7856afa5f199a77926d",
+      "http_status": 200,
+      "actual_sha256": "a6d3b34ffd0274a60ca6d5660005b572ae75e5b8559cc7856afa5f199a77926d",
+      "bytes": 377,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/favicon.svg",
+      "url": "https://matsu71.github.io/Statistics_Blog/favicon.svg",
+      "expected_sha256": "5283c5acd9f4341c52787f18c9203c4dc3138a2d73086d29fe4fbbe625a81153",
+      "http_status": 200,
+      "actual_sha256": "5283c5acd9f4341c52787f18c9203c4dc3138a2d73086d29fe4fbbe625a81153",
+      "bytes": 228,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/foundation-build.json",
+      "url": "https://matsu71.github.io/Statistics_Blog/foundation-build.json",
+      "expected_sha256": "2a2ccef9d8d015246205ed05508aeeb1e599ea2e7a7357ec5059359ef86a6802",
+      "http_status": 200,
+      "actual_sha256": "2a2ccef9d8d015246205ed05508aeeb1e599ea2e7a7357ec5059359ef86a6802",
+      "bytes": 230,
+      "attempts": 1,
+      "marker": {
+        "release": "foundation-1.0",
+        "source_commit": "0acf49d7d473073dfc6762e3de0aa4f80e0cd3a9",
+        "workflow_run_id": "34571582797",
+        "lesson_count": 40,
+        "question_count": 130,
+        "built_at": "2026-09-11T06:50:01.702737+00:00"
+      },
+      "status": "passed"
+    },
+    {
+      "path": "docs/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/",
+      "expected_sha256": "a28d9cb9e43e0690f164b98fa14d394c15e2b73a48cc50c56ab0459b01c8a4f7",
+      "http_status": 200,
+      "actual_sha256": "a28d9cb9e43e0690f164b98fa14d394c15e2b73a48cc50c56ab0459b01c8a4f7",
+      "bytes": 5516,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/labs/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/labs/",
+      "expected_sha256": "6f01b89d41e354e49536bb7b11acd218d74018071e9e3351d3e7bfe768d0c088",
+      "http_status": 200,
+      "actual_sha256": "6f01b89d41e354e49536bb7b11acd218d74018071e9e3351d3e7bfe768d0c088",
+      "bytes": 22576,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/asking-statistical-questions/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/asking-statistical-questions/",
+      "expected_sha256": "da733db70220cc1fcc296ca907578c880e45a4742097aaa5990a82de1b6c80e1",
+      "http_status": 200,
+      "actual_sha256": "da733db70220cc1fcc296ca907578c880e45a4742097aaa5990a82de1b6c80e1",
+      "bytes": 35465,
+      "attempts": 1,
+      "lesson_id": "F01",
+      "question_ids": [
+        "F01-Q1",
+        "F01-Q2",
+        "F01-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/binomial-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/binomial-basics/",
+      "expected_sha256": "c900ac7aa34335e8962281c148c0681dc18775936089c496af07468b24407b4d",
+      "http_status": 200,
+      "actual_sha256": "c900ac7aa34335e8962281c148c0681dc18775936089c496af07468b24407b4d",
+      "bytes": 48935,
+      "attempts": 1,
+      "lesson_id": "F30",
+      "question_ids": [
+        "F30-Q1",
+        "F30-Q2",
+        "F30-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/binomial-normal-approximation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/binomial-normal-approximation/",
+      "expected_sha256": "c4a6d453294d4652ae5b9706753b72ec468179409271b85808005a80e9fcb4aa",
+      "http_status": 200,
+      "actual_sha256": "c4a6d453294d4652ae5b9706753b72ec468179409271b85808005a80e9fcb4aa",
+      "bytes": 38354,
+      "attempts": 1,
+      "lesson_id": "F33",
+      "question_ids": [
+        "F33-Q1",
+        "F33-Q2",
+        "F33-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/bridge-to-grade-two/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/bridge-to-grade-two/",
+      "expected_sha256": "4d0b14fca8388000efd541a1e808ea951b304a0fab6137ed40087363e1df7b9b",
+      "http_status": 200,
+      "actual_sha256": "4d0b14fca8388000efd541a1e808ea951b304a0fab6137ed40087363e1df7b9b",
+      "bytes": 42833,
+      "attempts": 1,
+      "lesson_id": "F40",
+      "question_ids": [
+        "F40-Q1",
+        "F40-Q2",
+        "F40-Q3",
+        "F40-Q4",
+        "F40-Q5",
+        "F40-Q6",
+        "F40-Q7",
+        "F40-Q8",
+        "F40-Q9",
+        "F40-Q10",
+        "F40-Q11",
+        "F40-Q12"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/chance-and-sample-space/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/chance-and-sample-space/",
+      "expected_sha256": "5c959dff6450ff98f8a45ca0aad97f2c36bfa77c39ea2a479cf3b987540c9159",
+      "http_status": 200,
+      "actual_sha256": "5c959dff6450ff98f8a45ca0aad97f2c36bfa77c39ea2a479cf3b987540c9159",
+      "bytes": 34872,
+      "attempts": 1,
+      "lesson_id": "F23",
+      "question_ids": [
+        "F23-Q1",
+        "F23-Q2",
+        "F23-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/choosing-basic-graphs/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/choosing-basic-graphs/",
+      "expected_sha256": "07ced9d62b321701e1f3bd7bad76f148eed612fc124baa59beb58d39bc1ef509",
+      "http_status": 200,
+      "actual_sha256": "07ced9d62b321701e1f3bd7bad76f148eed612fc124baa59beb58d39bc1ef509",
+      "bytes": 40089,
+      "attempts": 1,
+      "lesson_id": "F09",
+      "question_ids": [
+        "F09-Q1",
+        "F09-Q2",
+        "F09-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/complements-and-unions/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/complements-and-unions/",
+      "expected_sha256": "41ea37afedc3c98a905cefbc2d26021f5034a8fd905232dda38c6e3740c8d717",
+      "http_status": 200,
+      "actual_sha256": "41ea37afedc3c98a905cefbc2d26021f5034a8fd905232dda38c6e3740c8d717",
+      "bytes": 42978,
+      "attempts": 1,
+      "lesson_id": "F24",
+      "question_ids": [
+        "F24-Q1",
+        "F24-Q2",
+        "F24-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/conditional-probability-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/conditional-probability-basics/",
+      "expected_sha256": "1dddd4c3aaf365340619cf30bae225ee2f944bb8ee730f4c8a39c94c2a0a2335",
+      "http_status": 200,
+      "actual_sha256": "1dddd4c3aaf365340619cf30bae225ee2f944bb8ee730f4c8a39c94c2a0a2335",
+      "bytes": 52830,
+      "attempts": 1,
+      "lesson_id": "F27",
+      "question_ids": [
+        "F27-Q1",
+        "F27-Q2",
+        "F27-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/correlation-is-not-causation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/correlation-is-not-causation/",
+      "expected_sha256": "a1170edfd7af234352a7d22e18d747dd24b44a9784bb7b4c8f88a403b563821f",
+      "http_status": 200,
+      "actual_sha256": "a1170edfd7af234352a7d22e18d747dd24b44a9784bb7b4c8f88a403b563821f",
+      "bytes": 35151,
+      "attempts": 1,
+      "lesson_id": "F21",
+      "question_ids": [
+        "F21-Q1",
+        "F21-Q2",
+        "F21-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/cross-tables-and-mosaics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/cross-tables-and-mosaics/",
+      "expected_sha256": "073117f6ecc343036f8101625edf1c791639073f8ffdf13b354fb50e5bc67821",
+      "http_status": 200,
+      "actual_sha256": "073117f6ecc343036f8101625edf1c791639073f8ffdf13b354fb50e5bc67821",
+      "bytes": 42262,
+      "attempts": 1,
+      "lesson_id": "F10",
+      "question_ids": [
+        "F10-Q1",
+        "F10-Q2",
+        "F10-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/frequency-tables/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/frequency-tables/",
+      "expected_sha256": "eeede0548c176b46b684541e3ee62d651b96bac448c55ea241044256d9673ad7",
+      "http_status": 200,
+      "actual_sha256": "eeede0548c176b46b684541e3ee62d651b96bac448c55ea241044256d9673ad7",
+      "bytes": 53920,
+      "attempts": 1,
+      "lesson_id": "F07",
+      "question_ids": [
+        "F07-Q1",
+        "F07-Q2",
+        "F07-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/histograms-and-stem-leaf/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/histograms-and-stem-leaf/",
+      "expected_sha256": "0576a93a0fcb76c67e328f34ff5b0208ed33f4b4294a85fcb33e41515621a6b0",
+      "http_status": 200,
+      "actual_sha256": "0576a93a0fcb76c67e328f34ff5b0208ed33f4b4294a85fcb33e41515621a6b0",
+      "bytes": 46611,
+      "attempts": 1,
+      "lesson_id": "F08",
+      "question_ids": [
+        "F08-Q1",
+        "F08-Q2",
+        "F08-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/hypothesis-testing-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/hypothesis-testing-basics/",
+      "expected_sha256": "bcf284e95545810445fd5b8a6294e1303b2c844bf5cbd9bcaa3b537b855765a8",
+      "http_status": 200,
+      "actual_sha256": "bcf284e95545810445fd5b8a6294e1303b2c844bf5cbd9bcaa3b537b855765a8",
+      "bytes": 43430,
+      "attempts": 1,
+      "lesson_id": "F37",
+      "question_ids": [
+        "F37-Q1",
+        "F37-Q2",
+        "F37-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/independent-trials/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/independent-trials/",
+      "expected_sha256": "389ffa7481419baa914f4cf946448de9b3b7d4a6ac71332d84a0834143147ed4",
+      "http_status": 200,
+      "actual_sha256": "389ffa7481419baa914f4cf946448de9b3b7d4a6ac71332d84a0834143147ed4",
+      "bytes": 33442,
+      "attempts": 1,
+      "lesson_id": "F26",
+      "question_ids": [
+        "F26-Q1",
+        "F26-Q2",
+        "F26-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/mean-and-proportion-tests-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/mean-and-proportion-tests-basics/",
+      "expected_sha256": "d6dbd313f665931b862d8b3737a2ae6199c4a9403f9b52fa9481e0fc45eae399",
+      "http_status": 200,
+      "actual_sha256": "d6dbd313f665931b862d8b3737a2ae6199c4a9403f9b52fa9481e0fc45eae399",
+      "bytes": 51494,
+      "attempts": 1,
+      "lesson_id": "F38",
+      "question_ids": [
+        "F38-Q1",
+        "F38-Q2",
+        "F38-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/mean-confidence-interval-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/mean-confidence-interval-basics/",
+      "expected_sha256": "bf136e930cad32ea51d5f917678c37e699c03fcf264f4d2c63dc046da28c528d",
+      "http_status": 200,
+      "actual_sha256": "bf136e930cad32ea51d5f917678c37e699c03fcf264f4d2c63dc046da28c528d",
+      "bytes": 50648,
+      "attempts": 1,
+      "lesson_id": "F35",
+      "question_ids": [
+        "F35-Q1",
+        "F35-Q2",
+        "F35-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/mean-median-mode/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/mean-median-mode/",
+      "expected_sha256": "99e46c4db41a3af5add2fe476e0f4396e51ea231177b99b0b70d18ebad61bdc0",
+      "http_status": 200,
+      "actual_sha256": "99e46c4db41a3af5add2fe476e0f4396e51ea231177b99b0b70d18ebad61bdc0",
+      "bytes": 61036,
+      "attempts": 1,
+      "lesson_id": "F12",
+      "question_ids": [
+        "F12-Q1",
+        "F12-Q2",
+        "F12-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/normal-density-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/normal-density-basics/",
+      "expected_sha256": "98f1b0981ffe7a6360cd6a7eeac3265a955cc2e3dfd76a42d63b7a80276e657a",
+      "http_status": 200,
+      "actual_sha256": "98f1b0981ffe7a6360cd6a7eeac3265a955cc2e3dfd76a42d63b7a80276e657a",
+      "bytes": 86839,
+      "attempts": 1,
+      "lesson_id": "F31",
+      "question_ids": [
+        "F31-Q1",
+        "F31-Q2",
+        "F31-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/normal-table-and-tail-area/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/normal-table-and-tail-area/",
+      "expected_sha256": "aa5a4e025f8c0af0606098fdec1bdd5c8e82b46b76ece69cc8d88db26e3c1906",
+      "http_status": 200,
+      "actual_sha256": "aa5a4e025f8c0af0606098fdec1bdd5c8e82b46b76ece69cc8d88db26e3c1906",
+      "bytes": 42404,
+      "attempts": 1,
+      "lesson_id": "F32",
+      "question_ids": [
+        "F32-Q1",
+        "F32-Q2",
+        "F32-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/observation-and-experiment/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/observation-and-experiment/",
+      "expected_sha256": "2c29b3dff4cfe6a0fda20e842363947d5f786bc29f8444f020866a1a48a63f77",
+      "http_status": 200,
+      "actual_sha256": "2c29b3dff4cfe6a0fda20e842363947d5f786bc29f8444f020866a1a48a63f77",
+      "bytes": 31461,
+      "attempts": 1,
+      "lesson_id": "F05",
+      "question_ids": [
+        "F05-Q1",
+        "F05-Q2",
+        "F05-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/population-and-sampling/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/population-and-sampling/",
+      "expected_sha256": "a9df0a63c5ccacc63506283dda28a3385390368dff9419f2bbfbc8d996fb38a3",
+      "http_status": 200,
+      "actual_sha256": "a9df0a63c5ccacc63506283dda28a3385390368dff9419f2bbfbc8d996fb38a3",
+      "bytes": 35987,
+      "attempts": 1,
+      "lesson_id": "F04",
+      "question_ids": [
+        "F04-Q1",
+        "F04-Q2",
+        "F04-Q3",
+        "F04-Q4"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/probability-and-repetition/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/probability-and-repetition/",
+      "expected_sha256": "6e4d1d230bfdf3f5718c31f542bb6efe4e5c3707fcd69cc8bbe8827ac5fc6227",
+      "http_status": 200,
+      "actual_sha256": "6e4d1d230bfdf3f5718c31f542bb6efe4e5c3707fcd69cc8bbe8827ac5fc6227",
+      "bytes": 42158,
+      "attempts": 1,
+      "lesson_id": "F28",
+      "question_ids": [
+        "F28-Q1",
+        "F28-Q2",
+        "F28-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/proportion-confidence-interval-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/proportion-confidence-interval-basics/",
+      "expected_sha256": "a0b7e1f8a66510b6523b7212b392c7a5b45a52813d18d60bc82b2f84e40baf10",
+      "http_status": 200,
+      "actual_sha256": "a0b7e1f8a66510b6523b7212b392c7a5b45a52813d18d60bc82b2f84e40baf10",
+      "bytes": 51926,
+      "attempts": 1,
+      "lesson_id": "F36",
+      "question_ids": [
+        "F36-Q1",
+        "F36-Q2",
+        "F36-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/quartiles-and-boxplots/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/quartiles-and-boxplots/",
+      "expected_sha256": "44b458274578f454daadfda306992acae002a78722fd4098e8c20c9c0e74f8ac",
+      "http_status": 200,
+      "actual_sha256": "44b458274578f454daadfda306992acae002a78722fd4098e8c20c9c0e74f8ac",
+      "bytes": 52040,
+      "attempts": 1,
+      "lesson_id": "F14",
+      "question_ids": [
+        "F14-Q1",
+        "F14-Q2",
+        "F14-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/random-variables-and-expectation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/random-variables-and-expectation/",
+      "expected_sha256": "bfe3e82ec1fe115e973050d63e88de22925a36279f539a3d82cbd2ac4bb66b37",
+      "http_status": 200,
+      "actual_sha256": "bfe3e82ec1fe115e973050d63e88de22925a36279f539a3d82cbd2ac4bb66b37",
+      "bytes": 47148,
+      "attempts": 1,
+      "lesson_id": "F29",
+      "question_ids": [
+        "F29-Q1",
+        "F29-Q2",
+        "F29-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/ratios-and-percentages/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/ratios-and-percentages/",
+      "expected_sha256": "0d89e4c3e1b7fac4294594e2cc11adc66f4cd3bb2bb888ce7b50df65b157db22",
+      "http_status": 200,
+      "actual_sha256": "0d89e4c3e1b7fac4294594e2cc11adc66f4cd3bb2bb888ce7b50df65b157db22",
+      "bytes": 55383,
+      "attempts": 1,
+      "lesson_id": "F06",
+      "question_ids": [
+        "F06-Q1",
+        "F06-Q2",
+        "F06-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/reading-a-data-table/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/reading-a-data-table/",
+      "expected_sha256": "db6945454aefb82d1b0ed8a7bb60dc9cd250f0f075b4cc9a4bf032fe5fd151d7",
+      "http_status": 200,
+      "actual_sha256": "db6945454aefb82d1b0ed8a7bb60dc9cd250f0f075b4cc9a4bf032fe5fd151d7",
+      "bytes": 38727,
+      "attempts": 1,
+      "lesson_id": "F02",
+      "question_ids": [
+        "F02-Q1",
+        "F02-Q2",
+        "F02-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/reading-unfamiliar-graphs/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/reading-unfamiliar-graphs/",
+      "expected_sha256": "8ec500859b10b0c691f4323a5e523d19b271c646e2930089a5831ebeb786804d",
+      "http_status": 200,
+      "actual_sha256": "8ec500859b10b0c691f4323a5e523d19b271c646e2930089a5831ebeb786804d",
+      "bytes": 34584,
+      "attempts": 1,
+      "lesson_id": "F11",
+      "question_ids": [
+        "F11-Q1",
+        "F11-Q2",
+        "F11-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/regression-line-and-prediction/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/regression-line-and-prediction/",
+      "expected_sha256": "39fee2c316c643d63b0d19d9c006c3837232ed4845da7faa35787f5835835ab2",
+      "http_status": 200,
+      "actual_sha256": "39fee2c316c643d63b0d19d9c006c3837232ed4845da7faa35787f5835835ab2",
+      "bytes": 87437,
+      "attempts": 1,
+      "lesson_id": "F20",
+      "question_ids": [
+        "F20-Q1",
+        "F20-Q2",
+        "F20-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/relative-spread-and-outliers/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/relative-spread-and-outliers/",
+      "expected_sha256": "67660e78acfe7465dac291fc8c68d0ecd2abaf80a919af404a301eb9a19de7d4",
+      "http_status": 200,
+      "actual_sha256": "67660e78acfe7465dac291fc8c68d0ecd2abaf80a919af404a301eb9a19de7d4",
+      "bytes": 47068,
+      "attempts": 1,
+      "lesson_id": "F18",
+      "question_ids": [
+        "F18-Q1",
+        "F18-Q2",
+        "F18-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/reporting-statistical-results/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/reporting-statistical-results/",
+      "expected_sha256": "273d777f8196b7152b94de201ecdd725bf193dc768ac47c4292cab3f265b45d9",
+      "http_status": 200,
+      "actual_sha256": "273d777f8196b7152b94de201ecdd725bf193dc768ac47c4292cab3f265b45d9",
+      "bytes": 38474,
+      "attempts": 1,
+      "lesson_id": "F39",
+      "question_ids": [
+        "F39-Q1",
+        "F39-Q2",
+        "F39-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/sampling-distributions-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/sampling-distributions-basics/",
+      "expected_sha256": "7446905b77a6b4382dcb000e746bced7c21273246a55deba09632262e4d3bdc9",
+      "http_status": 200,
+      "actual_sha256": "7446905b77a6b4382dcb000e746bced7c21273246a55deba09632262e4d3bdc9",
+      "bytes": 70930,
+      "attempts": 1,
+      "lesson_id": "F34",
+      "question_ids": [
+        "F34-Q1",
+        "F34-Q2",
+        "F34-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/scatter-covariance-correlation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/scatter-covariance-correlation/",
+      "expected_sha256": "b75ae021aac923c1e66ad9d3bc3482637ed3e4a5ff081ae0a325b68df42e27ab",
+      "http_status": 200,
+      "actual_sha256": "b75ae021aac923c1e66ad9d3bc3482637ed3e4a5ff081ae0a325b68df42e27ab",
+      "bytes": 65559,
+      "attempts": 1,
+      "lesson_id": "F19",
+      "question_ids": [
+        "F19-Q1",
+        "F19-Q2",
+        "F19-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/shifting-and-scaling-data/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/shifting-and-scaling-data/",
+      "expected_sha256": "639f01d3b1ccb61f34756deb18ee58acbeba127847d8aee57f73e693bb6eefcc",
+      "http_status": 200,
+      "actual_sha256": "639f01d3b1ccb61f34756deb18ee58acbeba127847d8aee57f73e693bb6eefcc",
+      "bytes": 80633,
+      "attempts": 1,
+      "lesson_id": "F16",
+      "question_ids": [
+        "F16-Q1",
+        "F16-Q2",
+        "F16-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/standardization-and-deviation-score/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/standardization-and-deviation-score/",
+      "expected_sha256": "0ad35453814d90cf876263bb73d778dda51bff906ebd628893fb2d552be76ec1",
+      "http_status": 200,
+      "actual_sha256": "0ad35453814d90cf876263bb73d778dda51bff906ebd628893fb2d552be76ec1",
+      "bytes": 43935,
+      "attempts": 1,
+      "lesson_id": "F17",
+      "question_ids": [
+        "F17-Q1",
+        "F17-Q2",
+        "F17-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/time-series-and-indices/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/time-series-and-indices/",
+      "expected_sha256": "73aa6005051b203209ec984b19fd739b68cdf6e968ffca201ada1e8a7decee7f",
+      "http_status": 200,
+      "actual_sha256": "73aa6005051b203209ec984b19fd739b68cdf6e968ffca201ada1e8a7decee7f",
+      "bytes": 50864,
+      "attempts": 1,
+      "lesson_id": "F22",
+      "question_ids": [
+        "F22-Q1",
+        "F22-Q2",
+        "F22-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/trees-and-counting/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/trees-and-counting/",
+      "expected_sha256": "02a0954380bab494b90be749afd81734b0714198460f5de93b7550a6d25d1aff",
+      "http_status": 200,
+      "actual_sha256": "02a0954380bab494b90be749afd81734b0714198460f5de93b7550a6d25d1aff",
+      "bytes": 52510,
+      "attempts": 1,
+      "lesson_id": "F25",
+      "question_ids": [
+        "F25-Q1",
+        "F25-Q2",
+        "F25-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/types-and-scales/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/types-and-scales/",
+      "expected_sha256": "e1595fe810ee22b11f5413b0c4ad089cf37714e337864dc835133f8f2ea76cfa",
+      "http_status": 200,
+      "actual_sha256": "e1595fe810ee22b11f5413b0c4ad089cf37714e337864dc835133f8f2ea76cfa",
+      "bytes": 50279,
+      "attempts": 1,
+      "lesson_id": "F03",
+      "question_ids": [
+        "F03-Q1",
+        "F03-Q2",
+        "F03-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/variance-and-standard-deviation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/variance-and-standard-deviation/",
+      "expected_sha256": "ce6c7a953fefb60b54e54ed0762c115ccb9bfdaf2f75b887e6087b465dc77679",
+      "http_status": 200,
+      "actual_sha256": "ce6c7a953fefb60b54e54ed0762c115ccb9bfdaf2f75b887e6087b465dc77679",
+      "bytes": 72244,
+      "attempts": 1,
+      "lesson_id": "F15",
+      "question_ids": [
+        "F15-Q1",
+        "F15-Q2",
+        "F15-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/weighted-and-grouped-means/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/weighted-and-grouped-means/",
+      "expected_sha256": "9be1fc1f896ec48608cb7ab5e4d1a0e59898056a9d77463eb8d435fef3d14726",
+      "http_status": 200,
+      "actual_sha256": "9be1fc1f896ec48608cb7ab5e4d1a0e59898056a9d77463eb8d435fef3d14726",
+      "bytes": 65934,
+      "attempts": 1,
+      "lesson_id": "F13",
+      "question_ids": [
+        "F13-Q1",
+        "F13-Q2",
+        "F13-Q3"
+      ],
+      "status": "passed"
+    },
+    {
+      "path": "docs/og-default.svg",
+      "url": "https://matsu71.github.io/Statistics_Blog/og-default.svg",
+      "expected_sha256": "039780a23733c94ff826abcdae7bca3b5a1088ef402429271ddfcc7b950200de",
+      "http_status": 200,
+      "actual_sha256": "039780a23733c94ff826abcdae7bca3b5a1088ef402429271ddfcc7b950200de",
+      "bytes": 1594,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/robots.txt",
+      "url": "https://matsu71.github.io/Statistics_Blog/robots.txt",
+      "expected_sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "http_status": 200,
+      "actual_sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "bytes": 23,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/sitemap-0.xml",
+      "url": "https://matsu71.github.io/Statistics_Blog/sitemap-0.xml",
+      "expected_sha256": "d6586821f9868dc47d505fc10c69ae9cd784b5568b4ef4c2a245cf6057ad04b0",
+      "http_status": 200,
+      "actual_sha256": "d6586821f9868dc47d505fc10c69ae9cd784b5568b4ef4c2a245cf6057ad04b0",
+      "bytes": 10907,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/sitemap-index.xml",
+      "url": "https://matsu71.github.io/Statistics_Blog/sitemap-index.xml",
+      "expected_sha256": "bf7acfea837c9f635557551e7f00ba770c954060455ffa56f261b5d9d78d1efc",
+      "http_status": 200,
+      "actual_sha256": "bf7acfea837c9f635557551e7f00ba770c954060455ffa56f261b5d9d78d1efc",
+      "bytes": 204,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/alternative-hypothesis/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/alternative-hypothesis/",
+      "expected_sha256": "4aed69a728dba49f2cdc8112d3fccd08ef5e098caaf3067e17e056410164874c",
+      "http_status": 200,
+      "actual_sha256": "4aed69a728dba49f2cdc8112d3fccd08ef5e098caaf3067e17e056410164874c",
+      "bytes": 55591,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/bayes-theorem/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/bayes-theorem/",
+      "expected_sha256": "824233e34182af5bb8abc1b30bb5a0e2994ed4b9ecc26357363c2025eb30929b",
+      "http_status": 200,
+      "actual_sha256": "824233e34182af5bb8abc1b30bb5a0e2994ed4b9ecc26357363c2025eb30929b",
+      "bytes": 46790,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/bernoulli-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/bernoulli-distribution/",
+      "expected_sha256": "0960f2cdfed295ffaec35c584f0164e8bef678fbc2d83de1d57a1fa3f57ac36b",
+      "http_status": 200,
+      "actual_sha256": "0960f2cdfed295ffaec35c584f0164e8bef678fbc2d83de1d57a1fa3f57ac36b",
+      "bytes": 39156,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/binomial-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/binomial-distribution/",
+      "expected_sha256": "2b6102765f8b6b334261c318b67aac517671d1fe9a1b3e2dbe826cd3705fffd4",
+      "http_status": 200,
+      "actual_sha256": "2b6102765f8b6b334261c318b67aac517671d1fe9a1b3e2dbe826cd3705fffd4",
+      "bytes": 45191,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/box-plot/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/box-plot/",
+      "expected_sha256": "bdb979bd85af09b094bf4d7ab825175085545402c4b6c50aabb02bfc1c348924",
+      "http_status": 200,
+      "actual_sha256": "bdb979bd85af09b094bf4d7ab825175085545402c4b6c50aabb02bfc1c348924",
+      "bytes": 37434,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/central-limit-theorem/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/central-limit-theorem/",
+      "expected_sha256": "8ad18fb8c0b353a1453b6dde41f5c4a61db9d39b48f9a00ef687c198aedf57a7",
+      "http_status": 200,
+      "actual_sha256": "8ad18fb8c0b353a1453b6dde41f5c4a61db9d39b48f9a00ef687c198aedf57a7",
+      "bytes": 61167,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/chi-square-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/chi-square-distribution/",
+      "expected_sha256": "2b7902e558361a9b82e7bec3e63c0f191dbf61a619148932f6568c9550030e33",
+      "http_status": 200,
+      "actual_sha256": "2b7902e558361a9b82e7bec3e63c0f191dbf61a619148932f6568c9550030e33",
+      "bytes": 71705,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/coefficient-of-determination/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/coefficient-of-determination/",
+      "expected_sha256": "30528b6c511dc7d771c2ef2e0603f4e9be62a760f572ae336036493eb9b11744",
+      "http_status": 200,
+      "actual_sha256": "30528b6c511dc7d771c2ef2e0603f4e9be62a760f572ae336036493eb9b11744",
+      "bytes": 111858,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/coefficient-of-variation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/coefficient-of-variation/",
+      "expected_sha256": "cafd947d2db81fafc077da928e1b470df6074e2cde48b3442d3f985b28899bd8",
+      "http_status": 200,
+      "actual_sha256": "cafd947d2db81fafc077da928e1b470df6074e2cde48b3442d3f985b28899bd8",
+      "bytes": 37667,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/conditional-probability/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/conditional-probability/",
+      "expected_sha256": "3a6cb8c8374078c27ba2c8574ad0aad64a0b220fec2ebe7797c394a48cdc2b67",
+      "http_status": 200,
+      "actual_sha256": "3a6cb8c8374078c27ba2c8574ad0aad64a0b220fec2ebe7797c394a48cdc2b67",
+      "bytes": 39982,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/confidence-interval/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/confidence-interval/",
+      "expected_sha256": "c6235be69d9720979dcf05bea227bc7422dcc7b36cca7cc73135995aa7ce2549",
+      "http_status": 200,
+      "actual_sha256": "c6235be69d9720979dcf05bea227bc7422dcc7b36cca7cc73135995aa7ce2549",
+      "bytes": 52209,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/correlation-coefficient/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/correlation-coefficient/",
+      "expected_sha256": "bc6de2f6a90bf1757b56ecb5c449f5cc9467019a1026fca4dfb51fdd0318bc55",
+      "http_status": 200,
+      "actual_sha256": "bc6de2f6a90bf1757b56ecb5c449f5cc9467019a1026fca4dfb51fdd0318bc55",
+      "bytes": 42987,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/covariance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/covariance/",
+      "expected_sha256": "38263c5695fe61edd5c56e2fd6f123e45fd209adce6c8eb88366c087d9401374",
+      "http_status": 200,
+      "actual_sha256": "38263c5695fe61edd5c56e2fd6f123e45fd209adce6c8eb88366c087d9401374",
+      "bytes": 48696,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/cumulative-distribution-function/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/cumulative-distribution-function/",
+      "expected_sha256": "14f2b3b1a972be3d176f879d5e22d1af50e91e6e423d9533963196b4fb8b1534",
+      "http_status": 200,
+      "actual_sha256": "14f2b3b1a972be3d176f879d5e22d1af50e91e6e423d9533963196b4fb8b1534",
+      "bytes": 41289,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/estimation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/estimation/",
+      "expected_sha256": "42572567199758a950819feaf081b2dc0fafd9a15ee6e2b91a624abba62fe839",
+      "http_status": 200,
+      "actual_sha256": "42572567199758a950819feaf081b2dc0fafd9a15ee6e2b91a624abba62fe839",
+      "bytes": 44728,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/estimator/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/estimator/",
+      "expected_sha256": "19983f2169419f6b6a25aa688528e83490e717faa8ba4eb9d62e173c78010bb9",
+      "http_status": 200,
+      "actual_sha256": "19983f2169419f6b6a25aa688528e83490e717faa8ba4eb9d62e173c78010bb9",
+      "bytes": 59849,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/event/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/event/",
+      "expected_sha256": "7ea0594c0830f3fe4452a9f58aa54bea3246182e27cd0c8c2c17d01c220bcee1",
+      "http_status": 200,
+      "actual_sha256": "7ea0594c0830f3fe4452a9f58aa54bea3246182e27cd0c8c2c17d01c220bcee1",
+      "bytes": 23074,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/expected-value/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/expected-value/",
+      "expected_sha256": "dce42c3ff5a8a850efcff3c9525c4295c2df05c9a2370576588096a9d8d20b3a",
+      "http_status": 200,
+      "actual_sha256": "dce42c3ff5a8a850efcff3c9525c4295c2df05c9a2370576588096a9d8d20b3a",
+      "bytes": 27380,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/f-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/f-distribution/",
+      "expected_sha256": "269295392dc7f07bdc44cfde0b17eda9bcb5c5aefd08f49e190dcd28bddc140f",
+      "http_status": 200,
+      "actual_sha256": "269295392dc7f07bdc44cfde0b17eda9bcb5c5aefd08f49e190dcd28bddc140f",
+      "bytes": 62526,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/geometric-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/geometric-distribution/",
+      "expected_sha256": "0621e6529ecf828d22262d8bb2793db1e6190f6db3baa99f9f4baa93ae9f5585",
+      "http_status": 200,
+      "actual_sha256": "0621e6529ecf828d22262d8bb2793db1e6190f6db3baa99f9f4baa93ae9f5585",
+      "bytes": 31805,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/histogram/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/histogram/",
+      "expected_sha256": "b9aa099b9ccfb8eb1a65548444691b8ee98c2d406187a47d58e505ff5d34d963",
+      "http_status": 200,
+      "actual_sha256": "b9aa099b9ccfb8eb1a65548444691b8ee98c2d406187a47d58e505ff5d34d963",
+      "bytes": 28238,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/hypothesis-testing/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/hypothesis-testing/",
+      "expected_sha256": "086f80621947b6cfe127a6c15c777996dedbc7c37c5a93840984e3e0cf77e074",
+      "http_status": 200,
+      "actual_sha256": "086f80621947b6cfe127a6c15c777996dedbc7c37c5a93840984e3e0cf77e074",
+      "bytes": 50519,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/independence/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/independence/",
+      "expected_sha256": "6592270d2a400f73d232866ed6c9f631838086f94c1193b6f9faa4b83b3f3b8d",
+      "http_status": 200,
+      "actual_sha256": "6592270d2a400f73d232866ed6c9f631838086f94c1193b6f9faa4b83b3f3b8d",
+      "bytes": 35167,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/",
+      "expected_sha256": "3fcb3ee0d34c7ab25e64fc3cb8a6e4b87c0bb27d825e325e9cbbebe86256e53f",
+      "http_status": 200,
+      "actual_sha256": "3fcb3ee0d34c7ab25e64fc3cb8a6e4b87c0bb27d825e325e9cbbebe86256e53f",
+      "bytes": 63845,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/interquartile-range/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/interquartile-range/",
+      "expected_sha256": "c20df3700d90eb42a61aa059d767d67721765a1e0e28dcc51d58faa6e56e6b75",
+      "http_status": 200,
+      "actual_sha256": "c20df3700d90eb42a61aa059d767d67721765a1e0e28dcc51d58faa6e56e6b75",
+      "bytes": 39733,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/interval-estimation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/interval-estimation/",
+      "expected_sha256": "958c0071cbaadd07c4cdb6fc5ed3750f30ffa91416f32f752d8aa7f2afa26301",
+      "http_status": 200,
+      "actual_sha256": "958c0071cbaadd07c4cdb6fc5ed3750f30ffa91416f32f752d8aa7f2afa26301",
+      "bytes": 38321,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/law-of-large-numbers/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/law-of-large-numbers/",
+      "expected_sha256": "029e740b1d31414a351d987988ace73419eb83809d39cb84f7c353fe4eb57bb2",
+      "http_status": 200,
+      "actual_sha256": "029e740b1d31414a351d987988ace73419eb83809d39cb84f7c353fe4eb57bb2",
+      "bytes": 70865,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/least-squares-method/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/least-squares-method/",
+      "expected_sha256": "2d3669f3f8832af80bf6c639b6e7d37338f472c4da15c84333af3ae1b0c84a45",
+      "http_status": 200,
+      "actual_sha256": "2d3669f3f8832af80bf6c639b6e7d37338f472c4da15c84333af3ae1b0c84a45",
+      "bytes": 95007,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/mean/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/mean/",
+      "expected_sha256": "6618065573d989075a1addcb0f6ec1d7fd3477827fec62e8854104cef69f94c2",
+      "http_status": 200,
+      "actual_sha256": "6618065573d989075a1addcb0f6ec1d7fd3477827fec62e8854104cef69f94c2",
+      "bytes": 79757,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/median/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/median/",
+      "expected_sha256": "86eca393981d0cb3e3318853e19053deb9c7c6f87909b26a86cc5f9a50c53747",
+      "http_status": 200,
+      "actual_sha256": "86eca393981d0cb3e3318853e19053deb9c7c6f87909b26a86cc5f9a50c53747",
+      "bytes": 32246,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/mode/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/mode/",
+      "expected_sha256": "e809272862e0a49ba3346401fa74fbcc4cbdb6ed4c35a715fe409393f8fd0c95",
+      "http_status": 200,
+      "actual_sha256": "e809272862e0a49ba3346401fa74fbcc4cbdb6ed4c35a715fe409393f8fd0c95",
+      "bytes": 22673,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/no-correlation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/no-correlation/",
+      "expected_sha256": "a40b491bcd608c489babd7163f76b8fdd26bd3097acb4868fbd654941f2f3fb2",
+      "http_status": 200,
+      "actual_sha256": "a40b491bcd608c489babd7163f76b8fdd26bd3097acb4868fbd654941f2f3fb2",
+      "bytes": 22795,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/normal-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/normal-distribution/",
+      "expected_sha256": "baf1a1cb56fb85de5361fe1de0ef46fd153b77f9402191cf6ed13695537ec96e",
+      "http_status": 200,
+      "actual_sha256": "baf1a1cb56fb85de5361fe1de0ef46fd153b77f9402191cf6ed13695537ec96e",
+      "bytes": 61339,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/null-hypothesis/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/null-hypothesis/",
+      "expected_sha256": "ec8f9ddf08d2c3853d48eb5e8f0678e7c5f38e299e13a381beb6c38664fc63a7",
+      "http_status": 200,
+      "actual_sha256": "ec8f9ddf08d2c3853d48eb5e8f0678e7c5f38e299e13a381beb6c38664fc63a7",
+      "bytes": 52207,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/one-sided-test/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/one-sided-test/",
+      "expected_sha256": "7708f9ac3e9421ce890086a48d0f5b8aa4d94f9d8f3f2569b5573914fb5061c2",
+      "http_status": 200,
+      "actual_sha256": "7708f9ac3e9421ce890086a48d0f5b8aa4d94f9d8f3f2569b5573914fb5061c2",
+      "bytes": 46158,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/p-value/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/p-value/",
+      "expected_sha256": "6b1aedc7ffcc6c2d9c3d7a0c2358a0fb83b0ac9390be44a8841890db5d72a5fd",
+      "http_status": 200,
+      "actual_sha256": "6b1aedc7ffcc6c2d9c3d7a0c2358a0fb83b0ac9390be44a8841890db5d72a5fd",
+      "bytes": 40398,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/point-estimation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/point-estimation/",
+      "expected_sha256": "f25d73b10bbabbb2ade082e2f1600cbe637b4b063f845464440f778f20013cf2",
+      "http_status": 200,
+      "actual_sha256": "f25d73b10bbabbb2ade082e2f1600cbe637b4b063f845464440f778f20013cf2",
+      "bytes": 46837,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/poisson-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/poisson-distribution/",
+      "expected_sha256": "a72415ab371aaf6dfee24b3c42661af9dbd8e478cd4ba3cb89020210829322ea",
+      "http_status": 200,
+      "actual_sha256": "a72415ab371aaf6dfee24b3c42661af9dbd8e478cd4ba3cb89020210829322ea",
+      "bytes": 30077,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/population/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/population/",
+      "expected_sha256": "e0cd3039cd8c88436afc79595e40db73de07293268b50b423e432e2fd5c56aa8",
+      "http_status": 200,
+      "actual_sha256": "e0cd3039cd8c88436afc79595e40db73de07293268b50b423e432e2fd5c56aa8",
+      "bytes": 40403,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/population-mean/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/population-mean/",
+      "expected_sha256": "865bd5cc64d980005fb4d127a9aae4a5fa2cac428bf585967868c278c1e9b4c6",
+      "http_status": 200,
+      "actual_sha256": "865bd5cc64d980005fb4d127a9aae4a5fa2cac428bf585967868c278c1e9b4c6",
+      "bytes": 49652,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/population-variance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/population-variance/",
+      "expected_sha256": "90856d4f61706f86d2b92e88ce73a2d10cbd024136259e12d88122cfcf39aa08",
+      "http_status": 200,
+      "actual_sha256": "90856d4f61706f86d2b92e88ce73a2d10cbd024136259e12d88122cfcf39aa08",
+      "bytes": 53450,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/probability/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/probability/",
+      "expected_sha256": "d30753a3759a0fa53480b34f658cde6abf65e3be2ef1133f47a748ede330c3b4",
+      "http_status": 200,
+      "actual_sha256": "d30753a3759a0fa53480b34f658cde6abf65e3be2ef1133f47a748ede330c3b4",
+      "bytes": 25791,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/probability-density-function/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/probability-density-function/",
+      "expected_sha256": "9da9cd735f8a780b2391e13403501c481e160b10fcca5050d30c8456fe6f94e2",
+      "http_status": 200,
+      "actual_sha256": "9da9cd735f8a780b2391e13403501c481e160b10fcca5050d30c8456fe6f94e2",
+      "bytes": 27596,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/probability-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/probability-distribution/",
+      "expected_sha256": "a6c94e997e21390a8bda091dc288cbd55e21c1325d0e790b501bb63bc969f3cf",
+      "http_status": 200,
+      "actual_sha256": "a6c94e997e21390a8bda091dc288cbd55e21c1325d0e790b501bb63bc969f3cf",
+      "bytes": 24575,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/probability-mass-function/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/probability-mass-function/",
+      "expected_sha256": "4dca4952cb60865679f43265760bf8e9f24fd9f91698d93975c0bc04d6425f5d",
+      "http_status": 200,
+      "actual_sha256": "4dca4952cb60865679f43265760bf8e9f24fd9f91698d93975c0bc04d6425f5d",
+      "bytes": 32491,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/probability-variable/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/probability-variable/",
+      "expected_sha256": "0164f0ddabc0849c363a20676a60b052ecee35b043f880308cdd320591c259d5",
+      "http_status": 200,
+      "actual_sha256": "0164f0ddabc0849c363a20676a60b052ecee35b043f880308cdd320591c259d5",
+      "bytes": 21676,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/quartile/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/quartile/",
+      "expected_sha256": "6665ef4f4b54b31811b93ee0965920fff777ef6515f884a5d7962b1134479d26",
+      "http_status": 200,
+      "actual_sha256": "6665ef4f4b54b31811b93ee0965920fff777ef6515f884a5d7962b1134479d26",
+      "bytes": 48731,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/random-sampling/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/random-sampling/",
+      "expected_sha256": "228bb65fbaa855c18b5db7b5b0189c7c00eccc907952448a49c26a30e289d421",
+      "http_status": 200,
+      "actual_sha256": "228bb65fbaa855c18b5db7b5b0189c7c00eccc907952448a49c26a30e289d421",
+      "bytes": 59307,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/range/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/range/",
+      "expected_sha256": "6be29efe6bb9caaf0f1a50ae3eea8b324b017b9b6855e39f61ab0994e1249cbd",
+      "http_status": 200,
+      "actual_sha256": "6be29efe6bb9caaf0f1a50ae3eea8b324b017b9b6855e39f61ab0994e1249cbd",
+      "bytes": 39255,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/regression-line/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/regression-line/",
+      "expected_sha256": "36eae784dbede2ab1fdc6feee2aab677978ae35775daa45533afd17836a527a3",
+      "http_status": 200,
+      "actual_sha256": "36eae784dbede2ab1fdc6feee2aab677978ae35775daa45533afd17836a527a3",
+      "bytes": 102741,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/rejection-region/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/rejection-region/",
+      "expected_sha256": "74c56ce8a27b5b1e62639c422df7f1bcfb5b7f2fe829d7b5f9b9ba316916894a",
+      "http_status": 200,
+      "actual_sha256": "74c56ce8a27b5b1e62639c422df7f1bcfb5b7f2fe829d7b5f9b9ba316916894a",
+      "bytes": 44659,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/residual/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/residual/",
+      "expected_sha256": "c47cf9cefeaaa4a99c4414952a84b439ab2eb3effffe91f3ac0bb90f21855f31",
+      "http_status": 200,
+      "actual_sha256": "c47cf9cefeaaa4a99c4414952a84b439ab2eb3effffe91f3ac0bb90f21855f31",
+      "bytes": 70732,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/sample/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/sample/",
+      "expected_sha256": "b3f5572c8dc33dbed11a32077471b400ead56a63cde4334f22e3a24ab7818cd3",
+      "http_status": 200,
+      "actual_sha256": "b3f5572c8dc33dbed11a32077471b400ead56a63cde4334f22e3a24ab7818cd3",
+      "bytes": 39543,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/sample-mean/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/sample-mean/",
+      "expected_sha256": "f0c405645962b87686ae46afb60f62545dd86237fea3c3bb3614ab8eb7beb4e8",
+      "http_status": 200,
+      "actual_sha256": "f0c405645962b87686ae46afb60f62545dd86237fea3c3bb3614ab8eb7beb4e8",
+      "bytes": 44704,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/sample-space/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/sample-space/",
+      "expected_sha256": "9f3a7c50e4d57171b7b4c4806e448fabe9aae657ab42994dcd04c4666d2ea896",
+      "http_status": 200,
+      "actual_sha256": "9f3a7c50e4d57171b7b4c4806e448fabe9aae657ab42994dcd04c4666d2ea896",
+      "bytes": 21973,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/sample-variance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/sample-variance/",
+      "expected_sha256": "c78b6a4400a2b1c7c19651f82cc0b156161b1a32fb0b6bca40dbb0903f5de0fb",
+      "http_status": 200,
+      "actual_sha256": "c78b6a4400a2b1c7c19651f82cc0b156161b1a32fb0b6bca40dbb0903f5de0fb",
+      "bytes": 63077,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/scatter-plot/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/scatter-plot/",
+      "expected_sha256": "a5ec842d4a68ebecfcca6a01c6558172b0e0b015e49c889cd38c47d1f5327283",
+      "http_status": 200,
+      "actual_sha256": "a5ec842d4a68ebecfcca6a01c6558172b0e0b015e49c889cd38c47d1f5327283",
+      "bytes": 23762,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/significance-level/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/significance-level/",
+      "expected_sha256": "3e8eb03ed0495b30385730bc9c99bb2d753529421cadbecd230b3f98587a907e",
+      "http_status": 200,
+      "actual_sha256": "3e8eb03ed0495b30385730bc9c99bb2d753529421cadbecd230b3f98587a907e",
+      "bytes": 36024,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/simple-linear-regression/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/simple-linear-regression/",
+      "expected_sha256": "07328e299f583b71f4228b444486bd128cdc84d16e17a597153ae5ec6eb17ced",
+      "http_status": 200,
+      "actual_sha256": "07328e299f583b71f4228b444486bd128cdc84d16e17a597153ae5ec6eb17ced",
+      "bytes": 76246,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/standard-deviation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/standard-deviation/",
+      "expected_sha256": "b84990a13d45f7de0e864686f659d2127df555f152b006b3fa18441a463fcb0c",
+      "http_status": 200,
+      "actual_sha256": "b84990a13d45f7de0e864686f659d2127df555f152b006b3fa18441a463fcb0c",
+      "bytes": 52951,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/standard-error/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/standard-error/",
+      "expected_sha256": "e2dbf66e391d98b12444f82d79921f4d9daba6b7fb01b7f4ed657505760aedd0",
+      "http_status": 200,
+      "actual_sha256": "e2dbf66e391d98b12444f82d79921f4d9daba6b7fb01b7f4ed657505760aedd0",
+      "bytes": 87863,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/standard-normal-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/standard-normal-distribution/",
+      "expected_sha256": "95c1c05ba24fab52618c857086e8246ff9c1fe608d96d264ecdfab1b0841ed9f",
+      "http_status": 200,
+      "actual_sha256": "95c1c05ba24fab52618c857086e8246ff9c1fe608d96d264ecdfab1b0841ed9f",
+      "bytes": 48760,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/standardization/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/standardization/",
+      "expected_sha256": "5817ce05342952c5bef2d7717cd5956fcb313f657458df9b19bcb27c5e47c1f6",
+      "http_status": 200,
+      "actual_sha256": "5817ce05342952c5bef2d7717cd5956fcb313f657458df9b19bcb27c5e47c1f6",
+      "bytes": 43179,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/t-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/t-distribution/",
+      "expected_sha256": "bcf656f34bf2424fc61d8d553ce5829771ef971e1b84041d103f9aa23ea9a003",
+      "http_status": 200,
+      "actual_sha256": "bcf656f34bf2424fc61d8d553ce5829771ef971e1b84041d103f9aa23ea9a003",
+      "bytes": 72557,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/test-statistic/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/test-statistic/",
+      "expected_sha256": "cebc1005ba746ea8be0534e964906bc8480d2af58b35b9c53400b00d7275c7ae",
+      "http_status": 200,
+      "actual_sha256": "cebc1005ba746ea8be0534e964906bc8480d2af58b35b9c53400b00d7275c7ae",
+      "bytes": 55555,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/two-sided-test/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/two-sided-test/",
+      "expected_sha256": "69708b84030843d96cb56f1cb67333dc1db4510f02a7d3812e5fd18dc840100e",
+      "http_status": 200,
+      "actual_sha256": "69708b84030843d96cb56f1cb67333dc1db4510f02a7d3812e5fd18dc840100e",
+      "bytes": 48065,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/type-i-error/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/type-i-error/",
+      "expected_sha256": "712927241b277d7eb94f446186bfa34eb07948f6ec95de4e3ae3cd941d5e5405",
+      "http_status": 200,
+      "actual_sha256": "712927241b277d7eb94f446186bfa34eb07948f6ec95de4e3ae3cd941d5e5405",
+      "bytes": 38881,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/type-ii-error/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/type-ii-error/",
+      "expected_sha256": "c3a5a8b7c049733a90456b6e016dc35759c4887a7ffba5382a048f152ffd2259",
+      "http_status": 200,
+      "actual_sha256": "c3a5a8b7c049733a90456b6e016dc35759c4887a7ffba5382a048f152ffd2259",
+      "bytes": 35776,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/unbiased-estimator/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/unbiased-estimator/",
+      "expected_sha256": "2238e1dd0116fdbab2c0e130d3c3fcba2c8148c82d178d837ef9a1978cb09e88",
+      "http_status": 200,
+      "actual_sha256": "2238e1dd0116fdbab2c0e130d3c3fcba2c8148c82d178d837ef9a1978cb09e88",
+      "bytes": 67080,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/unbiased-variance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/unbiased-variance/",
+      "expected_sha256": "cb6f5d966992a1d2d1243b92b9f5057268c841a828967ae85119de37f314993a",
+      "http_status": 200,
+      "actual_sha256": "cb6f5d966992a1d2d1243b92b9f5057268c841a828967ae85119de37f314993a",
+      "bytes": 97429,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/variance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/variance/",
+      "expected_sha256": "82eb077d2ac2500e0177fa3d5757c457d6d12b12637397276f04a8328e5e37de",
+      "http_status": 200,
+      "actual_sha256": "82eb077d2ac2500e0177fa3d5757c457d6d12b12637397276f04a8328e5e37de",
+      "bytes": 70741,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/z-score/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/z-score/",
+      "expected_sha256": "d52063c31ea22471143527f1305a2e2c814b63701acf3dbba67b55e3e7e9d365",
+      "http_status": 200,
+      "actual_sha256": "d52063c31ea22471143527f1305a2e2c814b63701acf3dbba67b55e3e7e9d365",
+      "bytes": 29820,
+      "attempts": 1,
+      "status": "passed"
+    },
+    {
+      "path": "docs/topics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/topics/",
+      "expected_sha256": "5618c59d9400d9025d30b8246f8480fa51b882ff0c711eac38b733cf9175927d",
+      "http_status": 200,
+      "actual_sha256": "5618c59d9400d9025d30b8246f8480fa51b882ff0c711eac38b733cf9175927d",
+      "bytes": 4054,
+      "attempts": 1,
+      "status": "passed"
+    }
+  ],
+  "limits": [
+    "This recheck verifies deployed bytes and structure, not new mathematical peer review.",
+    "The earlier successful release tests and competitor review remain separate evidence.",
+    "No user data, account state, or remote service settings were changed."
+  ],
+  "next": "基礎コースの利用者テスト・訂正対応と、同じ品質基準による2級コースの実装。"
+}
