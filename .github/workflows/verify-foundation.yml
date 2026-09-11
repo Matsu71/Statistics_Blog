@@ -21,21 +21,33 @@ jobs:
         with:
           node-version: '22'
           cache: npm
+      - name: Apply integrity-checked review sources
+        run: node scripts/apply-foundation-review-bundle.mjs
       - run: npm ci
-      - name: Record dependency advisory detail
+      - name: Refresh outdated build dependencies on this release branch
+        run: |
+          if [ "$(node -p "require('./package.json').dependencies.astro")" != '7.3.2' ]; then
+            npm install --save-exact astro@7.3.2 @astrojs/sitemap@latest
+            npm install --save-dev --save-exact @astrojs/check@latest
+            npm audit fix
+            node --input-type=module -e "import fs from 'node:fs'; const p=JSON.parse(fs.readFileSync('package.json'));p.engines.node='>=22.12.0';fs.writeFileSync('package.json',JSON.stringify(p,null,2)+'\n')"
+          fi
+      - name: Record and gate dependency advisories
         run: |
           mkdir -p review-assets
           npm audit --json > review-assets/npm-audit.json || true
-          node -e "const a=require('./review-assets/npm-audit.json'); console.log(JSON.stringify(a.metadata)); for(const [p,v] of Object.entries(a.vulnerabilities??{})) console.log(p,v.severity,JSON.stringify(v.fixAvailable),JSON.stringify(v.via));"
+          node -e "const fs=require('fs');const a=JSON.parse(fs.readFileSync('./review-assets/npm-audit.json'));if(!a.metadata)throw Error('Audit did not return metadata');console.log(JSON.stringify(a.metadata));fs.writeFileSync('project-docs/learning-platform-design/16-dependency-audit.json',JSON.stringify({checked_at:new Date().toISOString(),metadata:a.metadata,vulnerabilities:a.vulnerabilities},null,2));if(a.metadata.vulnerabilities.high||a.metadata.vulnerabilities.critical)process.exit(1)"
       - name: Apply audited editorial corrections
         run: |
           if [ -f scripts/prepare-foundation-release.mjs ]; then node scripts/prepare-foundation-release.mjs; fi
+          if [ -f scripts/finalize-foundation-docs.mjs ]; then node scripts/finalize-foundation-docs.mjs; fi
       - name: Generate and verify
         run: |
           npm run generate:index
           npm run verify
           node scripts/validate-foundation.mjs
           node scripts/test-foundation-math.mjs
+          if [ -f scripts/test-release-extras.mjs ]; then node scripts/test-release-extras.mjs; fi
       - name: Independent numerical oracle
         run: |
           python -m pip install --quiet scipy
@@ -43,14 +55,14 @@ jobs:
       - name: Browser verification
         run: |
           npm install --no-save --package-lock=false playwright@1.55.0
-          npx playwright install --with-deps chromium
+          npx playwright install --with-deps chromium webkit
           node scripts/test-foundation-browser.mjs
           if [ -f scripts/test-learning-labs.mjs ]; then node scripts/test-learning-labs.mjs; fi
       - name: Package review sources and screenshots
         if: always()
         run: |
           mkdir -p review-assets
-          tar -czf review-assets/source-review.tar.gz src scripts public/data project-docs package.json package-lock.json astro.config.mjs site-build.config.mjs tsconfig.json
+          tar -czf review-assets/source-review.tar.gz src scripts public docs project-docs package.json package-lock.json astro.config.mjs site-build.config.mjs tsconfig.json AGENTS.md README.md
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -64,7 +76,8 @@ jobs:
           if [ "$STAGE" != 'release_candidate' ]; then echo 'Audit checkpoint tested; no generated commit yet.'; exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs src public/data scripts project-docs/learning-platform-design AGENTS.md README.md package.json package-lock.json
+          git add docs src public scripts project-docs/learning-platform-design AGENTS.md README.md package.json package-lock.json
+          if [ -f .github/review-bundles/foundation-release.json ]; then git rm .github/review-bundles/foundation-release.json; fi
           if ! git diff --cached --quiet; then
             git commit -m 'build: generate audited complete foundation release'
             git push origin HEAD:${{ github.ref_name }}
