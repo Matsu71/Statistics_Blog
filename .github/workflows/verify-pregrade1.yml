@@ -11,6 +11,8 @@ on:
       - src/components/Pregrade1Tools.astro
       - src/styles/pregrade1.css
       - src/lib/pregrade1-schema.ts
+      - src/lib/lesson-search-text.mjs
+      - scripts/test-lesson-search-text.mjs
       - scripts/check-pregrade1-*
       - scripts/test-pregrade1-browser.mjs
       - scripts/pregrade1-release.py
@@ -22,7 +24,9 @@ concurrency:
   cancel-in-progress: false
 jobs:
   verify:
-    if: github.ref == 'refs/heads/content/pregrade1-foundations-20260911'
+    # Do not put skip-CI text on a candidate that will later be promoted to main.
+    # The actor guard additionally prevents a bot checkpoint from repeating review.
+    if: github.ref == 'refs/heads/content/pregrade1-foundations-20260911' && github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 35
     permissions:
@@ -49,6 +53,7 @@ jobs:
       - run: npm ci
       - name: Build all courses and validate the initial six
         run: |
+          node scripts/test-lesson-search-text.mjs
           node scripts/check-pregrade1-content.mjs prepare
           npm run generate:index
           npm run verify
@@ -103,7 +108,7 @@ jobs:
         run: |
           git add src docs public project-docs/pregrade1 project-docs/grade2/content-validation.json project-docs/grade2/math-validation.json project-docs/grade2/browser-validation.json project-docs/learning-platform-design
           test -z "$(git diff --cached --name-only -- .github)"
-          git commit -m 'build: save verified initial pregrade1 course and unchanged earlier manuscripts [skip ci]'
+          git commit -m 'build: save verified initial pregrade1 course and unchanged earlier manuscripts'
           git push origin HEAD:content/pregrade1-foundations-20260911
       - name: Preserve actual review outputs even on failure
         if: always()
