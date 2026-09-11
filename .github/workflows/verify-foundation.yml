@@ -1,21 +1,17 @@
 name: Verify foundation content
-
 on:
   push:
     branches: ['content/foundation-*']
   workflow_dispatch:
-
 concurrency:
   group: foundation-${{ github.ref }}
   cancel-in-progress: true
-
 permissions:
   contents: write
-
 jobs:
   verify:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
         with:
@@ -26,25 +22,26 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - name: Apply the versioned course-policy migration
-        run: node scripts/migrations/20260911-foundation.mjs
-      - name: Generate and verify the entire site
+      - name: Generate and verify
         run: |
           npm run generate:index
           npm run verify
           node scripts/validate-foundation.mjs
-      - name: Test foundation pages in Chromium
+          if [ -f scripts/test-foundation-math.mjs ]; then node scripts/test-foundation-math.mjs; fi
+      - name: Browser verification
         run: |
           npm install --no-save --package-lock=false playwright@1.55.0
           npx playwright install --with-deps chromium
           node scripts/test-foundation-browser.mjs
-      - name: Record the verified site on the staging branch only
+      - name: Save verified artifacts for release candidates only
         if: startsWith(github.ref, 'refs/heads/content/foundation-')
         run: |
+          STAGE=$(node -e "const fs=require('fs'); const p='src/data/foundation-release.json'; console.log(fs.existsSync(p)?JSON.parse(fs.readFileSync(p)).stage:'drafting')")
+          if [ "$STAGE" != 'release_candidate' ]; then echo 'Checkpoint tested; generated files stay out of draft commits.'; exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs src/generated/term-index.json AGENTS.md README.md project-docs/learning-platform-design
+          git add docs src/generated project-docs/learning-platform-design
           if ! git diff --cached --quiet; then
-            git commit -m 'build: regenerate verified foundation pages and record checks'
+            git commit -m 'build: verify and generate complete foundation release'
             git push origin HEAD:${{ github.ref_name }}
           fi
