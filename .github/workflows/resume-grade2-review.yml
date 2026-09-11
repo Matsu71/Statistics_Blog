@@ -1,0 +1,97 @@
+name: Review complete grade2 candidate
+on:
+  push:
+    branches: [content/grade2-complete-20260911]
+    paths: [.github/workflows/resume-grade2-review.yml]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: grade2-complete-review
+  cancel-in-progress: false
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Capture current main and the preserved foundation
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main:refs/remotes/origin/main
+          git merge --no-edit origin/main
+          mkdir -p review-assets/grade2-resume project-docs/grade2/release
+          python3 scripts/grade2-release-control.py capture
+      - run: npm ci
+      - name: Prepare a separate manuscript review copy
+        run: |
+          python3 -m pip install --quiet numpy==2.3.5 scipy==1.17.0
+          python3 scripts/import-grade2-iris.py
+          python3 scripts/enrich-grade2-iris-case.py
+          python3 scripts/prepare-grade2-complete-release.py
+          node scripts/prepare-grade2.mjs
+          python3 scripts/resume-grade2-review.py prepare
+          node scripts/prepare-grade2.mjs
+          python3 scripts/grade2-release-control.py marker
+      - name: Verify source, all course pages and formulas
+        run: |
+          set -euo pipefail
+          npm run generate:index
+          npm run verify 2>&1 | tee review-assets/grade2-resume/build.log
+          node scripts/validate-foundation.mjs > review-assets/grade2-resume/foundation-content.log
+          node scripts/validate-grade2.mjs > review-assets/grade2-resume/grade2-content.log
+      - name: Verify mathematical examples and cited sources
+        run: |
+          set -euo pipefail
+          node scripts/test-foundation-math.mjs > review-assets/grade2-resume/foundation-math.log
+          python3 scripts/check-foundation-oracle.py > review-assets/grade2-resume/foundation-oracle.log
+          python3 scripts/check-grade2-complete-math.py > review-assets/grade2-resume/grade2-math.log
+          node scripts/test-release-extras.mjs > review-assets/grade2-resume/extras.log
+          python3 scripts/check-grade2-references.py | tee review-assets/grade2-resume/references.log
+          npm audit --json > project-docs/grade2/release/npm-audit.json || true
+          node -e "const r=require('./project-docs/grade2/release/npm-audit.json');if(!r.metadata?.vulnerabilities||r.metadata.vulnerabilities.high||r.metadata.vulnerabilities.critical)process.exit(1)"
+      - name: Test the full experience in Chromium and WebKit
+        run: |
+          set -euo pipefail
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium webkit
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-cjk
+          node scripts/test-foundation-browser.mjs > review-assets/grade2-resume/foundation-browser.log
+          node scripts/test-learning-labs.mjs > review-assets/grade2-resume/learning-labs.log
+          node scripts/test-grade2-browser.mjs > review-assets/grade2-resume/grade2-browser.log
+      - name: Seal only the verified manuscript copies
+        run: |
+          python3 scripts/grade2-release-control.py gate
+          python3 scripts/resume-grade2-review.py seal
+      - name: Checkpoint the reviewed candidate without publishing main
+        run: |
+          git add src scripts public docs review project-docs/grade2 project-docs/learning-platform-design .github/workflows/verify-grade2.yml
+          if ! git diff --cached --quiet; then
+            git commit -m 'review: checkpoint verified grade2 copies and generated pages [skip ci]'
+            git push origin HEAD:content/grade2-complete-20260911
+          fi
+      - name: Preserve current outcomes even if a test fails
+        if: always()
+        run: |
+          mkdir -p review-assets/grade2-resume
+          tar --exclude='*.woff' --exclude='*.woff2' --exclude='*.ttf' --exclude='*.otf' --exclude='*.eot' -czf review-assets/grade2-resume/source-review.tar.gz src scripts public docs review project-docs .github/workflows package.json package-lock.json astro.config.mjs site-build.config.mjs tsconfig.json AGENTS.md README.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: grade2-resumed-review-${{ github.run_id }}
+          path: |
+            review-assets/
+            project-docs/grade2/
+          retention-days: 30
+          if-no-files-found: warn
