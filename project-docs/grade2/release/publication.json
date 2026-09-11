@@ -1,0 +1,2260 @@
+{
+  "status": "published_and_live_verified",
+  "checked_at": "2026-09-11T11:40:14.740754+00:00",
+  "verified_commit": "470e5c82b96bd28640871311e1dc7245cf494579",
+  "tested_source_commit": "e05ccb06ffacd982c98d083f9b28067b727341bf",
+  "workflow_run_id": "34595112210",
+  "workflow_url": "https://github.com/Matsu71/Statistics_Blog/actions/runs/34595112210",
+  "lesson_count": 40,
+  "question_count": 172,
+  "foundation_lesson_count": 40,
+  "foundation_question_count": 130,
+  "html_pages": 161,
+  "resources_verified": 234,
+  "numerical_checks": 145,
+  "browser_assertions": 2030,
+  "public_marker": {
+    "release": "grade2-1.0",
+    "source_commit": "e05ccb06ffacd982c98d083f9b28067b727341bf",
+    "workflow_run_id": "34589747612",
+    "built_at": "2026-09-11T10:33:15.880940+00:00",
+    "lesson_count": 40,
+    "question_count": 172,
+    "foundation_lesson_count": 40,
+    "foundation_question_count": 130,
+    "lesson_source_sha256": {
+      "src/content/grade2/binomial-hypergeometric.md": "32c77b607a17b0a2d1ceef89ba71b796ab11fc4ac1f35b9887f60e7ce7142801",
+      "src/content/grade2/chi-square-f-distributions.md": "f11b08d7f1e51517bb201ff0921844e26d628ab069499fdd07db8d1498a4cbe2",
+      "src/content/grade2/conditional-probability-and-bayes.md": "ce8921ad1ca60c2a42c1218c1cd156b24085dbe4d8395de95e9c3ea3c499e1e4",
+      "src/content/grade2/contingency-table-independence.md": "4ee2b7499f09d77fe4df2f56c2a2cb07bf8d2b9f0c3e1cd1994cc94887863097",
+      "src/content/grade2/density-cdf-transformation.md": "ff71a9da1cc7634de82d1ee8aca12688b0f1933a8d9f45fab1cda95e1bae9c62",
+      "src/content/grade2/errors-power-sample-size.md": "38a95e7b3f41e385ea2400e5adbaf69bc5b33ddd7554cc15ab839c240f6d4023",
+      "src/content/grade2/expectation-variance-covariance.md": "e67b54a30e73acc8e1f7521f290eb6e6eb168d916f76b3bfaa690d54c4182749",
+      "src/content/grade2/geometric-negative-binomial.md": "8376995abb561723fa63d762a81c596521ff66821ff07a85275d76e7e02084d8",
+      "src/content/grade2/goodness-of-fit.md": "e781d63210a191c9effe97950eadb2794092cf31bc25c94830db069afe20511e",
+      "src/content/grade2/grade2-integrated-practice.md": "46e8b30a9bf36a49b71ec56c19df96c9983d9028b4092a4fb40e810cf230ca45",
+      "src/content/grade2/growth-indices-autocorrelation.md": "1d49fbd528ab26928c6fdeb96bf50be90b37b0a5acfccb09819edf564cab26b0",
+      "src/content/grade2/hypotheses-p-values-and-tails.md": "ff3dc4024f4a4c3338a3fcd528bb2d543a0eb0baae0664159961344fd0e3cc32",
+      "src/content/grade2/joint-marginal-independent.md": "fd2d0f22b208425b81605a280a283838a08e90de9043ab2e443da63c1c1f1625",
+      "src/content/grade2/laws-limits-and-approximations.md": "b294ca949aa2a5abdff6ad5e3e714dd5755f775e3596154cd5fc63794d82cee6",
+      "src/content/grade2/lorenz-and-gini.md": "cbee18e21d981cdf511e9d29498f4b74205cc4205170b8c0755a34c6f431a46f",
+      "src/content/grade2/mean-confidence-intervals.md": "9d9552c2438dc0602259fa4c70c12a2dea0817e28ca76553eb45080223c20e2e",
+      "src/content/grade2/mean-difference-intervals.md": "b9f52c89a886a0eb22e4743866405c187a6378e6a9b73f7c04872733ea51376b",
+      "src/content/grade2/model-diagnostics-and-collinearity.md": "2dd742aa5cbb92f378dfe1efaa980c1eabd116abdeec184039f63a3f9cd090c7",
+      "src/content/grade2/multiple-regression-and-dummies.md": "bc2315fb8bdbd9301abb5311073c5fe8a3d0dcac09771d3912952565bfd8be65",
+      "src/content/grade2/normal-and-bivariate-normal.md": "cfb2f05448d63ae7666d970c09e545aae5455168a9469dd0c4353915113ac061",
+      "src/content/grade2/one-mean-tests.md": "d848f30c8c850b3f23402c48897dcca5a0d96195a1871ae9acfeef897e4b0bad",
+      "src/content/grade2/one-two-proportion-tests.md": "c9eade09fbc1578b659fbdc80eb2eeb9a8d5af9d66f719dc36b81aac0962b400",
+      "src/content/grade2/one-way-anova.md": "b1bcf103c88d356ef256db6588e048e528c2fa9297f82c1d3569f42ad7d5aab1",
+      "src/content/grade2/parameters-statistics-and-notation.md": "b1918e0d53fb3763b19a6000fadda683310327609d77b77a9fc50cd0230443c4",
+      "src/content/grade2/partial-correlation-and-intervals.md": "731e718414ae6ceeca54e5268d9851f83e912bc021c4dee77233fb8dbf5f33ac",
+      "src/content/grade2/poisson-exponential.md": "3fdebb96db38bea81ea22c3d310a736056a982454e71d3d7f7035c99a99cd3d3",
+      "src/content/grade2/proportion-difference-intervals.md": "a996fed08a1370912014e0bd15b5fc3051a7c42fd8854a3f3ce568a8757e25f0",
+      "src/content/grade2/randomization-replication-blocking.md": "13aa4df8814e7bac923c9edc29fa6072c0f78b98660ecdca42f061c19faeae16",
+      "src/content/grade2/reading-analysis-output.md": "b685eb6cc1ff7544307d2bfd265f342bd205a415eee707b685053469dc8b6d37",
+      "src/content/grade2/regression-estimation-standard-errors.md": "b3652569a1b74e9d597ba396cbecf08ff7013a6df0af12d8d38acceca44b3abf",
+      "src/content/grade2/regression-tests-and-prediction.md": "1fde4a642d9164e045af58ef6c1310a03cdae91006718d0bdc1682793e14256b",
+      "src/content/grade2/reproducible-case-study.md": "71fec374d7caafee3d17d86c92a8878da592b3fbcb5ca1684885830c6b51b00e",
+      "src/content/grade2/sampling-and-finite-populations.md": "419593db5376d3178b9aeae28b28a775069bf691674cd09d9b0eb43a697c9a45",
+      "src/content/grade2/sampling-mean-proportion-variance.md": "8cf3f2c924f40224287bffe455402449dd6749cb3b53e8e626938626cc85eda8",
+      "src/content/grade2/student-t-and-quantiles.md": "6bf2fa061954e782073f7de9426135c1ddbd5b2ccdb02cfb433ccb87c85f802e",
+      "src/content/grade2/two-mean-and-paired-tests.md": "db5c942af2d4ea0d633cdc9cbf26729b9694947aa06e8847b5fb96d28f179545",
+      "src/content/grade2/unbiased-consistent-mse.md": "f9cbee9256e55437f2ee36ae6c08cca63e47fb19d7eb8abc58ead17eb0911a53",
+      "src/content/grade2/variance-ratio-intervals.md": "3675c09d08bea57bcd19c4c634e160e84647d87cc1b5447848f48a03c8275622",
+      "src/content/grade2/variance-ratio-tests.md": "6b80ffc1160291de9220856d6eb5693983cfd5c2b4e68f00d04e57c5013298c6",
+      "src/content/grade2/variance-skewness-kurtosis.md": "93339c94c33c5fa0e0381b1eba7b3babf13979e2ef7f07f6d845925a40d8332f"
+    }
+  },
+  "resources": [
+    {
+      "path": "docs/_astro/BaseLayout.BH8f0zag.css",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/BaseLayout.BH8f0zag.css",
+      "sha256": "e4d6bd81e2dd44b65f0c58caff4d8fa4347ba819206ee094faa556c7b32c118d",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_AMS-Regular.BQhdFMY1.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_AMS-Regular.BQhdFMY1.woff2",
+      "sha256": "0cdd387c9590a1a9f9794560022dbb59654a7d86f187aa0c81495ad42d3a7308",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_AMS-Regular.DMm9YOAa.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_AMS-Regular.DMm9YOAa.woff",
+      "sha256": "30da91e84c893f875e252689faebdc590b2871145e8adc7f9a9d4dbd8ce0b251",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_AMS-Regular.DRggAlZN.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_AMS-Regular.DRggAlZN.ttf",
+      "sha256": "68534840bcfdd2bffb6f0e8deb48684dd01e7f04ea2813267577afb906de1d13",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Bold.ATXxdsX0.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Bold.ATXxdsX0.ttf",
+      "sha256": "07d8e303ce4fc12b4bb54f1004170dd190a1f3db45d400fe68060df3e0897268",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Bold.BEiXGLvX.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Bold.BEiXGLvX.woff",
+      "sha256": "1ae6bd7475590e97e7f145a89e09ccde322f7a6bc0b91607b1c8b8ee28290fed",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Bold.Dq_IR9rO.woff2",
+      "sha256": "de7701e42cf1f4cf0b766c03fb27977207eee2f4fd5d76fa82188406da43ea4c",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Regular.CTRA-rTL.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Regular.CTRA-rTL.woff",
+      "sha256": "3398dd02302557a793f2863f88e02d96ce10df2abffa07c8e9fa90775116e65c",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Regular.Di6jR-x-.woff2",
+      "sha256": "5d53e70ad607c2352162dec9e0923fb54ecdafaccbf604cd8dcf7d00facb989b",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Caligraphic-Regular.wX97UBjC.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Caligraphic-Regular.wX97UBjC.ttf",
+      "sha256": "ed0b74372feefcbb9c0666b2e210da37b7e49fa7fbbf3eeb11db5f693dacfbb7",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Bold.BdnERNNW.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Bold.BdnERNNW.ttf",
+      "sha256": "9163df9c7122432e6495b4229fa9071cf9ae86a758ae5efc4924ec2e1a6dbce1",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Bold.BsDP51OF.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Bold.BsDP51OF.woff",
+      "sha256": "9be7ceb88004ab8ad124082246fbfcca4091e36385d4ec6ed1df67375dad50fb",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Bold.CL6g_b3V.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Bold.CL6g_b3V.woff2",
+      "sha256": "74444efd593c005e3f4573b44524704c0af0a937fe911cca9e94068d0d140d3f",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Regular.CB_wures.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Regular.CB_wures.ttf",
+      "sha256": "1e6f9579e90e2cac37f8f60a597c436e075c114385652b7cbeb0dec0421291b3",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Regular.CTYiF6lA.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Regular.CTYiF6lA.woff2",
+      "sha256": "51814d270d06ff0255dba0799994fa4d8c84d11f09951d47595f4abb1f3602dc",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Fraktur-Regular.Dxdc4cR9.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Fraktur-Regular.Dxdc4cR9.woff",
+      "sha256": "5e28753be717dac97f559f49bc10be9cf3c124ddcabda6659d11cb68febc6463",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Bold.Cx986IdX.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Bold.Cx986IdX.woff2",
+      "sha256": "0f60d1b897938ec918c8ce073092411baf9438f6739465693ff18b0f9d20b021",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Bold.Jm3AIy58.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Bold.Jm3AIy58.woff",
+      "sha256": "c76c5d696297d51b9cb1639c7da4334f0e7dec81b42b11213b5e25ef671bb822",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Bold.waoOVXN0.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Bold.waoOVXN0.ttf",
+      "sha256": "138ac28d1663b3037e9c5f52371fa5c63d8324f4a38d22cd573e6ea3a3fd0cf8",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-BoldItalic.DxDJ3AOS.woff2",
+      "sha256": "99cd42a3c072d918f2f44984a807cf7aa16e13545fd0875fc07c6c65f99e715b",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-BoldItalic.DzxPMmG6.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-BoldItalic.DzxPMmG6.ttf",
+      "sha256": "70ee1f64a20f2048c21940ef46d0144fd215baa953ca69afd1e31e98544f708f",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-BoldItalic.SpSLRI95.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-BoldItalic.SpSLRI95.woff",
+      "sha256": "a6f7ec0d846ac7ad975adb8959c37ed49b94acbc4ae436db9ce9e20287e4a64c",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Italic.3WenGoN9.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Italic.3WenGoN9.ttf",
+      "sha256": "0d85ae7cc30f23790a7f1a58c4a112fdca8aae769b6ba11429af1d98b1b6cb3a",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Italic.BMLOBm91.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Italic.BMLOBm91.woff",
+      "sha256": "f1d6ef86f3b11a528bd5185199bd2443ecb2b0dead96d88674b5a2c12be24bdf",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Italic.NWA7e6Wa.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Italic.NWA7e6Wa.woff2",
+      "sha256": "97479ca6cce906abc961ecac96faa5f9ca2e61b8e7670d475826bcdee9a7c267",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Regular.B22Nviop.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Regular.B22Nviop.woff2",
+      "sha256": "c2342cd8b869e01752a9321dc17213fc40d4d04c79688c1d43f2cf316abd7866",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Regular.Dr94JaBh.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Regular.Dr94JaBh.woff",
+      "sha256": "c6368d87e8a1a3a5d337623d83d8dc4b868f242a9ad476237d6f8d1e0f168cdc",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Main-Regular.ypZvNtVU.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Main-Regular.ypZvNtVU.ttf",
+      "sha256": "d0332f52868370fd83ae7fa46470f90c8f2eab2fcf12bc4f88080b340c95a830",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-BoldItalic.B3XSjfu4.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-BoldItalic.B3XSjfu4.ttf",
+      "sha256": "f9377ab0271cda59af24bcffbd46a4d0c8a3572ffafdbb38de2ad5ea7b0d5ee5",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-BoldItalic.CZnvNsCZ.woff2",
+      "sha256": "dc47344dbb6cb5b655c8460d561f4df5f501b90c804ad3c6cec65fe322351ab1",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-BoldItalic.iY-2wyZ7.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-BoldItalic.iY-2wyZ7.woff",
+      "sha256": "850c0af5c2238497febaf5e461d880bf458c341f42f4f330f1b1ab5698b1998e",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-Italic.DA0__PXp.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-Italic.DA0__PXp.woff",
+      "sha256": "8a8d244581371912b8f3f5a23e2437cb2a59cd9bcaebb0346e722c05737a2571",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-Italic.flOr_0UB.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-Italic.flOr_0UB.ttf",
+      "sha256": "08ce98e51b04d58945a301e639e02b6998af29fdfd61a7b8afdd07bbfc479d4a",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Math-Italic.t53AETM-.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Math-Italic.t53AETM-.woff2",
+      "sha256": "7af58c5ec8f132a2ddde9027c6d7814decce4d3b822a11192a42a20e2e973264",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Bold.CFMepnvq.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Bold.CFMepnvq.ttf",
+      "sha256": "1ece03f79f95277d57dc7f6b435a74e1379b0d46104a8530286b60ff49369ea0",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Bold.D1sUS0GD.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Bold.D1sUS0GD.woff2",
+      "sha256": "e99ae51144bf1232efcc1bfe5add36262c6866b0faab24fa75740e1b98577a62",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Bold.DbIhKOiC.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Bold.DbIhKOiC.woff",
+      "sha256": "ece03cfd83e22c212cdef66feb8442d25a083beb988db3f1883f3f9738d750ba",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Italic.C3H0VqGB.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Italic.C3H0VqGB.woff2",
+      "sha256": "00b26ac825e2095056396e0553b8ac26d3f8ad158c3826e28b4c45b385c4714a",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Italic.DN2j7dab.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Italic.DN2j7dab.woff",
+      "sha256": "91ee67500cc0129aa0ace3ac5c61ff1692102f0f31d02b69347fba35dcb75bf2",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Italic.YYjJ1zSn.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Italic.YYjJ1zSn.ttf",
+      "sha256": "3931dd81faed86ba021bb2bbdc36f5bed9a38d6b4f4077aca59b265aa1b02083",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Regular.BNo7hRIc.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Regular.BNo7hRIc.ttf",
+      "sha256": "f36ea897e19f4a2e571d1e900e4e3710e438deb05a842486045ba0a3e616a4ad",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Regular.CS6fqUqJ.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Regular.CS6fqUqJ.woff",
+      "sha256": "11e4dc8a6471ff6d6ee561d53d10fde8f7489e798257ff449c5d37c197435605",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_SansSerif-Regular.DDBCnlJ7.woff2",
+      "sha256": "68e8c73ef42afd3ccec58bf0fba302cce448938e7fc020a5e31f8a952eee1342",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Script-Regular.C5JkGWo-.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Script-Regular.C5JkGWo-.ttf",
+      "sha256": "1c67f068fea8bb09bf099c088b1cf64bd27516a6e07f4684344873564bb66a67",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Script-Regular.D3wIWfF6.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Script-Regular.D3wIWfF6.woff2",
+      "sha256": "036d4e95149b69ff9bcc0cd55771efeb25ffa3947293e69acd78d5ac328c684b",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Script-Regular.D5yQViql.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Script-Regular.D5yQViql.woff",
+      "sha256": "d96cdf2b3bdd4d64a8fd5f74a4c467f123a8a73931cd435889f08ffaf9bf947a",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size1-Regular.C195tn64.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size1-Regular.C195tn64.woff",
+      "sha256": "c943cc986384f59e86bea5fd7dc50a9c4dfe567a7c05eb40d6790720dead97c9",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size1-Regular.Dbsnue_I.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size1-Regular.Dbsnue_I.ttf",
+      "sha256": "95b6d2f1a50173bfedb8c63e1d1c99b10427d0a4df4201cb44513b226951a22b",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size1-Regular.mCD8mA8B.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size1-Regular.mCD8mA8B.woff2",
+      "sha256": "6b47c40166b6dbe21a5dfca7718413f2147fd2399be1ba605d8ad39cedf25dfe",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size2-Regular.B7gKUWhC.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size2-Regular.B7gKUWhC.ttf",
+      "sha256": "a6b2099fb555c60e3a0db3a08842ebf1d732c6eb4e4bf44913613bed4fc4e39b",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size2-Regular.Dy4dx90m.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size2-Regular.Dy4dx90m.woff2",
+      "sha256": "d04c54219f9eaec6d4d4fd42dfb28785975a4794d6b2fc71e566b9cd6db842dd",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size2-Regular.oD1tc_U0.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size2-Regular.oD1tc_U0.woff",
+      "sha256": "2014c523c3210bcc166648c4d4cc57f05b747df07a24277bf71c51e67dc79e3d",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size3-Regular.CTq5MqoE.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size3-Regular.CTq5MqoE.woff",
+      "sha256": "6ab6b62e9b62dae2c00dd90f791bd10950be0ecc3490d7d6045f51c2e8fe0949",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size3-Regular.DgpXs0kz.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size3-Regular.DgpXs0kz.ttf",
+      "sha256": "500e04d54f0d51666332c9d2089aa803be22aa878eca539e59fa53c6e522b082",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size4-Regular.BF-4gkZK.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size4-Regular.BF-4gkZK.woff",
+      "sha256": "99f9c6750b489c9462bf04900bd3f939df9b829339daaaaa99ef5495cdddea58",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size4-Regular.DWFBv043.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size4-Regular.DWFBv043.ttf",
+      "sha256": "c647367d1dd4e162468717d020e1fc0f1dc5c26ebfdffbe55261713bf88c5877",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Size4-Regular.Dl5lxZxV.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Size4-Regular.Dl5lxZxV.woff2",
+      "sha256": "a4af7d414440a1c1790825cfb700cf9cf43b0f2c4b04f0ebc523011ad9853ec0",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Typewriter-Regular.C0xS9mPB.woff",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Typewriter-Regular.C0xS9mPB.woff",
+      "sha256": "e14fed02b1aba7ce9f5afd5844b5d0321b22351febc720e0de8b8723527609f7",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Typewriter-Regular.CO6r4hn1.woff2",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Typewriter-Regular.CO6r4hn1.woff2",
+      "sha256": "71d517d67827787cfabdf186914cc3358eda539e37931941f2b2fd4a21f68c0b",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/KaTeX_Typewriter-Regular.D3Ib7_Hf.ttf",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/KaTeX_Typewriter-Regular.D3Ib7_Hf.ttf",
+      "sha256": "f01f3e87d9c6a61c0c081ceb577abd864eb00a612f7ac1620dd6915fad2ef5aa",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/index.astro_astro_type_script_index_0_lang.k1XEYLJ-.js",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/index.astro_astro_type_script_index_0_lang.k1XEYLJ-.js",
+      "sha256": "d7a22c04ef027eba4cde5339548b711370a2fbd691183da0b52bbc59cd20a8cc",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/_astro/learning.Rs5a0QKP.css",
+      "url": "https://matsu71.github.io/Statistics_Blog/_astro/learning.Rs5a0QKP.css",
+      "sha256": "ed04d8a28f08fa32efe21095b34bd035cd30abf6b477efa5c3652fc396bd809f",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/about/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/about/",
+      "sha256": "49019284c8f7bd0d0149dcb0ff1bdd876c85096f8e6a84b7c6c514832e9040b5",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/courses/foundation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/courses/foundation/",
+      "sha256": "c07c3999a0aa50dca13ba4e6b2dec21f9590c3eebeed1ff9efc468e86f917cc1",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/courses/grade2/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/courses/grade2/",
+      "sha256": "72eb48f62689fa9de72e3ab1b3947fe57dc98b9803e73e03a5c3e7c0b62e1868",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/courses/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/courses/",
+      "sha256": "3744d1bf443f6a751bb34425bdb8dda45a77284fa37f4ab00a8e51206ccfab1a",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/coverage/foundation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/coverage/foundation/",
+      "sha256": "77d49e2637ae0895343da1b46d21a4752c259aa7efc95abd6d7c266539ce9119",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/coverage/grade2/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/coverage/grade2/",
+      "sha256": "8fe31345b4d562a22fc045c6fd1db8813abdd23c41adfb126f92b605c611694d",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/data/foundation-temperature-change.csv",
+      "url": "https://matsu71.github.io/Statistics_Blog/data/foundation-temperature-change.csv",
+      "sha256": "a6d3b34ffd0274a60ca6d5660005b572ae75e5b8559cc7856afa5f199a77926d",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/data/grade2-iris-provenance.json",
+      "url": "https://matsu71.github.io/Statistics_Blog/data/grade2-iris-provenance.json",
+      "sha256": "7e3106b114a527e267c316dbb4682715c44957c810ef7c575fea3d1aa2890a83",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/data/grade2-iris.csv",
+      "url": "https://matsu71.github.io/Statistics_Blog/data/grade2-iris.csv",
+      "sha256": "7866a81bd4601f74577a9cd0a7f03b35dcb0c361cf1e578a3930697524b0edeb",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/favicon.svg",
+      "url": "https://matsu71.github.io/Statistics_Blog/favicon.svg",
+      "sha256": "5283c5acd9f4341c52787f18c9203c4dc3138a2d73086d29fe4fbbe625a81153",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/foundation-build.json",
+      "url": "https://matsu71.github.io/Statistics_Blog/foundation-build.json",
+      "sha256": "2a2ccef9d8d015246205ed05508aeeb1e599ea2e7a7357ec5059359ef86a6802",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/grade2-build.json",
+      "url": "https://matsu71.github.io/Statistics_Blog/grade2-build.json",
+      "sha256": "7b3dd59c128affeead3687958b22bd279659fae20f0af3e112e11dea40c4b8d4",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/grade2-release-marker.json",
+      "url": "https://matsu71.github.io/Statistics_Blog/grade2-release-marker.json",
+      "sha256": "a39940db1b2bdb737f0266e1efb30c5847b641641bcc92bdfb1fbda6b036d3b8",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/",
+      "sha256": "a28d9cb9e43e0690f164b98fa14d394c15e2b73a48cc50c56ab0459b01c8a4f7",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/labs/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/labs/",
+      "sha256": "0e8a39cce37971c89bf8fb68ad1af8d9138b72aa5912dc93192be2a7e8eac608",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/learn/asking-statistical-questions/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/asking-statistical-questions/",
+      "sha256": "09c53e4ae8606f3524ed681e8a2179f15955510b6d22056b025829f025917009",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F01",
+      "question_ids": [
+        "F01-Q1",
+        "F01-Q2",
+        "F01-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/binomial-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/binomial-basics/",
+      "sha256": "8d026e89d32fbf22f95d8a9000f032a489083023512dd6e663f786281c866a1d",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F30",
+      "question_ids": [
+        "F30-Q1",
+        "F30-Q2",
+        "F30-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/binomial-normal-approximation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/binomial-normal-approximation/",
+      "sha256": "4ac3daf62ed006c897b9439438837cef77c0b1b8880f1229ef781fb840020413",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F33",
+      "question_ids": [
+        "F33-Q1",
+        "F33-Q2",
+        "F33-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/bridge-to-grade-two/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/bridge-to-grade-two/",
+      "sha256": "406d45e738762016a7e9d1d4f8d2f92e26b78a5a1f1d179f718d1ae098755cc1",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F40",
+      "question_ids": [
+        "F40-Q1",
+        "F40-Q2",
+        "F40-Q3",
+        "F40-Q4",
+        "F40-Q5",
+        "F40-Q6",
+        "F40-Q7",
+        "F40-Q8",
+        "F40-Q9",
+        "F40-Q10",
+        "F40-Q11",
+        "F40-Q12"
+      ]
+    },
+    {
+      "path": "docs/learn/chance-and-sample-space/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/chance-and-sample-space/",
+      "sha256": "32b77c375a049e8a5ef6dc3eb5da79d03b7eb5d087b172a193cbcfb5c032bf19",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F23",
+      "question_ids": [
+        "F23-Q1",
+        "F23-Q2",
+        "F23-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/choosing-basic-graphs/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/choosing-basic-graphs/",
+      "sha256": "ffb5ef26bee0e3cc131da98fcd7d5a579dfd1732b584c34682ce4aa8f80234f3",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F09",
+      "question_ids": [
+        "F09-Q1",
+        "F09-Q2",
+        "F09-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/complements-and-unions/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/complements-and-unions/",
+      "sha256": "963dd4176d205d9d73f1caceededf60b8f63396d94567c8a7adcd7df437efc59",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F24",
+      "question_ids": [
+        "F24-Q1",
+        "F24-Q2",
+        "F24-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/conditional-probability-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/conditional-probability-basics/",
+      "sha256": "4a3411c13a672900035c2c5fc31033e67b88df8875e76dbb290898d9738c0058",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F27",
+      "question_ids": [
+        "F27-Q1",
+        "F27-Q2",
+        "F27-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/correlation-is-not-causation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/correlation-is-not-causation/",
+      "sha256": "2ee9255056bbf73f3ad3aff2f87f39bf8aaad4ec01a671a5d2d5226e7a007654",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F21",
+      "question_ids": [
+        "F21-Q1",
+        "F21-Q2",
+        "F21-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/cross-tables-and-mosaics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/cross-tables-and-mosaics/",
+      "sha256": "42a682432cc8f251d2fc2ce5a453e62d9bca1a555f60291b50be292e32e3e436",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F10",
+      "question_ids": [
+        "F10-Q1",
+        "F10-Q2",
+        "F10-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/frequency-tables/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/frequency-tables/",
+      "sha256": "890708d5362e42141708d626c22ab535fb515c5f1811d3954ee53e03ba0e20f2",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F07",
+      "question_ids": [
+        "F07-Q1",
+        "F07-Q2",
+        "F07-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/binomial-hypergeometric/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/binomial-hypergeometric/",
+      "sha256": "5ffa5bae66221d2be601e677667e26780f901fff3ffeca68b15f0fd93e00f467",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G11",
+      "question_ids": [
+        "G11-Q1",
+        "G11-Q2",
+        "G11-Q3",
+        "G11-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/chi-square-f-distributions/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/chi-square-f-distributions/",
+      "sha256": "ce1cbb5dd0b9b9345d10cd3070fd589aa5b0af75ee44eea9aaf08f3609d2f9b0",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G18",
+      "question_ids": [
+        "G18-Q1",
+        "G18-Q2",
+        "G18-Q3",
+        "G18-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/conditional-probability-and-bayes/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/conditional-probability-and-bayes/",
+      "sha256": "e3579d80e73caa3415bbddb5f32b0fd3e34524b124a6b0872ec7478176f9e422",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G07",
+      "question_ids": [
+        "G07-Q1",
+        "G07-Q2",
+        "G07-Q3",
+        "G07-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/contingency-table-independence/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/contingency-table-independence/",
+      "sha256": "a893d0d4a13f393313a9bfde1c58b3fbc98d666a512b9d013617ecfa229e4e11",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G32",
+      "question_ids": [
+        "G32-Q1",
+        "G32-Q2",
+        "G32-Q3",
+        "G32-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/density-cdf-transformation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/density-cdf-transformation/",
+      "sha256": "c4a6f1d1e2cc328aaeca67de9b22b28fb1f10c4369e3c7b2e2049fb5c46a183f",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G10",
+      "question_ids": [
+        "G10-Q1",
+        "G10-Q2",
+        "G10-Q3",
+        "G10-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/errors-power-sample-size/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/errors-power-sample-size/",
+      "sha256": "0479f5526f8573d3d177bcbaf55bca3038cb229484d79ea77a6403ae4f6202e8",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G26",
+      "question_ids": [
+        "G26-Q1",
+        "G26-Q2",
+        "G26-Q3",
+        "G26-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/expectation-variance-covariance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/expectation-variance-covariance/",
+      "sha256": "5aed005414723fe4af5439dba2f992dd08271f6bf1872e4acc9cad594d3fa3b9",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G09",
+      "question_ids": [
+        "G09-Q1",
+        "G09-Q2",
+        "G09-Q3",
+        "G09-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/geometric-negative-binomial/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/geometric-negative-binomial/",
+      "sha256": "2b860063eea3f3689cd6ef4eb42f5b954f82c9e251bbc0f711d8442b05cfb00b",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G12",
+      "question_ids": [
+        "G12-Q1",
+        "G12-Q2",
+        "G12-Q3",
+        "G12-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/goodness-of-fit/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/goodness-of-fit/",
+      "sha256": "d2813030362d590084221233ca22b7667414e5944931a201ba8d9b8b016f3c2a",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G31",
+      "question_ids": [
+        "G31-Q1",
+        "G31-Q2",
+        "G31-Q3",
+        "G31-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/grade2-integrated-practice/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/grade2-integrated-practice/",
+      "sha256": "72efb7bc9518221814dc0580ca286468f3c32dc8b1fee3c1b3936ab3908383b4",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G40",
+      "question_ids": [
+        "G40-Q1",
+        "G40-Q2",
+        "G40-Q3",
+        "G40-Q4",
+        "G40-Q5",
+        "G40-Q6",
+        "G40-Q7",
+        "G40-Q8",
+        "G40-Q9",
+        "G40-Q10",
+        "G40-Q11",
+        "G40-Q12",
+        "G40-Q13",
+        "G40-Q14",
+        "G40-Q15",
+        "G40-Q16"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/growth-indices-autocorrelation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/growth-indices-autocorrelation/",
+      "sha256": "f7f807e39d6c6a0cf361279346f3ad44e67e2bade799d3fa70b85412714e58b5",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G04",
+      "question_ids": [
+        "G04-Q1",
+        "G04-Q2",
+        "G04-Q3",
+        "G04-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/hypotheses-p-values-and-tails/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/hypotheses-p-values-and-tails/",
+      "sha256": "fe2550980468c133ad9090cb406d21f6b41f8d9a66c71ee5b3e93b7a8115c2fc",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G25",
+      "question_ids": [
+        "G25-Q1",
+        "G25-Q2",
+        "G25-Q3",
+        "G25-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/joint-marginal-independent/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/joint-marginal-independent/",
+      "sha256": "3de1f919e985fe164be593bcdccf6f8dc8a5550e98fe9fe4bba741c088ed82dd",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G08",
+      "question_ids": [
+        "G08-Q1",
+        "G08-Q2",
+        "G08-Q3",
+        "G08-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/laws-limits-and-approximations/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/laws-limits-and-approximations/",
+      "sha256": "5d02c550d4b2887c150dda9c614d1e5c034612a94ec5006c3e4aa7d73b95e9a3",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G16",
+      "question_ids": [
+        "G16-Q1",
+        "G16-Q2",
+        "G16-Q3",
+        "G16-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/lorenz-and-gini/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/lorenz-and-gini/",
+      "sha256": "483312643a1df07099d9b69f9848081f42c813960a1a8b4d280ab90504f04993",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G03",
+      "question_ids": [
+        "G03-Q1",
+        "G03-Q2",
+        "G03-Q3",
+        "G03-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/mean-confidence-intervals/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/mean-confidence-intervals/",
+      "sha256": "f0d6a9a3999cc7f3a13a088de9f9fdae4c6b3d92bee14560ef2ee30949f1a85d",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G20",
+      "question_ids": [
+        "G20-Q1",
+        "G20-Q2",
+        "G20-Q3",
+        "G20-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/mean-difference-intervals/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/mean-difference-intervals/",
+      "sha256": "03f82af5aad8c7232e0673702a442f09f92af8a4c3695134e4f934cb90e9e0c0",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G21",
+      "question_ids": [
+        "G21-Q1",
+        "G21-Q2",
+        "G21-Q3",
+        "G21-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/model-diagnostics-and-collinearity/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/model-diagnostics-and-collinearity/",
+      "sha256": "ede479c50c3ae65f84d807c1fa85fdc18476689cadab265204382ca54f67cad5",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G36",
+      "question_ids": [
+        "G36-Q1",
+        "G36-Q2",
+        "G36-Q3",
+        "G36-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/multiple-regression-and-dummies/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/multiple-regression-and-dummies/",
+      "sha256": "bb985e333b7197375fddda078eb8ff9903b4e9a2f7f79ab4fc5687d82cddfd6b",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G35",
+      "question_ids": [
+        "G35-Q1",
+        "G35-Q2",
+        "G35-Q3",
+        "G35-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/normal-and-bivariate-normal/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/normal-and-bivariate-normal/",
+      "sha256": "e621324e6440e0dc747dce78f0e0f4f1c59cdb4a7e8a33043f96910cd7206dda",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G14",
+      "question_ids": [
+        "G14-Q1",
+        "G14-Q2",
+        "G14-Q3",
+        "G14-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/one-mean-tests/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/one-mean-tests/",
+      "sha256": "9ec9636e94771de60d9461a4c9479b9fbde6580c951ca9ce40dc1445e59b2b37",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G27",
+      "question_ids": [
+        "G27-Q1",
+        "G27-Q2",
+        "G27-Q3",
+        "G27-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/one-two-proportion-tests/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/one-two-proportion-tests/",
+      "sha256": "77b5ec3dd2b21feedd601c2114fb6551191233760db2d93ff29f68ac31be29aa",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G29",
+      "question_ids": [
+        "G29-Q1",
+        "G29-Q2",
+        "G29-Q3",
+        "G29-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/one-way-anova/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/one-way-anova/",
+      "sha256": "4430d86f0fd097495cff92875ac0293f44d9a1ea3d2bc3b572630e8602874247",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G37",
+      "question_ids": [
+        "G37-Q1",
+        "G37-Q2",
+        "G37-Q3",
+        "G37-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/parameters-statistics-and-notation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/parameters-statistics-and-notation/",
+      "sha256": "c15fc55f2fc4c9a845e07d7b88b7d70fae9dc2dde71461ce547b64bf3ae7c417",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G01",
+      "question_ids": [
+        "G01-Q1",
+        "G01-Q2",
+        "G01-Q3",
+        "G01-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/partial-correlation-and-intervals/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/partial-correlation-and-intervals/",
+      "sha256": "d603dad4ae2dcae33912dffac8429881f65945f88af18d69442903b55f0fca7a",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G24",
+      "question_ids": [
+        "G24-Q1",
+        "G24-Q2",
+        "G24-Q3",
+        "G24-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/poisson-exponential/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/poisson-exponential/",
+      "sha256": "65b87623ca48f8a7aeab810e70a13d8faf5f936d453e9b3af8005c7049fe912d",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G13",
+      "question_ids": [
+        "G13-Q1",
+        "G13-Q2",
+        "G13-Q3",
+        "G13-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/proportion-difference-intervals/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/proportion-difference-intervals/",
+      "sha256": "2fe9f9563e23012a33de9a95d144e70be591086b2943f1834ef857444c35d667",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G22",
+      "question_ids": [
+        "G22-Q1",
+        "G22-Q2",
+        "G22-Q3",
+        "G22-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/randomization-replication-blocking/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/randomization-replication-blocking/",
+      "sha256": "4662b1e6c0f4a7e86080b973a077701613c989ed33f65f80235a01dea22a469c",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G06",
+      "question_ids": [
+        "G06-Q1",
+        "G06-Q2",
+        "G06-Q3",
+        "G06-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/reading-analysis-output/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/reading-analysis-output/",
+      "sha256": "44f6fe3a7c05882707957f7b87e35472a9df34872df23c3dc63be9f4778899e7",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G38",
+      "question_ids": [
+        "G38-Q1",
+        "G38-Q2",
+        "G38-Q3",
+        "G38-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/regression-estimation-standard-errors/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/regression-estimation-standard-errors/",
+      "sha256": "b94cceaecf327767f3f08fdfaa1ae9b117899cd6f3b6c0b91eaf9e41f6115933",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G33",
+      "question_ids": [
+        "G33-Q1",
+        "G33-Q2",
+        "G33-Q3",
+        "G33-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/regression-tests-and-prediction/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/regression-tests-and-prediction/",
+      "sha256": "8498586d526c2b197ca50a47da9b6bb70222f19d4f6a31a1d46f3ca0441850b2",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G34",
+      "question_ids": [
+        "G34-Q1",
+        "G34-Q2",
+        "G34-Q3",
+        "G34-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/reproducible-case-study/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/reproducible-case-study/",
+      "sha256": "19ca94a2039d384f07be2a03084009f31f1b9838569b6bad0271c50fd3b4cb6b",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G39",
+      "question_ids": [
+        "G39-Q1",
+        "G39-Q2",
+        "G39-Q3",
+        "G39-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/sampling-and-finite-populations/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/sampling-and-finite-populations/",
+      "sha256": "76a4d83db59bed7a51777826098d5ece3bbf176e1274a452b24198080c29f0ec",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G05",
+      "question_ids": [
+        "G05-Q1",
+        "G05-Q2",
+        "G05-Q3",
+        "G05-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/sampling-mean-proportion-variance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/sampling-mean-proportion-variance/",
+      "sha256": "3bc44f39fe022650cd2a78f5ee81b246ecc0d680ae93423a05d7f078d3188b5b",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G15",
+      "question_ids": [
+        "G15-Q1",
+        "G15-Q2",
+        "G15-Q3",
+        "G15-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/student-t-and-quantiles/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/student-t-and-quantiles/",
+      "sha256": "ad7bf9fe4a6029366d32e94a55a11f6132dc759e8f9f5b084ef5ff78c02d13bf",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G17",
+      "question_ids": [
+        "G17-Q1",
+        "G17-Q2",
+        "G17-Q3",
+        "G17-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/two-mean-and-paired-tests/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/two-mean-and-paired-tests/",
+      "sha256": "deb95ed4d4d4a70b9b5e9f600ee6405e0958ba79d42ac5ee80af84ab132cf103",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G28",
+      "question_ids": [
+        "G28-Q1",
+        "G28-Q2",
+        "G28-Q3",
+        "G28-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/unbiased-consistent-mse/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/unbiased-consistent-mse/",
+      "sha256": "c9f887d67332ff3b8a4df7fc4e99cf091de7e69286b37f23c6985b5f427dc994",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G19",
+      "question_ids": [
+        "G19-Q1",
+        "G19-Q2",
+        "G19-Q3",
+        "G19-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/variance-ratio-intervals/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/variance-ratio-intervals/",
+      "sha256": "d940b92b7f7baa2a552fb81279d9bdd83d80b20841b1c6c09ef544ca4a7cb00d",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G23",
+      "question_ids": [
+        "G23-Q1",
+        "G23-Q2",
+        "G23-Q3",
+        "G23-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/variance-ratio-tests/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/variance-ratio-tests/",
+      "sha256": "870ed78811fbd1a5e69fd6e4e6287af787eada39fa5c42294a8f90a4353b8f62",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G30",
+      "question_ids": [
+        "G30-Q1",
+        "G30-Q2",
+        "G30-Q3",
+        "G30-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/grade2/variance-skewness-kurtosis/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/grade2/variance-skewness-kurtosis/",
+      "sha256": "1d906b7b2be623a7b0daf69e33f73314137a6121da6296cc10f243fbe5198e58",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "G02",
+      "question_ids": [
+        "G02-Q1",
+        "G02-Q2",
+        "G02-Q3",
+        "G02-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/histograms-and-stem-leaf/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/histograms-and-stem-leaf/",
+      "sha256": "b90bff6558877fa8ea76c7973460c097e622ef2936a6e224db63e91a7050d76c",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F08",
+      "question_ids": [
+        "F08-Q1",
+        "F08-Q2",
+        "F08-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/hypothesis-testing-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/hypothesis-testing-basics/",
+      "sha256": "23d2093f955ea1da600d7ddb539281b5600624562275a21df5a49f05d1aeb24e",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F37",
+      "question_ids": [
+        "F37-Q1",
+        "F37-Q2",
+        "F37-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/independent-trials/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/independent-trials/",
+      "sha256": "152dc3ca9d300ca5c1b7ba860e0b78d4310409182ac08755f7e45f1cc98ca49e",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F26",
+      "question_ids": [
+        "F26-Q1",
+        "F26-Q2",
+        "F26-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/mean-and-proportion-tests-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/mean-and-proportion-tests-basics/",
+      "sha256": "f363679ac2b67c4f4a73402b56b36cd0352ccb11fcac04229c436e31517a5958",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F38",
+      "question_ids": [
+        "F38-Q1",
+        "F38-Q2",
+        "F38-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/mean-confidence-interval-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/mean-confidence-interval-basics/",
+      "sha256": "f1db08524e710e96db94af3c17103efcfa2a3ee5e5aa6c6f52ac85eb3df92ca6",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F35",
+      "question_ids": [
+        "F35-Q1",
+        "F35-Q2",
+        "F35-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/mean-median-mode/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/mean-median-mode/",
+      "sha256": "b1e525470150005e2de53d47a8e7ee2661dc060ea232788c185e47071392d4a0",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F12",
+      "question_ids": [
+        "F12-Q1",
+        "F12-Q2",
+        "F12-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/normal-density-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/normal-density-basics/",
+      "sha256": "101dcded05027bf866da5497ce2ac81e6f751d5841697ef129bad999dd3a36e4",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F31",
+      "question_ids": [
+        "F31-Q1",
+        "F31-Q2",
+        "F31-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/normal-table-and-tail-area/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/normal-table-and-tail-area/",
+      "sha256": "51177afb5c98f015082b059da27b3626fd11a48e19f76b12da030cb22c128bd7",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F32",
+      "question_ids": [
+        "F32-Q1",
+        "F32-Q2",
+        "F32-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/observation-and-experiment/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/observation-and-experiment/",
+      "sha256": "792bada8d2eb21f26b6749c10c24452f161966e24e4e89cfec16f07d477f5586",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F05",
+      "question_ids": [
+        "F05-Q1",
+        "F05-Q2",
+        "F05-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/population-and-sampling/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/population-and-sampling/",
+      "sha256": "111207bb66d7f0884287ac290b303024925af771ed55c6ee82eeefbea17ddde0",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F04",
+      "question_ids": [
+        "F04-Q1",
+        "F04-Q2",
+        "F04-Q3",
+        "F04-Q4"
+      ]
+    },
+    {
+      "path": "docs/learn/probability-and-repetition/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/probability-and-repetition/",
+      "sha256": "8c27cdd82683cf2da84cc34794c140aae10b0a80a547f14f3e3a3bc04e292745",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F28",
+      "question_ids": [
+        "F28-Q1",
+        "F28-Q2",
+        "F28-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/proportion-confidence-interval-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/proportion-confidence-interval-basics/",
+      "sha256": "ce9dcab0c36bd3a07ada470b95dbde369c4d121337f2986a203a24c1b5bdf51f",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F36",
+      "question_ids": [
+        "F36-Q1",
+        "F36-Q2",
+        "F36-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/quartiles-and-boxplots/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/quartiles-and-boxplots/",
+      "sha256": "5ad55e78a314e20dd58c2e98f60db3978c525f243d8b869f7b6b6d11d22db1ce",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F14",
+      "question_ids": [
+        "F14-Q1",
+        "F14-Q2",
+        "F14-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/random-variables-and-expectation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/random-variables-and-expectation/",
+      "sha256": "3613dd9d54c4e427ca725a8bc9d3a7e9c637a6aa2c5be0ee63a745e9a7b54fc8",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F29",
+      "question_ids": [
+        "F29-Q1",
+        "F29-Q2",
+        "F29-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/ratios-and-percentages/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/ratios-and-percentages/",
+      "sha256": "476d1088a60bc2692f068137505df7e5ae4baf3d93c63ab886aff4cd1634282f",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F06",
+      "question_ids": [
+        "F06-Q1",
+        "F06-Q2",
+        "F06-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/reading-a-data-table/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/reading-a-data-table/",
+      "sha256": "0ee380874baf7848d86a48707509afa4b63d608ffa7feb26a2f8785b1bc509c1",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F02",
+      "question_ids": [
+        "F02-Q1",
+        "F02-Q2",
+        "F02-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/reading-unfamiliar-graphs/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/reading-unfamiliar-graphs/",
+      "sha256": "0e92b45b5ae9990fd8818a02421326ec8c84edc6d4052c9711f6fd9f3dce21ba",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F11",
+      "question_ids": [
+        "F11-Q1",
+        "F11-Q2",
+        "F11-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/regression-line-and-prediction/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/regression-line-and-prediction/",
+      "sha256": "eddfcf6d9a9245d9e9ef8ad018c0867c418172ad0f23d309ddbac0eb324f9461",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F20",
+      "question_ids": [
+        "F20-Q1",
+        "F20-Q2",
+        "F20-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/relative-spread-and-outliers/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/relative-spread-and-outliers/",
+      "sha256": "b4e78443a4711b787a7ccf0c62a041a1d01676671fd88d12639b66040889cc5a",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F18",
+      "question_ids": [
+        "F18-Q1",
+        "F18-Q2",
+        "F18-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/reporting-statistical-results/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/reporting-statistical-results/",
+      "sha256": "dbdad7ba39100a0b328463da4fb0b267ed47229704b2a6a21a75606c9e7f53c7",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F39",
+      "question_ids": [
+        "F39-Q1",
+        "F39-Q2",
+        "F39-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/sampling-distributions-basics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/sampling-distributions-basics/",
+      "sha256": "ca726f5631b9c87c8b77266407800b43b2e24a3f633e572021da2f98486708c4",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F34",
+      "question_ids": [
+        "F34-Q1",
+        "F34-Q2",
+        "F34-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/scatter-covariance-correlation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/scatter-covariance-correlation/",
+      "sha256": "55c6fa4b3efb3ea0f59e7616cbbab825d26027ade0f5e69d5b594f2059f3eb37",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F19",
+      "question_ids": [
+        "F19-Q1",
+        "F19-Q2",
+        "F19-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/shifting-and-scaling-data/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/shifting-and-scaling-data/",
+      "sha256": "5b9ca81bc08a94a735ade6d5a45b9c6639b5029314e6174524f64f05913fa917",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F16",
+      "question_ids": [
+        "F16-Q1",
+        "F16-Q2",
+        "F16-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/standardization-and-deviation-score/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/standardization-and-deviation-score/",
+      "sha256": "ec00d049883b3c1e8125d0fdf3c31df2d05feb43e637bd8bfd425bb25bf96c6e",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F17",
+      "question_ids": [
+        "F17-Q1",
+        "F17-Q2",
+        "F17-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/time-series-and-indices/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/time-series-and-indices/",
+      "sha256": "6254cbb35d6bd551a94117278c0c8a9e326d4c6dcbc5a9e351531270609ce165",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F22",
+      "question_ids": [
+        "F22-Q1",
+        "F22-Q2",
+        "F22-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/trees-and-counting/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/trees-and-counting/",
+      "sha256": "bbaaa0c03b83be19a6fd558e77e5517286a337819bcafb3375b535c06c82a5d1",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F25",
+      "question_ids": [
+        "F25-Q1",
+        "F25-Q2",
+        "F25-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/types-and-scales/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/types-and-scales/",
+      "sha256": "746945c25a086b9a5e71ab2eb120a7f07b1c80b5d70c75d8848faecba1901bc9",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F03",
+      "question_ids": [
+        "F03-Q1",
+        "F03-Q2",
+        "F03-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/variance-and-standard-deviation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/variance-and-standard-deviation/",
+      "sha256": "76fcdd54c26cc3c8aeac7613a6ddae8de1430afba5fb6173f2b74cbcf10bc7f8",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F15",
+      "question_ids": [
+        "F15-Q1",
+        "F15-Q2",
+        "F15-Q3"
+      ]
+    },
+    {
+      "path": "docs/learn/weighted-and-grouped-means/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/weighted-and-grouped-means/",
+      "sha256": "dfbb49d0798b746b219ffbdcaa3dc7077c9d5478462448324388fe705a099c71",
+      "http_status": 200,
+      "status": "passed",
+      "lesson_id": "F13",
+      "question_ids": [
+        "F13-Q1",
+        "F13-Q2",
+        "F13-Q3"
+      ]
+    },
+    {
+      "path": "docs/og-default.svg",
+      "url": "https://matsu71.github.io/Statistics_Blog/og-default.svg",
+      "sha256": "039780a23733c94ff826abcdae7bca3b5a1088ef402429271ddfcc7b950200de",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/robots.txt",
+      "url": "https://matsu71.github.io/Statistics_Blog/robots.txt",
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/sitemap-0.xml",
+      "url": "https://matsu71.github.io/Statistics_Blog/sitemap-0.xml",
+      "sha256": "c7d68fed780386fb9dea4494168fbba469ea150e4e0d23fa34c19e1e7fb8d825",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/sitemap-index.xml",
+      "url": "https://matsu71.github.io/Statistics_Blog/sitemap-index.xml",
+      "sha256": "bf7acfea837c9f635557551e7f00ba770c954060455ffa56f261b5d9d78d1efc",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/alternative-hypothesis/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/alternative-hypothesis/",
+      "sha256": "4aed69a728dba49f2cdc8112d3fccd08ef5e098caaf3067e17e056410164874c",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/bayes-theorem/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/bayes-theorem/",
+      "sha256": "824233e34182af5bb8abc1b30bb5a0e2994ed4b9ecc26357363c2025eb30929b",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/bernoulli-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/bernoulli-distribution/",
+      "sha256": "0960f2cdfed295ffaec35c584f0164e8bef678fbc2d83de1d57a1fa3f57ac36b",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/binomial-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/binomial-distribution/",
+      "sha256": "2b6102765f8b6b334261c318b67aac517671d1fe9a1b3e2dbe826cd3705fffd4",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/box-plot/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/box-plot/",
+      "sha256": "bdb979bd85af09b094bf4d7ab825175085545402c4b6c50aabb02bfc1c348924",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/central-limit-theorem/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/central-limit-theorem/",
+      "sha256": "8ad18fb8c0b353a1453b6dde41f5c4a61db9d39b48f9a00ef687c198aedf57a7",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/chi-square-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/chi-square-distribution/",
+      "sha256": "2b7902e558361a9b82e7bec3e63c0f191dbf61a619148932f6568c9550030e33",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/coefficient-of-determination/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/coefficient-of-determination/",
+      "sha256": "30528b6c511dc7d771c2ef2e0603f4e9be62a760f572ae336036493eb9b11744",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/coefficient-of-variation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/coefficient-of-variation/",
+      "sha256": "cafd947d2db81fafc077da928e1b470df6074e2cde48b3442d3f985b28899bd8",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/conditional-probability/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/conditional-probability/",
+      "sha256": "3a6cb8c8374078c27ba2c8574ad0aad64a0b220fec2ebe7797c394a48cdc2b67",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/confidence-interval/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/confidence-interval/",
+      "sha256": "c6235be69d9720979dcf05bea227bc7422dcc7b36cca7cc73135995aa7ce2549",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/correlation-coefficient/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/correlation-coefficient/",
+      "sha256": "bc6de2f6a90bf1757b56ecb5c449f5cc9467019a1026fca4dfb51fdd0318bc55",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/covariance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/covariance/",
+      "sha256": "38263c5695fe61edd5c56e2fd6f123e45fd209adce6c8eb88366c087d9401374",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/cumulative-distribution-function/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/cumulative-distribution-function/",
+      "sha256": "14f2b3b1a972be3d176f879d5e22d1af50e91e6e423d9533963196b4fb8b1534",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/estimation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/estimation/",
+      "sha256": "42572567199758a950819feaf081b2dc0fafd9a15ee6e2b91a624abba62fe839",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/estimator/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/estimator/",
+      "sha256": "19983f2169419f6b6a25aa688528e83490e717faa8ba4eb9d62e173c78010bb9",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/event/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/event/",
+      "sha256": "7ea0594c0830f3fe4452a9f58aa54bea3246182e27cd0c8c2c17d01c220bcee1",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/expected-value/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/expected-value/",
+      "sha256": "dce42c3ff5a8a850efcff3c9525c4295c2df05c9a2370576588096a9d8d20b3a",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/f-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/f-distribution/",
+      "sha256": "269295392dc7f07bdc44cfde0b17eda9bcb5c5aefd08f49e190dcd28bddc140f",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/geometric-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/geometric-distribution/",
+      "sha256": "0621e6529ecf828d22262d8bb2793db1e6190f6db3baa99f9f4baa93ae9f5585",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/histogram/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/histogram/",
+      "sha256": "b9aa099b9ccfb8eb1a65548444691b8ee98c2d406187a47d58e505ff5d34d963",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/hypothesis-testing/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/hypothesis-testing/",
+      "sha256": "086f80621947b6cfe127a6c15c777996dedbc7c37c5a93840984e3e0cf77e074",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/independence/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/independence/",
+      "sha256": "6592270d2a400f73d232866ed6c9f631838086f94c1193b6f9faa4b83b3f3b8d",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/",
+      "sha256": "3fcb3ee0d34c7ab25e64fc3cb8a6e4b87c0bb27d825e325e9cbbebe86256e53f",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/interquartile-range/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/interquartile-range/",
+      "sha256": "c20df3700d90eb42a61aa059d767d67721765a1e0e28dcc51d58faa6e56e6b75",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/interval-estimation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/interval-estimation/",
+      "sha256": "958c0071cbaadd07c4cdb6fc5ed3750f30ffa91416f32f752d8aa7f2afa26301",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/law-of-large-numbers/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/law-of-large-numbers/",
+      "sha256": "029e740b1d31414a351d987988ace73419eb83809d39cb84f7c353fe4eb57bb2",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/least-squares-method/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/least-squares-method/",
+      "sha256": "2d3669f3f8832af80bf6c639b6e7d37338f472c4da15c84333af3ae1b0c84a45",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/mean/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/mean/",
+      "sha256": "6618065573d989075a1addcb0f6ec1d7fd3477827fec62e8854104cef69f94c2",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/median/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/median/",
+      "sha256": "86eca393981d0cb3e3318853e19053deb9c7c6f87909b26a86cc5f9a50c53747",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/mode/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/mode/",
+      "sha256": "e809272862e0a49ba3346401fa74fbcc4cbdb6ed4c35a715fe409393f8fd0c95",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/no-correlation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/no-correlation/",
+      "sha256": "a40b491bcd608c489babd7163f76b8fdd26bd3097acb4868fbd654941f2f3fb2",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/normal-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/normal-distribution/",
+      "sha256": "baf1a1cb56fb85de5361fe1de0ef46fd153b77f9402191cf6ed13695537ec96e",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/null-hypothesis/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/null-hypothesis/",
+      "sha256": "ec8f9ddf08d2c3853d48eb5e8f0678e7c5f38e299e13a381beb6c38664fc63a7",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/one-sided-test/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/one-sided-test/",
+      "sha256": "7708f9ac3e9421ce890086a48d0f5b8aa4d94f9d8f3f2569b5573914fb5061c2",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/p-value/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/p-value/",
+      "sha256": "6b1aedc7ffcc6c2d9c3d7a0c2358a0fb83b0ac9390be44a8841890db5d72a5fd",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/point-estimation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/point-estimation/",
+      "sha256": "f25d73b10bbabbb2ade082e2f1600cbe637b4b063f845464440f778f20013cf2",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/poisson-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/poisson-distribution/",
+      "sha256": "a72415ab371aaf6dfee24b3c42661af9dbd8e478cd4ba3cb89020210829322ea",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/population/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/population/",
+      "sha256": "e0cd3039cd8c88436afc79595e40db73de07293268b50b423e432e2fd5c56aa8",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/population-mean/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/population-mean/",
+      "sha256": "865bd5cc64d980005fb4d127a9aae4a5fa2cac428bf585967868c278c1e9b4c6",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/population-variance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/population-variance/",
+      "sha256": "90856d4f61706f86d2b92e88ce73a2d10cbd024136259e12d88122cfcf39aa08",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/probability/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/probability/",
+      "sha256": "d30753a3759a0fa53480b34f658cde6abf65e3be2ef1133f47a748ede330c3b4",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/probability-density-function/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/probability-density-function/",
+      "sha256": "9da9cd735f8a780b2391e13403501c481e160b10fcca5050d30c8456fe6f94e2",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/probability-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/probability-distribution/",
+      "sha256": "a6c94e997e21390a8bda091dc288cbd55e21c1325d0e790b501bb63bc969f3cf",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/probability-mass-function/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/probability-mass-function/",
+      "sha256": "4dca4952cb60865679f43265760bf8e9f24fd9f91698d93975c0bc04d6425f5d",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/probability-variable/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/probability-variable/",
+      "sha256": "0164f0ddabc0849c363a20676a60b052ecee35b043f880308cdd320591c259d5",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/quartile/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/quartile/",
+      "sha256": "6665ef4f4b54b31811b93ee0965920fff777ef6515f884a5d7962b1134479d26",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/random-sampling/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/random-sampling/",
+      "sha256": "228bb65fbaa855c18b5db7b5b0189c7c00eccc907952448a49c26a30e289d421",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/range/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/range/",
+      "sha256": "6be29efe6bb9caaf0f1a50ae3eea8b324b017b9b6855e39f61ab0994e1249cbd",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/regression-line/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/regression-line/",
+      "sha256": "36eae784dbede2ab1fdc6feee2aab677978ae35775daa45533afd17836a527a3",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/rejection-region/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/rejection-region/",
+      "sha256": "74c56ce8a27b5b1e62639c422df7f1bcfb5b7f2fe829d7b5f9b9ba316916894a",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/residual/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/residual/",
+      "sha256": "c47cf9cefeaaa4a99c4414952a84b439ab2eb3effffe91f3ac0bb90f21855f31",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/sample/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/sample/",
+      "sha256": "b3f5572c8dc33dbed11a32077471b400ead56a63cde4334f22e3a24ab7818cd3",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/sample-mean/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/sample-mean/",
+      "sha256": "f0c405645962b87686ae46afb60f62545dd86237fea3c3bb3614ab8eb7beb4e8",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/sample-space/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/sample-space/",
+      "sha256": "9f3a7c50e4d57171b7b4c4806e448fabe9aae657ab42994dcd04c4666d2ea896",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/sample-variance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/sample-variance/",
+      "sha256": "c78b6a4400a2b1c7c19651f82cc0b156161b1a32fb0b6bca40dbb0903f5de0fb",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/scatter-plot/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/scatter-plot/",
+      "sha256": "a5ec842d4a68ebecfcca6a01c6558172b0e0b015e49c889cd38c47d1f5327283",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/significance-level/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/significance-level/",
+      "sha256": "3e8eb03ed0495b30385730bc9c99bb2d753529421cadbecd230b3f98587a907e",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/simple-linear-regression/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/simple-linear-regression/",
+      "sha256": "07328e299f583b71f4228b444486bd128cdc84d16e17a597153ae5ec6eb17ced",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/standard-deviation/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/standard-deviation/",
+      "sha256": "b84990a13d45f7de0e864686f659d2127df555f152b006b3fa18441a463fcb0c",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/standard-error/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/standard-error/",
+      "sha256": "e2dbf66e391d98b12444f82d79921f4d9daba6b7fb01b7f4ed657505760aedd0",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/standard-normal-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/standard-normal-distribution/",
+      "sha256": "95c1c05ba24fab52618c857086e8246ff9c1fe608d96d264ecdfab1b0841ed9f",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/standardization/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/standardization/",
+      "sha256": "5817ce05342952c5bef2d7717cd5956fcb313f657458df9b19bcb27c5e47c1f6",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/t-distribution/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/t-distribution/",
+      "sha256": "bcf656f34bf2424fc61d8d553ce5829771ef971e1b84041d103f9aa23ea9a003",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/test-statistic/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/test-statistic/",
+      "sha256": "cebc1005ba746ea8be0534e964906bc8480d2af58b35b9c53400b00d7275c7ae",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/two-sided-test/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/two-sided-test/",
+      "sha256": "69708b84030843d96cb56f1cb67333dc1db4510f02a7d3812e5fd18dc840100e",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/type-i-error/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/type-i-error/",
+      "sha256": "712927241b277d7eb94f446186bfa34eb07948f6ec95de4e3ae3cd941d5e5405",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/type-ii-error/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/type-ii-error/",
+      "sha256": "c3a5a8b7c049733a90456b6e016dc35759c4887a7ffba5382a048f152ffd2259",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/unbiased-estimator/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/unbiased-estimator/",
+      "sha256": "2238e1dd0116fdbab2c0e130d3c3fcba2c8148c82d178d837ef9a1978cb09e88",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/unbiased-variance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/unbiased-variance/",
+      "sha256": "cb6f5d966992a1d2d1243b92b9f5057268c841a828967ae85119de37f314993a",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/variance/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/variance/",
+      "sha256": "82eb077d2ac2500e0177fa3d5757c457d6d12b12637397276f04a8328e5e37de",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/terms/z-score/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/terms/z-score/",
+      "sha256": "d52063c31ea22471143527f1305a2e2c814b63701acf3dbba67b55e3e7e9d365",
+      "http_status": 200,
+      "status": "passed"
+    },
+    {
+      "path": "docs/topics/index.html",
+      "url": "https://matsu71.github.io/Statistics_Blog/topics/",
+      "sha256": "5618c59d9400d9025d30b8246f8480fa51b882ff0c711eac38b733cf9175927d",
+      "http_status": 200,
+      "status": "passed"
+    }
+  ],
+  "references_unconfirmed": [
+    "https://online.stat.psu.edu/stat506/"
+  ],
+  "limits": [
+    "No independent human mathematical peer review or controlled learning-outcome comparison is claimed.",
+    "Browser automation and screenshots are distinct from human usability evaluation.",
+    "Unavailable external pages are not recorded as newly read.",
+    "Pre-grade1 and grade1 course completion is not included."
+  ],
+  "next": "準1級の公式範囲・前提・講座順を整理し、最初の講座から同じ品質基準で制作する。"
+}
