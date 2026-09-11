@@ -3,6 +3,7 @@ import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { foundationLessons } from './lib/foundation-schema';
 import { grade2Lessons } from './lib/grade2-schema';
+import { pregrade1Lessons } from './lib/pregrade1-schema';
 
 const examScopeEnum = z.enum(['statistics_grade_2']);
 const contentLevelEnum = z.enum(['foundation', 'standard', 'advanced']);
@@ -56,5 +57,8 @@ const topics = defineCollection({
   })
 });
 
-// The existing glossary and foundation schemas remain unchanged.
-export const collections = { terms, topics, lessons: foundationLessons, grade2: grade2Lessons };
+// Existing glossary and course schemas stay unchanged when a course is added.
+export const collections = {
+  terms, topics, lessons: foundationLessons, grade2: grade2Lessons,
+  pregrade1: pregrade1Lessons
+};

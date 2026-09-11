@@ -1,0 +1,10 @@
+{
+  "stage": "review_candidate",
+  "planned_lessons": 72,
+  "candidate_lessons": 6,
+  "candidate_questions": 24,
+  "authored_through": "P06",
+  "baseline_main": "a33c944b47646c38edd20eb527ee43c98265526b",
+  "next": "P01〜P06と新UIの数値・表示・既存80講座の回帰を確認して公開する。その後P07から追加する。",
+  "note": "原稿のpublishedはビルド対象の指定であり、mainでの公開成功はproject-docs/pregrade1/release/publication.jsonで別に確認する。"
+}

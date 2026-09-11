@@ -1,0 +1,5 @@
+[data-pregrade1-lesson] .lesson-body td[align="right"]{white-space:nowrap;overflow-wrap:normal;text-align:right;font-variant-numeric:tabular-nums}
+[data-pregrade1-lesson] .lesson-body th[align="right"]{min-width:4.5rem}
+.pregrade1-table-note{font-size:.8rem;color:var(--muted);margin:.5rem 0}
+@media(min-width:601px){.pregrade1-table-note{display:none}}
+@media print{[data-pregrade1-tools],.pregrade1-table-note{display:none!important}}

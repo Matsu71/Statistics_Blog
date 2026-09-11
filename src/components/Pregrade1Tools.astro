@@ -1,0 +1,109 @@
+---
+import { getCollection } from 'astro:content';
+import { withBase } from '../lib/site';
+import '../styles/learning-extras.css';
+interface Props { lessonId?: string; }
+const { lessonId } = Astro.props;
+const lessons = await getCollection('pregrade1', ({ data }) => data.status === 'published');
+const entries = lessons.map((entry) => ({
+  id: entry.data.lesson_id, title: entry.data.title,
+  url: withBase(`/learn/pregrade1/${entry.data.slug}/`),
+  text: lessonId ? '' : `${entry.data.title} ${entry.data.description} ${(entry.body ?? '').replace(/<[^>]*>/g, ' ')}`
+}));
+const serialized = JSON.stringify(entries).replace(/</g, '\\u003c');
+---
+<section class="learning-utility" data-pregrade1-tools data-current={lessonId ?? ''} hidden aria-label="準1級講座の検索と端末内の学習記録">
+  {!lessonId && <div class="learning-search">
+    <label for="pregrade1-search">準1級の講座を検索</label>
+    <input id="pregrade1-search" type="search" autocomplete="off" placeholder="例：全分散、ヤコビアン、収束" />
+    <p class="utility-muted">公開されている本文・問題・詳説を検索します。準備中の本文は検索対象に含みません。</p>
+    <p data-p-search-status role="status" aria-live="polite"></p>
+  </div>}
+  <div class="learning-memory">
+    {lessonId && <label class="memory-check"><input type="checkbox" data-p-reviewed /> この講座を確認した</label>}
+    <div class="utility-actions">
+      {lessonId && <button type="button" data-p-save>ここを再開位置にする</button>}
+      <a data-p-resume hidden>保存した講座から再開</a>
+      <button type="button" data-p-export>準1級の記録を書き出す</button>
+      <button type="button" data-p-clear>準1級の記録を削除</button>
+    </div>
+    <p class="utility-muted">確認マークは自己記録で、習得の自動認定ではありません。このブラウザ内だけに保存し、基礎・2級の記録とは分けます。検索語や記録を外部に送信しません。</p>
+    <p data-p-memory-status role="status" aria-live="polite"></p>
+  </div>
+  <script is:inline type="application/json" id="pregrade1-search-index" set:html={serialized}></script>
+</section>
+<script>
+  type Entry = { id: string; title: string; url: string; text: string };
+  type Memory = { version: 1; reviewed: string[]; last: string | null };
+  const root = document.querySelector<HTMLElement>('[data-pregrade1-tools]');
+  if (root) {
+    const entries: Entry[] = JSON.parse(document.getElementById('pregrade1-search-index')?.textContent ?? '[]');
+    const lookup = new Map(entries.map((entry) => [entry.id, entry]));
+    const key = 'statistics-lab:pregrade1:memory:v1';
+    const current = root.dataset.current ?? '';
+    const status = root.querySelector<HTMLElement>('[data-p-memory-status]')!;
+    const resume = root.querySelector<HTMLAnchorElement>('[data-p-resume]')!;
+    const checkbox = root.querySelector<HTMLInputElement>('[data-p-reviewed]');
+    let memory: Memory = { version: 1, reviewed: [], last: null };
+    let message = '';
+    try {
+      const stored = localStorage.getItem(key);
+      if (stored) {
+        try {
+          const value: unknown = JSON.parse(stored);
+          if (typeof value !== 'object' || value === null) throw new Error('Invalid memory');
+          const raw = value as Record<string, unknown>;
+          if (raw.version !== 1 || !Array.isArray(raw.reviewed)) throw new Error('Unsupported memory');
+          memory.reviewed = [...new Set(raw.reviewed.filter((id): id is string => typeof id === 'string' && lookup.has(id)))];
+          memory.last = typeof raw.last === 'string' && lookup.has(raw.last) ? raw.last : null;
+        } catch { message = '保存記録の形式を読み取れませんでした。元の保存内容は変更していません。'; }
+      }
+    } catch { message = '端末内の保存を利用できません。本文・問題・検索は利用できます。'; }
+    function render(note = '') {
+      if (checkbox) checkbox.checked = memory.reviewed.includes(current);
+      const place = memory.last ? lookup.get(memory.last) : undefined;
+      resume.hidden = !place;
+      if (place) { resume.href = place.url; resume.textContent = `再開：${place.id} ${place.title}`; }
+      status.textContent = note || `確認マーク：${memory.reviewed.length} / 公開${entries.length}講座`;
+    }
+    function save(note: string) {
+      try { localStorage.setItem(key, JSON.stringify(memory)); render(note); }
+      catch { render('保存できませんでした。変更はこのページの表示だけに反映しています。'); }
+    }
+    checkbox?.addEventListener('change', () => {
+      if (!lookup.has(current)) return;
+      memory.reviewed = checkbox.checked ? [...new Set([...memory.reviewed, current])] : memory.reviewed.filter((id) => id !== current);
+      save('確認マークを保存しました。');
+    });
+    root.querySelector('[data-p-save]')?.addEventListener('click', () => {
+      if (lookup.has(current)) { memory.last = current; save('再開位置を保存しました。'); }
+    });
+    root.querySelector('[data-p-clear]')?.addEventListener('click', () => {
+      if (!window.confirm('準1級の記録を削除しますか。基礎・2級の記録は残ります。')) return;
+      try { localStorage.removeItem(key); memory = { version: 1, reviewed: [], last: null }; render('準1級の記録を削除しました。'); }
+      catch { render('保存領域にアクセスできず、削除できませんでした。'); }
+    });
+    root.querySelector('[data-p-export]')?.addEventListener('click', () => {
+      const objectUrl = URL.createObjectURL(new Blob([JSON.stringify(memory, null, 2)], { type: 'application/json' }));
+      const link = document.createElement('a');
+      link.href = objectUrl; link.download = 'statistics-pregrade1-memory.json'; link.click();
+      window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+    });
+    const normalized = (text: string) => text.normalize('NFKC').toLocaleLowerCase('ja');
+    const index = entries.map((entry) => ({ id: entry.id, text: normalized(`${entry.id} ${entry.text}`) }));
+    const input = document.getElementById('pregrade1-search') as HTMLInputElement | null;
+    input?.addEventListener('input', () => {
+      const words = normalized(input.value).trim().split(/\s+/).filter(Boolean);
+      const matching = new Set(index.filter((entry) => words.every((word) => entry.text.includes(word))).map((entry) => entry.id));
+      document.querySelectorAll<HTMLElement>('[data-pregrade1-course] li[data-p-id]').forEach((row) => {
+        row.hidden = words.length > 0 && !matching.has(row.dataset.pId ?? '');
+      });
+      document.querySelectorAll<HTMLElement>('[data-pregrade1-course] .course-module').forEach((module) => {
+        module.hidden = !module.querySelector('li[data-p-id]:not([hidden])');
+      });
+      const searchStatus = root.querySelector<HTMLElement>('[data-p-search-status]');
+      if (searchStatus) searchStatus.textContent = words.length ? `${matching.size}講座が見つかりました。${matching.size ? '' : '短い語句でもお試しください。'}` : '';
+    });
+    root.hidden = false; render(message);
+  }
+</script>

@@ -1,0 +1,86 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Pregrade1Tools from '../../../components/Pregrade1Tools.astro';
+import { withBase } from '../../../lib/site';
+import course from '../../../data/pregrade1-course.json';
+import '../../../styles/learning.css';
+import '../../../styles/pregrade1.css';
+
+export async function getStaticPaths() {
+  const lessons = await getCollection('pregrade1', ({ data }) => data.status === 'published');
+  return lessons.map((lesson) => ({ params: { slug: lesson.data.slug }, props: { lesson } }));
+}
+interface Props { lesson: CollectionEntry<'pregrade1'>; }
+const { lesson } = Astro.props;
+const { Content, headings } = await render(lesson);
+const pregrade1 = await getCollection('pregrade1', ({ data }) => data.status === 'published');
+const foundation = await getCollection('lessons', ({ data }) => data.status === 'published');
+const grade2 = await getCollection('grade2', ({ data }) => data.status === 'published');
+const published = new Set(pregrade1.map((entry) => entry.data.lesson_id));
+const references = new Map([
+  ...foundation.map((entry) => [entry.data.lesson_id, { title: entry.data.title, url: withBase(`/learn/${entry.data.slug}/`) }] as const),
+  ...grade2.map((entry) => [entry.data.lesson_id, { title: entry.data.title, url: withBase(`/learn/grade2/${entry.data.slug}/`) }] as const),
+  ...pregrade1.map((entry) => [entry.data.lesson_id, { title: entry.data.title, url: withBase(`/learn/pregrade1/${entry.data.slug}/`) }] as const)
+]);
+const ordered = course.modules.flatMap((module) => module.lessons);
+const index = ordered.findIndex((item) => item.id === lesson.data.lesson_id);
+const previous = ordered[index - 1];
+const next = ordered[index + 1];
+const prerequisites = lesson.data.prerequisites.map((id) => ({ id, entry: references.get(id) })).filter((item) => item.entry !== undefined);
+const toc = headings.filter((heading) => heading.depth === 2);
+---
+<BaseLayout title={`${lesson.data.lesson_id} ${lesson.data.title}`} description={lesson.data.description} ogType="article" updatedAt={lesson.data.updated_at}>
+  <div class="learning-shell lesson-shell" data-pregrade1-lesson>
+    <nav class="learning-breadcrumb" aria-label="パンくず"><a href={withBase('/courses/')}>学習コース</a><span aria-hidden="true"> / </span><a href={withBase('/courses/pregrade1/')}>準1級</a><span aria-hidden="true"> / </span><span>{lesson.data.lesson_id}</span></nav>
+    <header class="learning-hero"><p class="learning-eyebrow">統計検定準1級 · 第{index + 1}講</p><h1>{lesson.data.title}</h1><p>{lesson.data.description}</p><p class="lesson-time">読む目安 {lesson.data.reading_minutes}分 ＋ 確認問題 {lesson.data.practice_minutes}分（編集上の目安）</p></header>
+    {lesson.data.revision_note && <aside class="learning-note"><p>{lesson.data.revision_note}</p><a href={withBase('/courses/pregrade1/#syllabus-versions')}>公式範囲の適用時期を確認</a></aside>}
+    <section class="lesson-goals" aria-labelledby="goals"><h2 id="goals">このページでできること</h2><ul>{lesson.data.goals.map((goal) => <li>{goal}</li>)}</ul>{prerequisites.length > 0 && <div class="lesson-prerequisites"><p>前提を確認</p><ul>{prerequisites.map((item) => <li><a href={item.entry!.url}>{item.id} {item.entry!.title}</a></li>)}</ul></div>}</section>
+    <nav class="lesson-toc" aria-label="このページの目次"><strong>このページの内容</strong><ol>{toc.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav>
+    <div class="lesson-tools" data-p-lesson-tools hidden><button type="button" data-p-expand>解答も含めてすべて開く</button><button type="button" data-p-collapse>詳しい説明・解答を閉じる</button><button type="button" data-p-print>印刷</button></div>
+    <Pregrade1Tools lessonId={lesson.data.lesson_id} />
+    <p class="pregrade1-table-note">横長の表・数式は、その部分を横へスクロールして確認できます。</p>
+    <article class="lesson-body" data-lesson-id={lesson.data.lesson_id}><Content /></article>
+    <nav class="lesson-pagination" aria-label="講座を移動">{previous && published.has(previous.id) ? <a href={withBase(`/learn/pregrade1/${previous.slug}/`)} rel="prev"><small>前の講座</small>{previous.title}</a> : <a href={withBase('/courses/pregrade1/')}>準1級の目次</a>}{next && published.has(next.id) ? <a href={withBase(`/learn/pregrade1/${next.slug}/`)} rel="next"><small>次の講座</small>{next.title} →</a> : <a href={withBase('/courses/pregrade1/')}>ここまでを復習する →</a>}</nav>
+    <p class="lesson-review">内容確認：{lesson.data.review_status === 'independently_reviewed' ? '別担当者による確認済み' : '出典照合・数値・説明の自己点検（第三者監修ではありません）'}。出典と、定理の前提にしている結果は本文に記載しています。</p>
+  </div>
+</BaseLayout>
+<script>
+  const root = document.querySelector<HTMLElement>('[data-pregrade1-lesson]');
+  if (root) {
+    const details = () => Array.from(root.querySelectorAll<HTMLDetailsElement>('.lesson-body details'));
+    const toolbar = root.querySelector<HTMLElement>('[data-p-lesson-tools]');
+    if (toolbar) toolbar.hidden = false;
+    root.querySelector('[data-p-expand]')?.addEventListener('click', () => details().forEach((item) => { item.open = true; }));
+    root.querySelector('[data-p-collapse]')?.addEventListener('click', () => details().forEach((item) => { item.open = false; }));
+    root.querySelector('[data-p-print]')?.addEventListener('click', () => window.print());
+    function revealHash() {
+      let id: string;
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+      const target = id ? document.getElementById(id) : null;
+      if (!target) return;
+      let node: HTMLElement | null = target;
+      while (node) { if (node instanceof HTMLDetailsElement) node.open = true; node = node.parentElement; }
+      requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+    }
+    addEventListener('hashchange', revealHash); revealHash();
+    function scrollableTables() {
+      root?.querySelectorAll<HTMLTableElement>('.lesson-body table').forEach((table, i) => {
+        if (table.scrollWidth > table.clientWidth + 1) {
+          table.tabIndex = 0; table.setAttribute('aria-label', `表${i + 1}。左右の矢印キーでスクロールできます。`);
+        } else { table.removeAttribute('tabindex'); table.removeAttribute('aria-label'); }
+      });
+    }
+    void document.fonts.ready.then(scrollableTables);
+    root.addEventListener('toggle', scrollableTables, true);
+    addEventListener('resize', scrollableTables);
+    let printState: boolean[] | null = null;
+    addEventListener('beforeprint', () => {
+      if (printState === null) printState = details().map((item) => item.open);
+      details().forEach((item) => { item.open = true; });
+    });
+    addEventListener('afterprint', () => {
+      details().forEach((item, i) => { item.open = printState?.[i] ?? item.open; }); printState = null;
+    });
+  }
+</script>

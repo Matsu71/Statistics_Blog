@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Pregrade1Tools from '../../../components/Pregrade1Tools.astro';
+import course from '../../../data/pregrade1-course.json';
+import { withBase } from '../../../lib/site';
+import '../../../styles/learning.css';
+const entries = await getCollection('pregrade1', ({ data }) => data.status === 'published');
+const available = new Map(entries.map((entry) => [entry.data.lesson_id, entry.data]));
+const planned = course.modules.flatMap((module) => module.lessons);
+const first = planned.find((lesson) => available.has(lesson.id));
+---
+<BaseLayout title="統計検定準1級コース" description="条件付き期待値、母関数、変数変換から、推測と多変量解析へ。基本説明、具体例、解答、任意の証明を順番につなぐ準1級コースです。">
+  <div class="learning-shell" data-pregrade1-course>
+    <nav class="learning-breadcrumb" aria-label="パンくず"><a href={withBase('/courses/')}>学習コース</a><span aria-hidden="true"> / </span><span>準1級</span></nav>
+    <header class="learning-hero"><p class="learning-eyebrow">基礎 → 2級 → 準1級 → 1級</p><h1>統計検定準1級コース</h1><p>{course.subtitle}。式を使う条件と、結果が意味することを確かめます。</p>{first && <a class="learning-button" href={withBase(`/learn/pregrade1/${first.slug}/`)}>最初から学ぶ</a>}</header>
+    <aside class="learning-note" id="syllabus-versions"><h2>受験時期に合う公式範囲を確認する</h2><p>{course.syllabus.versions.map((version, index) => <span>{index > 0 && ' ／ '}<a href={version.pdf}>{version.label}</a></span>)}</p><p>公式では二つの範囲表を案内しています。共通の基礎は一緒に学び、2027版で明記された内容は講座ごとに補足します。受験前には<a href={course.syllabus.official_page}>公式案内</a>をご確認ください。（範囲確認日 {course.checked_at}）</p></aside>
+    <p class="learning-note">現在{entries.length}講座を閲覧できます。全{planned.length}講座の構成のうち、本文がない項目は準備中です。全範囲完成や合格を保証する案内ではありません。</p>
+    <Pregrade1Tools />
+    <section class="course-contents" aria-label="準1級コースの目次">
+      {course.modules.map((module, moduleIndex) => <section class="course-module" id={module.id}>
+        <h2><span>第{moduleIndex + 1}章</span> {module.title}</h2>
+        <ol>{module.lessons.map((lesson) => <li data-p-id={lesson.id}>{available.has(lesson.id)
+          ? <a href={withBase(`/learn/pregrade1/${lesson.slug}/`)}><span class="lesson-number">{lesson.id}</span><span><strong>{lesson.title}</strong><small>{lesson.objective}</small></span><span aria-hidden="true">→</span></a>
+          : <div class="lesson-planned"><span class="lesson-number">{lesson.id}</span><span>{lesson.title}</span><small>準備中</small></div>}
+        </li>)}</ol>
+      </section>)}
+    </section>
+    <aside class="learning-note"><h2>2級からの接続</h2><p>各講座に前提へのリンクがあります。微積分や線形代数の全課程を先に必修とはせず、必要な数式の読み方をその場で補います。証明に必要な発展事項は任意に開いて確認できます。</p><p><a href={withBase('/courses/grade2/')}>2級コースを復習する</a> · <a href={withBase('/labs/')}>確率・正規分布・信頼区間を動かす</a></p><p>公式認定の教材ではありません。確認問題は本サイトの独自制作で、本試験の再現ではありません。</p></aside>
+  </div>
+</BaseLayout>
