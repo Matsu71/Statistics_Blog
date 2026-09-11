@@ -1,0 +1,212 @@
+name: Finalize grade2 course
+
+on:
+  push:
+    branches: [content/grade2-complete-20260911]
+    paths: [.github/workflows/finalize-grade2-course.yml]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish the verified grade2 release and verify the live pages
+        type: boolean
+        required: true
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: grade2-final-release
+  cancel-in-progress: false
+
+jobs:
+  finish:
+    if: github.repository == 'Matsu71/Statistics_Blog' && github.ref == 'refs/heads/content/grade2-complete-20260911'
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    env:
+      TARGET_BRANCH: content/grade2-complete-20260911
+      GH_TOKEN: ${{ github.token }}
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Preserve newer main changes and capture the exact starting point
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main:refs/remotes/origin/main
+          git merge --no-edit origin/main
+          mkdir -p review-assets/grade2-final project-docs/grade2/release
+          python3 scripts/grade2-release-control.py capture | tee review-assets/grade2-final/starting-point.log
+      - name: Install the locked site and the recorded numerical environment
+        run: |
+          set -euo pipefail
+          npm ci 2>&1 | tee review-assets/grade2-final/npm-ci.log
+          python3 -m pip install --disable-pip-version-check numpy==2.3.5 scipy==1.17.0
+      - name: Import the exact real data and generate the verified case
+        run: |
+          set -euo pipefail
+          python3 scripts/import-grade2-iris.py 2>&1 | tee review-assets/grade2-final/iris-import.log
+          python3 scripts/enrich-grade2-iris-case.py 2>&1 | tee review-assets/grade2-final/iris-analysis.log
+      - name: Prepare the complete course without altering foundation manuscripts
+        run: |
+          set -euo pipefail
+          python3 scripts/prepare-grade2-complete-release.py 2>&1 | tee review-assets/grade2-final/preparation.log
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('.github/workflows/verify-grade2.yml')
+          if p.exists():
+              lines = p.read_text(encoding='utf-8').splitlines()
+              out = []
+              for line in lines:
+                  if line.strip() == 'python scripts/enrich-grade2-iris-case.py':
+                      indent = line[:len(line) - len(line.lstrip())]
+                      install = indent + 'python -m pip install numpy==2.3.5 scipy==1.17.0'
+                      if not out or out[-1] != install:
+                          out.append(install)
+                  out.append(line)
+              p.write_text('\n'.join(out) + '\n', encoding='utf-8')
+          agents = Path('AGENTS.md')
+          marker = '<!-- GRADE2_COMPLETE_POLICY_20260911 -->'
+          old = agents.read_text(encoding='utf-8')
+          if marker not in old:
+              note = marker + '\n## 2級完全版の検証方針\n\n'
+              note += '2級は `src/content/grade2/` のG01〜G40と独自172問を対象にする。基礎40講座・130問を維持し、級別の保存データを混ぜない。基本表示と任意の詳説・証明を分け、重要な条件は隠さない。\n\n'
+              note += '完全版の検算は `check-grade2-complete-math.py`、実データは `enrich-grade2-iris-case.py`、表示は `test-grade2-browser.mjs` と既存の基礎・実験テストで確認する。公開状態の正本は `project-docs/grade2/release/publication.json`。原稿がそろっただけで公開完了とは扱わない。\n\n'
+              note += '現在の作業範囲と次の工程は `project-docs/grade2/README.md` および checkpoints/ を参照する。独立した人間の監修と自動検査を区別し、未実施の検証を実施済みと書かない。\n\n---\n\n'
+              agents.write_text(note + old, encoding='utf-8')
+          readme = Path('README.md')
+          marker = '<!-- GRADE2_COURSE_ENTRY_20260911 -->'
+          old = readme.read_text(encoding='utf-8')
+          if marker not in old:
+              note = marker + '\n## 2級の順序コース\n\n'
+              note += '基礎の次に進む2級コースを、40講座・独自172問として整備しています。[原稿](src/content/grade2/)・[全件点検](project-docs/grade2/03-full-course-review.md)・[比較と改善](project-docs/grade2/04-comparison-and-remediation.md)を保存しています。\n\n'
+              note += '公開の完了状態は、`project-docs/grade2/release/publication.json` と [進捗・次の工程](project-docs/grade2/README.md)を参照してください。検証前の予定を公開済みと数えません。\n\n---\n\n'
+              readme.write_text(note + old, encoding='utf-8')
+          p = Path('project-docs/grade2/README.md')
+          if not p.exists():
+              p.write_text('# 2級コース：最終検証中\n\n40講座・172問の全件検証と公開後確認を行います。公開完了はrelease/publication.jsonの成功記録で確定します。\n\n次の作業は失敗したゲートの修正、または全件成功後の準1級コースです。\n', encoding='utf-8')
+          PY
+          node scripts/prepare-grade2.mjs
+          python3 scripts/grade2-release-control.py marker
+      - name: Full source types build and internal links
+        run: |
+          set -euo pipefail
+          npm run generate:index 2>&1 | tee review-assets/grade2-final/index.log
+          npm run verify 2>&1 | tee review-assets/grade2-final/verify.log
+          node scripts/validate-foundation.mjs 2>&1 | tee review-assets/grade2-final/foundation-content.log
+          node scripts/validate-grade2.mjs 2>&1 | tee review-assets/grade2-final/grade2-content.log
+      - name: Independent numerical checks for both courses
+        run: |
+          set -euo pipefail
+          node scripts/test-foundation-math.mjs 2>&1 | tee review-assets/grade2-final/foundation-math.log
+          python3 scripts/check-foundation-oracle.py 2>&1 | tee review-assets/grade2-final/foundation-oracle.log
+          python3 scripts/check-grade2-complete-math.py 2>&1 | tee review-assets/grade2-final/grade2-math.log
+          if [ -f scripts/test-release-extras.mjs ]; then
+            node scripts/test-release-extras.mjs 2>&1 | tee review-assets/grade2-final/release-extras.log
+          fi
+      - name: Verify cited destinations and preserve retrieval limitations
+        run: |
+          set -euo pipefail
+          python3 scripts/check-grade2-references.py 2>&1 | tee review-assets/grade2-final/references.log
+      - name: Gate known dependency advisories without changing the lockfile
+        run: |
+          npm audit --json > project-docs/grade2/release/npm-audit.json || true
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';
+          const report = JSON.parse(fs.readFileSync('project-docs/grade2/release/npm-audit.json','utf8'));
+          if (!report.metadata?.vulnerabilities) throw new Error('No valid dependency audit result');
+          console.log(JSON.stringify(report.metadata, null, 2));
+          if (report.metadata.vulnerabilities.high || report.metadata.vulnerabilities.critical) process.exit(1);
+          JS
+      - name: Test mobile desktop no-JavaScript storage and learning tools
+        run: |
+          set -euo pipefail
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium webkit
+          sudo apt-get update -qq
+          sudo apt-get install -y fonts-noto-cjk
+          node scripts/test-foundation-browser.mjs 2>&1 | tee review-assets/grade2-final/foundation-browser.log
+          node scripts/test-learning-labs.mjs 2>&1 | tee review-assets/grade2-final/foundation-labs.log
+          node scripts/test-grade2-browser.mjs 2>&1 | tee review-assets/grade2-final/grade2-browser.log
+      - name: Assert the actual complete build and bind all evidence to it
+        run: |
+          set -euo pipefail
+          python3 scripts/grade2-release-control.py gate 2>&1 | tee review-assets/grade2-final/final-gates.log
+      - name: Save the verified candidate and fast-forward main without force
+        if: github.event_name == 'push' || inputs.publish
+        run: |
+          set -euo pipefail
+          git add src scripts public docs project-docs/grade2 project-docs/learning-platform-design AGENTS.md README.md .github/workflows/verify-grade2.yml
+          if ! git diff --cached --quiet; then
+            git commit -m 'release: build and verify complete grade2 course with preserved foundation'
+          fi
+          git push origin "HEAD:$TARGET_BRANCH"
+          EXPECTED_MAIN=$(python3 -c "import json; print(json.load(open('project-docs/grade2/release/starting-point.json'))['expected_main'])")
+          git fetch origin main:refs/remotes/origin/main
+          CURRENT_MAIN=$(git rev-parse origin/main)
+          if [ "$CURRENT_MAIN" != "$EXPECTED_MAIN" ]; then
+            echo 'Main advanced during verification. Candidate and artifacts are preserved; no overwrite or force push.'
+            exit 1
+          fi
+          git merge-base --is-ancestor origin/main HEAD
+          VERIFIED_COMMIT=$(git rev-parse HEAD)
+          echo "GRADE2_VERIFIED_COMMIT=$VERIFIED_COMMIT" >> "$GITHUB_ENV"
+          git push origin HEAD:main
+      - name: Publish and verify every actual public resource and both courses
+        if: github.event_name == 'push' || inputs.publish
+        run: |
+          set -euo pipefail
+          python3 scripts/grade2-release-control.py publish 2>&1 | tee review-assets/grade2-final/publication.log
+      - name: Checkpoint factual completion and the next work
+        if: github.event_name == 'push' || inputs.publish
+        run: |
+          set -euo pipefail
+          git add project-docs/grade2
+          if ! git diff --cached --quiet; then
+            git commit -m 'docs: record live verified grade2 release and next pre-grade1 work [skip ci]'
+            git push origin HEAD:main
+            git push origin "HEAD:$TARGET_BRANCH"
+          fi
+      - name: Preserve current outcomes and font-free review artifacts even on failure
+        if: always()
+        env:
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          mkdir -p review-assets/grade2-final project-docs/grade2/release
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          from datetime import datetime, timezone
+          root = Path('project-docs/grade2/release')
+          p = root / 'publication.json'
+          publication = json.loads(p.read_text(encoding='utf-8')) if p.is_file() else {}
+          report = {'observed_at': datetime.now(timezone.utc).isoformat(),
+                    'job_status_before_artifact': os.environ.get('JOB_STATUS'),
+                    'workflow_run_id': os.environ.get('GITHUB_RUN_ID'),
+                    'source_commit': os.environ.get('GITHUB_SHA'),
+                    'publication_status': publication.get('status', 'not_established'),
+                    'next': publication.get('next', 'Inspect logs, correct the failing or unconfirmed release gate, and re-run the verified release process.')}
+          (root / 'attempt-summary.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          PY
+          tar --exclude='*.woff' --exclude='*.woff2' --exclude='*.ttf' --exclude='*.otf' --exclude='*.eot' -czf review-assets/grade2-final/source-review.tar.gz src scripts public docs project-docs .github/workflows package.json package-lock.json astro.config.mjs site-build.config.mjs tsconfig.json AGENTS.md README.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: grade2-final-release-${{ github.run_id }}
+          path: |
+            review-assets/
+            project-docs/grade2/
+          retention-days: 30
+          if-no-files-found: warn
