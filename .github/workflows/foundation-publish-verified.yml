@@ -1,0 +1,62 @@
+name: Publish verified foundation
+
+on:
+  workflow_dispatch:
+    inputs:
+      expected_sha:
+        description: Exact verified commit already on main
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: foundation-pages-publication
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.repository == 'Matsu71/Statistics_Blog' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.expected_sha }}
+          fetch-depth: 0
+      - name: Check the exact verified artifact and ancestry
+        env:
+          EXPECTED_SHA: ${{ inputs.expected_sha }}
+        run: |
+          set -euo pipefail
+          [[ "$EXPECTED_SHA" =~ ^[0-9a-f]{40}$ ]]
+          test "$(git rev-parse HEAD)" = "$EXPECTED_SHA"
+          git fetch origin main
+          git merge-base --is-ancestor HEAD origin/main
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          report = json.loads(Path('project-docs/foundation-release/final-gates.json').read_text())
+          assert report['status'] == 'verified_pending_publication'
+          assert report['lesson_count'] == 40
+          assert report['question_count'] >= 130
+          assert report['math_status'] == 'passed'
+          assert report['browser_status'] == 'passed'
+          for relative, expected in report['generated_sha256'].items():
+              path = Path(relative)
+              assert path.is_file(), relative
+              assert hashlib.sha256(path.read_bytes()).hexdigest() == expected, relative
+          print('Verified generated artifact hashes and full-course gates.')
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs
+      - name: Deploy the verified static artifact
+        id: deployment
+        uses: actions/deploy-pages@v5
