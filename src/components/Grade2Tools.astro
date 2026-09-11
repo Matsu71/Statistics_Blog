@@ -1,0 +1,112 @@
+---
+import { getCollection } from 'astro:content';
+import { withBase } from '../lib/site';
+import '../styles/learning-extras.css';
+interface Props { lessonId?: string; }
+const { lessonId } = Astro.props;
+const lessons = await getCollection('grade2', ({ data }) => data.status === 'published');
+const index = lessons.map((entry) => ({
+  id: entry.data.lesson_id, title: entry.data.title,
+  url: withBase(`/learn/grade2/${entry.data.slug}/`),
+  text: lessonId ? '' : `${entry.data.title} ${entry.data.description} ${(entry.body ?? '').replace(/<[^>]+>/g, ' ')}`
+}));
+const serialized = JSON.stringify(index).replace(/</g, '\u003c');
+---
+<section class="learning-utility" data-grade2-utility data-current-grade2={lessonId ?? ''} hidden aria-label="2級講座の検索と端末内の学習記録">
+  {!lessonId && (
+    <div class="learning-search">
+      <label for="grade2-search">2級の講座を検索</label>
+      <input id="grade2-search" type="search" autocomplete="off" placeholder="例：Welch、有限母集団、自由度" />
+      <p class="utility-muted">本文・問題・折りたたんだ説明も検索します。</p>
+      <p data-g2-search-result role="status" aria-live="polite"></p>
+    </div>
+  )}
+  <div class="learning-memory">
+    {lessonId && <label class="memory-check"><input type="checkbox" data-g2-reviewed /> この講座を確認した</label>}
+    <div class="utility-actions">
+      {lessonId && <button type="button" data-g2-save>ここを再開位置にする</button>}
+      <a data-g2-resume hidden>保存した講座から再開</a>
+      <button type="button" data-g2-export>2級の記録を書き出す</button>
+      <button type="button" data-g2-clear>2級の記録を削除</button>
+    </div>
+    <p class="utility-muted">自分で付ける確認マークです。理解度の自動判定ではありません。このブラウザ内にだけ保存し、基礎コースの記録とは分けて管理します。</p>
+    <p data-g2-memory-status role="status" aria-live="polite"></p>
+  </div>
+  <script type="application/json" id="grade2-search-index" set:html={serialized}></script>
+</section>
+<script>
+  type Entry = { id: string; title: string; url: string; text: string };
+  type Memory = { version: 1; reviewed: string[]; last: string | null };
+  const root = document.querySelector<HTMLElement>('[data-grade2-utility]');
+  if (root) {
+    const entries: Entry[] = JSON.parse(document.getElementById('grade2-search-index')?.textContent ?? '[]');
+    const lookup = new Map(entries.map((entry) => [entry.id, entry]));
+    const key = 'statistics-lab:grade2:memory:v1';
+    const current = root.dataset.currentGrade2 ?? '';
+    const status = root.querySelector<HTMLElement>('[data-g2-memory-status]')!;
+    const resume = root.querySelector<HTMLAnchorElement>('[data-g2-resume]')!;
+    const checkbox = root.querySelector<HTMLInputElement>('[data-g2-reviewed]');
+    let memory: Memory = { version: 1, reviewed: [], last: null };
+    let available = true;
+    try {
+      const raw = JSON.parse(localStorage.getItem(key) ?? 'null');
+      if (raw?.version === 1 && Array.isArray(raw.reviewed)) {
+        memory = {
+          version: 1,
+          reviewed: [...new Set<string>(raw.reviewed.filter((id: unknown): id is string => typeof id === 'string' && lookup.has(id)))],
+          last: typeof raw.last === 'string' && lookup.has(raw.last) ? raw.last : null
+        };
+      }
+    } catch { available = false; }
+    function render(message = '') {
+      if (checkbox) checkbox.checked = memory.reviewed.includes(current);
+      const place = memory.last ? lookup.get(memory.last) : undefined;
+      resume.hidden = !place;
+      if (place) { resume.href = place.url; resume.textContent = `再開：${place.id} ${place.title}`; }
+      status.textContent = message || (available
+        ? `確認マーク：${memory.reviewed.length} / ${entries.length}講座`
+        : '端末内の保存を利用できません。本文・問題・検索は利用できます。');
+    }
+    function save(message: string) {
+      try { localStorage.setItem(key, JSON.stringify(memory)); available = true; render(message); }
+      catch { available = false; render('保存できませんでした。このページ内の表示だけに反映しています。'); }
+    }
+    checkbox?.addEventListener('change', () => {
+      if (!lookup.has(current)) return;
+      memory.reviewed = checkbox.checked ? [...new Set([...memory.reviewed, current])] : memory.reviewed.filter((id) => id !== current);
+      save('確認マークを更新しました。');
+    });
+    root.querySelector('[data-g2-save]')?.addEventListener('click', () => {
+      if (lookup.has(current)) { memory.last = current; save('再開位置を保存しました。'); }
+    });
+    root.querySelector('[data-g2-clear]')?.addEventListener('click', () => {
+      if (!window.confirm('2級の確認マークと再開位置を削除しますか。基礎コースの記録は残ります。')) return;
+      try {
+        localStorage.removeItem(key); memory = { version: 1, reviewed: [], last: null }; available = true;
+        render('2級の学習記録を削除しました。');
+      } catch { render('保存領域にアクセスできず、削除を確認できませんでした。'); }
+    });
+    root.querySelector('[data-g2-export]')?.addEventListener('click', () => {
+      const url = URL.createObjectURL(new Blob([JSON.stringify(memory, null, 2)], { type: 'application/json' }));
+      const a = document.createElement('a'); a.href = url; a.download = 'statistics-grade2-memory.json'; a.click();
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+    });
+    const normalize = (text: string) => text.normalize('NFKC').toLocaleLowerCase('ja');
+    const searchable = entries.map((entry) => ({ id: entry.id, text: normalize(`${entry.id} ${entry.text}`) }));
+    const input = document.getElementById('grade2-search') as HTMLInputElement | null;
+    input?.addEventListener('input', () => {
+      const words = normalize(input.value).trim().split(/\s+/).filter(Boolean);
+      const matching = new Set(searchable.filter((entry) => words.every((word) => entry.text.includes(word))).map((entry) => entry.id));
+      document.querySelectorAll<HTMLElement>('[data-grade2-course] li[data-grade2-id]').forEach((row) => {
+        row.hidden = words.length > 0 && !matching.has(row.dataset.grade2Id ?? '');
+      });
+      document.querySelectorAll<HTMLElement>('[data-grade2-course] .course-module').forEach((module) => {
+        module.hidden = !module.querySelector('li[data-grade2-id]:not([hidden])');
+      });
+      const result = root.querySelector<HTMLElement>('[data-g2-search-result]');
+      if (result) result.textContent = words.length ? `${matching.size}講座が見つかりました。${matching.size ? '' : '短い語句や別の表現でもお試しください。'}` : '';
+    });
+    root.hidden = false;
+    render();
+  }
+</script>

@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import coverage from '../../../data/grade2-coverage.json';
+import { withBase } from '../../../lib/site';
+import '../../../styles/learning.css';
+const foundation = await getCollection('lessons', ({ data }) => data.status === 'published');
+const grade2 = await getCollection('grade2', ({ data }) => data.status === 'published');
+const all = [...foundation.map((entry) => ({ id: entry.data.lesson_id, title: entry.data.title, url: withBase(`/learn/${entry.data.slug}/`), body: entry.body ?? '' })), ...grade2.map((entry) => ({ id: entry.data.lesson_id, title: entry.data.title, url: withBase(`/learn/grade2/${entry.data.slug}/`), body: entry.body ?? '' }))];
+const lookup = new Map(all.map((entry) => [entry.id, entry]));
+function questionUrl(id: string) {
+  const lesson = lookup.get(id.split('-Q')[0]);
+  if (!lesson || !lesson.body.includes(`data-question="${id}"`)) return null;
+  // The question heading remains visible; do not automatically reveal the answer.
+  return `${lesson.url}#${id.toLowerCase()}`;
+}
+---
+<BaseLayout title="2級の出題範囲と講座・演習の対応" description="公式範囲の項目群から2級と基礎の講座・独自問題を確認します。制作予定と、実際に読める内容を区別しています。">
+  <div class="learning-shell" data-grade2-coverage>
+    <nav class="learning-breadcrumb" aria-label="パンくず"><a href={withBase('/courses/grade2/')}>2級コース</a><span aria-hidden="true"> / </span><span>出題範囲との対応</span></nav>
+    <header class="learning-hero"><p class="learning-eyebrow">講座と問題を探す</p><h1>2級の出題範囲との対応</h1><p>公式範囲の行をもとに整理した27項目群です。既習の基礎を再利用し、2級で必要な条件・計算・解釈へ進みます。</p></header>
+    <aside class="learning-note"><p>項目群への対応は、すべての出題形式や合格を保証する意味ではありません。公式の認定教材ではありません。折りたたみの証明は、基本の試験対策では任意の発展も含みます。</p><p><a href={coverage.source}>公式の出題範囲表</a> · 確認日 {coverage.checked_at}</p></aside>
+    {coverage.groups.map((group) => (
+      <section class="course-module" id={group.id}>
+        <h2>{group.goal}</h2>
+        <div style="padding:0 1.2rem 1.2rem">
+          <p class="lesson-review">参照箇所：{group.source_locator}</p>
+          <p>{group.lessons.every((id) => lookup.has(id)) && group.questions.every((id) => questionUrl(id)) ? '対応する講座・問題を閲覧できます。' : '一部の教材は準備中です。未公開の内容を対応済みと数えません。'}</p>
+          <h3>講座</h3><ul>{group.lessons.map((id) => { const entry = lookup.get(id); return <li>{entry ? <a href={entry.url}>{id} {entry.title}</a> : <span>{id}（準備中）</span>}</li>; })}</ul>
+          <h3>確認問題</h3><p>{group.questions.map((id, index) => { const url = questionUrl(id); return <span>{index > 0 && ' / '}{url ? <a href={url}>{id}</a> : <span>{id}（準備中）</span>}</span>; })}</p>
+        </div>
+      </section>
+    ))}
+    <p><a href={withBase('/courses/grade2/')}>2級コースの目次へ戻る</a></p>
+  </div>
+</BaseLayout>

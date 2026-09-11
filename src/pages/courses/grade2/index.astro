@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Grade2Tools from '../../../components/Grade2Tools.astro';
+import course from '../../../data/grade2-course.json';
+import { withBase } from '../../../lib/site';
+import '../../../styles/learning.css';
+const entries = await getCollection('grade2', ({ data }) => data.status === 'published');
+const available = new Map(entries.map((entry) => [entry.data.lesson_id, entry.data]));
+const planned = course.modules.flatMap((module) => module.lessons);
+const first = planned.find((lesson) => available.has(lesson.id));
+const complete = planned.every((lesson) => available.has(lesson.id));
+---
+<BaseLayout title="統計検定2級コース" description="基礎から、確率分布・推定・検定・回帰・分散分析へ。条件、数値例、独自の確認問題、必要な導出をつなげて学ぶ2級の順序コースです。">
+  <div class="learning-shell" data-grade2-course>
+    <nav class="learning-breadcrumb" aria-label="パンくず"><a href={withBase('/courses/')}>学習コース</a><span aria-hidden="true"> / </span><span>2級</span></nav>
+    <header class="learning-hero">
+      <p class="learning-eyebrow">基礎 → 2級 → 準1級 → 1級</p>
+      <h1>統計検定2級コース</h1>
+      <p>{course.subtitle}。具体例と問題で確かめ、必要な導出はその場で開けます。</p>
+      {first && <a class="learning-button" href={withBase(`/learn/grade2/${first.slug}/`)}>最初から学ぶ</a>}
+    </header>
+    <aside class="learning-note"><strong>基礎からの接続</strong><p>平均・標準偏差・確率・信頼区間の意味が曖昧なときは、各講座の前提リンクから戻れます。証明のための数学を、基本の学習で先にすべて履修する必要はありません。</p><a href={withBase('/courses/foundation/')}>基礎コースを確認する</a></aside>
+    <Grade2Tools />
+    <p class="learning-note"><a href={withBase('/coverage/grade2/')}>出題範囲と講座・演習の対応</a> · <a href={withBase('/labs/')}>確率・正規分布・信頼区間を動かす</a></p>
+    <section class="course-contents" aria-label="2級コースの目次">
+      {course.modules.map((module, index) => (
+        <section class="course-module" id={module.id}>
+          <h2><span>第{index + 1}章</span> {module.title}</h2>
+          <ol>
+            {module.lessons.map((lesson) => (
+              <li data-grade2-id={lesson.id}>
+                {available.has(lesson.id) ? (
+                  <a href={withBase(`/learn/grade2/${lesson.slug}/`)}><span class="lesson-number">{lesson.id}</span><span><strong>{lesson.title}</strong><small>{lesson.objective}</small></span><span aria-hidden="true">→</span></a>
+                ) : (
+                  <div class="lesson-planned"><span class="lesson-number">{lesson.id}</span><span>{lesson.title}</span><small>準備中</small></div>
+                )}
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))}
+    </section>
+    <aside class="learning-note" id="scope">
+      <h2>対象と使い方</h2>
+      <p>{complete ? '基礎で扱った内容を前提に、2級の公式範囲を講座と独自問題へつないでいます。' : '2級の公式範囲をもとに制作しています。準備中の項目はまだ公開済みの対応に数えません。'} 本試験問題の再現や合格保証ではなく、公式・公認の教材でもありません。</p>
+      <p><a href={course.syllabus.page_url}>公式の2級案内</a>。範囲確認日：{course.syllabus.checked_at}。受験方式や規定は、受験時に公式情報を確認してください。</p>
+    </aside>
+  </div>
+</BaseLayout>

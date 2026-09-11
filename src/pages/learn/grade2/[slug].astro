@@ -1,0 +1,76 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Grade2Tools from '../../../components/Grade2Tools.astro';
+import { withBase } from '../../../lib/site';
+import course from '../../../data/grade2-course.json';
+import '../../../styles/learning.css';
+
+export async function getStaticPaths() {
+  const lessons = await getCollection('grade2', ({ data }) => data.status === 'published');
+  return lessons.map((lesson) => ({ params: { slug: lesson.data.slug }, props: { lesson } }));
+}
+interface Props { lesson: CollectionEntry<'grade2'>; }
+const { lesson } = Astro.props;
+const { Content, headings } = await render(lesson);
+const grade2 = await getCollection('grade2', ({ data }) => data.status === 'published');
+const foundation = await getCollection('lessons', ({ data }) => data.status === 'published');
+const available = new Set(grade2.map((entry) => entry.data.lesson_id));
+const reference = new Map([...foundation.map((entry) => [entry.data.lesson_id, { title: entry.data.title, url: withBase(`/learn/${entry.data.slug}/`) }] as const), ...grade2.map((entry) => [entry.data.lesson_id, { title: entry.data.title, url: withBase(`/learn/grade2/${entry.data.slug}/`) }] as const)]);
+const ordered = course.modules.flatMap((module) => module.lessons);
+const index = ordered.findIndex((item) => item.id === lesson.data.lesson_id);
+const previous = ordered[index - 1];
+const next = ordered[index + 1];
+const prerequisites = lesson.data.prerequisites.map((id) => ({ id, entry: reference.get(id) })).filter((item) => item.entry !== undefined);
+const toc = headings.filter((heading) => heading.depth === 2);
+---
+<BaseLayout title={`${lesson.data.lesson_id} ${lesson.data.title}`} description={lesson.data.description} ogType="article" updatedAt={lesson.data.updated_at}>
+  <div class="learning-shell lesson-shell" data-grade2-lesson>
+    <nav class="learning-breadcrumb" aria-label="パンくず"><a href={withBase('/courses/')}>学習コース</a><span aria-hidden="true"> / </span><a href={withBase('/courses/grade2/')}>2級</a><span aria-hidden="true"> / </span><span>{lesson.data.lesson_id}</span></nav>
+    <header class="learning-hero">
+      <p class="learning-eyebrow">統計検定2級 · 第{index + 1}講</p><h1>{lesson.data.title}</h1><p>{lesson.data.description}</p>
+      <p class="lesson-time">読む目安 {lesson.data.reading_minutes}分 ＋ 確認問題 {lesson.data.practice_minutes}分（編集上の目安）</p>
+    </header>
+    <section class="lesson-goals" aria-labelledby="goals"><h2 id="goals">このページでできること</h2><ul>{lesson.data.goals.map((goal) => <li>{goal}</li>)}</ul>
+      {prerequisites.length > 0 && <div class="lesson-prerequisites"><p>前提を確認</p><ul>{prerequisites.map((item) => <li><a href={item.entry!.url}>{item.id} {item.entry!.title}</a></li>)}</ul></div>}
+    </section>
+    <nav class="lesson-toc" aria-label="このページの目次"><strong>このページの内容</strong><ol>{toc.map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol></nav>
+    <div class="lesson-tools" data-g2-lesson-tools hidden><button type="button" data-g2-expand>解答も含めてすべて開く</button><button type="button" data-g2-collapse>詳しい説明・解答を閉じる</button><button type="button" data-g2-print>印刷</button></div>
+    <Grade2Tools lessonId={lesson.data.lesson_id} />
+    <article class="lesson-body" data-lesson-id={lesson.data.lesson_id}><Content /></article>
+    <nav class="lesson-pagination" aria-label="講座を移動">
+      {previous && available.has(previous.id) ? <a href={withBase(`/learn/grade2/${previous.slug}/`)} rel="prev"><small>前の講座</small>{previous.title}</a> : <a href={withBase('/courses/grade2/')}>2級コースの目次</a>}
+      {next && available.has(next.id) ? <a href={withBase(`/learn/grade2/${next.slug}/`)} rel="next"><small>次の講座</small>{next.title} →</a> : <a href={withBase('/courses/grade2/')}>コースの目次で復習する →</a>}
+    </nav>
+    <p class="lesson-review">内容確認：{lesson.data.review_status === 'independently_reviewed' ? '別担当者による確認済み' : '出典照合・計算・説明の自己点検（第三者監修ではありません）'}。説明と演習は独自制作し、外部データの出所・利用条件は本文に記載しています。</p>
+  </div>
+</BaseLayout>
+<script>
+  const root = document.querySelector<HTMLElement>('[data-grade2-lesson]');
+  if (root) {
+    const details = () => Array.from(root.querySelectorAll<HTMLDetailsElement>('.lesson-body details'));
+    const tools = root.querySelector<HTMLElement>('[data-g2-lesson-tools]');
+    if (tools) tools.hidden = false;
+    root.querySelector('[data-g2-expand]')?.addEventListener('click', () => details().forEach((item) => { item.open = true; }));
+    root.querySelector('[data-g2-collapse]')?.addEventListener('click', () => details().forEach((item) => { item.open = false; }));
+    root.querySelector('[data-g2-print]')?.addEventListener('click', () => window.print());
+    function revealHash() {
+      let id = '';
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+      const target = id ? document.getElementById(id) : null;
+      if (!target) return;
+      let node: HTMLElement | null = target;
+      while (node) { if (node instanceof HTMLDetailsElement) node.open = true; node = node.parentElement; }
+      requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+    }
+    addEventListener('hashchange', revealHash); revealHash();
+    let printState: boolean[] | null = null;
+    addEventListener('beforeprint', () => {
+      if (printState === null) printState = details().map((item) => item.open);
+      details().forEach((item) => { item.open = true; });
+    });
+    addEventListener('afterprint', () => {
+      details().forEach((item, index) => { item.open = printState?.[index] ?? item.open; }); printState = null;
+    });
+  }
+</script>
