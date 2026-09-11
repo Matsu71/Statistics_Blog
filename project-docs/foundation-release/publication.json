@@ -1,0 +1,315 @@
+{
+  "status": "published_and_live_verified",
+  "release": "foundation-1.0",
+  "completed_at": "2026-09-11T06:59:10.550420+00:00",
+  "verified_commit": "1b9b503f05332226cf375e3f2027cbddbda33192",
+  "site": "https://matsu71.github.io/Statistics_Blog/courses/foundation/",
+  "lesson_count": 40,
+  "question_count": 130,
+  "publication": {
+    "checked_at": "2026-09-11T06:59:09.947543+00:00",
+    "verified_commit": "1b9b503f05332226cf375e3f2027cbddbda33192",
+    "publication_attempts": [
+      {
+        "method": "request_branch_pages_build",
+        "status": 201,
+        "body": "{\"status\":\"queued\",\"url\":\"https://api.github.com/repositories/1193703998/pages/builds/latest\"}"
+      }
+    ],
+    "live_marker": {
+      "release": "foundation-1.0",
+      "source_commit": "0acf49d7d473073dfc6762e3de0aa4f80e0cd3a9",
+      "workflow_run_id": "34571582797",
+      "lesson_count": 40,
+      "question_count": 130,
+      "built_at": "2026-09-11T06:50:01.702737+00:00"
+    }
+  },
+  "live_lessons": [
+    {
+      "lesson_id": "F01",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/asking-statistical-questions/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "da733db70220cc1fcc296ca907578c880e45a4742097aaa5990a82de1b6c80e1"
+    },
+    {
+      "lesson_id": "F02",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/reading-a-data-table/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "db6945454aefb82d1b0ed8a7bb60dc9cd250f0f075b4cc9a4bf032fe5fd151d7"
+    },
+    {
+      "lesson_id": "F03",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/types-and-scales/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "e1595fe810ee22b11f5413b0c4ad089cf37714e337864dc835133f8f2ea76cfa"
+    },
+    {
+      "lesson_id": "F04",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/population-and-sampling/",
+      "http_status": 200,
+      "questions": 4,
+      "body_sha256": "a9df0a63c5ccacc63506283dda28a3385390368dff9419f2bbfbc8d996fb38a3"
+    },
+    {
+      "lesson_id": "F05",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/observation-and-experiment/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "2c29b3dff4cfe6a0fda20e842363947d5f786bc29f8444f020866a1a48a63f77"
+    },
+    {
+      "lesson_id": "F06",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/ratios-and-percentages/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "0d89e4c3e1b7fac4294594e2cc11adc66f4cd3bb2bb888ce7b50df65b157db22"
+    },
+    {
+      "lesson_id": "F07",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/frequency-tables/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "eeede0548c176b46b684541e3ee62d651b96bac448c55ea241044256d9673ad7"
+    },
+    {
+      "lesson_id": "F08",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/histograms-and-stem-leaf/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "0576a93a0fcb76c67e328f34ff5b0208ed33f4b4294a85fcb33e41515621a6b0"
+    },
+    {
+      "lesson_id": "F09",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/choosing-basic-graphs/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "07ced9d62b321701e1f3bd7bad76f148eed612fc124baa59beb58d39bc1ef509"
+    },
+    {
+      "lesson_id": "F10",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/cross-tables-and-mosaics/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "073117f6ecc343036f8101625edf1c791639073f8ffdf13b354fb50e5bc67821"
+    },
+    {
+      "lesson_id": "F11",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/reading-unfamiliar-graphs/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "8ec500859b10b0c691f4323a5e523d19b271c646e2930089a5831ebeb786804d"
+    },
+    {
+      "lesson_id": "F12",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/mean-median-mode/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "99e46c4db41a3af5add2fe476e0f4396e51ea231177b99b0b70d18ebad61bdc0"
+    },
+    {
+      "lesson_id": "F13",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/weighted-and-grouped-means/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "9be1fc1f896ec48608cb7ab5e4d1a0e59898056a9d77463eb8d435fef3d14726"
+    },
+    {
+      "lesson_id": "F14",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/quartiles-and-boxplots/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "44b458274578f454daadfda306992acae002a78722fd4098e8c20c9c0e74f8ac"
+    },
+    {
+      "lesson_id": "F15",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/variance-and-standard-deviation/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "ce6c7a953fefb60b54e54ed0762c115ccb9bfdaf2f75b887e6087b465dc77679"
+    },
+    {
+      "lesson_id": "F16",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/shifting-and-scaling-data/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "639f01d3b1ccb61f34756deb18ee58acbeba127847d8aee57f73e693bb6eefcc"
+    },
+    {
+      "lesson_id": "F17",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/standardization-and-deviation-score/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "0ad35453814d90cf876263bb73d778dda51bff906ebd628893fb2d552be76ec1"
+    },
+    {
+      "lesson_id": "F18",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/relative-spread-and-outliers/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "67660e78acfe7465dac291fc8c68d0ecd2abaf80a919af404a301eb9a19de7d4"
+    },
+    {
+      "lesson_id": "F19",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/scatter-covariance-correlation/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "b75ae021aac923c1e66ad9d3bc3482637ed3e4a5ff081ae0a325b68df42e27ab"
+    },
+    {
+      "lesson_id": "F20",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/regression-line-and-prediction/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "39fee2c316c643d63b0d19d9c006c3837232ed4845da7faa35787f5835835ab2"
+    },
+    {
+      "lesson_id": "F21",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/correlation-is-not-causation/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "a1170edfd7af234352a7d22e18d747dd24b44a9784bb7b4c8f88a403b563821f"
+    },
+    {
+      "lesson_id": "F22",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/time-series-and-indices/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "73aa6005051b203209ec984b19fd739b68cdf6e968ffca201ada1e8a7decee7f"
+    },
+    {
+      "lesson_id": "F23",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/chance-and-sample-space/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "5c959dff6450ff98f8a45ca0aad97f2c36bfa77c39ea2a479cf3b987540c9159"
+    },
+    {
+      "lesson_id": "F24",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/complements-and-unions/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "41ea37afedc3c98a905cefbc2d26021f5034a8fd905232dda38c6e3740c8d717"
+    },
+    {
+      "lesson_id": "F25",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/trees-and-counting/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "02a0954380bab494b90be749afd81734b0714198460f5de93b7550a6d25d1aff"
+    },
+    {
+      "lesson_id": "F26",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/independent-trials/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "389ffa7481419baa914f4cf946448de9b3b7d4a6ac71332d84a0834143147ed4"
+    },
+    {
+      "lesson_id": "F27",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/conditional-probability-basics/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "1dddd4c3aaf365340619cf30bae225ee2f944bb8ee730f4c8a39c94c2a0a2335"
+    },
+    {
+      "lesson_id": "F28",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/probability-and-repetition/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "6e4d1d230bfdf3f5718c31f542bb6efe4e5c3707fcd69cc8bbe8827ac5fc6227"
+    },
+    {
+      "lesson_id": "F29",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/random-variables-and-expectation/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "bfe3e82ec1fe115e973050d63e88de22925a36279f539a3d82cbd2ac4bb66b37"
+    },
+    {
+      "lesson_id": "F30",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/binomial-basics/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "c900ac7aa34335e8962281c148c0681dc18775936089c496af07468b24407b4d"
+    },
+    {
+      "lesson_id": "F31",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/normal-density-basics/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "98f1b0981ffe7a6360cd6a7eeac3265a955cc2e3dfd76a42d63b7a80276e657a"
+    },
+    {
+      "lesson_id": "F32",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/normal-table-and-tail-area/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "aa5a4e025f8c0af0606098fdec1bdd5c8e82b46b76ece69cc8d88db26e3c1906"
+    },
+    {
+      "lesson_id": "F33",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/binomial-normal-approximation/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "c4a6d453294d4652ae5b9706753b72ec468179409271b85808005a80e9fcb4aa"
+    },
+    {
+      "lesson_id": "F34",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/sampling-distributions-basics/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "7446905b77a6b4382dcb000e746bced7c21273246a55deba09632262e4d3bdc9"
+    },
+    {
+      "lesson_id": "F35",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/mean-confidence-interval-basics/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "bf136e930cad32ea51d5f917678c37e699c03fcf264f4d2c63dc046da28c528d"
+    },
+    {
+      "lesson_id": "F36",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/proportion-confidence-interval-basics/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "a0b7e1f8a66510b6523b7212b392c7a5b45a52813d18d60bc82b2f84e40baf10"
+    },
+    {
+      "lesson_id": "F37",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/hypothesis-testing-basics/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "bcf284e95545810445fd5b8a6294e1303b2c844bf5cbd9bcaa3b537b855765a8"
+    },
+    {
+      "lesson_id": "F38",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/mean-and-proportion-tests-basics/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "d6dbd313f665931b862d8b3737a2ae6199c4a9403f9b52fa9481e0fc45eae399"
+    },
+    {
+      "lesson_id": "F39",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/reporting-statistical-results/",
+      "http_status": 200,
+      "questions": 3,
+      "body_sha256": "273d777f8196b7152b94de201ecdd725bf193dc768ac47c4292cab3f265b45d9"
+    },
+    {
+      "lesson_id": "F40",
+      "url": "https://matsu71.github.io/Statistics_Blog/learn/bridge-to-grade-two/",
+      "http_status": 200,
+      "questions": 12,
+      "body_sha256": "4d0b14fca8388000efd541a1e808ea951b304a0fab6137ed40087363e1df7b9b"
+    }
+  ],
+  "next": "基礎コースの利用者テスト・訂正対応と、同じ品質基準による2級コースの実装。",
+  "limits": [
+    "独立した人間の数学監修・実利用者による学習効果の実証は未実施。",
+    "本リリースは基礎40講座であり、2級・準1級・1級の全講座完成を意味しない。"
+  ]
+}
