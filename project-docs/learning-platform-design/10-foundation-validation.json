@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "checked_at": "2026-09-11T12:08:41.784Z",
-  "source_commit": "e7ba1b2502c69d27aafd2effb1a8fcd4dab7e58a",
-  "workflow_run_id": "34597371514",
+  "checked_at": "2026-09-11T12:41:16.747Z",
+  "source_commit": "c25b2cf951404ab5e89413088f69eb12c0996b15",
+  "workflow_run_id": "34600161989",
   "modules": 8,
   "planned_lessons": 40,
   "implemented_lessons": 40,
@@ -760,7 +760,7 @@
     "print_event_expansion_and_restore": "passed",
     "javascript_disabled_basic_reading": "passed",
     "horizontal_document_overflow": "none in tested pages and widths",
-    "completed_at": "2026-09-11T12:15:39.503Z",
+    "completed_at": "2026-09-11T12:47:59.766Z",
     "note": "This is browser automation, not a manual visual review or a screen-reader audit."
   }
 }

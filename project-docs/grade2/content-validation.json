@@ -1,7 +1,7 @@
 {
   "status": "structure_passed",
-  "source_commit": "e7ba1b2502c69d27aafd2effb1a8fcd4dab7e58a",
-  "checked_at": "2026-09-11T12:08:41.975Z",
+  "source_commit": "c25b2cf951404ab5e89413088f69eb12c0996b15",
+  "checked_at": "2026-09-11T12:41:16.935Z",
   "stage": "release_candidate",
   "planned_lessons": 40,
   "authored_lessons": 40,

@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "source_commit": "e7ba1b2502c69d27aafd2effb1a8fcd4dab7e58a",
-  "checked_at": "2026-09-11T12:08:42.149Z",
+  "source_commit": "c25b2cf951404ab5e89413088f69eb12c0996b15",
+  "checked_at": "2026-09-11T12:41:17.105Z",
   "lesson_count": 6,
   "question_count": 24,
   "planned_lessons": 72,
@@ -11,7 +11,7 @@
       "slug": "conditional-expectation",
       "title": "条件付き期待値と反復期待値",
       "path": "src/content/pregrade1/conditional-expectation.md",
-      "source_sha256": "f6065b1adbcfdfc3c116110b31b2515a9db69b39eca3e836c6fa3929121aa3b7",
+      "source_sha256": "26b6e01c578aaa8a8dcee5743b84d58785c88deba3ee89ec40ec5bf09076110d",
       "questions": 4,
       "question_ids": [
         "P01-Q1",
@@ -32,20 +32,20 @@
         "G09"
       ],
       "main_text_characters_approx": 1539,
-      "total_text_characters_approx": 2443,
+      "total_text_characters_approx": 2368,
       "source_urls": [
         "https://www.statlect.com/fundamentals-of-probability/conditional-expectation",
         "https://www.toukei-kentei.jp/grade/grade_pre-1"
       ],
       "review_status": "self_checked",
-      "html_sha256": "739df4a91c4fcf61b039ca992faacd447a331cf1735e9c947aded1c94fcac7f6"
+      "html_sha256": "413fe08adfcc47262faaa386b3c96f2fd247105a8f6dbe47db887efe05761e2f"
     },
     {
       "id": "P02",
       "slug": "conditional-variance",
       "title": "条件付き分散と全分散の公式",
       "path": "src/content/pregrade1/conditional-variance.md",
-      "source_sha256": "88bd0156936a0d923e31ef79648adfcf90edf7b6d75fc27ff303e7241c8c05ef",
+      "source_sha256": "1858cfd6077cefcc437da6005df1b091e8f573fc910a6c9e858eb1e2b6c91e10",
       "questions": 4,
       "question_ids": [
         "P02-Q1",
@@ -67,21 +67,21 @@
         "G09",
         "G13"
       ],
-      "main_text_characters_approx": 1625,
-      "total_text_characters_approx": 2672,
+      "main_text_characters_approx": 1608,
+      "total_text_characters_approx": 2655,
       "source_urls": [
         "https://www.statlect.com/fundamentals-of-probability/conditional-expectation",
         "https://www.toukei-kentei.jp/grade/grade_pre-1"
       ],
       "review_status": "self_checked",
-      "html_sha256": "18930f3a40029220cddbb76f3d9a64f8e8ffe3ac20d28a8047fb8f477a6ddfc2"
+      "html_sha256": "88287038318b26d3fb5ffeea7cab10362bd47c3c038a6d35c81fd45c0a0a1bea"
     },
     {
       "id": "P03",
       "slug": "moment-generating-functions",
       "title": "モーメント母関数と存在条件",
       "path": "src/content/pregrade1/moment-generating-functions.md",
-      "source_sha256": "f09459ea2818b32132626b05a777df93897c8233a65d418ab8cbb78d2d7f8776",
+      "source_sha256": "e2f3b577b0a0a06fec294a48e810fe3eb1510424a7bbbe2f3ff22cc55f0fdb6f",
       "questions": 4,
       "question_ids": [
         "P03-Q1",
@@ -103,21 +103,21 @@
         "G10",
         "G13"
       ],
-      "main_text_characters_approx": 1431,
-      "total_text_characters_approx": 2472,
+      "main_text_characters_approx": 1285,
+      "total_text_characters_approx": 2198,
       "source_urls": [
         "https://www.statlect.com/fundamentals-of-probability/moment-generating-function",
         "https://www.toukei-kentei.jp/grade/grade_pre-1"
       ],
       "review_status": "self_checked",
-      "html_sha256": "a806b4b4d97f87a85cc84991f5ddb26d223b8c2f237e476b3241c50e4d62d732"
+      "html_sha256": "d6be410c5467389a7c1787726b8de3eb3fcb0bb3c990f0edc8029af155a0974e"
     },
     {
       "id": "P04",
       "slug": "probability-generating-functions",
       "title": "確率母関数と個数の和",
       "path": "src/content/pregrade1/probability-generating-functions.md",
-      "source_sha256": "5063fd79d54e0ddb1d2b52e4fa38fed5f56e68c40d33ddaaceff0e47e4ed5754",
+      "source_sha256": "e29509031ecd8b861ddc5916283da6902e2cc9354a9dd9955d94d6562ce60523",
       "questions": 4,
       "question_ids": [
         "P04-Q1",
@@ -140,21 +140,21 @@
         "G11",
         "G13"
       ],
-      "main_text_characters_approx": 1487,
-      "total_text_characters_approx": 2559,
+      "main_text_characters_approx": 1316,
+      "total_text_characters_approx": 2282,
       "source_urls": [
         "https://www.maths.dur.ac.uk/users/ostap.hryniv/teaching/Probability2/Probability2-notes.html",
         "https://www.toukei-kentei.jp/grade/grade_pre-1"
       ],
       "review_status": "self_checked",
-      "html_sha256": "d9a5291fcce787fedb1de04e90810b2cc8597478e2e356e29c548f852d38a8fd"
+      "html_sha256": "94eea7bcadc5c20118bd5a3cbb165f0db88047ae5c2434c9990adebbd277fa19"
     },
     {
       "id": "P05",
       "slug": "multivariate-transformations",
       "title": "多変量の変数変換とヤコビアン",
       "path": "src/content/pregrade1/multivariate-transformations.md",
-      "source_sha256": "65b6b6a921dc31afe90b85dd01d78f0c3cbd570f6e29a62c2ae8c19951137a81",
+      "source_sha256": "d0cf74ca173e7150dd8c029e65870a323fcc39e0be8d185b2c4ff71500eaa6b6",
       "questions": 4,
       "question_ids": [
         "P05-Q1",
@@ -175,22 +175,22 @@
         "G10",
         "P02"
       ],
-      "main_text_characters_approx": 1496,
-      "total_text_characters_approx": 2447,
+      "main_text_characters_approx": 1451,
+      "total_text_characters_approx": 2391,
       "source_urls": [
         "https://online.stat.psu.edu/stat414/Lesson23",
         "https://www.statlect.com/fundamentals-of-probability/functions-of-random-vectors",
         "https://www.toukei-kentei.jp/grade/grade_pre-1"
       ],
       "review_status": "self_checked",
-      "html_sha256": "470efc7038d2ea9d36faafc0ff437adf87eec53a291adca34a2f911ea9b9dead"
+      "html_sha256": "964b89239d8882bfe42a5d59d68619f937e1f5c50fb8f4e6be4efdfe80e0bf35"
     },
     {
       "id": "P06",
       "slug": "modes-of-convergence",
       "title": "概収束・確率収束・分布収束",
       "path": "src/content/pregrade1/modes-of-convergence.md",
-      "source_sha256": "b94971c5399c83814f0ad5c48d5fd6991ea37b670df54f8404a3a16cf1360f2c",
+      "source_sha256": "8b201b91cf8dd42a9c08b4afbd3e423a3b01085dbb92d39e2d4dd6f1059fce8a",
       "questions": 4,
       "question_ids": [
         "P06-Q1",
@@ -212,15 +212,15 @@
         "G16",
         "P01"
       ],
-      "main_text_characters_approx": 1573,
-      "total_text_characters_approx": 2800,
+      "main_text_characters_approx": 1469,
+      "total_text_characters_approx": 2547,
       "source_urls": [
         "https://www.maths.dur.ac.uk/users/ostap.hryniv/teaching/Probability2/Probability2-notes.html",
         "https://www.statlect.com/asymptotic-theory/convergence-in-distribution",
         "https://www.toukei-kentei.jp/grade/grade_pre-1"
       ],
       "review_status": "self_checked",
-      "html_sha256": "0b48b00e5517b64dd8db73ab97f450d0fafd0cde40310866f8b94e057cee6a91"
+      "html_sha256": "2b27e37bf50a37327d5e68c5a1730431802e2ca450fda9a8f6d698e1223eec1e"
     }
   ],
   "limitations": [

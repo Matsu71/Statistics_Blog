@@ -1,8 +1,8 @@
 {
   "status": "passed",
-  "checked_at": "2026-09-11T12:16:43.759Z",
-  "source_commit": "e7ba1b2502c69d27aafd2effb1a8fcd4dab7e58a",
-  "assertions": 368,
+  "checked_at": "2026-09-11T12:49:04.538Z",
+  "source_commit": "c25b2cf951404ab5e89413088f69eb12c0996b15",
+  "assertions": 370,
   "lesson_views": 18,
   "views": [
     {
@@ -195,7 +195,7 @@
     "native disclosure keyboard",
     "deep link",
     "print restore",
-    "search",
+    "search including prose after inequalities",
     "export and isolated clear",
     "malformed storage",
     "blocked storage",

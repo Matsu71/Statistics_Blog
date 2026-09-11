@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "checked_at": "2026-09-11T12:08:53.892914+00:00",
-  "source_commit": "e7ba1b2502c69d27aafd2effb1a8fcd4dab7e58a",
+  "checked_at": "2026-09-11T12:41:28.345019+00:00",
+  "source_commit": "c25b2cf951404ab5e89413088f69eb12c0996b15",
   "lesson_count": 6,
   "numerical_checks": 55,
   "checks": [
@@ -748,27 +748,27 @@
   "sources": {
     "P01": {
       "path": "src/content/pregrade1/conditional-expectation.md",
-      "sha256": "f6065b1adbcfdfc3c116110b31b2515a9db69b39eca3e836c6fa3929121aa3b7"
+      "sha256": "26b6e01c578aaa8a8dcee5743b84d58785c88deba3ee89ec40ec5bf09076110d"
     },
     "P06": {
       "path": "src/content/pregrade1/modes-of-convergence.md",
-      "sha256": "b94971c5399c83814f0ad5c48d5fd6991ea37b670df54f8404a3a16cf1360f2c"
+      "sha256": "8b201b91cf8dd42a9c08b4afbd3e423a3b01085dbb92d39e2d4dd6f1059fce8a"
     },
     "P05": {
       "path": "src/content/pregrade1/multivariate-transformations.md",
-      "sha256": "65b6b6a921dc31afe90b85dd01d78f0c3cbd570f6e29a62c2ae8c19951137a81"
+      "sha256": "d0cf74ca173e7150dd8c029e65870a323fcc39e0be8d185b2c4ff71500eaa6b6"
     },
     "P04": {
       "path": "src/content/pregrade1/probability-generating-functions.md",
-      "sha256": "5063fd79d54e0ddb1d2b52e4fa38fed5f56e68c40d33ddaaceff0e47e4ed5754"
+      "sha256": "e29509031ecd8b861ddc5916283da6902e2cc9354a9dd9955d94d6562ce60523"
     },
     "P02": {
       "path": "src/content/pregrade1/conditional-variance.md",
-      "sha256": "88bd0156936a0d923e31ef79648adfcf90edf7b6d75fc27ff303e7241c8c05ef"
+      "sha256": "1858cfd6077cefcc437da6005df1b091e8f573fc910a6c9e858eb1e2b6c91e10"
     },
     "P03": {
       "path": "src/content/pregrade1/moment-generating-functions.md",
-      "sha256": "f09459ea2818b32132626b05a777df93897c8233a65d418ab8cbb78d2d7f8776"
+      "sha256": "e2f3b577b0a0a06fec294a48e810fe3eb1510424a7bbbe2f3ff22cc55f0fdb6f"
     }
   },
   "environment": {

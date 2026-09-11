@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "checked_at": "2026-09-11T12:08:54.001Z",
-  "source_commit": "e7ba1b2502c69d27aafd2effb1a8fcd4dab7e58a",
+  "checked_at": "2026-09-11T12:41:28.439Z",
+  "source_commit": "c25b2cf951404ab5e89413088f69eb12c0996b15",
   "lessons": 40,
   "questions": 130,
   "coverage_groups": 20,

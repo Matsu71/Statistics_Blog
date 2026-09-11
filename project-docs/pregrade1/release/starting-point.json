@@ -1,8 +1,8 @@
 {
   "status": "captured",
-  "at": "2026-09-11T12:08:13.771460+00:00",
+  "at": "2026-09-11T12:40:52.628032+00:00",
   "expected_main": "a33c944b47646c38edd20eb527ee43c98265526b",
-  "source_commit": "e7ba1b2502c69d27aafd2effb1a8fcd4dab7e58a",
+  "source_commit": "c25b2cf951404ab5e89413088f69eb12c0996b15",
   "preserved_manuscripts": {
     "src/content/lessons/ratios-and-percentages.md": "1001ce9448d3d2fd9b40708155a3672cb8b63980b3493a97483c737f1a97116c",
     "src/content/lessons/reporting-statistical-results.md": "3331a442b64bf2947136e995bc64e26b22a3da3032f51d0057e1086e95506784",
