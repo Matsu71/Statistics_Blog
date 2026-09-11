@@ -1,0 +1,14 @@
+export function normalDensity(z: number): number;
+export function normalSF(z: number): number;
+export function normalCDF(z: number): number;
+export function normalInterval(a: number, b: number): number;
+export function describe(values: number[]): { n: number; mean: number; sumSquares: number; variance: number; sd: number; unbiasedVariance: number | null; sampleSD: number | null };
+export function median(values: number[]): number;
+export function quartiles(values: number[]): { q1: number; q2: number; q3: number; iqr: number; lowerFence: number; upperFence: number };
+export function binomialPMF(k: number, n: number, p: number): number;
+export function binomialRange(a: number, b: number, n: number, p: number): number;
+export function wilsonInterval(k: number, n: number, z?: number): [number, number];
+export function seededRandom(seed: number): () => number;
+export function normalRandom(random: () => number): number;
+export const confidenceCritical: Readonly<Record<number, number>>;
+export function coverageSimulation(p: { mu: number; sigma: number; n: number; repetitions: number; level: number; seed: number }): { se: number; half: number; covered: number; intervals: { index: number; mean: number; lower: number; upper: number; covers: boolean }[] };
