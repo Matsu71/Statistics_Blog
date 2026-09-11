@@ -1,0 +1,261 @@
+name: Finalize foundation release
+
+on:
+  push:
+    branches: ['release/foundation-verified-20260911']
+    paths: ['.github/workflows/foundation-finalize-release.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+  pages: write
+
+concurrency:
+  group: foundation-final-release
+  cancel-in-progress: false
+
+jobs:
+  finish:
+    if: github.repository == 'Matsu71/Statistics_Blog' && github.ref == 'refs/heads/release/foundation-verified-20260911'
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Record the exact starting point
+        run: |
+          mkdir -p review-assets/final-release project-docs/foundation-release
+          git rev-parse HEAD | tee review-assets/final-release/source-commit.txt
+          if [ -f scripts/apply-foundation-review-bundle.mjs ]; then node scripts/apply-foundation-review-bundle.mjs; fi
+      - run: npm ci
+      - name: Preserve the previously tested Markdown pipeline when upgrading
+        run: |
+          set -euo pipefail
+          if [ "$(node -p "require('./package.json').dependencies.astro")" != '7.3.2' ]; then
+            npm install --save-exact astro@7.3.2 @astrojs/sitemap@latest @astrojs/markdown-remark@latest
+            npm install --save-dev --save-exact @astrojs/check@latest
+            npm audit fix
+            node --input-type=module -e "import fs from 'node:fs';const p=JSON.parse(fs.readFileSync('package.json'));p.engines.node='>=22.12.0';fs.writeFileSync('package.json',JSON.stringify(p,null,2)+'\n')"
+          fi
+      - name: Dependency audit with a release gate
+        run: |
+          npm audit --json > review-assets/final-release/npm-audit.json || true
+          node --input-type=module - <<'JS'
+          import fs from 'node:fs';
+          const audit=JSON.parse(fs.readFileSync('review-assets/final-release/npm-audit.json'));
+          if(!audit.metadata?.vulnerabilities) throw Error('Dependency audit did not complete');
+          const report={checked_at:new Date().toISOString(),metadata:audit.metadata,vulnerabilities:audit.vulnerabilities};
+          fs.writeFileSync('project-docs/learning-platform-design/16-dependency-audit.json',JSON.stringify(report,null,2)+'\n');
+          console.log(JSON.stringify(audit.metadata.vulnerabilities));
+          if(audit.metadata.vulnerabilities.high || audit.metadata.vulnerabilities.critical) throw Error('Unresolved high or critical dependency advisory');
+          JS
+      - name: Apply the reviewed corrections and create the public build marker
+        run: |
+          set -euo pipefail
+          if [ -f scripts/prepare-foundation-release.mjs ]; then node scripts/prepare-foundation-release.mjs; fi
+          if [ -f scripts/finalize-foundation-docs.mjs ]; then node scripts/finalize-foundation-docs.mjs; fi
+          python - <<'PY'
+          import json, os, re
+          from pathlib import Path
+          from datetime import datetime, timezone
+          lessons=list(Path('src/content/lessons').glob('*.md'))
+          ids=[]; questions=[]
+          for path in lessons:
+              text=path.read_text()
+              match=re.search(r'^lesson_id:\s*(F\d{2})\s*$',text,re.M)
+              assert match, str(path)
+              ids.append(match.group(1))
+              questions += re.findall(r'data-question=[\"\x27]([^\"\x27]+)',text)
+          assert len(ids)==40 and set(ids)=={f'F{i:02d}' for i in range(1,41)}
+          assert len(questions)>=130 and len(questions)==len(set(questions))
+          marker={'release':'foundation-1.0','source_commit':os.environ['GITHUB_SHA'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'lesson_count':40,'question_count':len(questions),'built_at':datetime.now(timezone.utc).isoformat()}
+          Path('public/foundation-build.json').write_text(json.dumps(marker,ensure_ascii=False,indent=2)+'\n')
+          Path('review-assets/final-release/build-marker.json').write_text(json.dumps(marker,indent=2)+'\n')
+          print(json.dumps(marker,ensure_ascii=False))
+          PY
+      - name: Full source, types, build and link verification
+        run: |
+          set -euo pipefail
+          npm run generate:index 2>&1 | tee review-assets/final-release/build.log
+          npm run verify 2>&1 | tee -a review-assets/final-release/build.log
+          node scripts/validate-foundation.mjs 2>&1 | tee review-assets/final-release/content.log
+          node scripts/test-foundation-math.mjs 2>&1 | tee review-assets/final-release/math.log
+      - name: Independent numerical implementation
+        run: |
+          set -euo pipefail
+          python -m pip install --quiet scipy
+          python scripts/check-foundation-oracle.py 2>&1 | tee review-assets/final-release/oracle.log
+      - name: All browser and learning-tool tests
+        run: |
+          set -euo pipefail
+          npm install --no-save --package-lock=false playwright@1.55.0
+          npx playwright install --with-deps chromium webkit
+          sudo apt-get install -y fonts-noto-cjk
+          test -f scripts/test-foundation-browser.mjs
+          test -f scripts/test-learning-labs.mjs
+          node scripts/test-foundation-browser.mjs 2>&1 | tee review-assets/final-release/browser.log
+          node scripts/test-learning-labs.mjs 2>&1 | tee review-assets/final-release/labs.log
+          if [ -f scripts/test-release-extras.mjs ]; then node scripts/test-release-extras.mjs 2>&1 | tee review-assets/final-release/extras.log; fi
+      - name: Assert the complete artifact and preserve verification evidence
+        env:
+          RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          python - <<'PY'
+          import hashlib,json,os,re
+          from pathlib import Path
+          from datetime import datetime,timezone
+          base=Path('project-docs/learning-platform-design')
+          content=json.loads((base/'10-foundation-validation.json').read_text())
+          math=json.loads((base/'12-math-audit.json').read_text())
+          assert content['status']=='passed', content.get('status')
+          assert content['implemented_lessons']==40
+          assert content['original_questions']>=130
+          assert content['checks']['browser']=='passed'
+          assert math['status']=='passed' and math['lessons']==40
+          marker=json.loads(Path('docs/foundation-build.json').read_text())
+          assert marker['source_commit']==os.environ['GITHUB_SHA']
+          assert marker['workflow_run_id']==os.environ['GITHUB_RUN_ID']
+          records={r['id']:r for r in math['records']}
+          for path in Path('src/content/lessons').glob('*.md'):
+              text=path.read_text();lesson=re.search(r'^lesson_id:\s*(F\d{2})\s*$',text,re.M).group(1)
+              assert records[lesson]['source_sha256']==hashlib.sha256(path.read_bytes()).hexdigest(),str(path)
+          comparisons=[]
+          for path in base.glob('*.md'):
+              text=path.read_text()
+              if ('競合' in text or '比較' in text) and '不足' in text and len(text)>1500 and not re.match(r'0[1-9]-',path.name):
+                  comparisons.append(str(path))
+          assert comparisons, 'Missing substantive post-implementation comparison and gap review'
+          hashes={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(Path('docs').rglob('*')) if p.is_file()}
+          security=json.loads((base/'16-dependency-audit.json').read_text())
+          result={'status':'verified_pending_publication','source_commit':os.environ['GITHUB_SHA'],'workflow_run_id':os.environ['GITHUB_RUN_ID'],'workflow_url':os.environ['RUN_URL'],'checked_at':datetime.now(timezone.utc).isoformat(),'lesson_count':40,'question_count':content['original_questions'],'math_status':math['status'],'browser_status':content['checks']['browser'],'numerical_checks':math.get('numerical_checks'),'comparison_documents':comparisons,'dependency_advisories':security['metadata']['vulnerabilities'],'generated_sha256':hashes,'limits':['Content review is self-review, not independent human mathematical peer review.','Automated browser tests do not establish empirical learning superiority.','The release scope is the 40-lesson foundation course, not the future grade-2 through grade-1 courses.'],'next_after_publication':'基礎の利用者テストと訂正対応を行い、同じ品質基準で2級コースを実装する。'}
+          Path('project-docs/foundation-release/final-gates.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+          print(json.dumps({k:v for k,v in result.items() if k!='generated_sha256'},ensure_ascii=False,indent=2))
+          PY
+      - name: Save and fast-forward the verified source without overwriting newer main work
+        id: promote
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add src docs public scripts project-docs/learning-platform-design project-docs/foundation-release AGENTS.md README.md package.json package-lock.json
+          if ! git diff --cached --quiet; then git commit -m 'release: finalize verified complete foundation artifact'; fi
+          VERIFIED_SHA=$(git rev-parse HEAD)
+          git fetch origin main
+          git merge-base --is-ancestor origin/main HEAD
+          git push origin HEAD:release/foundation-verified-20260911
+          git push origin HEAD:main
+          printf 'verified_sha=%s\n' "$VERIFIED_SHA" >> "$GITHUB_OUTPUT"
+          printf '%s\n' "$VERIFIED_SHA" > review-assets/final-release/verified-commit.txt
+      - name: Request publication and verify the live build marker
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERIFIED_SHA: ${{ steps.promote.outputs.verified_sha }}
+        run: |
+          python - <<'PY'
+          import json,os,time,urllib.request,urllib.error
+          from pathlib import Path
+          from datetime import datetime,timezone
+          repo=os.environ['GITHUB_REPOSITORY'];api='https://api.github.com/repos/'+repo
+          headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'statistics-foundation-release'}
+          attempts=[]
+          def call(path,payload):
+              request=urllib.request.Request(api+path,data=json.dumps(payload).encode(),headers=headers,method='POST')
+              try:
+                  with urllib.request.urlopen(request,timeout=40) as response:
+                      return response.status,response.read().decode()
+              except urllib.error.HTTPError as error:
+                  return error.code,error.read().decode()
+          code,body=call('/pages/builds',{})
+          attempts.append({'method':'request_branch_pages_build','status':code,'body':body[:1500]})
+          if code not in (200,201,202):
+              code,body=call('/actions/workflows/foundation-publish-verified.yml/dispatches',{'ref':'main','inputs':{'expected_sha':os.environ['VERIFIED_SHA']}})
+              attempts.append({'method':'dispatch_verified_pages_artifact','status':code,'body':body[:1500]})
+              assert code in (200,201,202,204), json.dumps(attempts)
+          expected=json.loads(Path('docs/foundation-build.json').read_text())
+          site='https://matsu71.github.io/Statistics_Blog'
+          observed=None
+          for index in range(180):
+              try:
+                  request=urllib.request.Request(site+'/foundation-build.json?release_run='+os.environ['GITHUB_RUN_ID']+'&attempt='+str(index),headers={'Cache-Control':'no-cache','User-Agent':'statistics-release-verification'})
+                  with urllib.request.urlopen(request,timeout=20) as response:
+                      candidate=json.load(response)
+                  if candidate.get('source_commit')==expected['source_commit'] and candidate.get('workflow_run_id')==expected['workflow_run_id']:
+                      observed=candidate;break
+              except (urllib.error.URLError,ValueError,TimeoutError):
+                  pass
+              time.sleep(5)
+          proof={'checked_at':datetime.now(timezone.utc).isoformat(),'verified_commit':os.environ['VERIFIED_SHA'],'publication_attempts':attempts,'live_marker':observed}
+          Path('review-assets/final-release/publication.json').write_text(json.dumps(proof,ensure_ascii=False,indent=2)+'\n')
+          assert observed is not None, 'The verified marker is not live; no publication-success claim was made'
+          print(json.dumps(proof,ensure_ascii=False,indent=2))
+          PY
+      - name: Verify every released lesson on the public site
+        env:
+          VERIFIED_SHA: ${{ steps.promote.outputs.verified_sha }}
+        run: |
+          python - <<'PY'
+          import concurrent.futures,hashlib,json,re,time,urllib.request
+          from pathlib import Path
+          from datetime import datetime,timezone
+          site='https://matsu71.github.io/Statistics_Blog'
+          records=[]
+          for p in Path('src/content/lessons').glob('*.md'):
+              text=p.read_text();records.append((re.search(r'^lesson_id:\s*(F\d{2})\s*$',text,re.M).group(1),re.search(r'^slug:\s*([^\s]+)\s*$',text,re.M).group(1)))
+          def get_lesson(record):
+              lesson,slug=record;url=site+'/learn/'+slug+'/'
+              error=None
+              for trial in range(3):
+                  try:
+                      with urllib.request.urlopen(urllib.request.Request(url,headers={'Cache-Control':'no-cache','User-Agent':'statistics-release-verification'}),timeout=30) as response:
+                          body=response.read().decode('utf-8');status=response.status
+                      assert status==200
+                      assert re.search(r'data-lesson-id\s*=\s*[\"\x27]?'+lesson+r'(?=[\"\x27\s>])',body),lesson
+                      assert 'katex-error' not in body
+                      questions=len(re.findall(r'data-question\s*=',body))
+                      assert questions>=3
+                      return {'lesson_id':lesson,'url':url,'http_status':status,'questions':questions,'body_sha256':hashlib.sha256(body.encode()).hexdigest()}
+                  except Exception as exc:
+                      error=exc;time.sleep(3)
+              raise error
+          with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+              checked=list(executor.map(get_lesson,records))
+          assert len(checked)==40 and sum(x['questions'] for x in checked)>=130
+          for route in ['/','/courses/foundation/','/labs/']:
+              with urllib.request.urlopen(site+route,timeout=30) as response: assert response.status==200
+          publication=json.loads(Path('review-assets/final-release/publication.json').read_text())
+          report={'status':'published_and_live_verified','release':'foundation-1.0','completed_at':datetime.now(timezone.utc).isoformat(),'verified_commit':publication['verified_commit'],'site':site+'/courses/foundation/','lesson_count':40,'question_count':sum(x['questions'] for x in checked),'publication':publication,'live_lessons':sorted(checked,key=lambda x:x['lesson_id']),'next':'基礎コースの利用者テスト・訂正対応と、同じ品質基準による2級コースの実装。','limits':['独立した人間の数学監修・実利用者による学習効果の実証は未実施。','本リリースは基礎40講座であり、2級・準1級・1級の全講座完成を意味しない。']}
+          Path('project-docs/foundation-release/publication.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
+          progress=Path('project-docs/learning-platform-design/11-completion-progress.md')
+          old=progress.read_text()
+          banner='# 基礎40講座：公開と実ページ確認完了\n\n'+report['completed_at']+'\n\n全40講座・'+str(report['question_count'])+'問を検証し、公開サイトの全40ページをHTTP応答と講座IDで確認しました。詳細は `project-docs/foundation-release/publication.json` と `final-gates.json` を参照してください。\n\n次に行うこと：基礎の利用者テストと訂正対応、同じ品質基準で2級コースを制作。独立した人間の数学監修と学習効果の実証は今後の品質向上課題です。\n\n以下は実施過程の履歴です。\n\n---\n\n'
+          progress.write_text(banner+old)
+          print(json.dumps({k:v for k,v in report.items() if k not in ('live_lessons','publication')},ensure_ascii=False,indent=2))
+          PY
+      - name: Checkpoint factual publication evidence
+        run: |
+          set -euo pipefail
+          git add project-docs/foundation-release project-docs/learning-platform-design/11-completion-progress.md
+          git commit -m 'docs: record successful foundation publication and next actions [skip ci]'
+          git fetch origin main
+          git merge-base --is-ancestor origin/main HEAD
+          git push origin HEAD:main
+          git push origin HEAD:release/foundation-verified-20260911
+      - name: Preserve all final evidence even when a gate fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: foundation-final-release-${{ github.run_id }}
+          path: |
+            review-assets/
+            project-docs/foundation-release/
+            project-docs/learning-platform-design/*audit*.json
+            project-docs/learning-platform-design/10-foundation-validation.json
+          retention-days: 30
+          if-no-files-found: error
