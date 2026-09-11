@@ -1,0 +1,144 @@
+name: Verify initial pregrade1 course
+on:
+  workflow_dispatch:
+  push:
+    branches: [content/pregrade1-foundations-20260911, main]
+    paths:
+      - .github/workflows/verify-pregrade1.yml
+      - src/content/pregrade1/**
+      - src/pages/learn/pregrade1/**
+      - src/pages/courses/pregrade1/**
+      - src/components/Pregrade1Tools.astro
+      - src/styles/pregrade1.css
+      - src/lib/pregrade1-schema.ts
+      - scripts/check-pregrade1-*
+      - scripts/test-pregrade1-browser.mjs
+      - scripts/pregrade1-release.py
+      - docs/pregrade1-build.json
+permissions:
+  contents: read
+concurrency:
+  group: pregrade1-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  verify:
+    if: github.ref == 'refs/heads/content/pregrade1-foundations-20260911'
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    permissions:
+      contents: write
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - name: Capture the current baseline without rewriting existing manuscripts
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git fetch origin main:refs/remotes/origin/main
+          git merge --no-edit origin/main
+          mkdir -p review-assets/pregrade1 project-docs/pregrade1/release
+          python3 scripts/pregrade1-release.py capture
+      - run: npm ci
+      - name: Build all courses and validate the initial six
+        run: |
+          node scripts/check-pregrade1-content.mjs prepare
+          npm run generate:index
+          npm run verify
+          node scripts/validate-foundation.mjs > review-assets/pregrade1/foundation-content.log
+          node scripts/validate-grade2.mjs > review-assets/pregrade1/grade2-content.log
+          node scripts/check-pregrade1-content.mjs validate
+      - name: Recalculate examples without changing the source
+        run: |
+          python3 -m pip install --quiet numpy==2.3.5 scipy==1.17.0
+          node scripts/test-foundation-math.mjs > review-assets/pregrade1/foundation-math.log
+          python3 scripts/check-foundation-oracle.py > review-assets/pregrade1/foundation-oracle.log
+          python3 scripts/check-grade2-complete-math.py > review-assets/pregrade1/grade2-math.log
+          python3 scripts/check-pregrade1-math.py
+          node scripts/test-release-extras.mjs > review-assets/pregrade1/extras.log
+          npm audit --json > project-docs/pregrade1/release/npm-audit.json || true
+      - name: Install browser tooling separately from locked site dependencies
+        run: |
+          npm install --prefix "$RUNNER_TEMP/browser-tools" --no-package-lock playwright@1.55.0
+          ln -s "$RUNNER_TEMP/browser-tools/node_modules/playwright" node_modules/playwright
+          ln -s "$RUNNER_TEMP/browser-tools/node_modules/playwright-core" node_modules/playwright-core
+          "$RUNNER_TEMP/browser-tools/node_modules/.bin/playwright" install --with-deps chromium webkit
+          sudo apt-get install -y fonts-noto-cjk
+      - name: Regress foundation and shared learning functions
+        timeout-minutes: 12
+        run: |
+          node scripts/test-foundation-browser.mjs > review-assets/pregrade1/foundation-browser.log 2>&1 &
+          F=$!
+          node scripts/test-learning-labs.mjs > review-assets/pregrade1/labs.log 2>&1 &
+          L=$!
+          result=0
+          wait "$F" || result=1
+          wait "$L" || result=1
+          cat review-assets/pregrade1/foundation-browser.log
+          cat review-assets/pregrade1/labs.log
+          exit "$result"
+      - name: Regress grade2 and test new course behavior
+        timeout-minutes: 12
+        run: |
+          node scripts/test-grade2-browser.mjs > review-assets/pregrade1/grade2-browser.log 2>&1 &
+          G=$!
+          node scripts/test-pregrade1-browser.mjs > review-assets/pregrade1/pregrade1-browser.log 2>&1 &
+          P=$!
+          result=0
+          wait "$G" || result=1
+          wait "$P" || result=1
+          cat review-assets/pregrade1/grade2-browser.log
+          cat review-assets/pregrade1/pregrade1-browser.log
+          exit "$result"
+      - name: Bind passing checks to every generated file
+        run: python3 scripts/pregrade1-release.py gate
+      - name: Save the tested candidate on the working branch only
+        run: |
+          git add src docs public project-docs/pregrade1 project-docs/grade2/content-validation.json project-docs/grade2/math-validation.json project-docs/grade2/browser-validation.json project-docs/learning-platform-design
+          test -z "$(git diff --cached --name-only -- .github)"
+          git commit -m 'build: save verified initial pregrade1 course and unchanged earlier manuscripts [skip ci]'
+          git push origin HEAD:content/pregrade1-foundations-20260911
+      - name: Preserve actual review outputs even on failure
+        if: always()
+        run: |
+          mkdir -p review-assets/pregrade1
+          tar --exclude='*.woff' --exclude='*.woff2' --exclude='*.ttf' --exclude='*.otf' --exclude='*.eot' -czf review-assets/pregrade1/source-review.tar.gz src scripts public docs project-docs package.json package-lock.json astro.config.mjs site-build.config.mjs AGENTS.md
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pregrade1-review-${{ github.run_id }}
+          path: |
+            review-assets/pregrade1/
+            project-docs/pregrade1/
+          retention-days: 30
+  confirm:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+      - name: Verify actual public files and all 86 lessons
+        run: python3 scripts/pregrade1-release.py public
+      - name: Save factual completion and the next work
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project-docs/pregrade1
+          git commit -m 'docs: confirm initial pregrade1 public delivery and next lessons [skip ci]'
+          git push origin HEAD:main
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: pregrade1-public-${{ github.run_id }}
+          path: project-docs/pregrade1/release/
