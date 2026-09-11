@@ -1,1 +1,13 @@
-{"stage":"audit","target_lessons":40,"authored_through":"F40","next":"full numerical/content/syllabus/browser audit; competitor comparison; remediation; release","scope":"foundation","date":"2026-09-11"}
+{
+  "stage": "release_candidate",
+  "version": "foundation-1.0.0",
+  "target_lessons": 40,
+  "authored_through": "F40",
+  "questions": 130,
+  "interactive_labs": 3,
+  "scope": "foundation",
+  "date": "2026-09-11",
+  "publication_requires": ["all content, math, oracle and browser tests pass", "review generated pages and screenshots", "explicit non-force main update", "verify Pages deployment and public routes"],
+  "next": "verify the release candidate, inspect browser results and rendered pages, publish to main without force, verify deployed pages",
+  "limitations": ["not independently peer reviewed", "not a controlled learning-outcome study", "advanced course sequences are not yet implemented"]
+}
