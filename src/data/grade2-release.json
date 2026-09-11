@@ -1,12 +1,11 @@
 {
-  "stage": "authoring",
-  "target_lessons": 40,
-  "authored_through": "G08",
-  "authored_lessons": 8,
-  "authored_questions": 32,
-  "scope": "grade2",
-  "started_from": "907657df5aa273b1a8d69e393c2b1dff6dccff8b",
-  "date": "2026-09-11",
-  "next": "G09以降の本文・独自問題を制作し、2級専用ルート・検索・復習・範囲対応を実装。全件監査後に公開。",
-  "verification": "原稿の自己点検段階。全40件の自動検証・公開は未実施。"
+  "stage":"checkpoint",
+  "target_lessons":40,
+  "authored_through":"G08",
+  "authored_lessons":8,
+  "authored_questions":32,
+  "scope":"grade2",
+  "started_from":"907657df5aa273b1a8d69e393c2b1dff6dccff8b",
+  "date":"2026-09-11",
+  "next":"G09以降の制作と、初期8講座・2級UIの検証。基礎コースの回帰テストを維持し、全40講座が揃って検証されるまで公開完了としない。"
 }

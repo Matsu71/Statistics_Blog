@@ -8,7 +8,12 @@ const release = JSON.parse(await readFile('src/data/grade2-release.json', 'utf8'
 const planned = manifest.modules.flatMap((module) => module.lessons);
 const records = [];
 for (const file of (await readdir('src/content/grade2')).filter((file) => file.endsWith('.md'))) {
-  const body = await readFile(`src/content/grade2/${file}`, 'utf8');
+  const path = `src/content/grade2/${file}`;
+  const old = await readFile(path, 'utf8');
+  // Stable visible-question anchors do not disclose answers and work without JavaScript.
+  const body = old.replace(/<section class="practice-question" data-question="(G\d{2}-Q\d+)"\s*>/g,
+    (_, id) => `<section class="practice-question" data-question="${id}" id="${id.toLowerCase()}">`);
+  if (body !== old) await writeFile(path, body);
   const match = body.match(/^---\n([\s\S]*?)\n---\n/);
   assert.ok(match, `${file}: frontmatter missing`);
   const data = parse(match[1]);
@@ -17,6 +22,11 @@ for (const file of (await readdir('src/content/grade2')).filter((file) => file.e
 records.sort((a, b) => a.id.localeCompare(b.id));
 assert.equal(new Set(records.map((record) => record.id)).size, records.length);
 if (release.stage === 'release_candidate') assert.equal(records.length, planned.length, 'A release candidate must contain all planned lessons');
+const coveragePath = 'src/pages/coverage/grade2/index.astro';
+const coverage = await readFile(coveragePath, 'utf8');
+const corrected = coverage.replace('return `${lesson.url}#${id.toLowerCase()}`;',
+  "return id.startsWith('G') ? `${lesson.url}#${id.toLowerCase()}` : `${lesson.url}#確認問題`; ");
+if (coverage !== corrected) await writeFile(coveragePath, corrected);
 const marker = {
   release: 'grade2-1.0', source_commit: process.env.GITHUB_SHA ?? 'local',
   workflow_run_id: process.env.GITHUB_RUN_ID ?? null, stage: release.stage,

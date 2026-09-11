@@ -1,20 +1,14 @@
 name: Verify grade2 course
-
 on:
   workflow_dispatch:
   push:
     branches: ['content/grade2-*']
-    paths:
-      - .github/workflows/verify-grade2.yml
-      - src/data/grade2-release.json
-
+    paths: ['.github/workflows/verify-grade2.yml', 'src/data/grade2-release.json']
 permissions:
   contents: write
-
 concurrency:
   group: grade2-${{ github.ref }}
   cancel-in-progress: true
-
 jobs:
   verify:
     runs-on: ubuntu-latest
@@ -31,6 +25,8 @@ jobs:
       - name: Read requested stage
         id: stage
         run: echo "value=$(node -p "require('./src/data/grade2-release.json').stage")" >> "$GITHUB_OUTPUT"
+      - name: Retrieve the licensed, versioned real dataset
+        run: python3 scripts/import-grade2-iris.py
       - name: Install locked dependencies
         if: steps.stage.outputs.value != 'authoring'
         run: npm ci
