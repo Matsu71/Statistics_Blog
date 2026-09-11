@@ -1,13 +1,13 @@
 {
   "status": "passed",
-  "checked_at": "2026-09-11T02:32:30.420Z",
-  "source_commit": "524ca8ea68218e077f2df601fcdd3875b370a16c",
-  "workflow_run_id": "34554988670",
+  "checked_at": "2026-09-11T06:25:35.113Z",
+  "source_commit": "39934a3a7125da6d9d72314d5259ff20f905fa16",
+  "workflow_run_id": "34569781245",
   "modules": 8,
   "planned_lessons": 40,
-  "implemented_lessons": 6,
-  "planned_not_implemented": 34,
-  "original_questions": 18,
+  "implemented_lessons": 40,
+  "planned_not_implemented": 0,
+  "original_questions": 130,
   "records": [
     {
       "id": "F01",
@@ -64,10 +64,10 @@
         "F01",
         "F02"
       ],
-      "questions": 3,
-      "disclosures": 4,
-      "main_text_characters_approx": 1729,
-      "all_text_characters_approx": 2685,
+      "questions": 4,
+      "disclosures": 5,
+      "main_text_characters_approx": 2079,
+      "all_text_characters_approx": 3196,
       "reading_minutes_editorial": 10,
       "practice_minutes_editorial": 6,
       "review_status": "self_checked"
@@ -104,14 +104,628 @@
       "reading_minutes_editorial": 9,
       "practice_minutes_editorial": 6,
       "review_status": "self_checked"
+    },
+    {
+      "id": "F07",
+      "slug": "frequency-tables",
+      "title": "度数分布表と累積度数",
+      "status": "published",
+      "prerequisites": [
+        "F06"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1780,
+      "all_text_characters_approx": 2466,
+      "reading_minutes_editorial": 9,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F08",
+      "slug": "histograms-and-stem-leaf",
+      "title": "ヒストグラム・幹葉図と分布の形",
+      "status": "published",
+      "prerequisites": [
+        "F07"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1539,
+      "all_text_characters_approx": 2255,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F09",
+      "slug": "choosing-basic-graphs",
+      "title": "棒・円・帯グラフを使い分ける",
+      "status": "published",
+      "prerequisites": [
+        "F06",
+        "F07"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1718,
+      "all_text_characters_approx": 2449,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F10",
+      "slug": "cross-tables-and-mosaics",
+      "title": "クロス集計表とモザイク図",
+      "status": "published",
+      "prerequisites": [
+        "F06",
+        "F09"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1585,
+      "all_text_characters_approx": 2215,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F11",
+      "slug": "reading-unfamiliar-graphs",
+      "title": "複合グラフ・レーダー・バブル・ローソク足",
+      "status": "published",
+      "prerequisites": [
+        "F09",
+        "F10"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1712,
+      "all_text_characters_approx": 2441,
+      "reading_minutes_editorial": 11,
+      "practice_minutes_editorial": 7,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F12",
+      "slug": "mean-median-mode",
+      "title": "平均値・中央値・最頻値",
+      "status": "published",
+      "prerequisites": [
+        "F08"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1581,
+      "all_text_characters_approx": 2350,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F13",
+      "slug": "weighted-and-grouped-means",
+      "title": "加重平均と度数分布表からの平均",
+      "status": "published",
+      "prerequisites": [
+        "F07",
+        "F12"
+      ],
+      "questions": 3,
+      "disclosures": 5,
+      "main_text_characters_approx": 1495,
+      "all_text_characters_approx": 2533,
+      "reading_minutes_editorial": 9,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F14",
+      "slug": "quartiles-and-boxplots",
+      "title": "四分位数・範囲・箱ひげ図",
+      "status": "published",
+      "prerequisites": [
+        "F08",
+        "F12"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1479,
+      "all_text_characters_approx": 2197,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 7,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F15",
+      "slug": "variance-and-standard-deviation",
+      "title": "分散と標準偏差",
+      "status": "published",
+      "prerequisites": [
+        "F12",
+        "F14"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1412,
+      "all_text_characters_approx": 2063,
+      "reading_minutes_editorial": 11,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F16",
+      "slug": "shifting-and-scaling-data",
+      "title": "値を足す・掛けると平均や分散はどう変わるか",
+      "status": "published",
+      "prerequisites": [
+        "F15"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1224,
+      "all_text_characters_approx": 1819,
+      "reading_minutes_editorial": 9,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F17",
+      "slug": "standardization-and-deviation-score",
+      "title": "標準化・z値・偏差値",
+      "status": "published",
+      "prerequisites": [
+        "F15",
+        "F16"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1367,
+      "all_text_characters_approx": 2036,
+      "reading_minutes_editorial": 9,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F18",
+      "slug": "relative-spread-and-outliers",
+      "title": "変動係数と外れ値の点検",
+      "status": "published",
+      "prerequisites": [
+        "F03",
+        "F14",
+        "F15",
+        "F16"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1575,
+      "all_text_characters_approx": 2329,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 7,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F19",
+      "slug": "scatter-covariance-correlation",
+      "title": "散布図・共分散・相関係数",
+      "status": "published",
+      "prerequisites": [
+        "F15",
+        "F17"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1310,
+      "all_text_characters_approx": 1965,
+      "reading_minutes_editorial": 11,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F20",
+      "slug": "regression-line-and-prediction",
+      "title": "回帰直線・最小二乗法・予測",
+      "status": "published",
+      "prerequisites": [
+        "F19"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1555,
+      "all_text_characters_approx": 2207,
+      "reading_minutes_editorial": 12,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F21",
+      "slug": "correlation-is-not-causation",
+      "title": "相関・擬相関・因果関係",
+      "status": "published",
+      "prerequisites": [
+        "F05",
+        "F10",
+        "F13",
+        "F19"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1703,
+      "all_text_characters_approx": 2494,
+      "reading_minutes_editorial": 11,
+      "practice_minutes_editorial": 7,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F22",
+      "slug": "time-series-and-indices",
+      "title": "時系列・指数・増減率・移動平均",
+      "status": "published",
+      "prerequisites": [
+        "F06",
+        "F12",
+        "F13"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1558,
+      "all_text_characters_approx": 2175,
+      "reading_minutes_editorial": 11,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F23",
+      "slug": "chance-and-sample-space",
+      "title": "試行・事象と確率",
+      "status": "published",
+      "prerequisites": [
+        "F06"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1470,
+      "all_text_characters_approx": 2197,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F24",
+      "slug": "complements-and-unions",
+      "title": "余事象と加法定理",
+      "status": "published",
+      "prerequisites": [
+        "F23"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1326,
+      "all_text_characters_approx": 1669,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 6,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F25",
+      "slug": "trees-and-counting",
+      "title": "樹形図と場合の数",
+      "status": "published",
+      "prerequisites": [
+        "F23",
+        "F24"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1479,
+      "all_text_characters_approx": 2137,
+      "reading_minutes_editorial": 11,
+      "practice_minutes_editorial": 7,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F26",
+      "slug": "independent-trials",
+      "title": "独立な試行と繰返し",
+      "status": "published",
+      "prerequisites": [
+        "F24",
+        "F25"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1445,
+      "all_text_characters_approx": 2195,
+      "reading_minutes_editorial": 11,
+      "practice_minutes_editorial": 7,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F27",
+      "slug": "conditional-probability-basics",
+      "title": "条件付き確率",
+      "status": "published",
+      "prerequisites": [
+        "F10",
+        "F26"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1508,
+      "all_text_characters_approx": 2185,
+      "reading_minutes_editorial": 12,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F28",
+      "slug": "probability-and-repetition",
+      "title": "確率と実際の頻度の違い",
+      "status": "published",
+      "prerequisites": [
+        "F23",
+        "F26",
+        "F27"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1089,
+      "all_text_characters_approx": 1888,
+      "reading_minutes_editorial": 10,
+      "practice_minutes_editorial": 7,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F29",
+      "slug": "random-variables-and-expectation",
+      "title": "確率変数・期待値・分散",
+      "status": "published",
+      "prerequisites": [
+        "F13",
+        "F15",
+        "F26"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1384,
+      "all_text_characters_approx": 2156,
+      "reading_minutes_editorial": 11,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F30",
+      "slug": "binomial-basics",
+      "title": "二項分布",
+      "status": "published",
+      "prerequisites": [
+        "F25",
+        "F26",
+        "F29"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1285,
+      "all_text_characters_approx": 2094,
+      "reading_minutes_editorial": 12,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F31",
+      "slug": "normal-density-basics",
+      "title": "連続分布と正規分布の面積",
+      "status": "published",
+      "prerequisites": [
+        "F08",
+        "F17",
+        "F29"
+      ],
+      "questions": 3,
+      "disclosures": 6,
+      "main_text_characters_approx": 1469,
+      "all_text_characters_approx": 2485,
+      "reading_minutes_editorial": 12,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F32",
+      "slug": "normal-table-and-tail-area",
+      "title": "正規分布表と1.96の使い方",
+      "status": "published",
+      "prerequisites": [
+        "F17",
+        "F24",
+        "F31"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1625,
+      "all_text_characters_approx": 2223,
+      "reading_minutes_editorial": 11,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F33",
+      "slug": "binomial-normal-approximation",
+      "title": "二項分布の正規近似",
+      "status": "published",
+      "prerequisites": [
+        "F30",
+        "F31",
+        "F32"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1435,
+      "all_text_characters_approx": 1143,
+      "reading_minutes_editorial": 12,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F34",
+      "slug": "sampling-distributions-basics",
+      "title": "標本平均・標本比率の分布",
+      "status": "published",
+      "prerequisites": [
+        "F04",
+        "F15",
+        "F29",
+        "F30",
+        "F31"
+      ],
+      "questions": 3,
+      "disclosures": 5,
+      "main_text_characters_approx": 1452,
+      "all_text_characters_approx": 2380,
+      "reading_minutes_editorial": 12,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F35",
+      "slug": "mean-confidence-interval-basics",
+      "title": "母平均の区間推定",
+      "status": "published",
+      "prerequisites": [
+        "F32",
+        "F34"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1684,
+      "all_text_characters_approx": 2449,
+      "reading_minutes_editorial": 12,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F36",
+      "slug": "proportion-confidence-interval-basics",
+      "title": "母比率の区間推定",
+      "status": "published",
+      "prerequisites": [
+        "F30",
+        "F33",
+        "F34",
+        "F35"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1750,
+      "all_text_characters_approx": 2551,
+      "reading_minutes_editorial": 12,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F37",
+      "slug": "hypothesis-testing-basics",
+      "title": "仮説検定・p値・有意水準",
+      "status": "published",
+      "prerequisites": [
+        "F32",
+        "F34",
+        "F35",
+        "F36"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1433,
+      "all_text_characters_approx": 1358,
+      "reading_minutes_editorial": 12,
+      "practice_minutes_editorial": 8,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F38",
+      "slug": "mean-and-proportion-tests-basics",
+      "title": "母平均・母比率の検定を使う",
+      "status": "published",
+      "prerequisites": [
+        "F30",
+        "F33",
+        "F35",
+        "F36",
+        "F37"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1664,
+      "all_text_characters_approx": 2258,
+      "reading_minutes_editorial": 13,
+      "practice_minutes_editorial": 9,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F39",
+      "slug": "reporting-statistical-results",
+      "title": "方法を選び、結果と限界を伝える",
+      "status": "published",
+      "prerequisites": [
+        "F02",
+        "F05",
+        "F15",
+        "F35",
+        "F36",
+        "F38"
+      ],
+      "questions": 3,
+      "disclosures": 4,
+      "main_text_characters_approx": 1932,
+      "all_text_characters_approx": 2775,
+      "reading_minutes_editorial": 13,
+      "practice_minutes_editorial": 10,
+      "review_status": "self_checked"
+    },
+    {
+      "id": "F40",
+      "slug": "bridge-to-grade-two",
+      "title": "基礎の総合確認と2級への準備",
+      "status": "published",
+      "prerequisites": [
+        "F39"
+      ],
+      "questions": 12,
+      "disclosures": 13,
+      "main_text_characters_approx": 427,
+      "all_text_characters_approx": 3539,
+      "reading_minutes_editorial": 12,
+      "practice_minutes_editorial": 30,
+      "review_status": "self_checked"
     }
   ],
   "source_urls": [
     "https://bellcurve.jp/statistics/course/",
     "https://bellcurve.jp/statistics/course/1562.html",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats._result_classes.BinomTestResult.proportion_ci.html",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html",
     "https://openintro-ims.netlify.app/data-design",
+    "https://openintro-ims.netlify.app/explore-categorical",
+    "https://openintro-ims.netlify.app/explore-numerical",
+    "https://openintro-ims.netlify.app/inference-one-mean",
+    "https://openintro-ims.netlify.app/inference-one-prop",
+    "https://openintro-ims.netlify.app/model-slr",
     "https://openstax.org/books/introductory-statistics-2e/pages/1-1-definitions-of-statistics-probability-and-key-terms",
+    "https://openstax.org/books/introductory-statistics-2e/pages/3-1-terminology",
+    "https://openstax.org/books/introductory-statistics-2e/pages/3-2-independent-and-mutually-exclusive-events",
+    "https://seeing-theory.brown.edu/basic-probability/index.html",
+    "https://toketarou.com/cheatsheet/",
+    "https://toketarou.com/correlation/",
+    "https://www.itl.nist.gov/div898/handbook/eda/section3/eda3661.htm",
+    "https://www.itl.nist.gov/div898/handbook/eda/section3/eda366i.htm",
+    "https://www.itl.nist.gov/div898/handbook/eda/section3/histogra.htm",
+    "https://www.itl.nist.gov/div898/handbook/pmc/section4/pmc42.htm",
     "https://www.stat.go.jp/dstart/point/seminar/02/3-1.html",
+    "https://www.statlect.com/probability-distributions/normal-distribution",
+    "https://www.toukei-kentei.jp/grade/grade2/",
+    "https://www.toukei-kentei.jp/grade/grade3/",
     "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade3_hani_20181214.pdf",
     "https://www.toukei-kentei.jp/hubfs/files/grade_range/grade4_hani_20181214.pdf"
   ],
@@ -138,15 +752,15 @@
       1280
     ],
     "height": 900,
-    "lesson_view_checks": 12,
-    "assertions": 150,
+    "lesson_view_checks": 80,
+    "assertions": 898,
     "page_errors": [],
     "deep_links": "passed",
     "keyboard_disclosures": "passed",
     "print_event_expansion_and_restore": "passed",
     "javascript_disabled_basic_reading": "passed",
     "horizontal_document_overflow": "none in tested pages and widths",
-    "completed_at": "2026-09-11T02:34:01.554Z",
+    "completed_at": "2026-09-11T06:43:52.730Z",
     "note": "This is browser automation, not a manual visual review or a screen-reader audit."
   }
 }

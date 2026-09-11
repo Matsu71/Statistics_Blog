@@ -1,0 +1,134 @@
+{
+  "status": "passed",
+  "checked_at": "2026-09-11T06:25:45.608058+00:00",
+  "scipy_version": "1.18.1",
+  "checks": [
+    {
+      "label": "F35 df9 t quantile",
+      "actual": 2.262157162798205,
+      "expected": 2.2621571628540993,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "F38 two-sided t=2.5 df9",
+      "actual": 0.033861827682985735,
+      "expected": 0.033861827487,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "F39 two-sided t=3 df9",
+      "actual": 0.014956363910414222,
+      "expected": 0.014956363910414222,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "F38 exact binomial p",
+      "actual": 0.005685155996750306,
+      "expected": 0.005685155996750306,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "F33 binomial tail",
+      "actual": 0.028443966820490444,
+      "expected": 0.028443966820490392,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "F31 normalization integral",
+      "actual": 0.9999999999999998,
+      "expected": 1,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "F31 second moment",
+      "actual": 1.000000000000001,
+      "expected": 1,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "normal SF oracle z=0",
+      "actual": 0.5,
+      "expected": 0.5,
+      "tolerance": 1e-14
+    },
+    {
+      "label": "normal SF oracle z=0.1",
+      "actual": 0.460172162722971,
+      "expected": 0.460172162722971,
+      "tolerance": 1e-14
+    },
+    {
+      "label": "normal SF oracle z=1",
+      "actual": 0.15865525393145707,
+      "expected": 0.15865525393145707,
+      "tolerance": 1e-14
+    },
+    {
+      "label": "normal SF oracle z=1.2",
+      "actual": 0.11506967022170822,
+      "expected": 0.1150696702217083,
+      "tolerance": 1e-14
+    },
+    {
+      "label": "normal SF oracle z=1.9",
+      "actual": 0.028716559816001803,
+      "expected": 0.02871655981600182,
+      "tolerance": 1e-14
+    },
+    {
+      "label": "normal SF oracle z=1.96",
+      "actual": 0.024997895148220435,
+      "expected": 0.024997895148220435,
+      "tolerance": 1e-14
+    },
+    {
+      "label": "normal SF oracle z=2",
+      "actual": 0.022750131948179195,
+      "expected": 0.02275013194817922,
+      "tolerance": 1e-14
+    },
+    {
+      "label": "normal SF oracle z=2.5758293035489004",
+      "actual": 0.005000000000000004,
+      "expected": 0.00500000000000001,
+      "tolerance": 1e-14
+    },
+    {
+      "label": "normal SF oracle z=8",
+      "actual": 6.22096057427174e-16,
+      "expected": 6.220960574271819e-16,
+      "tolerance": 1e-14
+    },
+    {
+      "label": "F39 CSV t",
+      "actual": -3.0,
+      "expected": -3,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "F39 CSV p",
+      "actual": 0.014956363910414222,
+      "expected": 0.014956363910414222,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "F36 Wilson lower",
+      "actual": 0.5308354385001253,
+      "expected": 0.5308354385001253,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "F36 Wilson upper",
+      "actual": 0.6653953603162106,
+      "expected": 0.6653953603162106,
+      "tolerance": 1e-09
+    },
+    {
+      "label": "F36 Wilson zero upper",
+      "actual": 0.1611301254949331,
+      "expected": 0.16113012549493322,
+      "tolerance": 1e-09
+    }
+  ],
+  "note": "Independent numerical implementation; not independent human mathematical review."
+}

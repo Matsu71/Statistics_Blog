@@ -61,6 +61,8 @@ $$
 
 「5分以上10分未満」は第2階級だけなので50%です。「10分未満」は第1・第2階級の合計なので90%です。「そこだけ」と「そこまで」を読み分けることが重要です。
 
+<figure id="f07-cumulative-figure"><svg viewBox="0 0 520 280" role="img" aria-labelledby="f07-fig-title f07-fig-desc"><title id="f07-fig-title">階級の境界と累積相対度数</title><desc id="f07-fig-desc">0分で0、5分で0.4、10分で0.9、15分で1。各境界で、その値未満の割合を表示。点を結ぶ線は見やすくする補助線で、階級内の分布を確定するものではない。</desc><path d="M60 30V230H470" fill="none" stroke="currentColor"/><path d="M60 230L190 150L320 50L450 30" fill="none" stroke="#144a56" stroke-width="3"/><g fill="#144a56"><circle cx="60" cy="230" r="5"/><circle cx="190" cy="150" r="5"/><circle cx="320" cy="50" r="5"/><circle cx="450" cy="30" r="5"/></g><g fill="currentColor" font-size="16" text-anchor="middle"><text x="60" y="251">0</text><text x="190" y="251">5</text><text x="320" y="251">10</text><text x="450" y="251">15</text><text x="190" y="138">0.4</text><text x="320" y="38">0.9</text><text x="450" y="18">1.0</text><text x="270" y="277">待ち時間の境界（分）</text></g><text x="5" y="22" font-size="14" fill="currentColor">累積割合</text></svg><figcaption>表の境界と割合を同じ尺度で描きました。線の途中から7分未満の正確な割合は復元できません。</figcaption></figure>
+
 ## この表だけでは答えられない問い
 
 元の一覧を隠し、度数分布表だけを見ているとします。「7分未満は何件か」には、正確に答えられません。第1階級の4件は確実に7分未満ですが、第2階級の5件のうち何件が7分未満かは分からないからです。
